@@ -89,6 +89,12 @@ const Navbar = () => {
                 className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#000000] text-white rounded-lg shadow-xl z-50"
               >
                 <Link
+                  href="/tournament/team"
+                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                >
+                  Team
+                </Link>
+                <Link
                   href="/tournament/rules"
                   className="block px-4 py-2 hover:bg-[#0F0F0F]"
                 >
@@ -145,12 +151,7 @@ const Navbar = () => {
                 >
                   About us
                 </Link>
-                <Link
-                  href="/about/team"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
-                >
-                  Team
-                </Link>
+
                 <Link
                   href="/about/vision"
                   className="block px-4 py-2 hover:bg-[#0F0F0F]"
@@ -262,54 +263,6 @@ const Navbar = () => {
 
           {/* Menu links */}
           <div className="flex flex-col justify-start font-navbar items-start gap-6 mt-10 w-full">
-            {/* About Dropdown for Mobile */}
-            <div className="w-full">
-              <div
-                className="flex items-center justify-between cursor-pointer"
-                onClick={() => toggleDropdown("about-mobile")}
-              >
-                <div className="font-navbar">About</div>
-                <svg
-                  className={`w-4 h-4 transition-transform ${
-                    openDropdown === "about-mobile" ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-              {openDropdown === "about-mobile" && (
-                <div className="mt-2 pl-4">
-                  <Link
-                    href="/about"
-                    className="block p-2 hover:bg-[#000000]"
-                  >
-                    About us
-                  </Link>
-                  <Link
-                    href="/about/team"
-                    className="block p-2 hover:bg-[#000000]"
-                  >
-                    Team
-                  </Link>
-                  <Link
-                    href="/about/vision"
-                    className="block p-2 hover:bg-[#000000]"
-                  >
-                    Vision
-                  </Link>
-                </div>
-              )}
-            </div>
-
             {/* Tournament Info Dropdown for Mobile */}
             <div className="w-full">
               <div
@@ -337,6 +290,12 @@ const Navbar = () => {
               {openDropdown === "tournament-mobile" && (
                 <div className="mt-2 pl-4">
                   <Link
+                    href="/tournament/team"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Team
+                  </Link>
+                  <Link
                     href="/tournament/rules"
                     className="block p-2 hover:bg-[#000000]"
                   >
@@ -353,6 +312,46 @@ const Navbar = () => {
                     className="block p-2 hover:bg-[#000000]"
                   >
                     Prizes
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* About Dropdown for Mobile */}
+            <div className="w-full">
+              <div
+                className="flex items-center justify-between cursor-pointer"
+                onClick={() => toggleDropdown("about-mobile")}
+              >
+                <div className="font-navbar">About</div>
+                <svg
+                  className={`w-4 h-4 transition-transform ${
+                    openDropdown === "about-mobile" ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              {openDropdown === "about-mobile" && (
+                <div className="mt-2 pl-4">
+                  <Link href="/about" className="block p-2 hover:bg-[#000000]">
+                    About us
+                  </Link>
+
+                  <Link
+                    href="/about/vision"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Vision
                   </Link>
                 </div>
               )}
@@ -384,10 +383,7 @@ const Navbar = () => {
               </div>
               {openDropdown === "teams-mobile" && (
                 <div className="mt-2 pl-4">
-                  <Link
-                    href="/faq"
-                    className="block p-2 hover:bg-[#000000]"
-                  >
+                  <Link href="/faq" className="block p-2 hover:bg-[#000000]">
                     FAQs
                   </Link>
                   <Link
@@ -396,10 +392,7 @@ const Navbar = () => {
                   >
                     Contact
                   </Link>
-                  <Link
-                    href="/policy"
-                    className="block p-2 hover:bg-[#000000]"
-                  >
+                  <Link href="/policy" className="block p-2 hover:bg-[#000000]">
                     Privacy Policy
                   </Link>
                 </div>

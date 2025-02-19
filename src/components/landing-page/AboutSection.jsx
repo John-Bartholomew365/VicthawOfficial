@@ -5,7 +5,12 @@ import React, { useState, useEffect } from "react";
 
 const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("about");
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
     const targetDate = new Date("April 12, 2025 09:00:00").getTime();
@@ -20,7 +25,9 @@ const AboutSection = () => {
       }
 
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
@@ -48,10 +55,18 @@ const AboutSection = () => {
 
       {/* Countdown Timer */}
       <div className="flex flex-wrap justify-center gap-3 lg:gap-5 mt-5 text-white text-lg lg:text-2xl">
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center">{timeLeft.days} days</div>
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center">{timeLeft.hours} hours</div>
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center">{timeLeft.minutes} minutes</div>
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center">{timeLeft.seconds} seconds</div>
+        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+          {timeLeft.days} days
+        </div>
+        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+          {timeLeft.hours} hours
+        </div>
+        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+          {timeLeft.minutes} minutes
+        </div>
+        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+          {timeLeft.seconds} seconds
+        </div>
       </div>
 
       {/* Tab Navigation */}
@@ -73,12 +88,23 @@ const AboutSection = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-[50px] lg:gap-[100px] mt-[60px]">
         {activeTab === "about" ? (
           <div className="flex flex-col-reverse lg:flex-row gap-[50px] lg:gap-[100px] text-center lg:text-left">
-            <Image src="/about.svg" alt="About" height={370} width={464} className="rounded-md mx-auto" priority />
+            <Image
+              src="/about.svg"
+              alt="About"
+              height={370}
+              width={464}
+              className="rounded-md mx-auto"
+              priority
+            />
             <div>
-              <h1 className="text-[25px] lg:text-[34px] tracking-tight">Countdown to Glory</h1>
+              <h1 className="text-[25px] lg:text-[34px] tracking-tight">
+                Countdown to Glory
+              </h1>
               <p className="lg:w-[350px] w-full text-[#B0B3B8] tracking-tight mt-2">
-                The excitement builds up as we approach April 12, 2025! In just a few days, top teams will battle for glory.
-                Are you ready for the most electrifying tournament of the year? The stage is set, and the countdown is on!
+                The excitement builds up as we approach April 12, 2025! In just
+                a few days, top teams will battle for glory. Are you ready for
+                the most electrifying tournament of the year? The stage is set,
+                and the countdown is on!
               </p>
               <p className="text-[#B0B3B8] tracking-tight mt-2 mb-7">
                 Join us and be part of history in Basin, Ilorin, Kwara State!
@@ -92,22 +118,42 @@ const AboutSection = () => {
           </div>
         ) : (
           <div className="flex flex-col-reverse lg:flex-row-reverse gap-[50px] lg:gap-[100px] text-center lg:text-left">
-            <Image src="/mission.svg" alt="Mission" height={370} width={464} className="rounded-md mx-auto" priority />
+            <Image
+              src="/mission.svg"
+              alt="Mission"
+              height={370}
+              width={464}
+              className="rounded-md mx-auto"
+              priority
+            />
             <div>
-              <h1 className="text-[25px] lg:text-[34px] tracking-tight">Our Vision</h1>
+              <h1 className="text-[25px] lg:text-[34px] tracking-tight">
+                Our Vision
+              </h1>
               <p className="lg:w-[380px] w-full text-[#B0B3B8] tracking-tight mt-2">
-                Our vision is to bring communities together, create memorable moments, and inspire the next generation of football stars.
-                As the countdown to kick-off continues, we remain committed to ensuring an unforgettable experience for players and fans alike.
+                Our vision is to bring communities together, create memorable
+                moments, and inspire the next generation of football stars. As
+                the countdown to kick-off continues, we remain committed to
+                ensuring an unforgettable experience for players and fans alike.
               </p>
-              <ul className="ml-7 mt-3 mb-7 tracking-tight text-left" style={{ listStyleType: "disc" }}>
+              <ul
+                className="ml-7 mt-3 mb-7 tracking-tight text-left"
+                style={{ listStyleType: "disc" }}
+              >
                 <li className="text-[#C81E23]">
-                  <span className="text-white">Encourage unity and teamwork among players.</span>
+                  <span className="text-white">
+                    Encourage unity and teamwork among players.
+                  </span>
                 </li>
                 <li className="text-[#C81E23]">
-                  <span className="text-white">Promote competitive spirit and fair play.</span>
+                  <span className="text-white">
+                    Promote competitive spirit and fair play.
+                  </span>
                 </li>
                 <li className="text-[#C81E23]">
-                  <span className="text-white">Provide a platform for discovering future football talents.</span>
+                  <span className="text-white">
+                    Provide a platform for discovering future football talents.
+                  </span>
                 </li>
               </ul>
               <Link href="/about/vision">

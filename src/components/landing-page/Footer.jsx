@@ -279,6 +279,9 @@ const Footer = () => {
             Tournament info
           </h1>
           <div className="ml-4 mt-5 flex flex-col space-y-2">
+            <Link className="hover:text-[#C81E23]" href={"/tournament/teams"}>
+              Teams
+            </Link>
             <Link className="hover:text-[#C81E23]" href={"/tournament/rules"}>
               Rules
             </Link>
@@ -310,7 +313,7 @@ const Footer = () => {
           <h1 className="text-[#C81E23] font-bold lg:text-[24px] text-[20px]">
             Countdown
           </h1>
-          <div className="ml-4 mt-5 flex flex-col space-y-2 text-[20px]">
+          <div className="ml-4 mt-5 flex flex-col space-y-2 text-[18px]">
             {Object.keys(timeLeft).length > 0 ? (
               <div className="flex flex-wrap gap-4">
                 <div>
@@ -328,7 +331,7 @@ const Footer = () => {
               </div>
             ) : (
               <p className="text-[18px] text-green-600 font-semibold">
-                The event is live now!
+                The tournament is live now!
               </p>
             )}
           </div>

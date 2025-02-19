@@ -1,41 +1,33 @@
 "use client";
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-  const [isEmailSent, setIsEmailSent] = useState(false);
-  const [error, setError] = useState("");
 
   const handleEmailVerification = () => {
     if (email) {
-      setIsEmailSent(true);
-      setError("");
-      setTimeout(() => setIsEmailSent(false), 3000);
+      toast.success("Email Sent Successfully! Check your inbox.", { position: "top-center" });
     } else {
-      setError("Please enter your email.");
+      toast.error("Please enter your email.", { position: "top-center" });
     }
   };
 
   return (
-    <div className="pt-24 flex flex-col items-center">
+    <div className="pt-24 tracking-tight flex flex-col items-center">
+      <ToastContainer autoClose={3000} hideProgressBar />
       <div className="pt-6 text-left w-full max-w-lg mx-auto">
-        {isEmailSent && (
-          <div className="bg-green-500 text-white p-3 rounded-md mb-4 text-center">
-            <h1 className="font-bold text-[16px]">Email Sent Successfully!</h1>{" "}
-            <p>Please check your email to reset your password.</p>
-          </div>
-        )}
         <div>
-          <h2 className="font-bold text-[30px]">Forgot password</h2>
-          <p className="opacity-70 text-[14px] mt-2">
+          <h2 className="font-bold text-[30px] text-white">Forgot password</h2>
+          <p className="text-[14px] mt-2 text-[#B0B3B8]">
             Kindly enter your email to reset your password
           </p>
         </div>
       </div>
       <div className="w-full max-w-lg mx-auto">
         <div className="mt-7">
-          <h1 className="font-bold text-[16px]">Email</h1>
-          <label htmlFor="email"></label>
+          <h1 className="font-bold text-[16px] text-white">Email</h1>
           <input
             type="text"
             id="email"
@@ -46,7 +38,6 @@ const ForgotPassword = () => {
             className="mt-1 p-2 text-[14px] w-full border-[0.5px] border-black/10 rounded-md text-black"
           />
         </div>
-        {error && <p className="text-red-500 font-bold text-[16px] mt-2">{error}</p>}
         <div className="my-8">
           <button
             onClick={handleEmailVerification}

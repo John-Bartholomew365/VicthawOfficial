@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const VerifyAccount = () => {
   const [seconds, setSeconds] = useState(59);
@@ -27,18 +29,22 @@ const VerifyAccount = () => {
   const handleResend = () => {
     setSeconds(59);
     setTimerActive(true);
+    toast.success("Verification code resent successfully!");
   };
 
   const handleConfirm = () => {
     if (code === "123456") {
-      router.push("/login");
+      toast.success("Account verified successfully!");
+      setTimeout(() => router.push("/login"), 2000);
     } else {
+      toast.error("Invalid code. Please try again.");
       setError("Invalid code. Please try again.");
     }
   };
 
   return (
-    <div className="pt-24 flex flex-col items-center">
+    <div className="pt-24 flex flex-col tracking-tight items-center">
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       <div className="pt-6 text-left w-full max-w-lg mx-auto">
         <div>
           <h2 className="font-bold text-[30px]">Verify account</h2>
@@ -58,7 +64,7 @@ const VerifyAccount = () => {
             value={code}
             onChange={(e) => setCode(e.target.value)}
             placeholder="e.g 123456"
-            className="mt-1 p-2 text-[14px] w-full border-[0.5px] border-black/10 rounded-md text-black"
+            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
           />
         </div>
         {error && (
