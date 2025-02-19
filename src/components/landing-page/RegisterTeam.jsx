@@ -17,7 +17,7 @@ const RegisterTeam = () => {
         </div>
 
         <div>
-          <h1 className="lg:text-[40px] lg:w-[400px] w-auto leading-tight tracking-tight text-[30px] lg:mt-0 mt-6">
+          <h1 className="lg:text-[40px] lg:w-[400px] w-auto leading-tight tracking-tight text-[30px] lg:text-start text-center lg:mt-0 mt-6">
             Register Your Team Today!
           </h1>
           <p className="lg:w-[410px] w-auto text-[#B0B3B8] mt-3 mb-8">

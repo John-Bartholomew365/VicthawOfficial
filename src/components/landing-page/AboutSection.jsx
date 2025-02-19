@@ -119,13 +119,10 @@ const AboutSection = () => {
                 Countdown to Glory
               </h1>
               <p className="lg:w-[350px] w-full text-[#B0B3B8] tracking-tight mt-2">
-                The excitement builds up as we approach April 12, 2025! In just
-                a few days, top teams will battle for glory. Are you ready for
-                the most electrifying tournament of the year? The stage is set,
-                and the countdown is on!
+              Mark your calendars!  Join us in Basin, Ilorin, Kwara State on April 12, 2025 for the year's most electrifying tournament.
               </p>
               <p className="text-[#B0B3B8] tracking-tight mt-2 mb-7">
-                Join us and be part of history in Basin, Ilorin, Kwara State!
+              Witness top teams compete for the championship title.
               </p>
               <Link href="/about">
                 <button className="bg-[#C81E23] py-[10px] px-[20px] text-white rounded-[6px]">
@@ -148,11 +145,9 @@ const AboutSection = () => {
               <h1 className="text-[25px] lg:text-[34px] tracking-tight">
                 Our Vision
               </h1>
-              <p className="lg:w-[380px] w-full text-[#B0B3B8] tracking-tight mt-2">
-                Our vision is to bring communities together, create memorable
-                moments, and inspire the next generation of football stars. As
-                the countdown to kick-off continues, we remain committed to
-                ensuring an unforgettable experience for players and fans alike.
+              <p className="lg:w-[400px] w-full text-[#B0B3B8] tracking-tight mt-2">
+                To bring communities together, create memorable moments, and
+                inspire the next generation of football stars.
               </p>
               <ul
                 className="ml-7 mt-3 mb-7 tracking-tight text-left"

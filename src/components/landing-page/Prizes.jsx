@@ -49,12 +49,22 @@ const About = () => {
         <h3 className="bg-[#000000] h-[30px] w-[73px] rounded-full flex items-center justify-center text-[14px] font-medium text-[#B0B3B8]">
           Prizes
         </h3>
-        <h2 className="lg:text-[45px] text-[30px] font-normal text-center leading-tight tracking-tight mt-[40px]">
+        <h2 className="lg:text-[45px] text-[25px] font-normal text-center leading-tight tracking-tight mt-[40px]">
           Rewards of Glory: <br /> What Champions Take Home!
         </h2>
       </div>
 
       <div className="lg:flex lg:flex-row items-center sm:flex-col lg:space-x-6 space-x-2 p-6 sm:gap-4">
+        <div className="lg:w-1/2 rounded-lg w-full lg:hidden flex lg:m-0 m-auto lg:justify-end justify-center lg:mb-0 mb-6">
+          <div className="lg:w-[549px] w-full h-[400px] relative">
+            <Image
+              src={prizes[currentIndex].image}
+              alt={prizes[currentIndex].title}
+              layout="fill"
+              className="object-contain rounded-lg"
+            />
+          </div>
+        </div>
         <div className="lg:flex lg:flex-col items-center space-y-2 hidden">
           {prizes.map((_, index) => (
             <div
@@ -80,7 +90,7 @@ const About = () => {
           </h2>
           <ul className="text-[#B0B3B8] text-[14px] font-normal lg:w-[350px] tracking-tight w-auto lg:mb-0 mb-5 space-y-3">
             {prizes[currentIndex].description.map((desc, index) => (
-              <li key={index} className="flex items-center">
+              <li key={index} className="flex items-center ml-4">
                 <Image
                   src="/checkmark.svg"
                   alt="Checkmark"
@@ -99,7 +109,7 @@ const About = () => {
           </Link>
         </div>
 
-        <div className="lg:w-1/2 rounded-lg w-full flex lg:m-0 m-auto lg:justify-end justify-center lg:mt-0 mt-6">
+        <div className="lg:w-1/2 rounded-lg w-full lg:flex hidden lg:m-0 m-auto lg:justify-end justify-center lg:mt-0 mt-6">
           <div className="lg:w-[549px] w-full h-[400px] relative">
             <Image
               src={prizes[currentIndex].image}

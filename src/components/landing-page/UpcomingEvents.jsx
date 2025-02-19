@@ -5,9 +5,18 @@ import React from "react";
 const UpcomingEvents = () => {
   return (
     <div>
-      <div className="my-[100px] lg:flex lg:flex-row flex-col gap-[100px] lg:pl-[100px] pl-[10px]">
+      <div className="my-[100px] lg:flex lg:flex-row flex-col-reverse gap-[100px] lg:pl-[100px] pl-[10px]">
+        <div className="lg:mb-0 mb-10 lg:hidden flex">
+          <Image
+            src="/stadium.svg"
+            alt="logo"
+            height={372}
+            width={410}
+            className="rounded-md"
+          />
+        </div>
         <div>
-          <h1 className="lg:text-[45px] text-[30px] tracking-tight">
+          <h1 className="lg:text-[45px] lg:text-start text-center text-[30px] tracking-tight">
             Upcoming Event
           </h1>
           <p className="lg:w-[450px] tracking-tight w-auto my-3 m-auto text-[#B0B3B8]">
@@ -26,7 +35,7 @@ const UpcomingEvents = () => {
           </div>
         </div>
 
-        <div className="lg:mt-0 mt-10">
+        <div className="lg:mt-0 mt-10 lg:flex hidden">
           <Image
             src="/stadium.svg"
             alt="logo"
