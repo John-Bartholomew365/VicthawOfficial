@@ -54,7 +54,7 @@ const AboutSection = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="flex flex-wrap justify-center gap-3 lg:gap-5 mt-5 text-white text-lg lg:text-2xl">
+      <div className="lg:flex hidden flex-wrap justify-center gap-3 lg:gap-5 mt-5 text-white text-lg lg:text-2xl">
         <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
           {timeLeft.days} days
         </div>
@@ -66,6 +66,24 @@ const AboutSection = () => {
         </div>
         <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
           {timeLeft.seconds} seconds
+        </div>
+      </div>
+      <div className="lg:hidden flex flex-col justify-center items-center mt-5 text-white text-lg">
+        <div className="flex gap-3">
+          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+            {timeLeft.days} days
+          </div>
+          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+            {timeLeft.hours} hours
+          </div>
+        </div>
+        <div className="flex gap-3 mt-4">
+          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+            {timeLeft.minutes} minutes
+          </div>
+          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+            {timeLeft.seconds} seconds
+          </div>
         </div>
       </div>
 
