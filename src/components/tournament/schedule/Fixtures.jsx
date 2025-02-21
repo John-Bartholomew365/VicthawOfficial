@@ -244,7 +244,7 @@ export default function MatchSchedule() {
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
               onClick={() => setSelectedMatch(null)}
             >
-              ✖
+        
             </button>
             <div className="flex justify-between items-center mb-4">
               <div className="flex flex-col items-center">
