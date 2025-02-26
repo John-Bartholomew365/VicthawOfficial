@@ -107,7 +107,7 @@ const AboutSection = () => {
         {activeTab === "about" ? (
           <div className="flex flex-col-reverse lg:flex-row gap-[50px] lg:gap-[100px] text-center lg:text-left">
             <Image
-              src="/about.svg"
+              src="/team.jpg"
               alt="About"
               height={370}
               width={464}

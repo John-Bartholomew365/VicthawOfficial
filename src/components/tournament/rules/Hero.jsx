@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="lg:flex lg:flex-row flex-col items-center justify-center gap-[100px]">
         <div>
           <h1 className="lg:text-[50px] text-[30px] leading-tight tracking-tight">
-            Tournament rules <br /> and regualations
+            Tournament rules <br /> and regulations
           </h1>
           <p className="text-[#B0B3B8] lg:w-[380px] w-auto mt-4">
             These guidelines ensure fair play, safety, and smooth conduct of

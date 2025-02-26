@@ -64,7 +64,7 @@ const Register = () => {
     toast.success("Registration successful! Redirecting...");
     
     setTimeout(() => {
-      router.push("/verify-account");
+      router.push("/login");
     }, 2000);
   };
 
@@ -93,7 +93,7 @@ const Register = () => {
           <input
             type="text"
             name="teamName"
-            placeholder="e.g Storm FC"
+            placeholder="e.g Storm United"
             value={formData.teamName}
             onChange={handleInputChange}
             className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"

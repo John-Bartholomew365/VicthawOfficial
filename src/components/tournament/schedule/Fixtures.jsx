@@ -12,7 +12,7 @@ const fixtures = {
   "Matchday 1": [
     {
       id: 1,
-      home: "Storm FC",
+      home: "Storm United",
       away: "Shadow Rovers",
       time: "10:00",
       date: "12th April 2025",
@@ -243,9 +243,7 @@ export default function MatchSchedule() {
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
               onClick={() => setSelectedMatch(null)}
-            >
-        
-            </button>
+            ></button>
             <div className="flex justify-between items-center mb-4">
               <div className="flex flex-col items-center">
                 <img

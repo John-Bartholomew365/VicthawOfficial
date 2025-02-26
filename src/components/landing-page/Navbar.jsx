@@ -107,6 +107,12 @@ const Navbar = () => {
                   Schedule
                 </Link>
                 <Link
+                  href="/tournament/results"
+                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                >
+                  Results
+                </Link>
+                <Link
                   href="/tournament/prizes"
                   className="block px-4 py-2 hover:bg-[#0F0F0F]"
                 >
@@ -306,6 +312,12 @@ const Navbar = () => {
                     className="block p-2 hover:bg-[#000000]"
                   >
                     Schedule
+                  </Link>
+                  <Link
+                    href="/tournament/results"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Results
                   </Link>
                   <Link
                     href="/tournament/prizes"

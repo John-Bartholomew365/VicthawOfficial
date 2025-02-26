@@ -4,7 +4,7 @@
 // const teams = [
 //   {
 //     id: 1,
-//     name: "Storm FC",
+//     name: "Storm United",
 //     rating: 5,
 //     description: "A top-tier team.",
 //     location: "Unity, Ilorin, Kwara State",
@@ -237,7 +237,7 @@ import { useState } from "react";
 const teams = [
   {
     id: 1,
-    name: "Storm FC",
+    name: "Storm United",
     rating: 5,
     description: "A top-tier team.",
     location: "Unity, Ilorin, Kwara State",

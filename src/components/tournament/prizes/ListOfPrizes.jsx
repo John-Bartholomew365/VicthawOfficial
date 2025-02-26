@@ -73,7 +73,7 @@ const ListOfPrizes = () => {
         </div>
       </div>
       <div className="my-[80px] lg:flex lg:flex-row flex-col justify-center gap-[150px]">
-      <div className="lg:hidden block lg:mb-0 mb-10">
+        <div className="lg:hidden block lg:mb-0 mb-10">
           <Image
             src="/second-win.jpg"
             alt="Winner"
@@ -122,10 +122,9 @@ const ListOfPrizes = () => {
                 className="w-5 h-5 mt-1"
               />
               <div>
-                <h2 className="font-bold">Commemorative Plaque:</h2>
+                <h2 className="font-bold">Cash Prize:</h2>
                 <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
-                  A commemorative plaque will also be awarded to the runner-up
-                  team.
+                  A generous cash reward for the runner-up team.
                 </p>
               </div>
             </li>
@@ -166,7 +165,7 @@ const ListOfPrizes = () => {
               <div>
                 <h2 className="font-bold">Best Player (MVP):</h2>
                 <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
-                Awarded to the Most Valuable Player of the tournament.
+                  Awarded to the Most Valuable Player of the tournament.
                 </p>
               </div>
             </li>
@@ -179,7 +178,8 @@ const ListOfPrizes = () => {
               <div>
                 <h2 className="font-bold">Best Goalkeeper:</h2>
                 <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
-                Awarded to the goalkeeper with the most outstanding performance.
+                  Awarded to the goalkeeper with the most outstanding
+                  performance.
                 </p>
               </div>
             </li>
@@ -205,7 +205,8 @@ const ListOfPrizes = () => {
               <div>
                 <h2 className="font-bold">Fair Play Award:</h2>
                 <p className="text-[#B0B3B8] lg:w-[345px] w-auto leading-tight">
-                Awarded to the team or player demonstrating the best sportsmanship and fair play.
+                  Awarded to the team or player demonstrating the best
+                  sportsmanship and fair play.
                 </p>
               </div>
             </li>
