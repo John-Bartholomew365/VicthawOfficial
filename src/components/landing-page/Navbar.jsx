@@ -172,12 +172,12 @@ const Navbar = () => {
           <div className="relative">
             <div
               className="text-sm gap-2 items-center flex cursor-pointer"
-              onClick={() => toggleDropdown("teams")}
+              onClick={() => toggleDropdown("support")}
             >
               <div className="font-navbar">Support</div>
               <svg
                 className={`w-4 h-4 ml-1 transition-transform ${
-                  openDropdown === "teams" ? "rotate-180" : ""
+                  openDropdown === "support" ? "rotate-180" : ""
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -192,7 +192,7 @@ const Navbar = () => {
                 />
               </svg>
             </div>
-            {openDropdown === "teams" && (
+            {openDropdown === "support" && (
               <div
                 ref={dropdownRef}
                 className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#000000] text-white rounded-lg shadow-xl z-50"
@@ -214,6 +214,63 @@ const Navbar = () => {
                   className="block px-4 py-2 hover:bg-[#0F0F0F]"
                 >
                   Privacy Policy
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* The Visionary Dropdown */}
+          <div className="relative">
+            <div
+              className="text-sm gap-2 items-center flex cursor-pointer"
+              onClick={() => toggleDropdown("visionary")}
+            >
+              <div className="font-navbar">The Visionary</div>
+              <svg
+                className={`w-4 h-4 ml-1 transition-transform ${
+                  openDropdown === "visionary" ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            {openDropdown === "visionary" && (
+              <div
+                ref={dropdownRef}
+                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#000000] text-white rounded-lg shadow-xl z-50"
+              >
+                <Link
+                  href="/visionary/home"
+                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/visionary/certification"
+                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                >
+                  Certification
+                </Link>
+                <Link
+                  href="/visionary/services"
+                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/visionary/contact"
+                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                >
+                  Contact
                 </Link>
               </div>
             )}
@@ -240,7 +297,7 @@ const Navbar = () => {
           {/* Register Button */}
           <Link
             href={"register"}
-            className="font-navbar font-semibold bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover hover:bg-black hover:text-white hover:border-[#C81E23] hover:border"
+            className="font-navbar font-semibold bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-black hover:text-white hover:border-[#C81E23] hover:border"
           >
             Register
           </Link>
@@ -373,12 +430,12 @@ const Navbar = () => {
             <div className="w-full">
               <div
                 className="flex items-center justify-between cursor-pointer"
-                onClick={() => toggleDropdown("teams-mobile")}
+                onClick={() => toggleDropdown("support-mobile")}
               >
                 <div className="font-navbar">Support</div>
                 <svg
                   className={`w-4 h-4 transition-transform ${
-                    openDropdown === "teams-mobile" ? "rotate-180" : ""
+                    openDropdown === "support-mobile" ? "rotate-180" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -393,7 +450,7 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              {openDropdown === "teams-mobile" && (
+              {openDropdown === "support-mobile" && (
                 <div className="mt-2 pl-4">
                   <Link href="/faq" className="block p-2 hover:bg-[#000000]">
                     FAQs
@@ -406,6 +463,60 @@ const Navbar = () => {
                   </Link>
                   <Link href="/policy" className="block p-2 hover:bg-[#000000]">
                     Privacy Policy
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Visionary Dropdown for Mobile */}
+            <div className="w-full">
+              <div
+                className="flex items-center justify-between cursor-pointer"
+                onClick={() => toggleDropdown("visionary-mobile")}
+              >
+                <div className="font-navbar">The Visionary</div>
+                <svg
+                  className={`w-4 h-4 transition-transform ${
+                    openDropdown === "visionary-mobile" ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              {openDropdown === "visionary-mobile" && (
+                <div className="mt-2 pl-4">
+                  <Link
+                    href="/visionary/home"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="/visionary/certification"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Certification
+                  </Link>
+                  <Link
+                    href="/visionary/services"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    href="/visionary/contact"
+                    className="block p-2 hover:bg-[#000000]"
+                  >
+                    Contact
                   </Link>
                 </div>
               )}

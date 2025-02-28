@@ -1,0 +1,18 @@
+import CertificationsHero from "@/components/the-visionary/certification/CertificationHero";
+import Certifications from "@/components/the-visionary/certification/Certifications";
+import FinalCerti from "@/components/the-visionary/certification/FinalCerti";
+import React from "react";
+
+const page = () => {
+  return (
+    <div className="bg-[#0F0F0F] text-white tracking-tight">
+      <CertificationsHero />
+      <div className="container lg:px-[30px] px-2">
+        <Certifications />
+        <FinalCerti/>
+      </div>
+    </div>
+  );
+};
+
+export default page;
