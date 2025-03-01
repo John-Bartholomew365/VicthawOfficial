@@ -16,7 +16,7 @@ const ListOfPrizes = () => {
       </div>
 
       <div className="my-[50px] lg:flex lg:flex-row flex-col justify-center gap-[150px]">
-        <div className="lg:mb-0 mb-10">
+        <div className="lg:mb-0 mb-10 flex lg:justify-end justify-center">
           <Image
             src="/gold-winner.jpg"
             alt="Winner"
@@ -73,7 +73,7 @@ const ListOfPrizes = () => {
         </div>
       </div>
       <div className="my-[80px] lg:flex lg:flex-row flex-col justify-center gap-[150px]">
-        <div className="lg:hidden block lg:mb-0 mb-10">
+        <div className="lg:hidden lg:mb-0 mb-10 flex justify-center">
           <Image
             src="/second-win.jpg"
             alt="Winner"
@@ -142,7 +142,7 @@ const ListOfPrizes = () => {
       </div>
 
       <div className="my-[50px] lg:flex lg:flex-row flex-col justify-center gap-[150px]">
-        <div className="lg:mb-0 mb-10">
+        <div className="lg:mb-0 mb-10 flex lg:justify-start justify-center">
           <Image
             src="/all-mvp.jpg"
             alt="Winner"

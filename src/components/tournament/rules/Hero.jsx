@@ -1,11 +1,24 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="my-[140px]">
-      <div className="lg:flex lg:flex-row flex-col items-center justify-center gap-[100px]">
-        <div>
+      <div
+        className="lg:flex lg:flex-row flex-col items-center justify-center gap-[100px]"
+        data-aos="fade-up"
+      >
+        <div data-aos="fade-right">
           <h1 className="lg:text-[50px] text-[30px] leading-tight tracking-tight">
             Tournament rules <br /> and regulations
           </h1>
@@ -14,7 +27,7 @@ const Hero = () => {
             matches while promoting sportsmanship and a successful tournament
           </p>
         </div>
-        <div className="lg:mt-0 mt-10">
+        <div className="lg:mt-0 mt-10" data-aos="fade-left">
           <Image
             src="/team.jpg"
             alt="logo"
@@ -132,7 +145,7 @@ const Hero = () => {
                 ⚽
                 <p className="text-[#B0B3B8]">
                   Players must wear appropriate equipment such as{" "}
-                  <b>footwear, shin guards, uniform, and socks.</b>
+                  <b>footwear, shin guards, uniform, and uniform socks.</b>
                 </p>
               </li>
               <li className="flex gap-3">
@@ -180,7 +193,7 @@ const Hero = () => {
           rel="noopener noreferrer"
           className="bg-[#C81E23]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
         >
-          Regsiter now
+          Register now
         </a>
       </div>
     </div>

@@ -1,19 +1,31 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutHero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="lg:flex lg:flex-row flex-col items-center gap-[100px] my-[100px] lg:pl-[50px] pl-0">
-      <div>
+      <div data-aos="fade-right">
         <h1 className="lg:text-[45px] lg:w-[471px] w-auto tracking-tight font-bold text-[30px] leading-tight">
           About the Victhaw Unity Cup 1.0
         </h1>
         <p className="text-[#B0B3B8] tracking-tight lg:w-[420px] w-auto mt-4">
-        Discover everything you need to know about the Victhaw Official Unity Cup 1.0.
+          Discover everything you need to know about the Victhaw Official Unity
+          Cup 1.0.
         </p>
       </div>
 
-      <div className="lg:mt-0 mt-10">
+      <div className="lg:mt-0 mt-10" data-aos="fade-left">
         <Image
           src="/victhaw-logo.svg"
           alt="logo"

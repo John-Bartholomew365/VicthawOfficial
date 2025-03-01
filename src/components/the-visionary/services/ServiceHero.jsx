@@ -3,14 +3,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const CertificationsHero = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
+const ServiceHero = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -24,6 +17,13 @@ const CertificationsHero = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
   return (
@@ -43,18 +43,18 @@ const CertificationsHero = () => {
       {/* Content */}
       <div className="relative text-center" data-aos="fade-up">
         <h1 className="lg:text-[45px] text-[40px] leading-tight font-bold text-white mb-5">
-          Certificates & Achievements
+          Services
         </h1>
         <p className="text-xl text-[#B0B3B8] lg:w-[470px] leading-tight m-auto w-auto mb-16 lg:px-0 px-2">
-          Explore Victor’s qualifications and recognitions that showcase his
-          expertise in fitness coaching and football mentorship.
+          Discover the range of services Victor offers to help you achieve your
+          fitness, football, and community goals.
         </p>
-        <div className="bg-[#C81E23] lg:w-[250px] m-auto w-auto text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300">
-          View Certifications below
+        <div className="bg-[#C81E23] lg:w-[250px] m-auto w-[60%] text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300">
+          View Services below
         </div>
       </div>
     </section>
   );
 };
 
-export default CertificationsHero;
+export default ServiceHero;

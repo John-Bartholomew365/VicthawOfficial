@@ -144,10 +144,10 @@ const Certifications = () => {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
-            List of Certifications
+            List of Certificates
           </h2>
           <p className="text-lg tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
-            Victor’s certifications reflect his commitment to excellence and
+            Victor’s certificates reflect his commitment to excellence and
             continuous learning in fitness and sports coaching.
           </p>
         </div>

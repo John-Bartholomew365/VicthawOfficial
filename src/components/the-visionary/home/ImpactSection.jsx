@@ -67,7 +67,7 @@ const ImpactSection = () => {
           {/* Impact Card 3: Health and Fitness */}
           <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">
-              1,000+
+              1K+
             </div>
             <h3 className="text-xl font-semibold mb-2">Spectators</h3>
             <p className="text-[#B0B3B8]">

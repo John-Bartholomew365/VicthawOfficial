@@ -9,7 +9,7 @@ const page = () => {
       <CertificationsHero />
       <div className="container lg:px-[30px] px-2">
         <Certifications />
-        <FinalCerti/>
+        <FinalCerti />
       </div>
     </div>
   );
