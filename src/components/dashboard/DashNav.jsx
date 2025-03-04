@@ -7,26 +7,34 @@ import Link from "next/link";
 import { IoHelpCircleOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaBell } from "react-icons/fa";
 
 const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
   const [openSideBar, setOpenSideBar] = useState(false);
   const [login, setLogin] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [notifications, setNotifications] = useState([
+    { id: 1, message: "Your tournament payment has been confirmed", type: "payment" },
+    { id: 2, message: "Check the fixture schedule to check your team's next fixture", type: "message" },
+    { id: 3, message: "You're all set", type: "follower" },
+  ]);
+
   const handleClick = () => {
     setOpenSideBar(!openSideBar);
   };
+
   useEffect(() => {
     const closeStates = () => {
       setOpenSideBar(false);
       setLogin(false);
+      setNotificationsOpen(false);
     };
     document.body.addEventListener("click", closeStates);
     return () => {
       document.removeEventListener("click", closeStates);
     };
   }, []);
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleToggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -35,6 +43,11 @@ const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
 
   const handleuser = () => {
     setLogin(!login);
+  };
+
+  const handleNotifications = (event) => {
+    event.stopPropagation();
+    setNotificationsOpen(!notificationsOpen);
   };
 
   return (
@@ -53,22 +66,38 @@ const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
               className="lg:w-[57px] w-[40%]"
             />
           </Link>
-          <h1 className="text-white lg:text-[25px] text-[20px]">Victhaw Official</h1>
+          <h1 className="text-white lg:text-[25px] text-[20px]">
+            Victhaw Official
+          </h1>
           <div className="pl-20 sm:hidden">
-            {/* <Link
-              href={""}
-              className=" text-left rounded-full bg-[#F8F8FF] px-3 py-2 gap-3"
-            >
-              API
-            </Link> */}
-
-            {/* <Link href={""} className="items-left  pl-5 gap-3">
-              SDK
-            </Link> */}
+      
           </div>
         </div>
 
         <div className="flex gap-3 items-center w-[55%] justify-end">
+          <div className="relative">
+            <FaBell
+              className="text-[#B0B3B8] text-2xl cursor-pointer"
+              onClick={handleNotifications}
+            />
+            {notificationsOpen && (
+              <div className="absolute top-10 right-50 text-white mt-2 w-64 bg-[#0F0F0F] border border-gray-200 rounded-lg shadow-lg text-[14px]">
+                <ul className="p-2">
+                  {notifications.map((notification) => (
+                    <li
+                      key={notification.id}
+                      className="flex items-center justify-between p-2 border-b border-gray-200 last:border-none"
+                    >
+                      <span>{notification.message}</span>
+                      {notification.type === "payment" && (
+                        <span className="text-green-500">Confirmed</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
           <div className="lg:flex gap-1 items-center border-none lg:w-[55%] hidden rounded-[10px] outline-none bg-[#0F0F0F] py-1 px-6">
             <TbSearch className="lg:text-[12px] text-xl text-[white] opacity-60" />
             <input
@@ -76,27 +105,15 @@ const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
               type="text"
               placeholder="Search here"
             />
-            {/* <input
-              className=" w-[30%] lg:text-[12px] text-xl bg-[#ffffff] rounded text-[#ffffff] outline-none opacity-80 text-center"
-              type="text text-center"
-              placeholder="CTRL + K"
-            /> */}
+       
           </div>
           <button className=" text-black flex flex-row gap-1">
-            {/* <span onClick={handleToggleIcon}>
-                            {icon ? (
-                                <BsMoon className="text-[#ffffff]" />
-                            ) : (
-                                <BsSun className="text-[#ffffff]" />
-                            )}
-                        </span> */}
+         
 
             <div className="text-[20px] sm:hidden">
               <IoHelpCircleOutline />
             </div>
-            {/* <Link href={"/support"}>
-              <p className="text-[14px] sm:hidden"> Support</p>
-            </Link> */}
+        
           </button>
           {/* <div className="lg:flex relative z-[1000] items-center gap-3 hidden">
             <Link
@@ -156,7 +173,11 @@ const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
             className="lg:hidden block text-[var(--text-color)] text-3xl cursor-pointer"
             onClick={handleToggleSidebar}
           >
-            {isSidebarOpen ? <TbX className="text-white"/> : <RxHamburgerMenu className="text-white"/>}
+            {isSidebarOpen ? (
+              <TbX className="text-white" />
+            ) : (
+              <RxHamburgerMenu className="text-white" />
+            )}
           </div>
         </div>
       </div>

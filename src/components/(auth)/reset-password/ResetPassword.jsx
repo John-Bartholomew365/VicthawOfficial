@@ -1,15 +1,24 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Ensure this is imported in your global styles or here
 
 const ResetPassword = () => {
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Animation duration
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+  }, []);
 
   const toggleNewPasswordVisibility = () => {
     setShowNewPassword(!showNewPassword);
@@ -38,7 +47,7 @@ const ResetPassword = () => {
   return (
     <div className="pt-24 flex flex-col tracking-tight items-center">
       <ToastContainer autoClose={3000} hideProgressBar />
-      <div className="pt-6 text-left w-full max-w-lg mx-auto">
+      <div className="pt-6 text-left w-full max-w-lg mx-auto" data-aos="fade-up">
         <div>
           <h2 className="font-bold text-[30px]">Reset Password</h2>
           <p className="opacity-70 text-[14px] mt-2">
@@ -47,7 +56,7 @@ const ResetPassword = () => {
         </div>
       </div>
       <div className="w-full max-w-lg mx-auto">
-        <div className="mt-7 relative">
+        <div className="mt-7 relative" data-aos="fade-up">
           <h1 className="font-bold text-[16px]">New password</h1>
           <input
             type={showNewPassword ? "text" : "password"}
@@ -68,7 +77,7 @@ const ResetPassword = () => {
           </button>
         </div>
 
-        <div className="mt-7 relative">
+        <div className="mt-7 relative" data-aos="fade-up">
           <h1 className="font-bold text-[16px]">Confirm password</h1>
           <input
             type={showConfirmPassword ? "text" : "password"}
@@ -88,8 +97,11 @@ const ResetPassword = () => {
           </button>
         </div>
 
-        <div className="my-8">
-          <button onClick={handleResetPassword} className="bg-[#C81E23] rounded-md p-2 text-white w-full">
+        <div className="my-8" data-aos="fade-up">
+          <button
+            onClick={handleResetPassword}
+            className="bg-[#C81E23] rounded-md p-2 text-white w-full"
+          >
             Reset
           </button>
         </div>

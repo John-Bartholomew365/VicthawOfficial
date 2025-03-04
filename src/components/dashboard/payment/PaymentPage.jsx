@@ -18,7 +18,7 @@ export default function PaymentPage() {
   };
 
   const pricingDetails = {
-    price: "₦5,000",
+    price: "₦80,000",
     description:
       "This payment confirms your team's registration for the Victhaw Official Unity Cup 1.0. Upon completion, your team will secure its place in the tournament and gain access to essential updates and resources.",
   };
@@ -92,7 +92,7 @@ export default function PaymentPage() {
         <div className="space-y-6">
           <div className="flex justify-between">
             <p className="text-[#B0B3B8]">Registration fee:</p>
-            <p className="font-semibold">{pricingDetails.price}</p>
+            <p className="font-bold text-[#C81E23]">{pricingDetails.price}</p>
           </div>
           <p className="text-[#B0B3B8]">{pricingDetails.description}</p>
         </div>

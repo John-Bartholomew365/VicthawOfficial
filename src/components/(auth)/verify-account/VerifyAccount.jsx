@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Ensure this is imported in your global styles or here
 
 const VerifyAccount = () => {
   const [seconds, setSeconds] = useState(59);
@@ -13,6 +15,11 @@ const VerifyAccount = () => {
   const router = useRouter();
 
   useEffect(() => {
+    AOS.init({
+      duration: 800, // Animation duration
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+
     if (timerActive && seconds > 0) {
       const timer = setInterval(() => {
         setSeconds((prev) => prev - 1);
@@ -45,7 +52,7 @@ const VerifyAccount = () => {
   return (
     <div className="pt-24 flex flex-col tracking-tight items-center">
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
-      <div className="pt-6 text-left w-full max-w-lg mx-auto">
+      <div className="pt-6 text-left w-full max-w-lg mx-auto" data-aos="fade-up">
         <div>
           <h2 className="font-bold text-[30px]">Verify account</h2>
           <p className="opacity-70 text-[14px] mt-2">
@@ -54,7 +61,7 @@ const VerifyAccount = () => {
         </div>
       </div>
       <div className="w-full max-w-lg mx-auto">
-        <div className="mt-7">
+        <div className="mt-7" data-aos="fade-up">
           <h1 className="font-bold text-[16px]">Enter code</h1>
           <label htmlFor="code"></label>
           <input
@@ -68,9 +75,11 @@ const VerifyAccount = () => {
           />
         </div>
         {error && (
-          <p className="text-red-500 font-bold text-[16px] mt-2">{error}</p>
+          <p className="text-red-500 font-bold text-[16px] mt-2" data-aos="fade-up">
+            {error}
+          </p>
         )}
-        <div className="my-8">
+        <div className="my-8" data-aos="fade-up">
           <button
             onClick={handleConfirm}
             className="bg-[#C81E23] rounded-md p-2 text-white w-full"
@@ -78,7 +87,7 @@ const VerifyAccount = () => {
             Confirm
           </button>
         </div>
-        <div className="mb-5 flex gap-3">
+        <div className="mb-5 flex gap-3" data-aos="fade-up">
           Didn't receive a code?{" "}
           {timerActive ? (
             <span className="font-bold text-[#C81E23]">

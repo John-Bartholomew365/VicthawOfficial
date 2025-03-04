@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Ensure this is imported in your global styles or here
 
 const VerifyEmail = () => {
   const [seconds, setSeconds] = useState(59);
@@ -10,6 +12,11 @@ const VerifyEmail = () => {
   const correctCode = "123456"; // Example correct code (replace with actual validation logic)
 
   useEffect(() => {
+    AOS.init({
+      duration: 800, // Animation duration
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+
     if (timerActive && seconds > 0) {
       const timer = setInterval(() => {
         setSeconds((prev) => prev - 1);
@@ -78,14 +85,14 @@ const VerifyEmail = () => {
   return (
     <div className="pt-24 flex flex-col tracking-tight items-center">
       <ToastContainer />
-      <div className="pt-6 text-left w-full max-w-lg mx-auto">
+      <div className="pt-6 text-left w-full max-w-lg mx-auto" data-aos="fade-up">
         <h2 className="font-bold text-[30px]">Verify email</h2>
         <p className="opacity-70 text-[14px] mt-2">
           Kindly verify your email to reset password
         </p>
       </div>
       <div className="w-full max-w-lg mx-auto">
-        <div className="mt-7">
+        <div className="mt-7" data-aos="fade-up">
           <h1 className="font-bold text-[16px]">Enter code</h1>
           <input
             type="number"
@@ -98,13 +105,16 @@ const VerifyEmail = () => {
           />
         </div>
 
-        <div className="my-8">
-          <button onClick={handleConfirm} className="bg-[#C81E23] rounded-md p-2 text-white w-full">
+        <div className="my-8" data-aos="fade-up">
+          <button
+            onClick={handleConfirm}
+            className="bg-[#C81E23] rounded-md p-2 text-white w-full"
+          >
             Confirm
           </button>
         </div>
 
-        <div className="mb-5 flex gap-3">
+        <div className="mb-5 flex gap-3" data-aos="fade-up">
           Don't have receive a code?{" "}
           {timerActive ? (
             <span className="font-bold text-[#C81E23]">
