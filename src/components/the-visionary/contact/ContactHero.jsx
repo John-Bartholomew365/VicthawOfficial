@@ -46,11 +46,11 @@ const ContactHero = () => {
           Contact Me
         </h1>
         <p className="text-xl text-[#B0B3B8] lg:w-[470px] leading-tight m-auto w-auto mb-16 lg:px-0 px-2">
-          Your body is capable of more than you think - at the end only the
-          VICTOR stands TALL!
+          Whether you are new to fitness or already active, I’m here to guide
+          you to train smarter, get stronger, and achieve your goals.
         </p>
         <a
-          href="#contact-form" // Link to the Contact Form section
+          href="https://instagram.com/victhawofficial" // Link to the Contact Form section
           className="bg-[#C81E23] text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300"
         >
           Get in Touch

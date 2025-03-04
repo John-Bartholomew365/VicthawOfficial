@@ -1,73 +1,3 @@
-// "use client";
-// import React, { useState } from "react";
-// import { FiChevronDown, FiChevronUp } from "react-icons/fi"; // Chevron icons for arrow
-
-// const Questions = () => {
-//   const [openQuestion, setOpenQuestion] = useState(null); // State to track which question is open
-
-//   const toggleQuestion = (index) => {
-//     setOpenQuestion(openQuestion === index ? null : index);
-//   };
-
-//   const questions = [
-//     {
-//       question: "1. How do I register my team?",
-//       answer:
-//         "Answer: You can register your team by filling out the online registration form on our website. Visit the Registration page, provide the required details (team name, captain’s information, player names, etc.), and complete the payment process.",
-//     },
-//     {
-//       question: "2. What is the tournament schedule?",
-//       answer:
-//         "The tournament schedule can be found on the schedule page with details of all matches and events.",
-//     },
-//     {
-//       question: "3. What are the tournament rules?",
-//       answer:
-//         "The tournament rules are available on the rules page. Please ensure you read and understand them before participating.",
-//     },
-//   ];
-
-//   return (
-//     <div className="my-[100px] text-white">
-//       <div className="mb-16">
-//         <h1 className="text-center lg:text-[50px] text-[30px] text-[#C81E23] font-bold">
-//           Frequently Asked Questions
-//         </h1>
-//         <p className="text-white lg:w-[470px] w-auto text-center m-auto my-3">
-//           We've compiled a list of frequently asked questions to help you
-//           navigate the tournament with ease.
-//         </p>
-//       </div>
-
-//       {questions.map((item, index) => (
-//         <div
-//           key={index}
-//           className="bg-[#000000] my-5 p-5 w-[80%] m-auto rounded-md"
-//         >
-//           <div
-//             className="flex justify-between items-center cursor-pointer"
-//             onClick={() => toggleQuestion(index)}
-//           >
-//             <h1 className="text-[#C81E23] lg:text-[30px] text-[22px]">
-//               {item.question}
-//             </h1>
-//             {openQuestion === index ? (
-//               <FiChevronUp className="text-[#C81E23] text-[24px]" />
-//             ) : (
-//               <FiChevronDown className="text-[#C81E23] text-[24px]" />
-//             )}
-//           </div>
-//           {openQuestion === index && (
-//             <p className="mt-3 text-[18px] text-white">{item.answer}</p>
-//           )}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Questions;
-
 "use client";
 import React, { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
@@ -128,28 +58,26 @@ const Questions = () => {
     {
       question: "6. Where will the matches be played?",
       answer: `
-          Matches will be played at <b style="color: #C81E23;">local stadiums and sports complexes in Basin, Ilorin, Kwara State.</b> Specific venues will be announced closer to the tournament date.
+          All matches will be played at <b style="color: #C81E23;">Basin Stadium, Ilorin, Kwara State,</b> from <b>April 12</b> to <b>May 4</b>
         `,
     },
     {
       question: "7. What are the prizes for the winners?",
       answer: `
-          During registration, you’ll need to submit:
+
           <ul style="margin-top: 10px; list-style: none; padding-left: 20px;">
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;"><b style="">Champion:</b> Gold Medal, Trophy, and Cash Prize.</span>
+              <span style="color: #BOB3B8;"><b style="color: #FFFFFF;">Champion:</b>  Gold Medal, Trophy, and Cash Prize.</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;"><b style="">Runner-up:</b> Silver Medal and Sporting Equipment.</span>
+              <span style="color: #BOB3B8;"><b style="color: #FFFFFF;">Runner-up:</b> Silver Medal and Sporting Equipment.</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;"><b style="">Individual Awards:</b> Best Player (MVP), Best Goalkeeper, Top Scorer, and Fair Play Award (each recipient will receive a plaque).</span>
+              <span style="color: #BOB3B8;"><b style="color: #FFFFFF;">Individual Awards:</b> Best Player (MVP), Best Goalkeeper, Top Scorer, and Fair Play Award (each recipient will receive a plaque).</span>
             </li>
-     
-         
           </ul>
         `,
     },
@@ -162,7 +90,7 @@ const Questions = () => {
     {
       question: "9. Is there parking available at the venue?",
       answer: `
-           Yes, parking will be available for spectators and participants at the tournament venues. Specific parking details will be provided closer to the event date.
+           Yes, parking will be available for spectators and participants at the tournament venues. 
           `,
     },
     {
@@ -193,7 +121,7 @@ const Questions = () => {
     {
       question: "14. Will there be medical support at the venue?",
       answer: `
-            Yes, <b style="color: #C81E23;">first aid stations</b> will be available at all venues to handle any medical emergencies.
+            Yes, <b style="color: #C81E23;">first aid stations</b> will be available at the venue to handle any medical emergencies.
             `,
     },
     {
@@ -273,9 +201,13 @@ const Questions = () => {
         </div>
       ))}
       <div className="mt-[100px] text-center">
-        <h1 className="text-center lg:text-[40px] text-[30px] mb-7">
-          Didn't find your answer?
+        <h1 className="text-center lg:text-[40px] text-[30px] mb-3">
+          Still, Have Questions?
         </h1>
+        <p className="lg:w-[350px] w-auto m-auto text-[#B0B3B8] mb-7">
+          We're here to help! Reach out to us for more information or any
+          inquiries.
+        </p>
         <a
           href="mailto:Victhawofficial@gmail.com"
           target="_blank"

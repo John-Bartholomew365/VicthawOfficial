@@ -1,91 +1,3 @@
-// "use client";
-// import React, { useEffect } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-
-// const Certifications = () => {
-//   useEffect(() => {
-//     AOS.init({
-//       duration: 1000, // Animation duration
-//       once: true, // Trigger animations only once
-//     });
-//   }, []);
-
-//   const certifications = [
-//     {
-//       id: 1,
-//       title: "Certified Fitness Coach",
-//       organization: "International Sports Sciences Association (ISSA)",
-//       year: "2020",
-//       image: "/certification1.jpg", // Replace with your image
-//     },
-//     {
-//       id: 2,
-//       title: "Football Coaching License",
-//       organization: "Nigerian Football Federation (NFF)",
-//       year: "2019",
-//       image: "/certification2.jpg", // Replace with your image
-//     },
-//     {
-//       id: 3,
-//       title: "Advanced Nutrition Certification",
-//       organization: "National Academy of Sports Medicine (NASM)",
-//       year: "2021",
-//       image: "/certification3.jpg", // Replace with your image
-//     },
-//     {
-//       id: 4,
-//       title: "Strength and Conditioning Specialist",
-//       organization: "American Council on Exercise (ACE)",
-//       year: "2022",
-//       image: "/certification4.jpg", // Replace with your image
-//     },
-//   ];
-
-//   return (
-//     <section className="py-16 bg-[#000000]" id="certifications">
-//       <div className="container mx-auto px-4">
-//         {/* Section Header */}
-//         <div className="text-center mb-12" data-aos="fade-up">
-//           <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
-//             Certifications
-//           </h2>
-//           <p className="text-lg tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
-//             Victor’s certifications reflect his commitment to excellence and
-//             continuous learning in fitness and sports coaching.
-//           </p>
-//         </div>
-
-//         {/* Certifications Grid */}
-//         <div
-//           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-//           data-aos="fade-up"
-//         >
-//           {certifications.map((certification) => (
-//             <div
-//               key={certification.id}
-//               className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center"
-//             >
-//               <img
-//                 src={certification.image}
-//                 alt={certification.title}
-//                 className="w-32 h-32 mx-auto mb-4 object-contain"
-//               />
-//               <h3 className="text-xl font-semibold mb-2 text-white">
-//                 {certification.title}
-//               </h3>
-//               <p className="text-[#B0B3B8] mb-2">{certification.organization}</p>
-//               <p className="text-[#B0B3B8]">{certification.year}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Certifications;
-
 "use client";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -102,12 +14,12 @@ const Certifications = () => {
   const certifications = [
     {
       id: 1,
-      title: "FITNESS / EXERCISE THERAPY INSTRUCTOR",
+      title: "Fitness & Exercise Therapy Instructor",
       organization: "Akorede Fitness and Exercise Therapy Center",
       year: "16th August, 2024",
       image: "/certification1.jpg",
       description:
-        "This certification validates Victor's expertise in fitness and exercise therapy, equipping him with the skills to guide clients through safe and effective rehabilitation and training programs.",
+        "This certification recognises Victor’s expertise in fitness and exercise therapy, equipping him with the knowledge and skills to design safe, effective rehabilitation and training programs. It qualifies him to help individuals recover from injuries, improve mobility, and enhance overall physical well-being.",
     },
     {
       id: 2,
@@ -116,7 +28,7 @@ const Certifications = () => {
       year: "22nd August, 2023",
       image: "/certification2.jpg",
       description:
-        "Victor's Diploma in Fitness demonstrates his deep understanding of physical training, exercise science, and personalized fitness programming.",
+        "This diploma highlights Victor’s expertise in physical training, exercise science, and personalized fitness programming. It equips him with the knowledge to design effective workout plans tailored to individual fitness levels and goals.",
     },
     {
       id: 3,
@@ -125,7 +37,7 @@ const Certifications = () => {
       year: "27th August, 2023",
       image: "/certification3.jpg",
       description:
-        "This advanced fitness diploma showcases Victor’s expertise in high-performance training, strength development, and injury prevention strategies.",
+        "This advanced diploma demonstrates Victor’s proficiency in high-performance training, strength conditioning, and injury prevention techniques. It qualifies him to train athletes and individuals seeking to enhance their physical performance safely and effectively.",
     },
     {
       id: 4,
@@ -134,7 +46,7 @@ const Certifications = () => {
       year: "28th February, 2025",
       image: "/certification4.jpg",
       description:
-        "With this First Aid & CPR/AED certification, Victor is equipped to handle emergency situations, ensuring the safety and well-being of clients during training sessions.",
+        "This certification ensures that Victor is fully trained to handle emergencies, including CPR and AED use. With this qualification, he prioritises client safety during training sessions and can respond effectively to medical emergencies.",
     },
   ];
 
@@ -144,11 +56,10 @@ const Certifications = () => {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
-            List of Certificates
+            List of Certifications
           </h2>
           <p className="text-lg tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
-            Victor’s certificates reflect his commitment to excellence and
-            continuous learning in fitness and sports coaching.
+          Victor's certifications demonstrate his dedication to excellence and ongoing growth in fitness and sports coaching.
           </p>
         </div>
 
@@ -164,7 +75,7 @@ const Certifications = () => {
               <img
                 src={certification.image}
                 alt={certification.title}
-                className="w-[100%] h-64 lg:w-[566px] lg:h-[430px] object-contain rounded-lg"
+                className="w-[100%] h-64 lg:w-[536px] lg:h-[430px] object-contain rounded-lg"
               />
 
               {/* Text Content */}
@@ -172,11 +83,11 @@ const Certifications = () => {
                 <h3 className="text-xl font-semibold mb-2 text-white">
                   {certification.title}
                 </h3>
-                <p className="text-[#B0B3B8] mb-2">
+                <p className="text-[#B0B3B8] mb-2 italic">
                   {certification.organization}
                 </p>
-                <p className="text-[#B0B3B8] mb-4">{certification.year}</p>
-                <p className="text-[#B0B3B8] lg:w-[470px] w-auto">
+                <p className="text-[#B0B3B8] mb-4 italic">Certified on: {certification.year}</p>
+                <p className="text-[#B0B3B8] lg:w-[430px] w-auto">
                   {certification.description}
                 </p>
               </div>

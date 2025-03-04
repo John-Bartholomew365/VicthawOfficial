@@ -20,11 +20,14 @@ const ImpactSection = () => {
           <h2 className="text-4xl tracking-tight font-bold mb-4">
             The Impact of the Victhaw <br /> Official Unity Cup
           </h2>
-          <p className="text-[16px] tracking-tight text-[#B0B3B8] m-auto lg:w-[440px] w-auto">
-            "The Victhaw Official Unity Cup is my way of giving back to the
-            community that has shaped me. It's about more than just football—it's
-            about building a legacy of strength, passion, and unity."
-            <br />– <strong>Adeniji Gbolabo Victor</strong>
+          <p className="text-[16px] tracking-tight text-[#B0B3B8] m-auto lg:w-[590px] w-auto">
+            Sports have the power to transform lives, build character, and unite
+            people from all walks of life. My goal is to create a platform where
+            athletes can showcase their talents, embrace discipline, and inspire
+            the next generation. This is more than just competition, it’s about
+            fostering resilience, teamwork, and a lasting impact on the
+            community.
+            <br />– <strong>Adeniji Gbolabo Victor, Founder</strong>
           </p>
         </div>
 
@@ -49,8 +52,9 @@ const ImpactSection = () => {
             <div className="text-[#C81E23] text-4xl font-bold mb-4">16+</div>
             <h3 className="text-xl font-semibold mb-2">Teams</h3>
             <p className="text-[#B0B3B8]">
-              Bringing together players and fans from diverse backgrounds to
-              celebrate the love of football.
+              Uniting talented football teams from different backgrounds,
+              fostering competition, teamwork, and a shared passion for the
+              game.
             </p>
           </div>
 
@@ -59,20 +63,18 @@ const ImpactSection = () => {
             <div className="text-[#C81E23] text-4xl font-bold mb-4">250+</div>
             <h3 className="text-xl font-semibold mb-2">Players</h3>
             <p className="text-[#B0B3B8]">
-              Providing a platform for aspiring athletes to showcase their
-              skills and grow their careers.
+              Offering a platform for athletes to shine, develop their skills,
+              and take their football careers to the next level.
             </p>
           </div>
 
           {/* Impact Card 3: Health and Fitness */}
           <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
-            <div className="text-[#C81E23] text-4xl font-bold mb-4">
-              1K+
-            </div>
+            <div className="text-[#C81E23] text-4xl font-bold mb-4">1K+</div>
             <h3 className="text-xl font-semibold mb-2">Spectators</h3>
             <p className="text-[#B0B3B8]">
-              Encouraging an active lifestyle and promoting the importance of
-              health and fitness.
+              Bringing the community together to experience the thrill of the
+              game while promoting fitness, engagement, and a love for sports.
             </p>
           </div>
 
@@ -81,8 +83,8 @@ const ImpactSection = () => {
             <div className="text-[#C81E23] text-4xl font-bold mb-4">10+</div>
             <h3 className="text-xl font-semibold mb-2">Sponsors</h3>
             <p className="text-[#B0B3B8]">
-              Boosting local businesses and creating opportunities for brands to
-              connect with the community.
+              Providing businesses with valuable exposure, brand visibility, and
+              a chance to support grassroots sports development.
             </p>
           </div>
         </div>

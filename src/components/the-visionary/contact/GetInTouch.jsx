@@ -18,13 +18,12 @@ const GetInTouch = () => {
     <section className="py-16 " id="contact-form">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12" data-aos="fade-up">
+        <div className="text-center mb-10" data-aos="fade-up">
           <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
-            Send a Message
+          Let’s Connect
           </h2>
-          <p className="text-lg tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
-            Reach out to Victor for inquiries, collaborations, or to book a
-            session. He’s here to help you achieve your goals!
+          <p className="text-[16px] tracking-tight leading-tight text-[#B0B3B8] m-auto lg:w-[425px] w-auto">
+          For inquiries, collaborations, or to book a session, reach out through the options below for a response tailored to your needs. Whether you’re looking to train, compete, or grow, your journey starts here!
           </p>
         </div>
         <div className="flex justify-center space-x-4">

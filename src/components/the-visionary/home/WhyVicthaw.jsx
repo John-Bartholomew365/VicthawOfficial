@@ -21,9 +21,9 @@ const WhyVicthaw = () => {
             The Vision Behind the Victhaw <br /> Official Unity Cup
           </h2>
           <p className="text-lg text-[#B0B3B8] leading-tight lg:w-[570px] w-auto mx-auto">
-            Football has always been more than just a game to me. It's a
-            passion, a way of life, and a powerful tool for bringing people
-            together.
+            Football is more than just a sport to me, it’s a passion, a
+            lifestyle, and a powerful force that unites people from all walks of
+            life.
           </p>
         </div>
 
@@ -52,23 +52,24 @@ const WhyVicthaw = () => {
           {/* Right Column: Text Content */}
           <div className="space-y-6" data-aos="fade-up">
             <p className="text-[#B0B3B8] leading-tight backdrop:text-lg">
-              Growing up, I saw how sports could transform lives and
-              communities, and I knew I wanted to create a platform where people
-              could connect, compete, and celebrate their love for the game.
+              Growing up, I witnessed firsthand how sports can transform lives
+              and strengthen communities. It became clear to me that I wanted to
+              create a platform where people could come together, compete, and
+              celebrate their passion for the game.
             </p>
             <p className="text-[#B0B3B8] leading-tight backdrop:text-lg">
-              The Victhaw Official Unity Cup is my way of giving back to the
-              community that has shaped me. It's a celebration of talent,
-              teamwork, and the power of sports to inspire greatness. Through
-              this tournament, I hope to provide a stage for aspiring athletes
-              to showcase their skills, promote a healthy and active lifestyle,
-              and foster a sense of unity and inclusion.
+              The Unity Cup is my way of giving back to the community that
+              shaped me. It’s more than just a tournament, it’s a celebration of
+              talent, teamwork, and the power of sports to inspire greatness.
+              Through this competition, I aim to provide a stage for aspiring
+              athletes to showcase their skills, encourage a healthy and active
+              lifestyle, and promote unity and inclusion.
             </p>
             <p className="text-[#B0B3B8] leading-tight backdrop:text-lg">
-              This is more than just a tournament—it's a movement. A movement to
-              build stronger bodies, sharper minds, and more resilient
-              communities. A movement to inspire future generations and leave a
-              lasting legacy of strength, passion, and excellence.
+              This is not just about football; it’s about building stronger
+              bodies, sharper minds, and more connected communities. It’s about
+              inspiring the next generation and leaving a lasting legacy of
+              strength, passion, and excellence.
             </p>
             <div className="flex flex-col lg:flex-row lg:justify-start lg:space-x-4 space-y-4 lg:space-y-0 mt-8">
               <a

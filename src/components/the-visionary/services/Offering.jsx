@@ -7,21 +7,21 @@ const Offering = () => {
       id: 1,
       title: "Fitness Coaching",
       description:
-        "Personalized training programs designed to help you build strength, endurance, and confidence.",
+        "Customised strength and conditioning programs focused on muscle building, endurance training, functional fitness, and injury prevention to optimise overall performance.",
       image: "/fitness-coaching.jpg", // Replace with your image
     },
     {
       id: 2,
       title: "Football Mentoring",
       description:
-        "Dynamic coaching to improve technical skills, tactical awareness, and athletic performance.",
+        "Technical and tactical football coaching that covers ball control, agility, positional awareness, game intelligence, and peak physical conditioning for players at all levels.",
       image: "/football-mentor.jpg", // Replace with your image
     },
     {
       id: 3,
       title: "Community Programs",
       description:
-        "Initiatives that bring people together through sports, fitness, and wellness.",
+        "Sports-driven initiatives that promote teamwork, youth development, and active lifestyles while fostering social impact through fitness and wellness.",
       image: "/community-programs.jpg", // Replace with your image
     },
   ];
@@ -34,8 +34,8 @@ const Offering = () => {
             What I Offer
           </h2>
           <p className="text-lg tracking-tight leading-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
-            From personalized fitness programs to dynamic football coaching,
-            Victor provides tailored services to help you achieve your goals.
+          Victor provides specialised programs designed to enhance physical fitness, elevate football performance, and foster community development through sports.
+
           </p>
         </div>
       </div>

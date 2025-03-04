@@ -46,12 +46,11 @@ const ServiceHero = () => {
           Services
         </h1>
         <p className="text-xl text-[#B0B3B8] lg:w-[470px] leading-tight m-auto w-auto mb-16 lg:px-0 px-2">
-          Discover the range of services Victor offers to help you achieve your
-          fitness, football, and community goals.
+        Explore Victor’s expert-driven services designed to elevate your fitness, enhance your football skills, and strengthen community connections.
         </p>
-        <div className="bg-[#C81E23] lg:w-[250px] m-auto w-[60%] text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300">
+        {/* <div className="bg-[#C81E23] lg:w-[250px] m-auto w-[60%] text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300">
           View Services below
-        </div>
+        </div> */}
       </div>
     </section>
   );

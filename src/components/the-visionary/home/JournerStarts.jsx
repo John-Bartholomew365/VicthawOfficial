@@ -17,52 +17,52 @@ const JourneyStarts = () => {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="lg:text-4xl text-[30px] leading-tight tracking-tight font-bold mb-4 text-white">
-            Your Journey Starts Here
+            Start Your Transformation Today
           </h2>
-          <p className="text-[16px] leading-tight tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
-            Whether you're looking to transform your fitness, elevate your
-            football skills, or simply live a healthier, more active life, Victor
-            is here to guide you every step of the way. Take the first step today
-            and unlock your full potential.
+          <p className="text-[16px] leading-tight tracking-tight text-[#B0B3B8] m-auto lg:w-[480px] w-auto">
+            Whether you want to improve your fitness, sharpen your football
+            skills, or adopt a healthier, more active lifestyle, Victor is here
+            to support you every step of the way. Take the first step today and
+            unlock your full potential.
           </p>
         </div>
 
         {/* Key Points */}
         <div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 tracking-tight lg:px-[50px] px-[5px] mb-12"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-5 tracking-tight lg:px-[50px] px-[5px] mb-12"
           data-aos="fade-up"
         >
           {/* Personalized Programs */}
           <div className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center">
             <h3 className="text-xl font-semibold mb-4 text-white">
-              Personalized Programs
+              Personalized Trainings
             </h3>
-            <p className="text-[#B0B3B8]">
-              Victor’s fitness and coaching programs are tailored to your unique
-              goals, ensuring you get the results you want.
+            <p className="text-[#B0B3B8] w-auto">
+              Victor designs personalized fitness and coaching programs tailored
+              to your goals, ensuring you achieve real and lasting results.
             </p>
           </div>
 
           {/* Proven Results */}
           <div className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center">
             <h3 className="text-xl font-semibold mb-4 text-white">
-              Proven Results
+              Proven Success
             </h3>
             <p className="text-[#B0B3B8]">
-              With years of experience and a passion for helping others, Victor
-              has helped countless individuals achieve their goals and transform
-              their lives.
+              With years of experience and a deep passion for helping others,
+              Victor has guided countless individuals toward their fitness and
+              athletic goals.
             </p>
           </div>
 
           {/* Community Support */}
           <div className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center">
             <h3 className="text-xl font-semibold mb-4 text-white">
-              Community Support
+              Supportive Community
             </h3>
             <p className="text-[#B0B3B8]">
-              Join a community of like-minded individuals who are committed to
-              growth, health, and excellence.
+              Join a network of motivated individuals who share your commitment
+              to growth, health, and excellence.
             </p>
           </div>
         </div>

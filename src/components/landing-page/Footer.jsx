@@ -55,7 +55,7 @@
 //             <Link className="hover:text-[#C81E23]" href={"/faq"}>
 //               FAQs
 //             </Link>
-          
+
 //             <Link className="hover:text-[#C81E23]" href={"/about/vision"}>
 //               Vision
 //             </Link>
@@ -202,7 +202,6 @@
 
 // export default Footer;
 
-
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -257,11 +256,11 @@ const Footer = () => {
             About
           </h1>
           <div className="ml-4 mt-5 flex flex-col space-y-2">
-            <Link className="hover:text-[#C81E23]" href={"/faq"}>
+            <Link className="hover:text-[#C81E23]" href={"/about/faq"}>
               FAQs
             </Link>
             <Link className="hover:text-[#C81E23]" href={"/about/vision"}>
-              Vision
+              Victhaw Vision
             </Link>
             <Link className="hover:text-[#C81E23]" href={"/terms"}>
               Terms & Conditions
@@ -285,11 +284,17 @@ const Footer = () => {
             <Link className="hover:text-[#C81E23]" href={"/tournament/rules"}>
               Rules
             </Link>
-            <Link className="hover:text-[#C81E23]" href={"/tournament/schedule"}>
+            <Link
+              className="hover:text-[#C81E23]"
+              href={"/tournament/schedule"}
+            >
               Schedule
             </Link>
             <Link className="hover:text-[#C81E23]" href={"/tournament/prizes"}>
               Prizes
+            </Link>
+            <Link className="hover:text-[#C81E23]" href={"/news"}>
+              News & Updates
             </Link>
           </div>
         </div>
@@ -303,9 +308,6 @@ const Footer = () => {
             </Link>
             <Link className="hover:text-[#C81E23]" href={"/about/sponsors"}>
               Become a sponsor
-            </Link>
-            <Link className="hover:text-[#C81E23]" href={"/news"}>
-              News & Updates
             </Link>
           </div>
         </div>

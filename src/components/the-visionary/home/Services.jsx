@@ -8,27 +8,27 @@ const services = [
   {
     title: "Muscle Building",
     description:
-      "Structured training programs designed to help clients build lean muscle and develop strength.",
+      "Customised strength training programs are designed to help you build muscle, increase power, and achieve a well-defined physique.",
   },
   {
     title: "Weight Loss",
     description:
-      "Effective workout and nutrition plans tailored to help individuals burn fat and achieve their desired physique.",
+      "Personalised workout and nutrition plans focused on burning fat, boosting metabolism, and shaping a healthier body.",
   },
   {
     title: "Sports Coaching",
     description:
-      "Dynamic coaching for aspiring and professional athletes, focusing on technical skills, tactical awareness, and peak conditioning.",
+      "Comprehensive training for athletes at all levels, enhancing technical skills, tactical awareness, and overall physical conditioning.",
   },
   {
     title: "Endurance Training",
     description:
-      "Programs that enhance stamina, cardiovascular fitness, and overall athletic performance.",
+      "Targeted programs to improve stamina, cardiovascular fitness, and athletic performance, helping you go the extra mile.",
   },
   {
     title: "Football Training",
     description:
-      "Specialized coaching to improve gameplay, strategy, and athletic discipline on the football field.",
+      "Specialised coaching to sharpen skills, enhance game strategy, and develop the discipline needed to excel on the field.",
   },
 ];
 
@@ -51,23 +51,20 @@ export default function Services() {
 
   return (
     <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center justify-center min-h-screen p-3 lg:pr-16">
-
       {/* Services Info for mobile*/}
-      <div
-        className="lg:ml-10 ml-0 lg:mb-0 mb-7 max-w-md"
-        data-aos="fade-left"
-      >
+      <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 max-w-md" data-aos="fade-left">
         <h2 className="text-4xl lg:text-start text-center font-bold text-[#FFFFFF]">
-          My Awesome <span className="text-[#C81E23]">Services</span>
+          My Expert <span className="text-[#C81E23]">Services</span>
         </h2>
         <p className="text-[#B0B3B8] mt-4">
-          As a certified fitness coach with over 7 years of experience, I
-          specialize in helping individuals achieve their fitness goals.
+          As a certified fitness coach with over seven years of experience, I am
+          dedicated to helping individuals reach their full potential.
         </p>
         <p className="text-[#B0B3B8] mt-4">
-          Whether it's muscle building, weight loss, or athletic performance, my
-          goal is to help you push limits, stay disciplined, and achieve lasting
-          results.
+          Whether you’re looking to build muscle, lose weight, or enhance
+          athletic performance, I provide tailored training programs designed to
+          push your limits, instil discipline, and deliver lasting results.
+          Let’s turn your fitness goals into reality!
         </p>
         <Link href={"/visionary/contact"}>
           <button className="mt-6 px-6 py-3 bg-[#C81E23] lg:w-[180px] w-full text-white font-semibold rounded-lg">

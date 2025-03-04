@@ -2,23 +2,21 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import AOS from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS styles
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Link from "next/link";
 
 const Victor = () => {
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
   const [isAppearing, setIsAppearing] = useState(true);
 
-  
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false, // Allow animations to trigger every time the element is in view
-      mirror: true, // Allow animations to trigger when scrolling back up
+      once: false,
+      mirror: true,
     });
 
-    // Refresh AOS when the component mounts or updates
     AOS.refresh();
   }, []);
 
@@ -28,11 +26,10 @@ const Victor = () => {
 
   useEffect(() => {
     if (isAppearing) {
-      // Appearing logic
       if (currentLetterIndex < fullName.length) {
         const timeout = setTimeout(() => {
           setCurrentLetterIndex((prev) => prev + 1);
-        }, 200); // Adjust the delay between letters
+        }, 200);
         return () => clearTimeout(timeout);
       } else {
         // Once the full name is visible, wait and start disappearing
@@ -113,13 +110,14 @@ const Victor = () => {
             </span>
           </h1>
           <p
-            className="lg:w-[400px] tracking-tight w-full py-[20px] text-[#B0B3B8]"
+            className="lg:w-[410px] tracking-tight w-full py-[20px] text-[#B0B3B8]"
             data-aos="fade-up"
             data-aos-once="false"
           >
-            Certified fitness coach with 7+ years of experience in strength
-            training, weight loss, and sports coaching. Helping individuals
-            build muscle, burn fat, and improve performance.
+            A certified fitness coach with over 7 years of experience in
+            strength training, weight loss, and sports coaching. I specialize in
+            helping individuals build muscle, shed excess fat, and enhance their
+            overall performance.
           </p>
           <div
             className="flex flex-row gap-[20px]"
