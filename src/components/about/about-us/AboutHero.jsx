@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -20,8 +20,8 @@ const AboutHero = () => {
           About the Victhaw Unity Cup 1.0
         </h1>
         <p className="text-[#B0B3B8] tracking-tight lg:w-[420px] w-auto mt-4">
-          Discover everything you need to know about the Victhaw Official Unity
-          Cup 1.0.
+          Get all the essential details about this thrilling tournament, its
+          purpose, structure, and what makes it an unmissable event!
         </p>
       </div>
 

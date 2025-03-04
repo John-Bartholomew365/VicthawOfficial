@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -17,13 +17,13 @@ const VisionHero = () => {
     <div className="lg:flex lg:flex-row flex-col items-center gap-[100px] my-[100px] lg:pl-[50px] pl-0">
       <div data-aos="fade-right">
         <h1 className="lg:text-[45px] tracking-tight text-[30px] leading-tight">
-          Victhaw Official: <br />
-          Where fitness meets art
+          Where Fitness Passion Meets Purpose
         </h1>
         <p className="text-[#B0B3B8] tracking-tight lg:w-[420px] w-auto mt-4">
-          Fuel your passion for fitness, sports, and creativity—all in one
-          place. Victhaw Official empowers you to push limits, stay active, and
-          express yourself like never before.
+          Victhaw is a profesional coach, mentor, and fitness expert dedicated
+          to developing athletes and inspiring individuals. With years of
+          experience in sports and community building, he continues to shape the
+          next generation of talent through discipline and innovation.
         </p>
       </div>
 

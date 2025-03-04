@@ -6,12 +6,12 @@ const ListOfPrizes = () => {
     <div className="">
       <div className="my-[50px]">
         <h1 className="lg:text-[40px] text-[30px] tracking-tight text-center">
-          Victhaw Official Unity Cup 1.0 Prizes
+          Tournament Prizes & Awards
         </h1>
-        <p className="text-[#B0B3B8] lg:w-[460px] w-auto text-center m-auto mt-4">
-          The Victhaw Official Unity Cup 1.0 will award top teams and players
-          with a variety of prizes, celebrating their accomplishments in the
-          tournament.
+        <p className="text-[#B0B3B8] lg:w-[480px] w-auto text-center m-auto mt-4">
+          Top-performing teams and standout players will be rewarded with
+          exciting prizes, recognizing their hard work, skill, and achievements
+          throughout the competition.
         </p>
       </div>
 

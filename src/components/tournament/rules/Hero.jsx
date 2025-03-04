@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -20,11 +20,12 @@ const Hero = () => {
       >
         <div data-aos="fade-right">
           <h1 className="lg:text-[50px] text-[30px] leading-tight tracking-tight">
-            Tournament rules <br /> and regulations
+            Tournament Rules <br /> and Guidelines
           </h1>
           <p className="text-[#B0B3B8] lg:w-[380px] w-auto mt-4">
-            These guidelines ensure fair play, safety, and smooth conduct of
-            matches while promoting sportsmanship and a successful tournament
+            Clear and fair rules are in place to ensure a safe, competitive, and
+            well-organized tournament while promoting sportsmanship and
+            teamwork.
           </p>
         </div>
         <div className="lg:mt-0 mt-10" data-aos="fade-left">
@@ -47,37 +48,40 @@ const Hero = () => {
               <li className="flex gap-3">
                 ⚽
                 <p className="text-[#B0B3B8]">
-                  Each team will have <b>11 players,</b> including{" "}
+                  Each team will have <b>11 players,</b> consisting of
                   <b>10 outfield players</b> and <b>1 goalkeeper.</b>
                 </p>
               </li>
               <li className="flex gap-3">
                 🔄
                 <p className="text-[#B0B3B8]">
-                  Teams can have <b>9 substitutes,</b> but only <b>5</b> can be
-                  used during play. A concussion substitution is allowed after
-                  the 5th substitution if needed.
+                  Teams are allowed a maximum of <b>9 substitutes,</b> with only{" "}
+                  <b>5</b> permitted to enter during play. An additional
+                  concussion substitution is allowed if needed after the 5th
+                  substitution.
                 </p>
               </li>
               <li className="flex gap-3">
                 ⏰
                 <p className="text-[#B0B3B8]">
-                  Teams must be present at the match venue <b>40 minutes</b>{" "}
-                  before kick-off.
+                  All teams must arrive at the match venue at least{" "}
+                  <b>40 minutes</b> before kick-off.
                 </p>
               </li>
               <li className="flex gap-3">
                 🚶‍♂️
                 <p className="text-[#B0B3B8]">
-                  A match will start if a team has at least <b>7 players</b> at
-                  kick-off time. Late players won’t be waited for.
+                  A match will commence as long as a team has a minimum of{" "}
+                  <b>7 players</b> at kick-off. Late arrivals will not delay the
+                  game.
                 </p>
               </li>
               <li className="flex gap-3">
                 🚫
                 <p className="text-[#B0B3B8]">
-                  If a team cannot produce at least 7 players within 15 minutes
-                  after kick-off, the match will be awarded to the opposition.
+                  If a team fails to present at least <b>7 players</b> within{" "}
+                  <b>15 minutes</b> after the scheduled kick-off, the opposing
+                  team will be awarded the match.
                 </p>
               </li>
             </ul>
@@ -91,17 +95,22 @@ const Hero = () => {
               <li className="flex gap-3">
                 ⏱️
                 <p className="text-[#B0B3B8]">
-                  Each half will last <b>30 minutes</b>. No injury time will be
-                  added.
+                  Each half will be <b>30 minutes</b> long, with <b>no</b>{" "}
+                  additional injury time.
                 </p>
               </li>
               <li className="flex gap-3">
                 🏆
                 <p className="text-[#B0B3B8]">
-                  Matches are knockout style. In case of a draw, there will be
-                  <b> 15 minutes</b> of extra time. If still tied,{" "}
-                  <b>a penalty shootout</b>
-                  will decide the winner.
+                  The tournament follows a <b>knockout format</b>. In the event
+                  of a draw, an extra <b>15 minutes</b> will be played.
+                </p>
+              </li>
+              <li className="flex gap-3">
+                🏆
+                <p className="text-[#B0B3B8]">
+                  If the match remains tied after extra time, the winner will be
+                  determined through a <b>penalty shootout.</b>
                 </p>
               </li>
             </ul>
@@ -115,22 +124,25 @@ const Hero = () => {
               <li className="flex gap-3">
                 📝
                 <p className="text-[#B0B3B8]">
-                  All <b>18 players must be registered</b>. Unregistered players
-                  and officials will not be allowed.
+                  Each team must register all <b>18 players</b> before the
+                  tournament. Unregistered players and officials will not be
+                  allowed to participate.
                 </p>
               </li>
               <li className="flex gap-3">
                 🚑
                 <p className="text-[#B0B3B8]">
-                  Organizers won’t be responsible for injuries. Teams must bring
-                  their medical personnel, though first aid will be provided.
+                  The tournament organizers are not responsible for player
+                  injuries. Teams are required to bring their{" "}
+                  <b> medical personnel</b>, although first aid will be
+                  available.
                 </p>
               </li>
               <li className="flex gap-3">
                 ⚖️
                 <p className="text-[#B0B3B8]">
-                  The referee’s decision is <b>final</b>. Complaints must be
-                  directed to the organizers respectfully.
+                  The referee’s decision is <b>final</b>. Any complaints must be
+                  addressed to the organizers respectfully.
                 </p>
               </li>
             </ul>
@@ -144,28 +156,32 @@ const Hero = () => {
               <li className="flex gap-3">
                 ⚽
                 <p className="text-[#B0B3B8]">
-                  Players must wear appropriate equipment such as{" "}
-                  <b>footwear, shin guards, uniform, and uniform socks.</b>
+                  All players must wear the appropriate equipment, including
+                  <b>
+                    football boots, shin guards, team uniforms, and uniform
+                    socks.
+                  </b>
                 </p>
               </li>
               <li className="flex gap-3">
                 ✂️
                 <p className="text-[#B0B3B8]">
-                  All <b>fingernails</b> must be cut short before each match
-                  day.
+                  Before each match day, players are required to trim their
+                  fingernails short to ensure safety during play.
                 </p>
               </li>
               <li className="flex gap-3">
                 🚫
                 <p className="text-[#B0B3B8]">
-                  No <b>accessories</b> such as bracelets, chains, or beads are
-                  allowed.
+                  Accessories such as bracelets, chains, beads, and any other
+                  jewellery are strictly prohibited on the field.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-red-600">👕</span>
                 <p className="text-[#B0B3B8]">
-                  Players must be in <b>uniform</b> at all times.
+                  Players must remain in full team uniform at all times
+                  throughout the tournament.
                 </p>
               </li>
             </ul>
@@ -178,10 +194,10 @@ const Hero = () => {
           <h1 className="lg:text-[40px] text-[30px] text-center leading-tight tracking-tight">
             Ready to Compete? <br /> Play Fair, Play Smart!
           </h1>
-          <p className="text-center lg:w-[380px] tracking-tight mt-3 m-auto w-auto text-[#B0B3B8]">
-            Whether you’re here to win or simply enjoy the game, remember that
-            discipline and fair play are just as important as scoring goals.{" "}
-            <br /> Let’s make this tournament one to remember!
+          <p className="text-center lg:w-[460px] tracking-tight mt-3 m-auto w-auto text-[#B0B3B8]">
+            Whether you are aiming for victory or playing for the love of the
+            game, always remember that discipline, respect, and fair play are
+            just as important as scoring goals.
           </p>
         </div>
       </div>

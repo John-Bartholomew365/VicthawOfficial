@@ -246,7 +246,7 @@ const Footer = () => {
         </div>
         <div className="text-center lg:text-left">
           <h1 className="lg:text-[24px] text-[16px] leading-tight">
-            Bringing Communities Together <br /> Through Unity and Sports.
+            Uniting Communities Together <br /> Through Unity and Sports.
           </h1>
         </div>
       </div>

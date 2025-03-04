@@ -98,7 +98,7 @@ const Navbar = () => {
                   href="/tournament/rules"
                   className="block px-4 py-2 hover:bg-[#0F0F0F]"
                 >
-                  Rules & Regulations
+                  Rules & Guidelines
                 </Link>
                 <Link
                   href="/tournament/schedule"
@@ -362,7 +362,7 @@ const Navbar = () => {
                     href="/tournament/rules"
                     className="block p-2 hover:bg-[#000000]"
                   >
-                    Rules & Regulations
+                    Rules & Guidelines
                   </Link>
                   <Link
                     href="/tournament/schedule"

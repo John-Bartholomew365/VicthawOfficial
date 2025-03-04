@@ -8,10 +8,11 @@ const Sponsors = () => {
         <h2 className="lg:text-[45px] text-[30px] tracking-tight font-bold text-white mb-3">
           Become a Sponsor
         </h2>
-        <p className="text-[16px] text-[#B0B3B8] tracking-tight mb-12 lg:w-[370px] w-auto m-auto">
-          Join us in making the Victhaw Official Unity Cup a success!
-          Sponsorship offers you an opportunity to boost your brand's
-          visibility, engage with the community, and build valuable connections.
+        <p className="text-[16px] text-[#B0B3B8] tracking-tight mb-12 lg:w-[440px] w-auto m-auto">
+          Partner with us to make the <strong>Unity Cup 1.0</strong>a resounding
+          success! Sponsoring this event is more than just branding, it’s a
+          chance to amplify your visibility, engage with a passionate community,
+          and create meaningful connections.
         </p>
       </div>
 
@@ -28,7 +29,7 @@ const Sponsors = () => {
             Community Engagement
           </h1>
           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#B0B3B8]">
-            Connect with thousands of fans and participants while supporting
+            Connect with hundreds of fans and participants while supporting
             local sports.
           </p>
         </div>

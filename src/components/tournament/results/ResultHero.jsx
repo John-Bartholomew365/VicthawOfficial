@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -19,7 +19,10 @@ const ResultsHero = () => {
         <div data-aos="fade-right">
           <h1 className="lg:text-[45px] text-[30px]">Match Day Results</h1>
           <p className="lg:w-[400px] w-auto tracking-tight text-[#B0B3B8] mt-3">
-            Stay updated with the latest action! Below are the results for the matches played so far in the Victhaw Official Unity Cup 1.0. Check out the match outcomes and highlights so far. More exciting matches are coming soon!
+            Keep up with all the thrilling moments from the Victhaw Official
+            Unity Cup 1.0! Here, you’ll find the latest match results, key
+            highlights, and team performances. Stay tuned for more exciting
+            games as the tournament unfolds!
           </p>
         </div>
         <div className="lg:mt-0 mt-10" data-aos="fade-left">

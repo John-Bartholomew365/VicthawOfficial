@@ -6,49 +6,49 @@ const ChooseUs = () => {
     <div className="my-[50px]">
       <div>
         <h1 className="lg:text-[40px] tracking-tight text-[30px] text-center leading-tight font-bold text-[#C81E23]">
-          Why you should <br /> choose us
+          Why Choose Us?
         </h1>
         <p className="text-[#B0B3B8] tracking-tight lg:w-[370px] text-[14px] w-auto m-auto text-center mt-3">
-          At Victhaw Official, we deliver quality services in fitness, sports,
-          and creative solutions, tailored to meet your unique needs.
+          At Victhaw Official, we are dedicated to providing top-quality
+          services in fitness, sports, and creative solutions all tailored to
+          help you achieve your goals
         </p>
       </div>
 
       <div className="lg:flex lg:flex-row flex-col gap-[20px] justify-center lg:px-[70px] px-[10px] my-[70px]">
         <div className="bg-[#000000] p-3 lg:w-fit w-auto rounded-md shadow-2xl">
           <h1 className="lg:text-[25px] lg:w-[300px] tracking-tight mb-3 w-auto leading-tight text-[22px] font-bold text-[#C81E23]">
-            Fitness – Elevate Your Strength
+            Build Strength, Boost Performance
           </h1>
           <p className="lg:w-[300px] tracking-tight text-[14px] w-auto text-[#B0B3B8]">
-            A healthy body fuels a strong mind. Whether you're a beginner or a
-            seasoned athlete, our fitness programs are designed to push your
-            limits, improve endurance, and build resilience. Through training,
-            wellness tips, and motivation, we help you stay active and live a
-            healthier life.
+            A strong body fuels a powerful mind. Whether you are just starting
+            your fitness journey or pushing your limits as an athlete, our
+            programs focus on strength, endurance, and resilience. Through
+            expert training, wellness insights, and motivation, we help you stay
+            active and live a healthier life.
           </p>
         </div>
         <div className="bg-[#000000] p-3 lg:w-fit w-full rounded-md lg:my-0 my-5">
           <h1 className="lg:text-[25px] tracking-tight lg:w-[300px] mb-3 w-auto leading-tight text-[22px] font-bold text-[#C81E23]">
-            Sports - Ignite Your Passion
+            Fuel Your Passion, Reach New Heights
           </h1>
           <p className="lg:w-[300px] tracking-tight text-[14px] w-auto text-[#B0B3B8]">
-            Sports unite people, build discipline, and create champions. We
-            support atheletes at all levels, from grassroots to professions,
-            providing platforms for competition, skill development, and team
-            work. Whether it's football, basketball, or any sport you love, we
-            are here to fuel your passion.
+            Sports go beyond the game, they build discipline, teamwork, and
+            champions. We support athletes at every level, from grassroots to
+            professional, by providing platforms for skill development,
+            competition, and growth.
           </p>
         </div>
         <div className="bg-[#000000] p-3 lg:w-fit w-auto rounded-md">
           <h1 className="lg:text-[25px] tracking-tight lg:w-[300px] mb-3 w-auto leading-tight text-[22px] font-bold text-[#C81E23]">
-            Art – Express Your Creativity
+            Showcase Your Artistic Expression
           </h1>
           <p className="lg:w-[300px] tracking-tight text-[14px] w-auto text-[#B0B3B8]">
-            Art is the heartbeat of culture and innovation. Through visual arts,
-            music, dance, and creative storytelling, we provide a platform for
-            artists to showcase their talents, inspire audiences, and bring
-            ideas to life. We celebrate creativity as a powerful tool for
-            self-expression and social impact.
+            Creativity shapes the world. Whether it’s visual arts, music, dance,
+            or storytelling, we provide a platform for artists to showcase their
+            talent, inspire audiences, and bring ideas to life. We believe in
+            the power of creativity to influence culture and drive social
+            impact.
           </p>
         </div>
       </div>

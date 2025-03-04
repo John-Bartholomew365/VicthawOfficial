@@ -12,61 +12,61 @@ const AboutUs = () => {
                 What is the Victhaw Official Unity Cup 1.0?
               </h3>
               <p className="text-[#B0B3B8] mb-4">
-                The Victhaw Official Unity Cup 1.0 is a premier esports
-                tournament designed to bring together the best teams from across
-                the region. This event aims to celebrate the spirit of
-                competition, teamwork, and unity in the esports community.
+                The Victhaw Official Unity Cup 1.0 is a high-stakes football
+                tournament designed to unite teams from different backgrounds in
+                a competitive and thrilling sporting event. It celebrates
+                teamwork, skill, and the spirit of unity through football.
               </p>
             </article>
             <article className="bg-[#000000] shadow-md rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Mission and Vision</h3>
               <p className="text-[#B0B3B8] mb-4">
-                Our mission is to create a platform where talented gamers can
-                showcase their skills and compete at the highest level. We aim
-                to foster a sense of community and unity among participants and
-                fans alike.
+                Our goal is to create a platform where talented players can
+                compete at their best, showcase their abilities, and foster
+                strong community bonds through the love of the game.
               </p>
             </article>
             <article className="bg-[#000000] shadow-md rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Tournament Structure</h3>
               <p className="text-[#B0B3B8] mb-4">
-                The tournament will feature a series of intense matches,
-                culminating in a grand final. Teams will compete in a
-                double-elimination format, ensuring that every match counts.
+                The competition will feature intense knockout matches, leading
+                to a grand final where the best teams will battle for the
+                championship. Each game is designed to test strategy, teamwork,
+                and resilience.
               </p>
             </article>
             <article className="bg-[#000000] shadow-md rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-2">Prize Pool</h3>
+              <h3 className="text-xl font-bold mb-2">Prize & Rewards</h3>
               <p className="text-[#B0B3B8] mb-4">
-                The Victhaw Official Unity Cup 1.0 boasts a substantial prize
-                pool, with cash prizes and exclusive rewards for the top teams.
-                We will announce the total prize pool and individual prizes
-                soon.
+                The Unity Cup 1.0 offers exciting rewards, including trophies,
+                medals, and cash prizes for top-performing teams and outstanding
+                players. Full prize details will be announced soon.
               </p>
             </article>
             <article className="bg-[#000000] shadow-md rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Partners and Sponsors</h3>
               <p className="text-[#B0B3B8] mb-4">
-                We are excited to partner with leading brands and sponsors who
-                share our vision. Stay tuned for updates on our fantastic
-                partners who will be supporting this incredible event.
+                This tournament is made possible through the support of our
+                valued sponsors and partners. We are proud to collaborate with
+                brands that share our passion for sports and community
+                development.
               </p>
             </article>
             <article className="bg-[#000000] shadow-md rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Community Engagement</h3>
               <p className="text-[#B0B3B8] mb-4">
-                We believe in the power of community. Throughout the tournament,
-                we will host various fan engagement activities, live streams,
-                and interactive events to keep the excitement high.
+                Beyond the matches, the Unity Cup 1.0 is about bringing people
+                together. Expect fan engagement activities, live updates, and
+                interactive events to keep the excitement alive.
               </p>
             </article>
             <article className="bg-[#000000] shadow-md rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Get Involved</h3>
               <p className="text-[#B0B3B8] mb-4">
-                Whether you're a player, a fan, or a potential sponsor, there's
-                a place for you in the Victhaw Official Unity Cup 1.0.
-                Registration is open, and we are always looking for volunteers
-                and partners to help make this event a success.
+                Whether you're a player, a fan, or a sponsor, there's a place
+                for you in the Unity Cup 1.0. Team registration is open, and we
+                welcome volunteers and sponsors to join us in making this event
+                a remarkable success.
               </p>
             </article>
           </div>

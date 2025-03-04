@@ -6,7 +6,7 @@ const TournamentHighlight = () => {
     <div className="my-16">
       <div>
         <h1 className="lg:text-5xl text-3xl font-bold leading-tight text-center tracking-tight mb-10">
-          Experience the <br className="hidden lg:block" /> Victhaw Difference
+          An Unmatched <br /> Football Experience
         </h1>
       </div>
 
@@ -29,48 +29,71 @@ const TournamentHighlight = () => {
           <ul className="ml-5 space-y-4 mb-7 tracking-tight">
             <li className="flex items-start gap-3 lg:w-[410px] w-auto">
               <span className="text-red-600">●</span>
-              <p className="text-white">
-                <strong>16-Team Knockout Competition:</strong>
-                <span className="text-[#B0B3B8] ">
-                  {" "}
-                  Thrilling matches in a high-stakes knockout format.
-                </span>
-              </p>
+              <div className="flex flex-col">
+                {" "}
+                <div>
+                  <strong>16-Team Knockout Competition:</strong>
+                </div>
+                <div>
+                  <p className="text-white">
+                    <span className="text-[#B0B3B8] ">
+                      {" "}
+                      High-intensity matches where only the strongest advance,
+                      delivering nonstop action and unforgettable moments.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li className="flex items-start gap-3 lg:w-[410px] w-auto">
+              <span className="text-red-600">●</span>
+              <div className="flex flex-col">
+                {" "}
+                <div>
+                  <strong>For Players Aged 18–45:</strong>
+                </div>
+                <div>
+                  <p className="text-white">
+                    <span className="text-[#B0B3B8] ">
+                      {" "}
+                      A dynamic platform for footballers of all generations to
+                      showcase their talent and compete at the highest level.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li className="flex items-start gap-3 lg:w-[410px] w-auto">
+              <span className="text-red-600">●</span>
+              <div className="flex flex-col">
+                {" "}
+                <div>
+                  <strong>Professionally Organized:</strong>
+                </div>
+                <div>
+                  <p className="text-white">
+                    <span className="text-[#B0B3B8] ">
+                      {" "}
+                      A well-structured tournament featuring certified referees,
+                      top-notch officiating, and seamless coordination.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </li>
             <li className="flex items-start gap-3 lg:w-[410px] w-auto">
               <span className="text-red-600">●</span>
               <p className="text-white">
-                <strong>Ages 18–45:</strong>
+                <strong>Exciting Rewards:</strong>
                 <span className="text-[#B0B3B8]">
                   {" "}
-                  A platform for players across generations to showcase their
-                  skills.
+                  Compete for prestigious trophies, medals, cash prizes, and
+                  individual accolades, including MVP, Best Goalkeeper, and Top
+                  Scorer awards.
                 </span>
               </p>
             </li>
-            <li className="flex items-start gap-3 lg:w-[410px] w-auto">
-              <span className="text-red-600">●</span>
-              <p className="text-white">
-                <strong>Professional Organization:</strong>
-                <span className="text-[#B0B3B8]">
-                  {" "}
-                  Well-structured tournament with qualified referees and
-                  officials.
-                </span>
-              </p>
-            </li>
-            <li className="flex items-start gap-3 lg:w-[410px] w-auto">
-              <span className="text-red-600">●</span>
-              <p className="text-white">
-                <strong>Attractive Prizes:</strong>
-                <span className="text-[#B0B3B8]">
-                  {" "}
-                  Trophies, medals, cash rewards, and individual awards for MVP,
-                  Best Goalkeeper, and Top Scorer.
-                </span>
-              </p>
-            </li>
-            <li className="flex items-start gap-3 lg:w-[410px] w-auto">
+            {/* <li className="flex items-start gap-3 lg:w-[410px] w-auto">
               <span className="text-red-600">●</span>
               <p className="text-white">
                 <strong>Community Focus:</strong>
@@ -80,7 +103,7 @@ const TournamentHighlight = () => {
                   community event.
                 </span>
               </p>
-            </li>
+            </li> */}
           </ul>
           <Link href={"/register"}>
             <button className="bg-[#C81E23] flex justify-center items-center lg:m-0 m-auto text-center py-[10px] px-[20px] text-white rounded-[6px] hover hover:bg-[#0F0F0F] hover:text-white hover:border-[#C81E23] hover:border">

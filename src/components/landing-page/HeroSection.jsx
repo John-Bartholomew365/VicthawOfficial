@@ -88,8 +88,6 @@
 
 // export default HeroSection;
 
-
-
 "use client";
 
 import Image from "next/image";
@@ -105,7 +103,7 @@ const HeroSection = () => {
       secondText: "community",
       thirdText: "through soccer",
       subTitle:
-        "Victhaw Official Unity Cup 1.0 brings together players and fans from all backgrounds to celebrate the beautiful game.",
+        "Victhawofficial Unity Cup 1.0 isn’t just a tournament, it’s a movement! We bring players together to compete and fans to cheer them on, celebrating the love of football.",
       image: "/hero-img.svg",
     },
     {
@@ -113,7 +111,7 @@ const HeroSection = () => {
       secondText: "your talent",
       thirdText: "",
       subTitle:
-        "A platform for aspiring soccer stars to shine and gain recognition.",
+        "Calling all aspiring football stars! This is your chance to shine, showcase your skills, and earn the recognition you deserve.",
       image: "/hero-img2.svg",
     },
     {
@@ -121,7 +119,7 @@ const HeroSection = () => {
       secondText: "the thrill",
       thirdText: "of Victory",
       subTitle:
-        "Compete against the best in a professionally organized tournament with exciting prizes.",
+        "Think you have what it takes to compete against the best? This is your chance to battle it out in a professionally organized tournament, where glory and exciting prizes await the champions.",
       image: "/hero-img3.svg",
     },
   ];
@@ -154,7 +152,7 @@ const HeroSection = () => {
             <span className="block">{carousel.secondText}</span>
             <span className="block">{carousel.thirdText}</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#B0B3B8] tracking-tight">
+          <p className="text-[16px] text-[#B0B3B8] tracking-tight">
             {carousel.subTitle}
           </p>
           {/* Carousel Indicators */}

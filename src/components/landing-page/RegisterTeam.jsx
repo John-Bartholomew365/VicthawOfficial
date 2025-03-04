@@ -21,12 +21,13 @@ const RegisterTeam = () => {
             Register Your Team Today!
           </h1>
           <p className="lg:w-[410px] w-auto text-[#B0B3B8] mt-3 mb-8">
-            Don’t miss your chance to compete in the Victhaw Official Unity Cup.
-            Register your team now and showcase your skills on the field.
+            Be part of the action! Register your team for the Unity Cup 1.0 and
+            seize the opportunity to showcase your talent, compete against the
+            best, and make your mark on the pitch.
           </p>
           <div className="flex justify-center lg:justify-start">
             <Link href="/register">
-              <button className="bg-[#C81E23] text-white py-3 px-6 text-lg rounded-md hover:bg-black hover:text-white hover:border-[#C81E23] hover:border">
+              <button className="bg-[#C81E23] text-white py-2 px-6 text-lg rounded-md hover:bg-black hover:text-white hover:border-[#C81E23] hover:border">
                 Register now
               </button>
             </Link>
