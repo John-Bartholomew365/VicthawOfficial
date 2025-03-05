@@ -17,8 +17,8 @@ const WhyVicthaw = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-[85px]" data-aos="fade-up">
-          <h2 className="text-4xl font-bold mb-4">
-            The Vision Behind the Victhaw <br /> Official Unity Cup
+          <h2 className="lg:text-[35px] text-[27px] font-bold mb-4">
+            The Vision Behind the Victhaw <br className="lg:block hidden" /> Official Unity Cup
           </h2>
           <p className="text-lg text-[#B0B3B8] leading-tight lg:w-[570px] w-auto mx-auto">
             Football is more than just a sport to me, it’s a passion, a

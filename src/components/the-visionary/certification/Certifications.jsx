@@ -69,7 +69,7 @@ const Certifications = () => {
               key={certification.id}
               className={`flex flex-col md:flex-row items-center ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8  lg:p-6 p-2 rounded-lg shadow-md`}
+              } gap-8  lg:p-6 p-0 rounded-lg shadow-md`}
               data-aos="fade-up"
             >
               <img

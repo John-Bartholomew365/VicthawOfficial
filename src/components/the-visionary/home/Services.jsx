@@ -53,14 +53,14 @@ export default function Services() {
     <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center justify-center min-h-screen p-3 lg:pr-16">
       {/* Services Info for mobile*/}
       <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 max-w-md" data-aos="fade-left">
-        <h2 className="text-4xl lg:text-start text-center font-bold text-[#FFFFFF]">
+        <h2 className="lg:text-[35px] text-[28px] lg:text-start text-center font-bold text-[#FFFFFF]">
           My Expert <span className="text-[#C81E23]">Services</span>
         </h2>
-        <p className="text-[#B0B3B8] mt-4">
+        <p className="text-[#B0B3B8] mt-4 w-auto">
           As a certified fitness coach with over seven years of experience, I am
           dedicated to helping individuals reach their full potential.
         </p>
-        <p className="text-[#B0B3B8] mt-4">
+        <p className="text-[#B0B3B8] mt-4 w-auto">
           Whether you’re looking to build muscle, lose weight, or enhance
           athletic performance, I provide tailored training programs designed to
           push your limits, instil discipline, and deliver lasting results.

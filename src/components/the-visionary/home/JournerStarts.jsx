@@ -16,7 +16,7 @@ const JourneyStarts = () => {
       <div className="container px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="lg:text-4xl text-[30px] leading-tight tracking-tight font-bold mb-4 text-white">
+          <h2 className="lg:text-4xl text-[27px] leading-tight tracking-tight font-bold mb-4 text-white">
             Start Your Transformation Today
           </h2>
           <p className="text-[16px] leading-tight tracking-tight text-[#B0B3B8] m-auto lg:w-[480px] w-auto">

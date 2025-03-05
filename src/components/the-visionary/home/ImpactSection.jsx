@@ -14,11 +14,11 @@ const ImpactSection = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className=" lg:mx-auto mx-0 lg:px-4 px-2">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-4xl tracking-tight font-bold mb-4">
-            The Impact of the Victhaw <br /> Official Unity Cup
+          <h2 className="lg:text-[35px] text-[27px] tracking-tight font-bold mb-4">
+            The Impact of the Victhaw <br className="lg:block hidden" /> Official Unity Cup
           </h2>
           <p className="text-[16px] tracking-tight text-[#B0B3B8] m-auto lg:w-[590px] w-auto">
             Sports have the power to transform lives, build character, and unite
@@ -51,7 +51,7 @@ const ImpactSection = () => {
           <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">16+</div>
             <h3 className="text-xl font-semibold mb-2">Teams</h3>
-            <p className="text-[#B0B3B8]">
+            <p className="text-[#B0B3B8] w-auto">
               Uniting talented football teams from different backgrounds,
               fostering competition, teamwork, and a shared passion for the
               game.
@@ -62,7 +62,7 @@ const ImpactSection = () => {
           <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">250+</div>
             <h3 className="text-xl font-semibold mb-2">Players</h3>
-            <p className="text-[#B0B3B8]">
+            <p className="text-[#B0B3B8] w-auto">
               Offering a platform for athletes to shine, develop their skills,
               and take their football careers to the next level.
             </p>
@@ -82,7 +82,7 @@ const ImpactSection = () => {
           <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">10+</div>
             <h3 className="text-xl font-semibold mb-2">Sponsors</h3>
-            <p className="text-[#B0B3B8]">
+            <p className="text-[#B0B3B8] w-auto">
               Providing businesses with valuable exposure, brand visibility, and
               a chance to support grassroots sports development.
             </p>
@@ -150,7 +150,7 @@ const ImpactSection = () => {
         {/* Call to Action */}
         <div className="text-center mt-16" data-aos="fade-up">
           <a
-            href="/register" // Replace with your registration link
+            href="/register" 
             className="bg-[#C81E23] text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300"
           >
             Be Part of the Impact
