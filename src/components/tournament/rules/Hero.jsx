@@ -270,8 +270,8 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C81E23]">•</span>
                 <p className="text-[#B0B3B8]">
-                  Each team will have <b>11 players,</b> consisting of
-                  <b>10 outfield players</b> and <b>1 goalkeeper.</b>
+                  Each team will have <b>11 players,</b> consisting of 
+                  <b> 10 outfield players</b> and <b>1 goalkeeper.</b>
                 </p>
               </li>
               <li className="flex gap-3">
@@ -400,9 +400,9 @@ const Hero = () => {
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="">•</span>
-                <p className="text-[#B0B3B8]">
-                  <span className="text-red-500">Red Card:</span> A fine of <b>1000 Naira</b> will be imposed for each red card.
+                <span className="text-red-500">•</span>
+                <p className="text-[#B0B3B8] ">
+                  <span className="text-white">Red Card:</span> A fine of <b>1000 Naira</b> will be imposed for each red card.
                 </p>
               </li>
             </ul>
