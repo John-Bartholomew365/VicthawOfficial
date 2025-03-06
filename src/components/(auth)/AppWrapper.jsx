@@ -26,7 +26,7 @@ const AppWrapper = ({ children }) => {
   const pathName = usePathname();
 
   // Check for specific auth-related paths
-  const isAuthPage = ["/register", "/login", "/forgot-password", "/reset-password", "/verify-account", "/verify-email"].includes(pathName);
+  const isAuthPage = ["/register", "/login", "/forgot-password", "/reset-password", "/verify-account", "/verify-email", "/setup", "/payment"].includes(pathName);
 
   return (
     <div>
