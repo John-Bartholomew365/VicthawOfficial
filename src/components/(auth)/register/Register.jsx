@@ -28,9 +28,9 @@ const Register = () => {
     password: Yup.string()
       .min(8, "Password must be at least 8 characters")
       .required("Password is required"),
-    terms: Yup.boolean()
-      .oneOf([true], "You must accept the terms and conditions")
-      .required("You must accept the terms and conditions"),
+    // terms: Yup.boolean()
+    //   .oneOf([true], "You must accept the terms and conditions")
+    //   .required("You must accept the terms and conditions"),
   });
 
   // Formik setup
@@ -56,7 +56,7 @@ const Register = () => {
         if (response.data.statusCode === "00") {
           toast.success("Registration successful! Redirecting...");
           setTimeout(() => {
-            router.push("/setup");
+            router.push("/verify-account");
           }, 2000);
         } else {
           toast.error(

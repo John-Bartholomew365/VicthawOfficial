@@ -179,8 +179,6 @@
 //   );
 // }
 
-
-
 // "use client";
 // import { useState } from "react";
 // import { FaCopy, FaCheck } from "react-icons/fa";
@@ -390,19 +388,19 @@
 //   );
 // }
 
-
-
 "use client";
 import { useState } from "react";
 import { FaCopy, FaCheck } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 export default function PaymentPage() {
   const [copiedField, setCopiedField] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState(null);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const accountDetails = {
@@ -435,7 +433,7 @@ export default function PaymentPage() {
     }
   };
 
-  const handleFileSubmit = () => {
+  const handleFileSubmit = async () => {
     if (!selectedFile) {
       toast.error("Please upload an image or PDF before submitting.", {
         position: "top-right",
@@ -450,45 +448,78 @@ export default function PaymentPage() {
           border: "1px solid #C81E23",
         },
       });
+    }
+    const userData = getUserData();
+    if (!userData) {
+      toast.error("User not found. Please register again");
+      setLoading(false);
       return;
+    }
+    const formData = new FormData();
+    formData.append("paymentProof", selectedFile);
+    formData.append("userId", userData.userId);
+
+    try {
+      const response = await axios.post("/api/payment", formData, {
+        // method: "POST",
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+ 
+
+      toast(response.data.message);
+      localStorage.removeItem("userData");
+      router.push("/login");
+    } catch (error) {
+      toast.error(error.response?.data?.message);
+      console.error("Registration error:", error);
     }
 
     // Save payment proof to local storage
-    const paymentProof = {
-      teamName: "Storm FC", // Replace with dynamic team name if available
-      file: selectedFile,
-      submittedAt: new Date().toISOString(),
-    };
+    // const paymentProof = {
+    //   teamName: "Storm FC", // Replace with dynamic team name if available
+    //   file: selectedFile,
+    //   submittedAt: new Date().toISOString(),
+    // };
 
     // Get existing payment proofs from local storage
-    const existingProofs = JSON.parse(localStorage.getItem("paymentProofs")) || [];
-    existingProofs.push(paymentProof);
+    // const existingProofs =
+    //   JSON.parse(localStorage.getItem("paymentProofs")) || [];
+    // existingProofs.push(paymentProof);
 
-    // Save updated payment proofs to local storage
-    localStorage.setItem("paymentProofs", JSON.stringify(existingProofs));
+    // // Save updated payment proofs to local storage
+    // localStorage.setItem("paymentProofs", JSON.stringify(existingProofs));
 
-    toast.success(
-      "Payment proof submitted successfully. Redirecting to your team's dashboard...",
-      {
-        position: "top-right",
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        style: {
-          background: "#0F0F0F",
-          color: "#fff",
-          border: "1px solid #00ff00",
-        },
-      }
-    );
+    // toast.success(
+    //   "Payment proof submitted successfully. Redirecting to your team's dashboard...",
+    //   {
+    //     position: "top-right",
+    //     autoClose: 4000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     style: {
+    //       background: "#0F0F0F",
+    //       color: "#fff",
+    //       border: "1px solid #00ff00",
+    //     },
+    //   }
+    // );
 
-    setTimeout(() => {
-      router.push("/dashboard");
-    }, 4000);
+    // setTimeout(() => {
+    //   router.push("/dashboard");
+    // }, 4000);
   };
 
+  const getUserData = () => {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      return JSON.parse(userData);
+    }
+    return null;
+  };
   return (
     <div className="lg:p-6 p-0 lg:w-[800px] w-auto m-auto tracking-tight mt-24">
       <h1 className="text-2xl font-bold mb-4 text-center">Make Payment</h1>
@@ -538,6 +569,7 @@ export default function PaymentPage() {
       </div>
 
       {/* Payment Confirmation */}
+  
       <div className="mt-8">
         <h2 className="text-lg font-bold mb-4">Confirm Payment</h2>
         <div className="space-y-3">
@@ -579,7 +611,7 @@ export default function PaymentPage() {
           </button>
         </div>
       </div>
-
+   
       {/* Toast Container */}
       <ToastContainer />
     </div>

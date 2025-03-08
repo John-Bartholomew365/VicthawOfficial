@@ -8,10 +8,12 @@ export async function POST(req) {
     console.log(body);
 
     const payload = {
-      otp: body.otp,
+      email: body.email,
+      password: body.password
+
     };
 
-    const base_url = `${process.env.BASE_URL}/auth/verify-otp`;
+    const base_url = `${process.env.BASE_URL}/auth/login`;
     console.log("Sending request to:", base_url);
 
     const response = await axios.post(base_url, payload, {

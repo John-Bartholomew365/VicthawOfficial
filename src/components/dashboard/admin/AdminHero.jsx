@@ -1,196 +1,42 @@
-// "use client";
-// import React, { useState } from "react";
-
-// const AdminHero = () => {
-//   // Sample data for registered teams
-//   const [teams, setTeams] = useState([
-//     {
-//       id: 1,
-//       name: "Storm FC",
-//       paymentStatus: "Pending",
-//       players: 18,
-//       coach: "John Doe",
-//       assistantCoach: "Jane Smith",
-//     },
-//     {
-//       id: 2,
-//       name: "Thunder Strikers",
-//       paymentStatus: "Confirmed",
-//       players: 18,
-//       coach: "Mike Johnson",
-//       assistantCoach: "Sarah Lee",
-//     },
-//     {
-//       id: 3,
-//       name: "Shadow Rovers",
-//       paymentStatus: "Pending",
-//       players: 18,
-//       coach: "Chris Green",
-//       assistantCoach: "Emily Brown",
-//     },
-//   ]);
-
-//   // Function to confirm payment for a team
-//   const confirmPayment = (teamId) => {
-//     setTeams((prevTeams) =>
-//       prevTeams.map((team) =>
-//         team.id === teamId ? { ...team, paymentStatus: "Confirmed" } : team
-//       )
-//     );
-//   };
-
-//   // Function to reject payment for a team
-//   const rejectPayment = (teamId) => {
-//     setTeams((prevTeams) =>
-//       prevTeams.map((team) =>
-//         team.id === teamId ? { ...team, paymentStatus: "Rejected" } : team
-//       )
-//     );
-//   };
-
-//   return (
-//     <div className="p-2 lg:w-[960px] tracking-tight">
-//       <h1 className="text-2xl font-bold mb-8 text-center">Admin Dashboard</h1>
-
-//       {/* Dashboard Overview */}
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-//         <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
-//           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
-//             Registered Teams
-//           </h2>
-//           <p className="text-3xl font-bold">{teams.length}</p>
-//         </div>
-//         <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
-//           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
-//             Confirmed Payments
-//           </h2>
-//           <p className="text-3xl font-bold">
-//             {teams.filter((team) => team.paymentStatus === "Confirmed").length}
-//           </p>
-//         </div>
-//         <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
-//           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
-//             Pending Reviews
-//           </h2>
-//           <p className="text-3xl font-bold">
-//             {teams.filter((team) => team.paymentStatus === "Pending").length}
-//           </p>
-//         </div>
-//       </div>
-
-//       {/* Team Management */}
-//       <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg mb-8">
-//         <h2 className="text-lg font-bold text-[#C81E23] mb-4">
-//           Team Management
-//         </h2>
-//         <div className="overflow-x-auto">
-//           <table className="min-w-full">
-//             <thead>
-//               <tr>
-//                 <th className="text-left py-2">Team Name</th>
-//                 <th className="text-left py-2">Payment Status</th>
-//                 <th className="text-left py-2">Players</th>
-//                 <th className="text-left py-2">Coach</th>
-//                 <th className="text-left py-2">Assistant Coach</th>
-//                 <th className="text-left py-2">Actions</th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {teams.map((team) => (
-//                 <tr key={team.id} className="border-b border-[#1F1F1F]">
-//                   <td className="py-4">{team.name}</td>
-//                   <td className="py-4">
-//                     <span
-//                       className={`px-2 py-1 rounded ${
-//                         team.paymentStatus === "Confirmed"
-//                           ? "bg-green-500"
-//                           : team.paymentStatus === "Pending"
-//                           ? "bg-yellow-500"
-//                           : "bg-red-500"
-//                       }`}
-//                     >
-//                       {team.paymentStatus}
-//                     </span>
-//                   </td>
-//                   <td className="py-4">{team.players}</td>
-//                   <td className="py-4">{team.coach}</td>
-//                   <td className="py-4">{team.assistantCoach}</td>
-//                   <td className="py-4">
-//                     {team.paymentStatus === "Pending" && (
-//                       <div className="flex gap-2">
-//                         <button
-//                           onClick={() => confirmPayment(team.id)}
-//                           className="px-3 py-1 bg-green-500 rounded hover:bg-green-600 transition"
-//                         >
-//                           Confirm
-//                         </button>
-//                         <button
-//                           onClick={() => rejectPayment(team.id)}
-//                           className="px-3 py-1 bg-red-500 rounded hover:bg-red-600 transition"
-//                         >
-//                           Reject
-//                         </button>
-//                       </div>
-//                     )}
-//                   </td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminHero;
-
-
-
-
 "use client";
+import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const AdminHero = () => {
   // Sample data for registered teams
-  const [teams, setTeams] = useState([
-    {
-      id: 1,
-      name: "Storm FC",
-      paymentStatus: "Pending",
-      players: 18,
-      coach: "John Barthy",
-      paymentProof: null, // Add payment proof field
-    },
-    {
-      id: 2,
-      name: "Thunder Strikers",
-      paymentStatus: "Confirmed",
-      players: 18,
-      coach: "Mike Johnson",
-      paymentProof: "https://example.com/proof1.jpg", // Example payment proof
-    },
-    {
-      id: 3,
-      name: "Shadow Rovers",
-      paymentStatus: "Pending",
-      players: 18,
-      coach: "Chris Adebayo",
-      paymentProof: null,
-    },
-  ]);
+  const [teams, setTeams] = useState([]);
+
+
+  const getToken = () => {
+    const token = localStorage.getItem("accessToken"); 
+    if (token) {
+      return token;
+    }
+    return null;
+  };
 
   // Fetch payment proofs from local storage (if using local storage)
   useEffect(() => {
-    const fetchPaymentProofs = () => {
+    const fetchPaymentProofs = async () => {
+   
+
       try {
-        const proofs = JSON.parse(localStorage.getItem("paymentProofs")) || [];
-        // Update teams with payment proofs
-        const updatedTeams = teams.map((team) => {
-          const proof = proofs.find((p) => p.teamName === team.name);
-          return proof ? { ...team, paymentProof: proof.file } : team;
+        const response = await axios.get("/api/getTeams", {
+          headers: {
+            token: getToken(),
+          },
         });
-        setTeams(updatedTeams);
+
+      
+
+        // const proofs = JSON.parse(localStorage.getItem("paymentProofs")) || [];
+        // // Update teams with payment proofs
+        // const updatedTeams = teams.map((team) => {
+        //   const proof = proofs.find((p) => p.teamName === team.name);
+        //   return proof ? { ...team, paymentProof: proof.file } : team;
+        // });
+        setTeams(response?.data);
       } catch (error) {
         console.error("Failed to fetch payment proofs:", error);
       }
@@ -200,25 +46,105 @@ const AdminHero = () => {
   }, []);
 
   // Function to confirm payment for a team
-  const confirmPayment = (teamId) => {
-    setTeams((prevTeams) =>
-      prevTeams.map((team) =>
-        team.id === teamId ? { ...team, paymentStatus: "Confirmed" } : team
-      )
-    );
+  const confirmPayment = async (teamId) => {
+    try {
+      // Send a PUT request to update the payment status
+      const response = await fetch("/api/status", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          token: getToken(),  
+        },
+        body: JSON.stringify({
+          teamId: teamId,  
+          status: "Confirmed",  
+        }),
+      });
+  
+      // Check if the request was successful
+      if (response.ok) {
+        const data = await response.json();
+
+        
+        // Notify the user of success
+        toast.error(data.message, {
+          position: "top-center",
+        });
+
+      } else {
+        // Handle server errors
+        const data = await response.json();
+        toast.error(data.message || "Failed to update payment status", {
+          position: "top-center",
+        });
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Error updating payment status:", error);
+      toast.error("An error occurred. Please try again.", {
+        position: "top-center",
+      });
+    }
   };
 
-  // Function to reject payment for a team
-  const rejectPayment = (teamId) => {
-    setTeams((prevTeams) =>
-      prevTeams.map((team) =>
-        team.id === teamId ? { ...team, paymentStatus: "Rejected" } : team
-      )
-    );
+  const rejectPayment = async (teamId) => {
+    try {
+      // Send a PUT request to update the payment status
+      const response = await fetch("/api/status", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          token: getToken(),  
+        },
+        body: JSON.stringify({
+          teamId: teamId,  
+          status: "Rejected",  
+        }),
+      });
+  
+      // Check if the request was successful
+      if (response.ok) {
+        const data = await response.json();
+
+     
+        // Notify the user of success
+        toast.success(data.message, {
+          position: "top-center",
+        });
+
+      } else {
+        // Handle server errors
+        const data = await response.json();
+        toast.error(data.message || "Failed to update payment status", {
+          position: "top-center",
+        });
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Error updating payment status:", error);
+      toast.error("An error occurred. Please try again.", {
+        position: "top-center",
+      });
+    }
   };
+
+ 
+
+  const confirmedPayments = teams.filter(
+    (item) => item.payment_status === "Confirmed"
+  ).length;
+
+  // Count pending payment reviews
+  const pendingPayments = teams.filter(
+    (item) => item.payment_status === "Pending"
+  ).length;
+  const paidPayments = teams.filter(
+    (item) => item.payment_status === "Paid"
+  ).length;
 
   return (
     <div className="p-2 lg:w-[960px] tracking-tight">
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       <h1 className="text-2xl font-bold mb-8 text-center">Admin Dashboard</h1>
 
       {/* Dashboard Overview */}
@@ -233,17 +159,13 @@ const AdminHero = () => {
           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
             Confirmed Payments
           </h2>
-          <p className="text-3xl font-bold">
-            {teams.filter((team) => team.paymentStatus === "Confirmed").length}
-          </p>
+          <p className="text-3xl font-bold">{confirmedPayments}</p>
         </div>
         <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
             Pending Reviews
           </h2>
-          <p className="text-3xl font-bold">
-            {teams.filter((team) => team.paymentStatus === "Pending").length}
-          </p>
+          <p className="text-3xl font-bold">{pendingPayments + paidPayments}</p>
         </div>
       </div>
 
@@ -258,7 +180,7 @@ const AdminHero = () => {
               <tr>
                 <th className="text-left py-2">Team Name</th>
                 <th className="text-left py-2">Payment Status</th>
-                <th className="text-left py-2">Players</th>
+               <th className="text-left py-2">Email</th> 
                 <th className="text-left py-2">Coach</th>
                 <th className="text-left py-2">Payment Proof</th>
                 <th className="text-left py-2">Actions</th>
@@ -267,26 +189,26 @@ const AdminHero = () => {
             <tbody>
               {teams.map((team) => (
                 <tr key={team.id} className="border-b border-[#1F1F1F]">
-                  <td className="py-4">{team.name}</td>
+                  <td className="py-4">{team?.team_name}</td>
                   <td className="py-4">
                     <span
                       className={`px-2 py-1 rounded ${
-                        team.paymentStatus === "Confirmed"
+                        team?.payment_status === "Confirmed"
                           ? "bg-green-500"
-                          : team.paymentStatus === "Pending"
+                          : team?.payment_status === "Pending"
                           ? "bg-yellow-500"
                           : "bg-red-500"
                       }`}
                     >
-                      {team.paymentStatus}
+                      {team?.payment_status}
                     </span>
                   </td>
-                  <td className="py-4">{team.players}</td>
-                  <td className="py-4">{team.coach}</td>
+                  <td className="py-4">{team.email}</td>
+                  <td className="py-4">{team?.manager_name}</td>
                   <td className="py-4">
-                    {team.paymentProof ? (
+                    {team?.payment_proof ? (
                       <a
-                        href={team.paymentProof}
+                        href={`${process.env.BASE_URL}/${team?.payment_proof}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#C81E23] hover:underline"
@@ -298,16 +220,16 @@ const AdminHero = () => {
                     )}
                   </td>
                   <td className="py-4">
-                    {team.paymentStatus === "Pending" && (
+                    {team.payment_status !== "Confirmed" && (
                       <div className="flex gap-2">
                         <button
-                          onClick={() => confirmPayment(team.id)}
+                          onClick={() => confirmPayment(team._id)}
                           className="px-3 py-1 bg-green-500 rounded hover:bg-green-600 transition"
                         >
                           Confirm
                         </button>
                         <button
-                          onClick={() => rejectPayment(team.id)}
+                          onClick={() => rejectPayment(team._id)}
                           className="px-3 py-1 bg-red-500 rounded hover:bg-red-600 transition"
                         >
                           Reject

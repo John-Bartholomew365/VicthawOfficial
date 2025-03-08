@@ -319,16 +319,16 @@ const Footer = () => {
             {Object.keys(timeLeft).length > 0 ? (
               <div className="flex flex-wrap gap-4">
                 <div>
-                  <span className="font-bold">{timeLeft.days}</span> Days
+                  <p className="font-bold">{timeLeft?.days}</p> Days
                 </div>
                 <div>
-                  <span className="font-bold">{timeLeft.hours}</span> Hours
+                  <p className="font-bold">{timeLeft?.hours}</p> Hours
                 </div>
                 <div>
-                  <span className="font-bold">{timeLeft.minutes}</span> Minutes
+                  <p className="font-bold">{timeLeft?.minutes}</p> Minutes
                 </div>
                 <div>
-                  <span className="font-bold">{timeLeft.seconds}</span> Seconds
+                  <p className="font-bold">{timeLeft.seconds}</p> Seconds
                 </div>
               </div>
             ) : (

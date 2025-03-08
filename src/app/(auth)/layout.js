@@ -24,14 +24,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    
         <AppWrapper>
           <main>{children}</main>
         </AppWrapper>
-      </body>
-    </html>
+    
   );
 }

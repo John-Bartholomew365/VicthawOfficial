@@ -8,15 +8,25 @@ import { IoHelpCircleOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
 import { FaBars, FaBell } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
+  const router = useRouter()
   const [openSideBar, setOpenSideBar] = useState(false);
   const [login, setLogin] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [notifications, setNotifications] = useState([
-    { id: 1, message: "Your tournament payment has been confirmed", type: "payment" },
-    { id: 2, message: "Check the fixture schedule to check your team's next fixture", type: "message" },
+    {
+      id: 1,
+      message: "Your tournament payment has been confirmed",
+      type: "payment",
+    },
+    {
+      id: 2,
+      message: "Check the fixture schedule to check your team's next fixture",
+      type: "message",
+    },
     { id: 3, message: "You're all set", type: "follower" },
   ]);
 
@@ -50,6 +60,11 @@ const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
     setNotificationsOpen(!notificationsOpen);
   };
 
+  const logout = () => {
+    localStorage.removeItem('accessToken')
+    localStorage.removeItem('userData')
+    router.push("/login")
+  }
   return (
     <div className="bg-black border-b-2 border-white fixed w-full top-0  border-opacity-10 z-[5000]">
       <div className="px-[5%] flex items-center justify-between  w-full py-3">
@@ -69,51 +84,20 @@ const DashNav = ({ handleToggleIcon, icon, toggleSidebar }) => {
           <h1 className="text-white lg:text-[25px] text-[20px]">
             Victhaw Official
           </h1>
-          <div className="pl-20 sm:hidden">
-      
-          </div>
+          <div className="pl-20 sm:hidden"></div>
         </div>
 
         <div className="flex gap-3 items-center w-[55%] justify-end">
-          <div className="relative">
-            <FaBell
-              className="text-[#B0B3B8] text-2xl cursor-pointer"
-              onClick={handleNotifications}
-            />
-            {notificationsOpen && (
-              <div className="absolute top-10 right-50 text-white mt-2 w-64 bg-[#0F0F0F] border border-gray-200 rounded-lg shadow-lg text-[14px]">
-                <ul className="p-2">
-                  {notifications.map((notification) => (
-                    <li
-                      key={notification.id}
-                      className="flex items-center justify-between p-2 border-b border-gray-200 last:border-none"
-                    >
-                      <span>{notification.message}</span>
-                      {notification.type === "payment" && (
-                        <span className="text-green-500">Confirmed</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-          <div className="lg:flex gap-1 items-center border-none lg:w-[55%] hidden rounded-[10px] outline-none bg-[#0F0F0F] py-1 px-6">
-            <TbSearch className="lg:text-[12px] text-xl text-[white] opacity-60" />
-            <input
-              className=" w-full lg:text-[12px] bg-black/10 text-xl text-white  outline-none opacity-60"
-              type="text"
-              placeholder="Search here"
-            />
-       
+          
+          <div className="">
+            <button onClick={logout} className="bg-[#C81E23] py-2 px-7 rounded-md text-white">
+              Logout
+            </button>
           </div>
           <button className=" text-black flex flex-row gap-1">
-         
-
             <div className="text-[20px] sm:hidden">
               <IoHelpCircleOutline />
             </div>
-        
           </button>
           {/* <div className="lg:flex relative z-[1000] items-center gap-3 hidden">
             <Link
