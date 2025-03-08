@@ -11,30 +11,30 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   const pathname = usePathname();
 
   const menus = [
-    {
-      header: {
-        title: "Getting started",
-        ic: <LiaAngleRightSolid />,
-        link: "#",
-      },
-      items: [
-        {
-          label: "Registered teams",
-          link: "#",
-          id: "introduction",
-        },
-        {
-          label: "Pending registrations",
-          link: "#",
-          id: "quickstart",
-        },
-        {
-          label: "Upcoming matches",
-          link: "#",
-          id: "authentication",
-        },
-      ],
-    },
+    // {
+    //   header: {
+    //     title: "Getting started",
+    //     ic: <LiaAngleRightSolid />,
+    //     link: "#",
+    //   },
+    //   items: [
+    //     {
+    //       label: "Registered teams",
+    //       link: "#",
+    //       id: "introduction",
+    //     },
+    //     {
+    //       label: "Pending registrations",
+    //       link: "#",
+    //       id: "quickstart",
+    //     },
+    //     {
+    //       label: "Upcoming matches",
+    //       link: "#",
+    //       id: "authentication",
+    //     },
+    //   ],
+    // },
     {
       header: {
         title: "Team management",
@@ -222,97 +222,98 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           link: "#",
           id: "createpaymentlink",
         },
-        // {
-        //   label: "Get all payment link",
-        //   link: "/dashboard/getallpaymentlink",
-        //   id: "getallpaymentlink/",
-        // },
-        // {
-        //   label: "Get single payment link",
-        //   link: "/dashboard/getsinglepaymentlink",
-        //   id: "getsinglepaymentlink",
-        // },
-        // {
-        //   label: "Edit payment link",
-        //   link: "/dashboard/editpaymentlink",
-        //   id: "editpaymentlink",
-        // },
+        {
+          label: "Get all payment link",
+          link: "/dashboard/getallpaymentlink",
+          id: "getallpaymentlink/",
+        },
+        {
+          label: "Get single payment link",
+          link: "/dashboard/getsinglepaymentlink",
+          id: "getsinglepaymentlink",
+        },
+        {
+          label: "Edit payment link",
+          link: "/dashboard/editpaymentlink",
+          id: "editpaymentlink",
+        },
 
-        // {
-        //   label: "Payment link checkout",
-        //   link: "/dashboard/paymentlinkcheckout",
-        //   id: "paymentlinkcheckout",
-        // },
-      ],
-    },
-    {
-      header: {
-        title: "Settings",
-        ic: <LiaAngleRightSolid />,
-        link: "#",
-      },
-      items: [
         {
-          label: "Tournament Settings",
-          link: "#",
-          id: "addpayroll",
-        },
-        {
-          label: "User Settings",
-          link: "#",
-          id: "getallpayroll",
-        },
-        // {
-        //   label: "Get single payroll",
-        //   link: "/dashboard/payroll/singlepayroll",
-        //   id: "getsinglepayroll",
-        // },
-        // {
-        //   label: "Suspend and Activate Payroll",
-        //   link: "/dashboard/payroll/suspendandActivatePayroll",
-        //   id: "createcustomer",
-        // },
-        // {
-        //   label: "Edit Payroll",
-        //   link: "/dashboard/payroll/editpayroll",
-        //   id: "createcustomer",
-        // },
-        // {
-        //   label: "Delete Payroll",
-        //   link: "/dashboard/payroll/deletepayroll",
-        //   id: "createcustomer",
-        // },
-        // {
-        //   label: "Add Beneficiary",
-        //   link: "/dashboard/payroll/addbeneficiary",
-        //   id: "createcustomer",
-        // },
-        // {
-        //   label: "Delete Beneficiary",
-        //   link: "/dashboard/payroll/deletebeneficiary",
-        //   id: "createcustomer",
-        // },
-        // {
-        //   label: "Disburse Payroll",
-        //   link: "/dashboard/payroll/disbursepayroll",
-        //   id: "createcustomer",
-        // },
-      ],
-    },
-    {
-      header: {
-        title: "Support",
-        ic: <LiaAngleRightSolid />,
-        link: "#",
-      },
-      items: [
-        {
-          label: "Support",
-          link: "/support",
-          id: "support",
+          label: "Payment link checkout",
+          link: "/dashboard/paymentlinkcheckout",
+          id: "paymentlinkcheckout",
         },
       ],
     },
+    // },
+    // {
+    //   header: {
+    //     title: "Settings",
+    //     ic: <LiaAngleRightSolid />,
+    //     link: "#",
+    //   },
+    //   items: [
+    //     {
+    //       label: "Tournament Settings",
+    //       link: "#",
+    //       id: "addpayroll",
+    //     },
+    //     {
+    //       label: "User Settings",
+    //       link: "#",
+    //       id: "getallpayroll",
+    //     },
+    //     // {
+    //     //   label: "Get single payroll",
+    //     //   link: "/dashboard/payroll/singlepayroll",
+    //     //   id: "getsinglepayroll",
+    //     // },
+    //     // {
+    //     //   label: "Suspend and Activate Payroll",
+    //     //   link: "/dashboard/payroll/suspendandActivatePayroll",
+    //     //   id: "createcustomer",
+    //     // },
+    //     // {
+    //     //   label: "Edit Payroll",
+    //     //   link: "/dashboard/payroll/editpayroll",
+    //     //   id: "createcustomer",
+    //     // },
+    //     // {
+    //     //   label: "Delete Payroll",
+    //     //   link: "/dashboard/payroll/deletepayroll",
+    //     //   id: "createcustomer",
+    //     // },
+    //     // {
+    //     //   label: "Add Beneficiary",
+    //     //   link: "/dashboard/payroll/addbeneficiary",
+    //     //   id: "createcustomer",
+    //     // },
+    //     // {
+    //     //   label: "Delete Beneficiary",
+    //     //   link: "/dashboard/payroll/deletebeneficiary",
+    //     //   id: "createcustomer",
+    //     // },
+    //     // {
+    //     //   label: "Disburse Payroll",
+    //     //   link: "/dashboard/payroll/disbursepayroll",
+    //     //   id: "createcustomer",
+    //     // },
+    //   ],
+    // },
+    // {
+    //   header: {
+    //     title: "Support",
+    //     ic: <LiaAngleRightSolid />,
+    //     link: "#",
+    //   },
+    //   items: [
+    //     {
+    //       label: "Support",
+    //       link: "/support",
+    //       id: "support",
+    //     },
+    //   ],
+    // },
   ];
 
   const getInitialCollapsedMenus = () => {

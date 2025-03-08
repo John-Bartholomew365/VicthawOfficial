@@ -90,8 +90,8 @@ const SetupTeam = () => {
   useEffect(() => {
     const user = getUserData();
     // Check if user exists and their payment status is not "Confirmed"
-  
-    setTeamName(user.team_name)
+
+    setTeamName(user.team_name);
     if (user && user.payment_status !== "Confirmed") {
       setShowPaymentReview(true); // Hide the payment review notification
     }
@@ -157,7 +157,6 @@ const SetupTeam = () => {
           },
         });
 
-       
         setPlayersNames(response?.data.teamMembers);
 
         // setTeams(response?.data);
@@ -170,7 +169,9 @@ const SetupTeam = () => {
   }, []);
 
   const players = playerNames.filter((d) => d.role === "Player");
-  const coaches = playerNames.filter((d) => d.role === "Coach" || d.role === "Assistant Coach");
+  const coaches = playerNames.filter(
+    (d) => d.role === "Coach" || d.role === "Assistant Coach"
+  );
   return (
     <div className="p-6 max-w-4xl mx-auto tracking-tight">
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
@@ -189,13 +190,19 @@ const SetupTeam = () => {
       )}
 
       {/* Team Setup Section */}
+      <div>
+        <h1 className="lg:text-[25px] text-[20px] font-bold text-[#C81E23]">
+          Welcome to your team's dashboard! 
+        </h1>
+        <h1 className="text-[#B0B3B8] mt-2">Now, setup your team a maximum of 18
+        players, a coach and an assistant coach</h1>
+      </div>
       <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
         <h2 className="text-lg font-bold text-[#C81E23] mb-4">Team Setup</h2>
 
         {/* Team Logo, Name, and Rating */}
         {/* <div className="flex flex-col items-center mb-8"> */}
         <div className="">
-
           {/* <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
             <img
               src="/one.png"
@@ -371,7 +378,6 @@ const SetupTeam = () => {
                 <p className="text-xs font-semibold text-center">{d.role}</p>
               </div>
             ))}
-            
           </div>
         </div>
       </div>
