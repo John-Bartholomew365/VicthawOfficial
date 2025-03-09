@@ -9,19 +9,37 @@ export async function PUT(req) {
     // Extract teamId and status from the request body
     const { teamId, status } = body;
 
+    if (!teamId || !status) {
+      return NextResponse.json(
+        { message: "teamId and status are required." },
+        { status: 400 }
+      );
+    }
+    
     // Construct the base URL
     const base_url = `${process.env.BASE_URL}/admin/update-payment-status/${teamId}`;
 
     // Extract the token from the request headers
     const token = req.headers.get("token");
 
+    if (!token) {
+      return NextResponse.json(
+        { message: "Authorization token is missing." },
+        { status: 401 }
+      );
+    }
+
+    console.log("Token:", token);
+    console.log("teamId:", teamId);
+
     // Make the PUT request using axios
     const response = await axios.put(
       base_url,
-      { status }, // Request body
+      { status }, // Corrected request body structure
       {
         headers: {
-          token: token, // Pass the token in the headers
+          token: token, // Use this format if required
+          "Content-Type": "application/json",
         },
       }
     );
@@ -32,7 +50,7 @@ export async function PUT(req) {
     // Return the response as JSON
     return NextResponse.json(result);
   } catch (error) {
-    console.error("Error in route.js:", error.message);
+    console.error("Error in route.js:", error.response?.data || error.message);
 
     // Handle errors and return a meaningful response
     return NextResponse.json(
