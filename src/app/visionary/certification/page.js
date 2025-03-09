@@ -1,3 +1,4 @@
+import Footer from "@/components/landing-page/Footer";
 import CertificationsHero from "@/components/the-visionary/certification/CertificationHero";
 import Certifications from "@/components/the-visionary/certification/Certifications";
 import FinalCerti from "@/components/the-visionary/certification/FinalCerti";
@@ -10,6 +11,7 @@ const page = () => {
       <div className="container lg:px-[30px] px-2">
         <Certifications />
         <FinalCerti />
+        <Footer />
       </div>
     </div>
   );

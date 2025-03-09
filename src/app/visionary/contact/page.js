@@ -1,3 +1,4 @@
+import Footer from "@/components/landing-page/Footer";
 import CommunityImpact from "@/components/the-visionary/contact/CommunityImpact";
 import ContactHero from "@/components/the-visionary/contact/ContactHero";
 import GetInTouch from "@/components/the-visionary/contact/GetInTouch";
@@ -10,6 +11,7 @@ const page = () => {
       <div className="container lg:px-[30px] px-2">
         <CommunityImpact />
         <GetInTouch />
+        <Footer />
       </div>
     </div>
   );

@@ -84,19 +84,19 @@ export default function TermsAgreement() {
           Why Complete Your Payment?
         </h2>
         <div className="space-y-3">
-          <div className="flex items-center gap-2">
+          <div className="flex gap-2">
             <FaCheckCircle className="text-green-500" />
             <p className="text-white">
               Secure your team's spot in the tournament.
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex gap-2">
             <FaCheckCircle className="text-green-500" />
             <p className="text-white">
               Gain access to exclusive updates and resources.
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex gap-2">
             <FaCheckCircle className="text-green-500" />
             <p className="text-white">
               Ensure your team is ready for the competition.
@@ -143,7 +143,7 @@ export default function TermsAgreement() {
         <button
           onClick={handleProceed}
           disabled={!agreed}
-          className={`mt-4 lg:w-[200px] w-auto py-2 rounded-lg font-semibold text-white transition ${
+          className={`mt-4 lg:w-[200px] px-3 w-auto py-2 rounded-lg font-semibold text-white transition ${
             agreed
               ? "bg-[#C81E23] hover:bg-red-700"
               : "bg-[#000000] cursor-not-allowed"

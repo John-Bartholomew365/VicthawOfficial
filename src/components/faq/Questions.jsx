@@ -40,7 +40,7 @@ const Questions = () => {
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;">A valid ID for each player (e.g., National ID, Driver’s License, or Passport).</span>
+              <span style="color: #FFFFFF;">A valid ID for each player (e.g., Player name, player image and player role).</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
@@ -114,7 +114,7 @@ const Questions = () => {
     {
       question: "13. How can I become a sponsor?",
       answer: `
-          Visit the <a href="/sponsor" target="_blank" style="color: #C81E23; text-decoration: underline;">Sponsorship page</a> on our website to view available sponsorship packages. You can also contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> or call <b style="color: #C81E23;">08106163804</b> for more details.
+          Visit the <a href="/about/sponsors" target="_blank" style="color: #C81E23; text-decoration: underline;">Sponsorship page</a> on our website to view available sponsorship packages. You can also contact us at <a href="mailto:victhawofficial@gmail.com" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> or call <b style="color: #C81E23;">08106163804</b> for more details.
           `,
     },
 
@@ -133,13 +133,13 @@ const Questions = () => {
     {
       question: "16. How can I stay updated on the tournament schedule?",
       answer: `
-            The full schedule will be available on the <a href="/schedule" target="_blank" style="color: #C81E23; text-decoration: underline;">Schedule page</a> of our website. You can also follow us on social media for live updates.
+            The full schedule will be available on the <a href="/tournament/schedule" target="_blank" style="color: #C81E23; text-decoration: underline;">Schedule page</a> of our website. You can also follow us on social media for live updates.
             `,
     },
     {
       question: "17. Are there opportunities for media coverage?",
       answer: `
-            Yes, media outlets are encouraged to cover the event. Please contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> for press passes and further details.
+            Yes, media outlets are encouraged to cover the event. Please contact us at <a href="mailto:victhawofficial@gmail.com" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> for press passes and further details.
             `,
     },
     {
@@ -151,7 +151,7 @@ const Questions = () => {
     {
       question: "19. Can I volunteer for the tournament?",
       answer: `
-            Yes, we welcome volunteers! Please contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> for more information on how to get involved.
+            Yes, we welcome volunteers! Please contact us at <a href="mailto:victhawofficial@gmail.com" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> for more information on how to get involved.
             `,
     },
     {

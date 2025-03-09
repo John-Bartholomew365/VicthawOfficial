@@ -1,4 +1,5 @@
 import AboutSection from "@/components/landing-page/AboutSection";
+import Footer from "@/components/landing-page/Footer";
 import HeroSection from "@/components/landing-page/HeroSection";
 import Prizes from "@/components/landing-page/Prizes";
 import RegisterTeam from "@/components/landing-page/RegisterTeam";
@@ -18,6 +19,7 @@ export default function Home() {
         <Sponsors />
         <RegisterTeam />
         <UpcomingEvents />
+        <Footer/>
       </div>
     </div>
   );

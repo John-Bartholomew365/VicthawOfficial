@@ -38,22 +38,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     {
       header: {
         title: "Team management",
-        ic: <LiaAngleRightSolid />,
+        // ic: <LiaAngleRightSolid />,
         // link: "",
-        link: "#",
+        link: "",
       },
-      items: [
-        {
-          label: "Team details",
-          link: "#",
-          id: "allcustomers",
-        },
-        {
-          label: "Match History",
-          link: "#",
-          id: "allcustomers",
-        },
-      ],
+      // items: [
+      //   {
+      //     label: "Team details",
+      //     link: "#",
+      //     id: "allcustomers",
+      //   },
+      //   {
+      //     label: "Match History",
+      //     link: "#",
+      //     id: "allcustomers",
+      //   },
+      // ],
     },
     // {
     //   header: {
@@ -208,42 +208,42 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     {
       header: {
         title: "Schedule management",
-        ic: <LiaAngleRightSolid />,
-        link: "#",
+        // ic: <LiaAngleRightSolid />,
+        link: "/dashboard/schedule",
       },
-      items: [
-        {
-          label: "Schedule overview",
-          link: "#",
-          id: "createpaymentlink",
-        },
-        {
-          label: "Match details",
-          link: "#",
-          id: "createpaymentlink",
-        },
-        {
-          label: "Get all payment link",
-          link: "/dashboard/getallpaymentlink",
-          id: "getallpaymentlink/",
-        },
-        {
-          label: "Get single payment link",
-          link: "/dashboard/getsinglepaymentlink",
-          id: "getsinglepaymentlink",
-        },
-        {
-          label: "Edit payment link",
-          link: "/dashboard/editpaymentlink",
-          id: "editpaymentlink",
-        },
+      // items: [
+      //   {
+      //     label: "Schedule overview",
+      //     link: "#",
+      //     id: "createpaymentlink",
+      //   },
+      //   {
+      //     label: "Match details",
+      //     link: "#",
+      //     id: "createpaymentlink",
+      //   },
+      //   {
+      //     label: "Get all payment link",
+      //     link: "/dashboard/getallpaymentlink",
+      //     id: "getallpaymentlink/",
+      //   },
+      //   {
+      //     label: "Get single payment link",
+      //     link: "/dashboard/getsinglepaymentlink",
+      //     id: "getsinglepaymentlink",
+      //   },
+      //   {
+      //     label: "Edit payment link",
+      //     link: "/dashboard/editpaymentlink",
+      //     id: "editpaymentlink",
+      //   },
 
-        {
-          label: "Payment link checkout",
-          link: "/dashboard/paymentlinkcheckout",
-          id: "paymentlinkcheckout",
-        },
-      ],
+      //   {
+      //     label: "Payment link checkout",
+      //     link: "/dashboard/paymentlinkcheckout",
+      //     id: "paymentlinkcheckout",
+      //   },
+      // ],
     },
     // },
     // {
@@ -316,17 +316,17 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     // },
   ];
 
-  const getInitialCollapsedMenus = () => {
-    return menus
-      .filter((menu) => menu.items.some((item) => item.link === pathname))
-      .map((menu) => menu.header.title);
-  };
+  // const getInitialCollapsedMenus = () => {
+  //   return menus
+  //     .filter((menu) => menu.items.some((item) => item.link === pathname))
+  //     .map((menu) => menu.header.title);
+  // };
 
   const [collapsedMenus, setCollapsedMenus] = useState([]);
 
-  useEffect(() => {
-    setCollapsedMenus(getInitialCollapsedMenus());
-  }, [pathname]);
+  // useEffect(() => {
+  //   setCollapsedMenus(getInitialCollapsedMenus());
+  // }, [pathname]);
 
   const toggleCollapse = (title) => {
     setCollapsedMenus((prev) =>

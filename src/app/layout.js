@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

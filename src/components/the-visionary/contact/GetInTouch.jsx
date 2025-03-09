@@ -1,24 +1,16 @@
 "use client";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const GetInTouch = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Trigger animations only once
-    });
-  }, []);
 
   return (
     <section className="py-16 " id="contact-form">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-10" data-aos="fade-up">
+        <div className="text-center mb-10">
           <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
           Let’s Connect
           </h2>
@@ -28,7 +20,7 @@ const GetInTouch = () => {
         </div>
         <div className="flex justify-center space-x-4">
           <a
-            href="https://wa.me/+2348106163804"
+            href="https://wa.me/+2349097949863"
             className="text-[#B0B3B8] hover:text-[#C81E23] transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -36,7 +28,7 @@ const GetInTouch = () => {
             <FaWhatsapp size={24} />
           </a>
           <a
-            href="mailto:victhawofficial@gmail.com"
+            href="mailto:adenijijvictor27@gmail.com"
             className="text-[#B0B3B8] hover:text-[#C81E23] transition duration-300"
           >
             <MdEmail size={24} />

@@ -1,3 +1,4 @@
+import Footer from "@/components/landing-page/Footer";
 import ImpactSection from "@/components/the-visionary/home/ImpactSection";
 import JourneyStarts from "@/components/the-visionary/home/JournerStarts";
 import JoinMovement from "@/components/the-visionary/home/Services";
@@ -14,6 +15,7 @@ const page = () => {
         <ImpactSection />
         <JoinMovement />
         <JourneyStarts />
+        <Footer/>
       </div>
     </div>
   );

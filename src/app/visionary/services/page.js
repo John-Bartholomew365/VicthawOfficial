@@ -1,3 +1,4 @@
+import Footer from "@/components/landing-page/Footer";
 import Offering from "@/components/the-visionary/services/Offering";
 import ServiceHero from "@/components/the-visionary/services/ServiceHero";
 import ServicesCta from "@/components/the-visionary/services/ServicesCta";
@@ -12,6 +13,7 @@ const page = () => {
         <Offering />
         <Testimonials />
         <ServicesCta />
+        <Footer />
       </div>
     </div>
   );
