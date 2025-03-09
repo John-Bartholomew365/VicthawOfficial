@@ -196,20 +196,6 @@ const ListOfPrizes = () => {
                 </p>
               </div>
             </li>
-            <li className="flex items-start gap-3">
-              <img
-                src="/checkmark.svg"
-                alt="Checkmark"
-                className="w-5 h-5 mt-1"
-              />
-              <div>
-                <h2 className="font-bold">Fair Play Award:</h2>
-                <p className="text-[#B0B3B8] lg:w-[345px] w-auto leading-tight">
-                  Awarded to the team or player demonstrating the best
-                  sportsmanship and fair play.
-                </p>
-              </div>
-            </li>
           </ul>
         </div>
       </div>

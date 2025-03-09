@@ -20,7 +20,7 @@ const Questions = () => {
     {
       question: "2. What is the registration fee?",
       answer: `
-        The registration fee will be announced soon. Please check the <a href="/register" target="_blank" style="color: #C81E23; text-decoration: underline;">Registration page</a> on our website for updates.
+        Registration is now open. The confirmed registration fee is <b style="color: #C81E23;">₦80,000.</b> <br> Visit the <a href="/register" target="_blank" style="color: #C81E23; text-decoration: underline;">  Registration page</a> on our website for updates.
       `,
     },
     {
@@ -114,7 +114,7 @@ const Questions = () => {
     {
       question: "13. How can I become a sponsor?",
       answer: `
-          Visit the <a href="/sponsor" target="_blank" style="color: #C81E23; text-decoration: underline;">Sponsorship page</a> on our website to view available sponsorship packages. You can also contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">Victhawofficial@gmail.com</a> or call <b style="color: #C81E23;">08106163804</b> for more details.
+          Visit the <a href="/sponsor" target="_blank" style="color: #C81E23; text-decoration: underline;">Sponsorship page</a> on our website to view available sponsorship packages. You can also contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> or call <b style="color: #C81E23;">08106163804</b> for more details.
           `,
     },
 
@@ -139,7 +139,7 @@ const Questions = () => {
     {
       question: "17. Are there opportunities for media coverage?",
       answer: `
-            Yes, media outlets are encouraged to cover the event. Please contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">Victhawofficial@gmail.com</a> for press passes and further details.
+            Yes, media outlets are encouraged to cover the event. Please contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> for press passes and further details.
             `,
     },
     {
@@ -151,7 +151,7 @@ const Questions = () => {
     {
       question: "19. Can I volunteer for the tournament?",
       answer: `
-            Yes, we welcome volunteers! Please contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">Victhawofficial@gmail.com</a> for more information on how to get involved.
+            Yes, we welcome volunteers! Please contact us at <a href="/#" target="_blank" style="color: #C81E23; text-decoration: underline;">victhawofficial@gmail.com</a> for more information on how to get involved.
             `,
     },
     {
@@ -209,7 +209,7 @@ const Questions = () => {
           inquiries.
         </p>
         <a
-          href="mailto:Victhawofficial@gmail.com"
+          href="mailto:victhawofficial@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#C81E23]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"

@@ -263,7 +263,7 @@ const Navbar = () => {
 
           {/* Register Button */}
           <Link
-            href={"register"}
+            href={"/register"}
             className="font-navbar font-semibold bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-black hover:text-white hover:border-[#C81E23] hover:border"
           >
             Register

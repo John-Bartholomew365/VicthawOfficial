@@ -13,6 +13,12 @@ const TeamHero = () => {
           the matches to witness the action live.
         </p>
       </div>
+
+      <div>
+        <h1 className="text-center mt-7 text-[#C81E23]">
+          Stay tuned in. More details coming soon!
+        </h1>
+      </div>
     </div>
   );
 };
