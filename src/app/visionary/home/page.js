@@ -15,8 +15,8 @@ const page = () => {
         <ImpactSection />
         <JoinMovement />
         <JourneyStarts />
-        <Footer/>
       </div>
+      <Footer />
     </div>
   );
 };

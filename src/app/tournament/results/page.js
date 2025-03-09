@@ -14,8 +14,9 @@ const page = () => {
         {/* <ResultsPage /> */}
         {/* <PlayerRankings /> */}
         {/* <ResultsSection /> */}
-        <Footer />
       </div>
+      <Footer />
+
     </div>
   );
 };

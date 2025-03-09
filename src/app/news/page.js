@@ -7,8 +7,9 @@ const page = () => {
     <div className="bg-[#0F0F0F] text-white tracking-tight">
       <div className="container lg:px-[30px] px-2 tracking-tight">
         <NewsUpdates />
-        <Footer />
       </div>
+      <Footer />
+
     </div>
   );
 };

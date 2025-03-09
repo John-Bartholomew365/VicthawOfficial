@@ -7,8 +7,9 @@ const page = () => {
     <div>
       <div className="container lg:px-[30px] px-2 tracking-tight">
         <Questions />
-        <Footer/>
       </div>
+      <Footer/>
+
     </div>
   );
 };

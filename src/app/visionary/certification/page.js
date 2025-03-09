@@ -11,8 +11,9 @@ const page = () => {
       <div className="container lg:px-[30px] px-2">
         <Certifications />
         <FinalCerti />
-        <Footer />
       </div>
+      <Footer />
+
     </div>
   );
 };

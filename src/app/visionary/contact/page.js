@@ -11,8 +11,8 @@ const page = () => {
       <div className="container lg:px-[30px] px-2">
         <CommunityImpact />
         <GetInTouch />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -7,8 +7,9 @@ const page = () => {
     <div className="bg-[#0F0F0F] text-white">
       <div className="container lg:px-[50px] px-2">
         <Hero />
-        <Footer />
       </div>
+      <Footer />
+
     </div>
   );
 };

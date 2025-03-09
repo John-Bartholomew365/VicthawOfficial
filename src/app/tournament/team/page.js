@@ -9,8 +9,8 @@ const page = () => {
       <div className="container lg:px-[30px] px-2">
         <TeamHero />
         {/* <TeamList /> */}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -13,8 +13,8 @@ const page = () => {
         <Offering />
         <Testimonials />
         <ServicesCta />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

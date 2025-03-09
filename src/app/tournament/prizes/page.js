@@ -11,8 +11,9 @@ const page = () => {
         <Hero />
         <ListOfPrizes />
         <ReadyPrize />
-        <Footer />
       </div>
+      <Footer />
+
     </div>
   );
 };

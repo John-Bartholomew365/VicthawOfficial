@@ -19,8 +19,8 @@ export default function Home() {
         <Sponsors />
         <RegisterTeam />
         <UpcomingEvents />
-        <Footer/>
       </div>
+      <Footer />
     </div>
   );
 }
