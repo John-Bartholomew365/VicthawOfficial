@@ -23,7 +23,7 @@ const Hero = () => {
           <p className="lg:w-[400px] w-auto tracking-tight text-[#B0B3B8] mt-3">
             Get ready for all the excitement! Here’s the full schedule for the
             Victhaw Official Unity Cup 1.0. Stay informed about match dates,
-            kick-off times, and venues so you can plan to participate or cheer
+            kick-off times, and venue so you can plan to participate or cheer
             for your favourite team(s). Let the competition begin!
           </p>
         </div>

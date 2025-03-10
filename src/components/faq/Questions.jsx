@@ -90,7 +90,7 @@ const Questions = () => {
     {
       question: "9. Is there parking available at the venue?",
       answer: `
-           Yes, parking will be available for spectators and participants at the tournament venues. 
+           Yes, parking will be available for spectators and participants at the tournament venue. 
           `,
     },
     {

@@ -227,7 +227,7 @@ export default function MatchSchedule() {
               <h1 className="text-[18px] font-bold">Parking:</h1>
             </div>
             <p className="text-[#B0B3B8] mt-[-10px] ml-[40px]">
-              Parking will be available at all venues.
+              Parking will be available at the tournament venue.
             </p>
           </div>
 

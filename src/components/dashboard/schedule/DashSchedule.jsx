@@ -54,7 +54,7 @@ const DashSchedule = () => {
       <div className="flex flex-col justify-center items-center text-center">
         <h1 className="text-[30px] lg:text-[45px] font-bold">Tournament Schedule</h1>
         <p className="text-[#B0B3B8] mt-3 lg:w-[600px] w-auto">
-          The official schedule for the Victhaw Official Unity Cup 1.0 is coming soon! Stay tuned for match dates, times, and venues. We can't wait to share the excitement with you.
+          The official schedule for the Victhaw Official Unity Cup 1.0 is coming soon! Stay tuned for match dates, times, and venue. We can't wait to share the excitement with you.
         </p>
 
         {/* Countdown Section */}
