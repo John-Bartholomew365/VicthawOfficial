@@ -278,7 +278,7 @@ const Footer = () => {
             Tournament info
           </h1>
           <div className="ml-4 mt-5 flex flex-col space-y-2">
-            <Link className="hover:text-[#C81E23]" href={"/tournament/teams"}>
+            <Link className="hover:text-[#C81E23]" href={"/tournament/team"}>
               Teams
             </Link>
             <Link className="hover:text-[#C81E23]" href={"/tournament/rules"}>
