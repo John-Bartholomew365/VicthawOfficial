@@ -148,7 +148,7 @@ const GetInTouch = () => {
       <div className="container mx-auto px-4">
         <div className="mb-10">
           <h1 className="lg:text-[40px] leading-tight text-[30px] font-bold text-center tracking-tight">
-            Victhaw Official Unity <br /> Cup 1.0
+            Victhaw Official Unity <br className="lg:block hidden" /> Cup 1.0
           </h1>
           <p className="text-[#B0B3B8] m-auto mb-6 mt-4 text-center lg:w-[420px] w-auto">
             Contact us today for inquiries about the tournament, team

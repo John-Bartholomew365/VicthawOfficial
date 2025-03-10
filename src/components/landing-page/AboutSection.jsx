@@ -119,7 +119,7 @@ const AboutSection = () => {
                 Countdown to Glory
               </h1>
               <p className="lg:w-[350px] w-full text-[#B0B3B8] tracking-tight mt-2">
-              Mark your calendars!  Join us in Basin, Ilorin, Kwara State on April 12, 2025 for the year's most electrifying tournament.
+              Mark your calendars!  Join us at Basin, Ilorin, Kwara State on April 12, 2025 for the year's most electrifying tournament.
               </p>
               <p className="text-[#B0B3B8] tracking-tight mt-2 mb-7">
               Witness top teams compete for the championship title.

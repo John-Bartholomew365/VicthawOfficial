@@ -20,7 +20,7 @@ const ReadyPrize = () => {
           rel="noopener noreferrer"
           className="bg-[#C81E23]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
         >
-          Regsiter now
+          Register now
         </a>
       </div>
     </div>

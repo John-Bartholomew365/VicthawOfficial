@@ -75,7 +75,7 @@ const TournamentHighlight = () => {
                     <span className="text-[#B0B3B8] ">
                       {" "}
                       A well-structured tournament featuring certified referees,
-                      top-notch officiating, and seamless coordination.
+                      top-notch officials, and seamless coordination.
                     </span>
                   </p>
                 </div>
