@@ -8,7 +8,7 @@ const RegisterTeam = () => {
       <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center">
         <div>
           <Image
-            src="/img3.svg"
+            src="/img3.jpg"
             alt="logo"
             height={280}
             width={420}
