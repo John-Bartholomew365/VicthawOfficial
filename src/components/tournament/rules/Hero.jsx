@@ -207,7 +207,7 @@
 //           href="/register"
 //           target="_blank"
 //           rel="noopener noreferrer"
-//           className="bg-[#C81E23]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
+//           className="bg-[#C90A1D]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
 //         >
 //           Register now
 //         </a>
@@ -268,14 +268,14 @@ const Hero = () => {
             </h2>
             <ul className="space-y-4 ml-4 lg:ml-10 lg:w-[600px] w-auto tracking-tight">
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Each team will have <b>11 players,</b> consisting of 
                   <b> 10 outfield players</b> and <b>1 goalkeeper.</b>
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Teams are allowed a maximum of <b>9 substitutes,</b> with only{" "}
                   <b>5</b> permitted to enter during play. An additional
@@ -284,19 +284,19 @@ const Hero = () => {
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   All teams must arrive at the match venue at least{" "}<b>40 minutes</b> before kick-off.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   A match will commence as long as a team has a minimum of{" "}<b>7 players</b> at kick-off. Late arrivals will not delay the game.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   If a team fails to present at least <b>7 players</b> within{" "}<b>15 minutes</b> after the scheduled kick-off, the opposing team will be awarded the match.
                 </p>
@@ -310,19 +310,19 @@ const Hero = () => {
             </h2>
             <ul className="space-y-4 ml-4 lg:ml-10 lg:w-[600px] w-auto">
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Each half will be <b>30 minutes</b> long, with <b>no</b> additional injury time.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   The tournament follows a <b>knockout format</b>. In the event of a draw, an extra <b>15 minutes</b> will be played.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   If the match remains tied after extra time, the winner will be determined through a <b>penalty shootout</b>.
                 </p>
@@ -336,19 +336,19 @@ const Hero = () => {
             </h2>
             <ul className="space-y-4 ml-4 lg:ml-10 lg:w-[600px] w-auto tracking-tight">
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Each team must register all <b>18 players</b> before the tournament. Unregistered players and officials will not be allowed to participate.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   The tournament organizers are not responsible for player injuries. Teams are required to bring their <b>medical personnel</b>, although first aid will be available.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   The referee’s decision is <b>final</b>. Any complaints must be addressed to the organizers respectfully.
                 </p>
@@ -362,25 +362,25 @@ const Hero = () => {
             </h2>
             <ul className="space-y-4 ml-4 lg:ml-10 lg:w-[600px] w-auto tracking-tight">
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   All players must wear the appropriate equipment, including <b>football boots, shin guards, team uniforms, and uniform socks</b>.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Before each match day, players are required to trim their fingernails short to ensure safety during play.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Accessories such as bracelets, chains, beads, and any other jewellery are strictly prohibited on the field.
                 </p>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   Players must remain in full team uniform at all times throughout the tournament.
                 </p>
@@ -394,7 +394,7 @@ const Hero = () => {
             </h2>
             <ul className="space-y-4 ml-4 lg:ml-10 lg:w-[600px] w-auto tracking-tight">
               <li className="flex gap-3">
-                <span className="text-[#C81E23]">•</span>
+                <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
                   <span className="text-black">Yellow Card:</span> A fine of <b>500 Naira</b> will be imposed for each yellow card.
                 </p>
@@ -426,7 +426,7 @@ const Hero = () => {
           href="/register"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#C81E23]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
+          className="bg-[#C90A1D]  text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
         >
           Register now
         </a>

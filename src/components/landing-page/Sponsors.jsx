@@ -45,7 +45,7 @@ const Sponsors = () => {
 
       <div className="mt-12 text-center">
         <Link href={"/about/sponsors"}>
-          <button className="bg-[#C81E23] text-white py-3 px-6 text-lg rounded-md hover:bg-black hover:text-white hover:border-[#C81E23] hover:border">
+          <button className="bg-[#C81E23] hover:text-black text-white py-3 px-6 text-lg rounded-md hover:bg-white  hover:border-[#C81E23] hover:border">
             Learn more
           </button>
         </Link>

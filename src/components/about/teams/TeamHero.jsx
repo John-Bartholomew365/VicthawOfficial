@@ -4,7 +4,7 @@ const TeamHero = () => {
   return (
     <div className="mt-[100px] mb-[60px]">
       <div>
-        <h1 className="text-center text-[#C81E23] font-bold tracking-tight lg:text-[45px] text-[30px]">
+        <h1 className="text-center text-[#C90A1D] font-bold tracking-tight lg:text-[45px] text-[30px]">
           Meet the teams
         </h1>
         <p className="text-[#6B6F76] mt-3 text-center lg:w-[500px] w-auto m-auto">
@@ -15,7 +15,7 @@ const TeamHero = () => {
       </div>
 
       <div>
-        <h1 className="text-center mt-7 text-[#C81E23]">
+        <h1 className="text-center mt-7 text-[#C90A1D]">
           Stay tuned in. More details coming soon!
         </h1>
       </div>

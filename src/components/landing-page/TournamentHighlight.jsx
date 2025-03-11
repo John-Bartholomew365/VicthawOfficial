@@ -106,7 +106,7 @@ const TournamentHighlight = () => {
             </li> */}
           </ul>
           <Link href={"/register"}>
-            <button className="bg-[#C81E23] flex justify-center items-center lg:m-0 m-auto text-center py-[10px] px-[20px] text-white rounded-[6px] hover hover:bg-[#0F0F0F] hover:text-white hover:border-[#C81E23] hover:border">
+            <button className="bg-[#C81E23] flex justify-center items-center lg:m-0 m-auto text-center py-[10px] px-[20px] text-white rounded-[6px] hover hover:bg-[#FFFFFF] hover:text-black hover:border-[#C81E23] hover:border">
               Register now
             </button>
           </Link>

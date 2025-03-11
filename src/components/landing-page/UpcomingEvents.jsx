@@ -19,7 +19,7 @@ const UpcomingEvents = () => {
           <h1 className="lg:text-[45px] lg:text-start text-center text-[30px] tracking-tight">
             Upcoming Event
           </h1>
-          <p className="lg:w-[450px] tracking-tight w-auto my-3 m-auto text-[#6B6F76]">
+          <p className="lg:w-[430px] tracking-tight w-auto my-3 m-auto text-[#6B6F76]">
             The <strong>Victhaw Official Unity Cup 1.0</strong> will commence on
             <strong> April 12th to May 4th, 2025!</strong> This highly
             anticipated tournament will take place at Basin, Ilorin, Kwara
@@ -28,7 +28,7 @@ const UpcomingEvents = () => {
           </p>
           <div className="mt-8 flex lg:justify-start justify-center">
             <Link href={"/tournament/about"}>
-              <button className="bg-[#C81E23] py-[10px] px-[20px] text-white rounded-[6px] hover:bg-[#0F0F0F] hover:text-white hover:border-[#C81E23] hover:border">
+              <button className="bg-[#C81E23] py-[10px] px-[20px] text-white rounded-[6px] hover:bg-[#ffffff] hover:text-black hover:border-[#C81E23] hover:border">
                 Learn more
               </button>
             </Link>
