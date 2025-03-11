@@ -8,7 +8,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="bg-[#0F0F0F] text-white tracking-tight">
+    <div className="bg-[#FFFFFF] text-black tracking-tight">
       <div className="container lg:px-[30px] px-0">
         <Victor />
         <WhyVicthaw />

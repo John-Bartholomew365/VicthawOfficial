@@ -8,7 +8,7 @@ const RegisterTeam = () => {
       <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center">
         <div>
           <Image
-            src="/hero-img3.svg"
+            src="/img3.svg"
             alt="logo"
             height={280}
             width={420}
@@ -20,7 +20,7 @@ const RegisterTeam = () => {
           <h1 className="lg:text-[40px] lg:w-[400px] w-auto leading-tight tracking-tight text-[30px] lg:text-start text-center lg:mt-0 mt-6">
             Register Your Team Today!
           </h1>
-          <p className="lg:w-[410px] w-auto text-[#B0B3B8] mt-3 mb-8">
+          <p className="lg:w-[410px] w-auto text-[#6B6F76] mt-3 mb-8">
             Be part of the action! Register your team for the Unity Cup 1.0 and
             seize the opportunity to showcase your talent, compete against the
             best, and make your mark on the pitch.

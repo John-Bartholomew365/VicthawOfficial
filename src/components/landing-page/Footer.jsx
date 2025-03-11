@@ -238,10 +238,10 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="bg-[#000000] text-white lg:px-[140px] px-[30px] pb-[15px] pt-[50px]">
+    <div className="bg-[#FAFAFA] text-black lg:px-[140px] px-[30px] pb-[15px] pt-[50px]">
       <div className="flex flex-col lg:flex-row justify-between items-center border-t border-b border-white/10 py-8">
         <div className="mb-6 lg:mb-0">
-          <Image src="/victhaw-logo.svg" alt="logo" height={80} width={90} />
+          <Image src="/victhaw-logo.svg" alt="logo" height={80} width={90} className="rounded-full" />
         </div>
         <div className="text-center lg:text-left">
           <h1 className="lg:text-[24px] text-[16px] leading-tight">
@@ -343,7 +343,7 @@ const Footer = () => {
       <div>
         <div className="flex flex-col lg:flex-row justify-between items-center border-t border-white/10 py-8 mt-[80px]">
           <div className="mb-4 lg:mb-0">
-            <p className="copyright text-[#B0B3B8] text-center lg:text-left">
+            <p className="copyright text-[#6B6F76] text-center lg:text-left">
               &copy; 2025 Victhaw Official Unity Cup. All rights reserved.
             </p>
           </div>

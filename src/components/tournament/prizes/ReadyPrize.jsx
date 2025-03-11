@@ -7,7 +7,7 @@ const ReadyPrize = () => {
         <h1 className="lg:text-[40px] text-[30px] tracking-tight text-center">
           Gear Up for Victory!
         </h1>
-        <p className="text-[#B0B3B8] lg:w-[530px] w-auto text-center m-auto mt-4">
+        <p className="text-[#6B6F76] lg:w-[530px] w-auto text-center m-auto mt-4">
           Seize the opportunity to compete for prestigious prizes and showcase
           your talent on the big stage. Assemble your team, refine your
           strategy, and secure your spot in the tournament today

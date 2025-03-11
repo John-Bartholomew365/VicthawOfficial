@@ -19,7 +19,7 @@ const UpcomingEvents = () => {
           <h1 className="lg:text-[45px] lg:text-start text-center text-[30px] tracking-tight">
             Upcoming Event
           </h1>
-          <p className="lg:w-[450px] tracking-tight w-auto my-3 m-auto text-[#B0B3B8]">
+          <p className="lg:w-[450px] tracking-tight w-auto my-3 m-auto text-[#6B6F76]">
             The <strong>Victhaw Official Unity Cup 1.0</strong> will commence on
             <strong> April 12th to May 4th, 2025!</strong> This highly
             anticipated tournament will take place at Basin, Ilorin, Kwara

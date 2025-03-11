@@ -12,14 +12,14 @@ const JourneyStarts = () => {
   }, []);
 
   return (
-    <section className="py-16 lg:mx-[40px] mx-[10px] rounded-[10px] lg:px-[30px] bg-[#000000]">
+    <section className="py-16 lg:mx-[40px] mx-[10px] rounded-[10px] lg:px-[30px] bg-[#FAFAFA]">
       <div className="container px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="lg:text-4xl text-[27px] leading-tight tracking-tight font-bold mb-4 text-white">
+          <h2 className="lg:text-4xl text-[27px] leading-tight tracking-tight font-bold mb-4 text-black">
             Start Your Transformation Today
           </h2>
-          <p className="text-[16px] leading-tight tracking-tight text-[#B0B3B8] m-auto lg:w-[480px] w-auto">
+          <p className="text-[16px] leading-tight tracking-tight text-[#6B6F76] m-auto lg:w-[480px] w-auto">
             Whether you want to improve your fitness, sharpen your football
             skills, or adopt a healthier, more active lifestyle, Victor is here
             to support you every step of the way. Take the first step today and
@@ -33,22 +33,22 @@ const JourneyStarts = () => {
           data-aos="fade-up"
         >
           {/* Personalized Programs */}
-          <div className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center">
-            <h3 className="text-xl font-semibold mb-4 text-white">
+          <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md text-center">
+            <h3 className="text-xl font-semibold mb-4 text-black">
               Personalized Trainings
             </h3>
-            <p className="text-[#B0B3B8] w-auto">
+            <p className="text-[#A8A8A8] w-auto">
               Victor designs personalized fitness and coaching programs tailored
               to your goals, ensuring you achieve real and lasting results.
             </p>
           </div>
 
           {/* Proven Results */}
-          <div className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center">
-            <h3 className="text-xl font-semibold mb-4 text-white">
+          <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md text-center">
+            <h3 className="text-xl font-semibold mb-4 text-black">
               Proven Success
             </h3>
-            <p className="text-[#B0B3B8]">
+            <p className="text-[#A8A8A8]">
               With years of experience and a deep passion for helping others,
               Victor has guided countless individuals toward their fitness and
               athletic goals.
@@ -56,11 +56,11 @@ const JourneyStarts = () => {
           </div>
 
           {/* Community Support */}
-          <div className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center">
-            <h3 className="text-xl font-semibold mb-4 text-white">
+          <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md text-center">
+            <h3 className="text-xl font-semibold mb-4 text-black">
               Supportive Community
             </h3>
-            <p className="text-[#B0B3B8]">
+            <p className="text-[#A8A8A8]">
               Join a network of motivated individuals who share your commitment
               to growth, health, and excellence.
             </p>

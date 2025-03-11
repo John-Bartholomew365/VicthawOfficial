@@ -40,7 +40,7 @@ const TermsAndConditions = () => {
         </h2>
 
         {/* Subtitle */}
-        <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200 text-[#B0B3B8] mt-3 mb-10 text-center lg:w-[480px] m-auto w-auto">
+        <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200 text-[#6B6F76] mt-3 mb-10 text-center lg:w-[480px] m-auto w-auto">
           Welcome to the Victhaw Official Unity Cup 1.0. By accessing or using
           our website, you agree to be bound by these Terms and Conditions.
           Please read them carefully.
@@ -51,18 +51,18 @@ const TermsAndConditions = () => {
           <h3 className="text-xl font-bold mb-2 mt-16">
             1. Eligibility & Registration
           </h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[470px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[470px] w-auto">
             Each team must complete the registration process through the
             official website. All players must meet the age and eligibility
             criteria set by the tournament organizers.
           </p>
           <ul className="list-none text-gray-700 mb-4 ml-5 lg:w-[600px] w-auto">
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               A team must consist of a minimum of <strong>15</strong> players
               and a maximum of <strong>18</strong> players, including
               substitutes.
             </li>
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               Registration fees of <b>₦80,000</b> must be paid in full before the
               deadline.
             </li>
@@ -72,12 +72,12 @@ const TermsAndConditions = () => {
         {/* Code of Conduct */}
         <section className="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out delay-600">
           <h3 className="text-xl font-bold mt-16 mb-2">2. Code of Conduct</h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[470px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[470px] w-auto">
             Teams and players must demonstrate sportsmanship, fair play, and
             respect toward referees, opponents, and officials.
           </p>
           <ul className="list-none text-gray-700 mb-4 ml-5">
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8] lg:w-[600px] w-auto">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76] lg:w-[600px] w-auto">
               Any form of violent conduct, abuse, discrimination, or
               unsportsmanlike behavior will result in immediate
               disqualification.
@@ -90,17 +90,17 @@ const TermsAndConditions = () => {
           <h3 className="text-xl font-bold mt-16 mb-2">
             3. Match Rules & Regulations
           </h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[470px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[470px] w-auto">
             All matches will be played according to the official{" "}
             <strong>Football Association/FIFA-approved</strong> rules unless
             otherwise stated by the organizers.
           </p>
           <ul className="list-none text-gray-700 mb-4 ml-5 lg:w-[600px] w-auto">
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               Teams must arrive <strong>40 minutes</strong> before their
               scheduled match time. Failure to do so may result in a forfeit.
             </li>
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               The referee’s decision is final, and no appeals will be
               entertained during or after the match.
             </li>
@@ -112,15 +112,15 @@ const TermsAndConditions = () => {
           <h3 className="text-xl font-bold mt-16 mb-2">
             4. Injuries & Liability
           </h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[470px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[470px] w-auto">
             The tournament organizers will not be held responsible for any
             serious injuries, accidents, or damages occurring during the event.
           </p>
           <ul className="list-none text-gray-700 mb-4 ml-5">
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               Medical personnel will be present for minor injuries.
             </li>
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               Players are advised to have personal or team insurance coverage.
             </li>
           </ul>
@@ -131,11 +131,11 @@ const TermsAndConditions = () => {
           <h3 className="text-xl font-bold mt-16 mb-2">
             5. Cancellations & Refunds
           </h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[470px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[470px] w-auto">
             Registration fees are non-refundable once a team has been confirmed.
           </p>
           <ul className="list-none text-gray-700 mb-4 ml-5 lg:w-[600px] w-auto">
-            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#B0B3B8]">
+            <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
               If the tournament is canceled due to unforeseen circumstances,
               teams will be informed, and a refund policy will be communicated.
             </li>
@@ -147,7 +147,7 @@ const TermsAndConditions = () => {
           <h3 className="text-xl font-bold mt-16 mb-2">
             6. Photography & Media Rights
           </h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[600px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[600px] w-auto">
             By participating, teams and players grant the organizers the right
             to use photos, videos, and other media content for promotional
             purposes.
@@ -159,7 +159,7 @@ const TermsAndConditions = () => {
           <h3 className="text-xl font-bold mt-16 mb-2">
             7. Disqualification & Rule Violations
           </h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[600px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[600px] w-auto">
             The organizers reserve the right to disqualify any team for rule
             violations, misconduct, or failure to comply with the tournament
             guidelines.
@@ -169,7 +169,7 @@ const TermsAndConditions = () => {
         {/* Agreement */}
         <section className="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out delay-1800">
           <h3 className="text-xl font-bold mt-16 mb-2">8. Agreement</h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[600px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[600px] w-auto">
             By completing the registration, all team members acknowledge and
             agree to these terms and conditions.
           </p>
@@ -178,7 +178,7 @@ const TermsAndConditions = () => {
         {/* Contact Us */}
         <section className="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out delay-2000">
           <h3 className="text-xl font-bold mt-16 mb-2">9. Contact Us</h3>
-          <p className="text-[#B0B3B8] mb-4 lg:w-[600px] w-auto">
+          <p className="text-[#6B6F76] mb-4 lg:w-[600px] w-auto">
             If you have any questions or concerns about these Terms and
             Conditions, please contact us at{" "}
             <a

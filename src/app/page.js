@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[#0F0F0F] text-white tracking-tight">
+    <div className="bg-[#FFFFFF] text-[#000000] tracking-tight">
       <div className="container lg:px-[30px] px-2">
         <HeroSection />
         <AboutSection />

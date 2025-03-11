@@ -56,7 +56,7 @@ const SponsorsPage = () => {
     <div className="my-[100px] px-5">
       <div className="flex flex-col justify-center items-center text-center">
         <h1 className="text-[30px] lg:text-[45px] font-bold">Our Sponsors</h1>
-        <p className="text-[#B0B3B8] mt-3 lg:w-[600px] w-auto">
+        <p className="text-[#6B6F76] mt-3 lg:w-[600px] w-auto">
           The Victhaw Official Unity Cup 1.0 is proud to partner with these
           incredible sponsors who are helping us bring this tournament to life.
         </p>
@@ -67,7 +67,7 @@ const SponsorsPage = () => {
               Meet our sponsors
             </h1>
           </div>
-          <div className="bg-[#0F0F0F] lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
+          <div className="bg-[#FAFAFA] lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
             <div>
               <Image
                 src="/sponsors1.jpg"
@@ -106,7 +106,7 @@ const SponsorsPage = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#0F0F0F] mt-10 lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
+          <div className="bg-[#FAFAFA] mt-10 lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
             <div className="lg:hidden block ">
               <Image
                 src="/sponsors2.jpg"
@@ -172,21 +172,21 @@ const SponsorsPage = () => {
               Countdown to Tournament:
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mt-4">
-              <div className="bg-[#0F0F0F] text-white text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#FAFAFA] text-black text-[20px] px-6 py-3 rounded-md">
                 {formatTime(days)}
-                <span className="text-[#B0B3B8] ml-1 block">days</span>
+                <span className="text-[#6B6F76] ml-1 block">days</span>
               </div>
-              <div className="bg-[#0F0F0F] text-white text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#FAFAFA] text-black text-[20px] px-6 py-3 rounded-md">
                 {formatTime(hours)}
-                <span className="text-[#B0B3B8] ml-1 block">hours</span>
+                <span className="text-[#6B6F76] ml-1 block">hours</span>
               </div>
-              <div className="bg-[#0F0F0F] text-white text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#FAFAFA] text-black text-[20px] px-6 py-3 rounded-md">
                 {formatTime(minutes)}
-                <span className="text-[#B0B3B8] ml-1 block">mins</span>
+                <span className="text-[#6B6F76] ml-1 block">mins</span>
               </div>
-              <div className="bg-[#0F0F0F] text-white text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#FAFAFA] text-black text-[20px] px-6 py-3 rounded-md">
                 {formatTime(seconds)}
-                <span className="text-[#B0B3B8] ml-1 block">secs</span>
+                <span className="text-[#6B6F76] ml-1 block">secs</span>
               </div>
             </div>
           </div>

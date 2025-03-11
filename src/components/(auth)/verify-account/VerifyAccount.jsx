@@ -276,7 +276,7 @@ const VerifyAccount = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             placeholder="e.g 123456"
-            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
           />
           {formik.touched.code && formik.errors.code ? (
             <div className="text-red-500 text-sm">{formik.errors.code}</div>

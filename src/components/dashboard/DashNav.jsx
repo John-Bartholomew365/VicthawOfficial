@@ -338,7 +338,7 @@ const DashNav = () => {
 
   return (
     <>
-      <div className="bg-black border-b-2 border-white fixed w-full top-0 border-opacity-10 z-[5000]">
+      <div className="bg-[#FFFFFF] border-b-2 border-white fixed w-full top-0 border-opacity-10 z-[5000]">
         <div className="px-[5%] flex items-center justify-between w-full py-3">
           <div className="flex items-center gap-3">
             <div>
@@ -347,10 +347,10 @@ const DashNav = () => {
                 height={50}
                 width={57}
                 alt=""
-                className="lg:w-[57px] w-[80%]"
+                className="lg:w-[57px] w-[50%] rounded-full"
               />
             </div>
-            <h1 className="text-white lg:text-[25px] text-[20px] lg:block hidden">
+            <h1 className="text-black lg:text-[25px] text-[20px] lg:block hidden">
               Victhaw Official
             </h1>
             <div className="pl-20 sm:hidden"></div>
@@ -365,11 +365,11 @@ const DashNav = () => {
                 Logout
               </button>
             </div>
-            <button className="text-black flex flex-row gap-1">
+            {/* <button className="text-black flex flex-row gap-1">
               <div className="text-[20px] sm:hidden">
                 <IoHelpCircleOutline />
               </div>
-            </button>
+            </button> */}
 
             {/* Hamburger Menu Icon */}
             <div
@@ -377,9 +377,9 @@ const DashNav = () => {
               onClick={handleToggleSidebar}
             >
               {isSidebarOpen ? (
-                <TbX className="text-white" />
+                <TbX className="text-black" />
               ) : (
-                <RxHamburgerMenu className="text-white" />
+                <RxHamburgerMenu className="text-black" />
               )}
             </div>
           </div>

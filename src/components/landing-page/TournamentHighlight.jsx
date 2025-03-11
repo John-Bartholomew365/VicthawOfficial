@@ -35,8 +35,8 @@ const TournamentHighlight = () => {
                   <strong>16-Team Knockout Competition:</strong>
                 </div>
                 <div>
-                  <p className="text-white">
-                    <span className="text-[#B0B3B8] ">
+                  <p className="text-black">
+                    <span className="text-[#6B6F76] ">
                       {" "}
                       High-intensity matches where only the strongest advance,
                       delivering nonstop action and unforgettable moments.
@@ -53,8 +53,8 @@ const TournamentHighlight = () => {
                   <strong>For Players Aged 18–45:</strong>
                 </div>
                 <div>
-                  <p className="text-white">
-                    <span className="text-[#B0B3B8] ">
+                  <p className="text-black">
+                    <span className="text-[#6B6F76] ">
                       {" "}
                       A dynamic platform for footballers of all generations to
                       showcase their talent and compete at the highest level.
@@ -71,8 +71,8 @@ const TournamentHighlight = () => {
                   <strong>Professionally Organized:</strong>
                 </div>
                 <div>
-                  <p className="text-white">
-                    <span className="text-[#B0B3B8] ">
+                  <p className="text-black">
+                    <span className="text-[#6B6F76] ">
                       {" "}
                       A well-structured tournament featuring certified referees,
                       top-notch officials, and seamless coordination.
@@ -83,9 +83,9 @@ const TournamentHighlight = () => {
             </li>
             <li className="flex items-start gap-3 lg:w-[410px] w-auto">
               <span className="text-red-600">●</span>
-              <p className="text-white">
+              <p className="text-black">
                 <strong>Exciting Rewards:</strong>
-                <span className="text-[#B0B3B8]">
+                <span className="text-[#6B6F76]">
                   {" "}
                   Compete for prestigious trophies, medals, cash prizes, and
                   individual accolades, including MVP, Best Goalkeeper, and Top

@@ -168,7 +168,7 @@ const Questions = () => {
         <h1 className="text-center lg:text-[50px] text-[30px] text-[#C81E23] font-bold">
           Frequently Asked Questions
         </h1>
-        <p className="text-[#B0B3B8] lg:w-[470px] w-auto text-center m-auto my-3">
+        <p className="text-[#6B6F76] lg:w-[470px] w-auto text-center m-auto my-3">
           We've compiled a list of frequently asked questions to help you
           navigate the tournament with ease.
         </p>
@@ -177,7 +177,7 @@ const Questions = () => {
       {questions.map((item, index) => (
         <div
           key={index}
-          className="bg-[#000000] my-5 p-5 lg:w-[80%] w-full m-auto rounded-md"
+          className="bg-[#FAFAFA] my-5 p-5 lg:w-[80%] w-full m-auto rounded-md"
         >
           <div
             className="flex justify-between items-center cursor-pointer"
@@ -194,17 +194,17 @@ const Questions = () => {
           </div>
           {openQuestion === index && (
             <div
-              className="mt-6 text-[18px] text-[#B0B3B8]"
+              className="mt-6 text-[18px] text-[#6B6F76]"
               dangerouslySetInnerHTML={{ __html: item.answer }}
             />
           )}
         </div>
       ))}
       <div className="mt-[100px] text-center">
-        <h1 className="text-center lg:text-[40px] text-[30px] mb-3">
+        <h1 className="text-center text-black lg:text-[40px] text-[30px] mb-3">
           Still, Have Questions?
         </h1>
-        <p className="lg:w-[350px] w-auto m-auto text-[#B0B3B8] mb-7">
+        <p className="lg:w-[350px] w-auto m-auto text-[#6B6F76] mb-7">
           We're here to help! Reach out to us for more information or any
           inquiries.
         </p>

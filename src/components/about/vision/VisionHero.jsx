@@ -19,7 +19,7 @@ const VisionHero = () => {
         <h1 className="lg:text-[45px] tracking-tight text-[30px] leading-tight lg:w-[470px] w-auto">
           Where Fitness Passion Meets Purpose
         </h1>
-        <p className="text-[#B0B3B8] tracking-tight lg:w-[420px] w-auto mt-4">
+        <p className="text-[#6B6F76] tracking-tight lg:w-[420px] w-auto mt-4">
           Victhaw is a profesional coach, mentor, and fitness expert dedicated
           to developing athletes and inspiring individuals. With years of
           experience in sports and community building, he continues to shape the

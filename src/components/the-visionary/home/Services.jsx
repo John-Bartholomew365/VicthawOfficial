@@ -56,7 +56,7 @@
 //         <h2 className="lg:text-[35px] text-[28px] lg:text-start text-center font-bold text-[#FFFFFF]">
 //           My Expert <span className="text-[#C81E23]">Services</span>
 //         </h2>
-//         <p className="text-[#B0B3B8] mt-4 w-auto">
+//         <p className="text-[#6B6F76] mt-4 w-auto">
 //           As a certified fitness coach with over seven years of experience, I am
 //           dedicated to helping individuals reach their full potential.
 //         </p>
@@ -207,14 +207,14 @@ export default function Services() {
     <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center justify-center min-h-screen p-3 lg:pr-16 pr-0 overflow-x-hidden">
       {/* Services Info for mobile*/}
       <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 lg:max-w-md w-full" data-aos="fade-left">
-        <h2 className="lg:text-[35px] text-[28px] lg:text-start text-center font-bold text-[#FFFFFF]">
+        <h2 className="lg:text-[35px] text-[28px] lg:text-start text-center font-bold text-[#000000]">
           My Expert <span className="text-[#C81E23]">Services</span>
         </h2>
-        <p className="text-[#B0B3B8] mt-4 w-auto">
+        <p className="text-[#6B6F76] mt-4 w-auto">
           As a certified fitness coach with over seven years of experience, I am
           dedicated to helping individuals reach their full potential.
         </p>
-        <p className="text-[#B0B3B8] mt-4 w-auto">
+        <p className="text-[#6B6F76] mt-4 w-auto">
           Whether you’re looking to build muscle, lose weight, or enhance
           athletic performance, I provide tailored training programs designed to
           push your limits, instil discipline, and deliver lasting results.
@@ -228,7 +228,7 @@ export default function Services() {
       </div>
       {/* Services List */}
       <div
-        className="space-y-2 bg-[#000000] p-6 rounded-xl w-full lg:w-auto"
+        className="space-y-2 bg-[#FAFAFA] p-6 rounded-xl w-full lg:w-auto"
         data-aos="fade-right"
       >
         {services.map((service, index) => (
@@ -242,7 +242,7 @@ export default function Services() {
             onClick={() => setSelected(index)}
           >
             {/* Dashed Border Animation */}
-            {selected === index && (
+            {/* {selected === index && (
               <div
                 className="absolute inset-0 top-[-2] rounded-xl border-[6px] border-dashed border-transparent"
                 style={{
@@ -251,12 +251,12 @@ export default function Services() {
                   animation: "dashBorder 2s linear infinite",
                 }}
               ></div>
-            )}
-            <h3 className="text-white text-lg font-semibold mb-2 relative z-10">
+            )} */}
+            <h3 className="text-black text-lg font-semibold mb-2 relative z-10">
               {service.title}
             </h3>
             <p
-              className={`text-gray-400 text-sm transition-all duration-300 w-auto relative z-10 ${
+              className={`text-[#6B6F76] text-sm transition-all duration-300 w-auto relative z-10 ${
                 selected === index ? "opacity-100 h-auto" : "opacity-0 h-0"
               }`}
             >
@@ -267,7 +267,7 @@ export default function Services() {
       </div>
 
       {/* Inline Styles for Animation */}
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes dashBorder {
           0% {
             transform: translateX(-100%);
@@ -276,7 +276,7 @@ export default function Services() {
             transform: translateX(100%);
           }
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }

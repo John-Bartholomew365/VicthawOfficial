@@ -8,7 +8,7 @@ const ListOfPrizes = () => {
         <h1 className="lg:text-[40px] text-[30px] tracking-tight text-center">
           Tournament Prizes & Awards
         </h1>
-        <p className="text-[#B0B3B8] lg:w-[480px] w-auto text-center m-auto mt-4">
+        <p className="text-[#6B6F76] lg:w-[480px] w-auto text-center m-auto mt-4">
           Top-performing teams and standout players will be rewarded with
           exciting prizes, recognizing their hard work, skill, and achievements
           throughout the competition.
@@ -38,7 +38,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Gold Medal:</h2>
-                <p className="text-[#B0B3B8]">
+                <p className="text-[#6B6F76]">
                   A symbol of victory and excellence.
                 </p>
               </div>
@@ -51,7 +51,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Trophy:</h2>
-                <p className="text-[#B0B3B8] lg:w-[280px] leading-tight">
+                <p className="text-[#6B6F76] lg:w-[280px] leading-tight">
                   A prestigious award to commemorate your team’s success.
                 </p>
               </div>
@@ -64,7 +64,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Cash Prize:</h2>
-                <p className="text-[#B0B3B8] lg:w-[250px] leading-tight">
+                <p className="text-[#6B6F76] lg:w-[250px] leading-tight">
                   A generous cash reward for the winning team.
                 </p>
               </div>
@@ -96,7 +96,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Silver Medals</h2>
-                <p className="text-[#B0B3B8] lg:w-[300px] w-auto leading-tight">
+                <p className="text-[#6B6F76] lg:w-[300px] w-auto leading-tight">
                   The runner-up team will receive silver medals for their strong
                   performance.
                 </p>
@@ -110,7 +110,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Sporting Equipment:</h2>
-                <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
+                <p className="text-[#6B6F76] lg:w-[280px] w-auto leading-tight">
                   Runners-up also receive high-quality sporting equipment.
                 </p>
               </div>
@@ -123,7 +123,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Cash Prize:</h2>
-                <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
+                <p className="text-[#6B6F76] lg:w-[280px] w-auto leading-tight">
                   A generous cash reward for the runner-up team.
                 </p>
               </div>
@@ -164,7 +164,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Best Player (MVP):</h2>
-                <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
+                <p className="text-[#6B6F76] lg:w-[280px] w-auto leading-tight">
                   Awarded to the Most Valuable Player of the tournament.
                 </p>
               </div>
@@ -177,7 +177,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Best Goalkeeper:</h2>
-                <p className="text-[#B0B3B8] lg:w-[280px] w-auto leading-tight">
+                <p className="text-[#6B6F76] lg:w-[280px] w-auto leading-tight">
                   Awarded to the goalkeeper with the most outstanding
                   performance.
                 </p>
@@ -191,7 +191,7 @@ const ListOfPrizes = () => {
               />
               <div>
                 <h2 className="font-bold">Top Scorer:</h2>
-                <p className="text-[#B0B3B8] lg:w-[250px] w-auto leading-tight">
+                <p className="text-[#6B6F76] lg:w-[250px] w-auto leading-tight">
                   Awarded to the player with the highest number of goals
                 </p>
               </div>

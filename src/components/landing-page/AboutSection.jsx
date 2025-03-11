@@ -48,7 +48,7 @@ const AboutSection = () => {
         <h1 className="text-center font-semibold text-[#C81E23] lg:text-[40px] text-[28px] tracking-tight">
           Victhaw Official Unity Cup 1.0
         </h1>
-        <p className="text-center text-lg text-[#B0B3B8] mt-3">
+        <p className="text-center text-lg text-[#6B6F76] mt-3">
           The countdown to the most thrilling football tournament has begun!
         </p>
       </div>
@@ -88,13 +88,13 @@ const AboutSection = () => {
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex flex-wrap gap-2 justify-center mt-10 bg-black/10 w-fit m-auto py-3 px-5 lg:px-8 rounded-[40px]">
+      <div className="flex flex-wrap gap-2 justify-center mt-10 bg-[#FAFAFA] w-fit m-auto py-3 px-5 lg:px-8 rounded-[40px]">
         {["about", "vision"].map((tab) => (
           <div
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`cursor-pointer rounded-[20px] py-[10px] px-[20px] lg:px-[30px] ${
-              activeTab === tab ? "bg-[#C81E23] text-white" : "text-white"
+              activeTab === tab ? "bg-[#C81E23] text-[#000000]" : "text-[#000000]"
             }`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -118,10 +118,10 @@ const AboutSection = () => {
               <h1 className="text-[25px] lg:text-[34px] tracking-tight">
                 Countdown to Glory
               </h1>
-              <p className="lg:w-[350px] w-full text-[#B0B3B8] tracking-tight mt-2">
+              <p className="lg:w-[350px] w-full text-[#6B6F76] tracking-tight mt-2">
               Mark your calendars!  Join us at Basin, Ilorin, Kwara State on April 12, 2025 for the year's most electrifying tournament.
               </p>
-              <p className="text-[#B0B3B8] tracking-tight mt-2 mb-7">
+              <p className="text-[#6B6F76] tracking-tight mt-2 mb-7">
               Witness top teams compete for the championship title.
               </p>
               <Link href="/about">
@@ -154,17 +154,17 @@ const AboutSection = () => {
                 style={{ listStyleType: "disc" }}
               >
                 <li className="text-[#C81E23]">
-                  <span className="text-white">
+                  <span className="text-[#000000]">
                     Encourage unity and teamwork among players.
                   </span>
                 </li>
                 <li className="text-[#C81E23]">
-                  <span className="text-white">
+                  <span className="text-[#000000]">
                     Promote competitive spirit and fair play.
                   </span>
                 </li>
                 <li className="text-[#C81E23]">
-                  <span className="text-white">
+                  <span className="text-[#000000]">
                     Provide a platform for discovering future football talents.
                   </span>
                 </li>

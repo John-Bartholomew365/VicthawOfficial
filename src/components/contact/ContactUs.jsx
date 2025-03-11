@@ -150,7 +150,7 @@ const GetInTouch = () => {
           <h1 className="lg:text-[40px] leading-tight text-[30px] font-bold text-center tracking-tight">
             Victhaw Official Unity <br className="lg:block hidden" /> Cup 1.0
           </h1>
-          <p className="text-[#B0B3B8] m-auto mb-6 mt-4 text-center lg:w-[420px] w-auto">
+          <p className="text-[#6B6F76] m-auto mb-6 mt-4 text-center lg:w-[420px] w-auto">
             Contact us today for inquiries about the tournament, team
             registration, or sponsorship opportunities.
           </p>
@@ -168,7 +168,7 @@ const GetInTouch = () => {
         <div className="flex justify-center space-x-4">
           <a
             href="https://wa.me/+2349097949863"
-            className="text-[#B0B3B8] hover:text-[#C81E23] transition duration-300"
+            className="text-[#6B6F76] hover:text-[#C81E23] transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -176,19 +176,19 @@ const GetInTouch = () => {
           </a>
           <a
             href="mailto:victhawofficial@gmail.com"
-            className="text-[#B0B3B8] hover:text-[#C81E23] transition duration-300"
+            className="text-[#6B6F76] hover:text-[#C81E23] transition duration-300"
           >
             <MdEmail size={24} />
           </a>
           <a
             href="https://www.instagram.com/victhawofficial_unitycup"
-            className="text-[#B0B3B8] hover:text-[#C81E23] transition duration-300"
+            className="text-[#6B6F76] hover:text-[#C81E23] transition duration-300"
           >
             <FaInstagram size={24} />
           </a>
           <a
             href="https://twitter.com/Coachvhicktaw"
-            className="text-[#B0B3B8] hover:text-[#C81E23] transition duration-300"
+            className="text-[#6B6F76] hover:text-[#C81E23] transition duration-300"
           >
             <FaXTwitter size={24} />
           </a>

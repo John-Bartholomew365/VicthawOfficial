@@ -46,7 +46,7 @@ const About = () => {
   return (
     <div className="flex flex-col my-[100px] items-center gap-[4rem]">
       <div className="flex flex-col items-center">
-        <h3 className="bg-[#000000] h-[30px] w-[73px] rounded-full flex items-center justify-center text-[14px] font-medium text-[#B0B3B8]">
+        <h3 className="bg-[#FAFAFA] h-[30px] w-[73px] rounded-full flex items-center justify-center text-[14px] font-medium text-[#6B6F76]">
           Prizes
         </h3>
         <h2 className="lg:text-[45px] text-[25px] font-normal text-center leading-tight tracking-tight mt-[40px]">
@@ -69,7 +69,7 @@ const About = () => {
           {prizes.map((_, index) => (
             <div
               key={index}
-              className={`relative w-2 bg-black rounded-full overflow-hidden ${
+              className={`relative w-2 bg-[#FAFAFA] rounded-full overflow-hidden ${
                 index === currentIndex ? "h-24" : "h-12"
               }`}
             >
@@ -88,7 +88,7 @@ const About = () => {
           <h2 className="lg:text-[40px] text-[30px] font-normal lg:w-[350px] tracking-tight w-auto leading-tight">
             {prizes[currentIndex].title}
           </h2>
-          <ul className="text-[#B0B3B8] text-[14px] font-normal lg:w-[350px] tracking-tight w-auto lg:mb-0 mb-5 space-y-3">
+          <ul className="text-[#6B6F76] text-[14px] font-normal lg:w-[350px] tracking-tight w-auto lg:mb-0 mb-5 space-y-3">
             {prizes[currentIndex].description.map((desc, index) => (
               <li key={index} className="flex items-center ml-4">
                 <Image

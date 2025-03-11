@@ -30,10 +30,10 @@ const Offering = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
+          <h2 className="text-4xl tracking-tight font-bold mb-4 text-black">
             What I Offer
           </h2>
-          <p className="text-lg tracking-tight leading-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
+          <p className="text-lg tracking-tight leading-tight text-[#6B6F76] m-auto lg:w-[470px] w-auto">
           Victor provides specialised programs designed to enhance physical fitness, elevate football performance, and foster community development through sports.
 
           </p>
@@ -49,17 +49,17 @@ const Offering = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-[#1C1C1E] p-6 rounded-lg shadow-md text-center"
+              className="bg-[#FAFAFA] p-6 rounded-lg shadow-md text-center"
             >
               <img
                 src={service.image}
                 alt={service.title}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2 text-white">
+              <h3 className="text-xl font-semibold mb-2 text-black">
                 {service.title}
               </h3>
-              <p className="text-[#B0B3B8]">{service.description}</p>
+              <p className="text-[#6B6F76]">{service.description}</p>
             </div>
           ))}
         </div>

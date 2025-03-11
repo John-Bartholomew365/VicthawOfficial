@@ -594,12 +594,12 @@ const SetupTeam = () => {
         <h1 className="lg:text-[30px] text-[24px] font-bold leading-tight text-[#C81E23] lg:text-start text-center">
           Welcome to your team's dashboard!
         </h1>
-        <h1 className="text-[#B0B3B8] mt-2 lg:text-start text-center">
+        <h1 className="text-[#6B6F76] mt-2 lg:text-start text-center">
           Now, setup your team a maximum of 18 players, a coach and an assistant
           coach
         </h1>
       </div>
-      <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
+      <div className="bg-[#FAFAFA] mt-5 p-6 rounded-lg shadow-lg">
         <h2 className="text-lg font-bold text-[#C81E23] mb-4">Team Setup</h2>
 
         {/* Team Logo, Name, and Rating */}
@@ -661,7 +661,7 @@ const SetupTeam = () => {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 rounded-lg bg-[#000000] text-white focus:outline-none focus:border-[#C81E23] "
+              className="w-full p-3 rounded-lg bg-[#FFFFFF] text-black focus:outline-none focus:border-[#C81E23] "
             />
           </div>
           <div className="my-3">
@@ -672,12 +672,12 @@ const SetupTeam = () => {
               name="role"
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-full p-3 bg-[#000000] text-white rounded-lg focus:outline-none focus:border-[#C81E23]"
+              className="w-full p-3 bg-[#FFFFFF] text-black rounded-lg focus:outline-none focus:border-[#C81E23]"
             />
           </div>
           <div className="space-y-3">
             {/* Custom File Input */}
-            <label className="block w-full bg-[#0F0F0F] p-3 rounded-lg border border-gray-600 cursor-pointer text-white text-center">
+            <label className="block w-full bg-[#FFFFFF] p-3 rounded-lg border border-gray-600 cursor-pointer text-black text-center">
               {selectedFile ? selectedFile.name : "Choose File"}
               <input
                 type="file"

@@ -327,25 +327,25 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
 
   return (
     <div
-      className={`fixed top-0 text-black left-0 p-6 min-h-screen sm:h-full sm:z-50 w-[307px] sidebar flex flex-col gap-[30px] overflow-y-auto
-    transition-transform duration-300 ease-in-out bg-black transform ${
+      className={`fixed top-0 text-black left-0 p-6 min-h-screen sm:h-full sm:z-50 w-[307px] lg:z-0 z-[100] sidebar flex flex-col gap-[30px] overflow-y-auto
+    transition-transform duration-300 ease-in-out bg-[#FFFFFF] border-r border-black/10 transform ${
       isOpen ? "translate-x-0 " : "-translate-x-full"
     }
     lg:translate-x-0`}
     >
-      <div className="bg-black ">
+      <div className="bg-[#FFFFFF] ">
         <div className="mb-6 space-y-4">
           <Link
             href={"/news"}
             className="flex items-center gap-3 mt-20 cursor-pointer"
             onClick={() => setIsSidebarOpen(false)} // Close sidebar on link click
           >
-            <div className="bg-[#9595951A] rounded-[10px] px-2.5 py-3">
+            <div className="bg-[#9595951A] px-2.5 py-3">
               <GrBook className="text-gray-500 text-[20px]" />
             </div>
             <div>
-              <h3 className="text-white font-medium text-[14px]">Changelog</h3>
-              <p className="text-gray-500 text-[12px]">
+              <h3 className="text-black font-medium text-[14px]">Changelog</h3>
+              <p className="text-[#6B6F76] text-[12px]">
                 View all recent updates here
               </p>
             </div>
@@ -355,11 +355,11 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => setIsSidebarOpen(false)} // Close sidebar on link click
           >
-            <div className="bg-[#9595951A] rounded-[10px] px-2.5 py-3">
-              <GrBook className="text-gray-500 text-[20px]" />
+            <div className="bg-[#9595951A] px-2.5 py-3">
+              <GrBook className="text-[#6B6F76] text-[20px]" />
             </div>
             <div>
-              <h3 className="text-white font-medium text-[14px]">
+              <h3 className="text-black font-medium text-[14px]">
                 Terms of Service
               </h3>
               <p className="text-gray-500 text-[12px]">Learn about our terms</p>
@@ -367,14 +367,14 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
           </Link>
         </div>
 
-        <div className="border border-[#9595951A] w-full mb-5"></div>
+        {/* <div className="border border-[#9595951A] w-full mb-5"></div> */}
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 mt-5">
           {menus.map((menu, index) => (
             <div key={index} className="flex flex-col gap-3">
               <Link
                 href={menu.header.link}
-                className="flex text-white text-[14px] font-medium items-center gap-2 px-2 rounded"
+                className="flex text-black text-[14px] font-medium items-center gap-2 px-2 rounded"
                 onClick={() => {
                   toggleCollapse(menu.header.title);
                   setIsSidebarOpen(false); // Close sidebar on link click

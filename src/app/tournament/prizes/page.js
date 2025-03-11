@@ -6,7 +6,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="bg-[#0F0F0F] text-white">
+    <div className="bg-[#FFFFFF] text-black">
       <div className="container lg:px-[50px] px-2">
         <Hero />
         <ListOfPrizes />

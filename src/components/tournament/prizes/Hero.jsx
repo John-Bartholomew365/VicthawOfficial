@@ -54,7 +54,7 @@ const Hero = () => {
           <h1 className="lg:text-[50px] text-[30px] lg:text-start text-center leading-tight tracking-tight">
             Prizes and Awards
           </h1>
-          <p className="text-[#B0B3B8] lg:text-start text-center tracking-tight lg:w-[410px] w-auto mt-4">
+          <p className="text-[#6B6F76] lg:text-start text-center tracking-tight lg:w-[410px] w-auto mt-4">
             This tournament is all about celebrating excellence! Outstanding
             teams and exceptional players will be recognized with prestigious
             awards and exciting prizes for their skill, dedication, and

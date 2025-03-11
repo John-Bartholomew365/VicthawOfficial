@@ -4,7 +4,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-[#FFFFFF] text-black">
       <div className="container lg:px-[30px] px-2 tracking-tight">
         <Questions />
       </div>

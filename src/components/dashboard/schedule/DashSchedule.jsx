@@ -37,11 +37,11 @@ const DashSchedule = () => {
 
   return (
     <div className="my-[50px] lg:my-[100px] px-5 ">
-      <div className="flex flex-col justify-center items-center lg:w-[1000px] w-auto m-auto">
+      <div className="flex flex-col justify-center items-center lg:w-[950px] w-auto m-auto">
         <h1 className="text-[30px] lg:text-[45px] font-bold text-center">
           Tournament Schedule
         </h1>
-        <p className="text-[#B0B3B8] text-center mt-3 m-auto lg:w-[560px] w-auto">
+        <p className="text-[#6B6F76] text-center mt-3 m-auto lg:w-[560px] w-auto">
           The official schedule for the Victhaw Official Unity Cup 1.0 is coming
           soon! Stay tuned for match dates, times, and venue. We can't wait to
           share the excitement with you.
@@ -58,21 +58,21 @@ const DashSchedule = () => {
               Countdown to Tournament:
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mt-4">
-              <div className="bg-[#0F0F0F] text-white flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#F5F5F5] text-black flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
                 {formatTime(days)}
-                <span className="text-[#B0B3B8] block">days</span>
+                <span className="text-[#6B6F76] block">days</span>
               </div>
-              <div className="bg-[#0F0F0F] text-white flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#F5F5F5] text-black flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
                 {formatTime(hours)}
-                <span className="text-[#B0B3B8] block">hours</span>
+                <span className="text-[#6B6F76] block">hours</span>
               </div>
-              <div className="bg-[#0F0F0F] text-white flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#F5F5F5] text-black flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
                 {formatTime(minutes)}
-                <span className="text-[#B0B3B8] block">mins</span>
+                <span className="text-[#6B6F76] block">mins</span>
               </div>
-              <div className="bg-[#0F0F0F] text-white flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
+              <div className="bg-[#F5F5F5] text-black flex flex-col items-center text-[20px] px-6 py-3 rounded-md">
                 {formatTime(seconds)}
-                <span className="text-[#B0B3B8] block">secs</span>
+                <span className="text-[#6B6F76] block">secs</span>
               </div>
             </div>
           </div>
@@ -80,8 +80,8 @@ const DashSchedule = () => {
 
         {/* Email Subscription Section */}
 
-        <h1 className="my-[25px] font-bold text-center">Get Notified</h1>
-        <p className="text-[#B0B3B8] mb-4">
+        <h1 className="my-[16px] font-bold text-center">Get Notified</h1>
+        <p className="text-[#6B6F76] mb-4">
           You'll get notified upon the tournament schedule release!
         </p>
       </div>

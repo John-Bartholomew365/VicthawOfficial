@@ -55,10 +55,10 @@ const Certifications = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-4xl tracking-tight font-bold mb-4 text-white">
+          <h2 className="text-4xl tracking-tight font-bold mb-4 text-black">
             List of Certifications
           </h2>
-          <p className="text-lg tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
+          <p className="text-lg tracking-tight text-[#6B6F76] m-auto lg:w-[470px] w-auto">
           Victor's certifications demonstrate his dedication to excellence and ongoing growth in fitness and sports coaching.
           </p>
         </div>
@@ -69,7 +69,7 @@ const Certifications = () => {
               key={certification.id}
               className={`flex flex-col md:flex-row items-center ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8  lg:p-6 p-0 rounded-lg shadow-md`}
+              } gap-8  lg:p-6 p-0 rounded-lg shadow-sm`}
               data-aos="fade-up"
             >
               <img
@@ -83,11 +83,11 @@ const Certifications = () => {
                 <h3 className="text-xl font-semibold mb-2 text-white">
                   {certification.title}
                 </h3>
-                <p className="text-[#B0B3B8] mb-2 italic">
+                <p className="text-[#6B6F76] mb-2 italic">
                   {certification.organization}
                 </p>
-                <p className="text-[#B0B3B8] mb-4 italic">Certified on: {certification.year}</p>
-                <p className="text-[#B0B3B8] lg:w-[430px] w-auto">
+                <p className="text-[#6B6F76] mb-4 italic">Certified on: {certification.year}</p>
+                <p className="text-[#6B6F76] lg:w-[430px] w-auto">
                   {certification.description}
                 </p>
               </div>

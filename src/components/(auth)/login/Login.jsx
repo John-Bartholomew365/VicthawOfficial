@@ -286,7 +286,7 @@ const Login = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="e.g example@gmail.com"
-              className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+              className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="text-red-500 text-sm">{formik.errors.email}</div>
@@ -302,12 +302,12 @@ const Login = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="*************"
-              className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+              className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
             />
             <button
               type="button"
               onClick={togglePasswordVisibility}
-              className="absolute right-3 top-[70%] translate-y-[-50%] text-white opacity-70"
+              className="absolute right-3 top-[70%] translate-y-[-50%] text-black opacity-70"
             >
               {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
             </button>

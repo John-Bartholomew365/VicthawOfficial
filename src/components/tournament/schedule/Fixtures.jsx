@@ -115,15 +115,15 @@ export default function MatchSchedule() {
       <h1 className="text-2xl font-bold mb-4 text-center">Match Schedule</h1>
       <div className="lg:flex lg:flex-row flex-col gap-2 items-center justify-center">
         <h1 className="font-bold">Tournament Dates:</h1>
-        <p className="text-[#B0B3B8]">12th April – 4th May 2025</p>
+        <p className="text-[#6B6F76]">12th April – 4th May 2025</p>
       </div>
       <div className="lg:flex lg:flex-row flex-col gap-2 lg:my-3 my-5 items-center justify-center">
         <h1 className="font-bold">Match Format:</h1>
-        <p className="text-[#B0B3B8]">Knockout style (two-legged)</p>
+        <p className="text-[#6B6F76]">Knockout style (two-legged)</p>
       </div>
       <div className="lg:flex lg:flex-row flex-col gap-2 items-center justify-center">
         <h1 className="font-bold">Number of Teams:</h1>
-        <p className="text-[#B0B3B8]">16 teams competing.</p>
+        <p className="text-[#6B6F76]">16 teams competing.</p>
       </div>
 
       <div>
@@ -203,7 +203,7 @@ export default function MatchSchedule() {
               <FaClock className="text-[#C81E23] text-2xl" />
               <h1 className="text-[18px] font-bold">Match Duration:</h1>
             </div>
-            <p className="text-[#B0B3B8] mt-[-10px] ml-[40px] lg:w-[350px] w-auto">
+            <p className="text-[#6B6F76] mt-[-10px] ml-[40px] lg:w-[350px] w-auto">
               Each match consists of two 30-minute halves with a 10-minute
               halftime break.
             </p>
@@ -215,7 +215,7 @@ export default function MatchSchedule() {
               <FaMapMarkerAlt className="text-[#C81E23] text-2xl" />
               <h1 className="text-[18px] font-bold">Venue Address:</h1>
             </div>
-            <p className="text-[#B0B3B8] mt-[-10px] ml-[40px]">
+            <p className="text-[#6B6F76] mt-[-10px] ml-[40px]">
               Basin Stadium, Ilorin, Kwara State
             </p>
           </div>
@@ -226,7 +226,7 @@ export default function MatchSchedule() {
               <FaParking className="text-[#C81E23] text-2xl" />
               <h1 className="text-[18px] font-bold">Parking:</h1>
             </div>
-            <p className="text-[#B0B3B8] mt-[-10px] ml-[40px]">
+            <p className="text-[#6B6F76] mt-[-10px] ml-[40px]">
               Parking will be available at the tournament venue.
             </p>
           </div>
@@ -237,7 +237,7 @@ export default function MatchSchedule() {
               <FaCloudSunRain className="text-[#C81E23] text-2xl" />
               <h1 className="text-[18px] font-bold">Weather Updates:</h1>
             </div>
-            <p className="text-[#B0B3B8] mt-[-10px] ml-[40px]">
+            <p className="text-[#6B6F76] mt-[-10px] ml-[40px]">
               In case of adverse weather, matches may be rescheduled. <br />{" "}
               Check the website or social media for updates.
             </p>

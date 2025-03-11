@@ -110,7 +110,7 @@ const Victor = () => {
             </span>
           </h1>
           <p
-            className="lg:w-[410px] tracking-tight w-full py-[20px] text-[#B0B3B8]"
+            className="lg:w-[410px] tracking-tight w-full py-[20px] text-[#6B6F76]"
             data-aos="fade-up"
             data-aos-once="false"
           >
@@ -124,7 +124,7 @@ const Victor = () => {
             data-aos="zoom-in"
             data-aos-once="false"
           >
-            <div className="hover:bg-[#0f0f0f] hover:border-[1px] hover:border-[#FF0000] py-[10px] px-[40px] rounded-[50px] bg-[#FF0000] hover:text-white cursor-pointer">
+            <div className="hover:bg-[#FAFAFA] hover:border-[1px] text-white hover:border-[#FF0000] py-[10px] px-[40px] rounded-[50px] bg-[#FF0000] hover:text-black cursor-pointer">
               <Link href="/visionary/contact">
                 <button className="flex items-center gap-[15px]">
                   Contact me <FaArrowRightLong />

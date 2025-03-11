@@ -36,14 +36,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#000000] lg:px-7 px-3 lg:mx-[50px] mx-2 mb-[70px]">
+    <section className="py-16 bg-[#FAFAFA] lg:px-7 px-3 lg:mx-[50px] mx-2 mb-[70px]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="lg:text-4xl text-[30px] leading-tight tracking-tight font-bold mb-4 text-white">
+          <h2 className="lg:text-4xl text-[30px] leading-tight tracking-tight font-bold mb-4 text-black">
             What People Are Saying
           </h2>
-          <p className="text-lg tracking-tight text-[#B0B3B8] m-auto lg:w-[470px] w-auto">
+          <p className="text-lg tracking-tight text-[#6B6F76] m-auto lg:w-[470px] w-auto">
             Hear from those who have experienced Victor’s coaching and
             mentorship firsthand.
           </p>
@@ -57,16 +57,16 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-[#1C1C1E] p-6 rounded-lg shadow-md"
+              className="bg-[#FAFAFA]  p-6 rounded-lg shadow-md"
             >
-              <p className="text-[#B0B3B8] italic mb-6">
+              <p className="text-[#6B6F76] italic mb-6">
                 "{testimonial.quote}"
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
                 <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-sm text-[#B0B3B8]">{testimonial.role}</p>
+                  <p className="font-semibold text-black">{testimonial.name}</p>
+                  <p className="text-sm text-[#6B6F76]">{testimonial.role}</p>
                 </div>
               </div>
             </div>

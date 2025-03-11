@@ -104,7 +104,7 @@ const HeroSection = () => {
       thirdText: "through soccer",
       subTitle:
         "Victhawofficial Unity Cup 1.0 isn’t just a tournament, it’s a movement! We bring players together to compete and fans to cheer them on, celebrating the love of football.",
-      image: "/hero-img.svg",
+      image: "/img1.jpg",
     },
     {
       firstText: "Showcase",
@@ -112,7 +112,7 @@ const HeroSection = () => {
       thirdText: "",
       subTitle:
         "Calling all aspiring football stars! This is your chance to shine, showcase your skills, and earn the recognition you deserve.",
-      image: "/hero-img2.svg",
+      image: "/img2.jpg",
     },
     {
       firstText: "Experience",
@@ -120,7 +120,7 @@ const HeroSection = () => {
       thirdText: "of Victory",
       subTitle:
         "Think you have what it takes to compete against the best? This is your chance to battle it out in a professionally organized tournament, where glory and exciting prizes await the champions.",
-      image: "/hero-img3.svg",
+      image: "/img3.jpg",
     },
   ];
 
@@ -152,7 +152,7 @@ const HeroSection = () => {
             <span className="block">{carousel.secondText}</span>
             <span className="block">{carousel.thirdText}</span>
           </h1>
-          <p className="text-[16px] text-[#B0B3B8] tracking-tight">
+          <p className="text-[16px] text-[#6B6F76] tracking-tight">
             {carousel.subTitle}
           </p>
           {/* Carousel Indicators */}

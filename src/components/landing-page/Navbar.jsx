@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="py-4 lg:px-[70px] px-[30px] w-full z-50 text-white bg-[#000000] fixed justify-between gap-28 font-navbar flex items-center">
+      <div className="py-4 border-b border-black/10 lg:px-[70px] px-[30px] w-full z-50 text-[#000000] bg-[#FFFFFF] fixed justify-between gap-28 font-navbar flex items-center">
         {/* Left section */}
         <div className="flex items-center gap-[80px]">
           <Link href={"/"} className="hidden md:block">
@@ -47,13 +48,13 @@ const Navbar = () => {
               height={40}
               width={47}
               className="rounded-full"
-              style={{ boxShadow: "0 12px 0 rgba(0, 0, 0, 0.3)" }} // Bottom-only shadow
+              // style={{ boxShadow: "0 12px 0 rgba(0, 0, 0, 0.3)" }} // Bottom-only shadow
             />
           </Link>
 
           {/* Logo visible on mobile */}
           <Link href={"/"} className="md:hidden">
-            <Image src="/victhaw-logo.svg" alt="logo" height={40} width={47} />
+            <Image src="/victhaw-logo.svg" alt="logo" height={40} width={47} className="rounded-full" />
           </Link>
         </div>
 
@@ -86,35 +87,35 @@ const Navbar = () => {
             {openDropdown === "tournament" && (
               <div
                 ref={dropdownRef}
-                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#000000] text-white rounded-lg shadow-xl z-50"
+                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#FFFFFF] text-[#000000] rounded-lg shadow-xl z-50"
               >
                 <Link
                   href="/tournament/team"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Team
                 </Link>
                 <Link
                   href="/tournament/rules"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Rules & Guidelines
                 </Link>
                 <Link
                   href="/tournament/schedule"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Schedule
                 </Link>
                 <Link
                   href="/tournament/results"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Results
                 </Link>
                 <Link
                   href="/tournament/prizes"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Prizes
                 </Link>
@@ -149,36 +150,36 @@ const Navbar = () => {
             {openDropdown === "about" && (
               <div
                 ref={dropdownRef}
-                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#000000] text-white rounded-lg shadow-xl z-50"
+                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#FFFFFF] text-[#000000] rounded-lg shadow-xl z-50"
               >
                 <Link
                   href="/about/tournament"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   The Tournament
                 </Link>
 
                 <Link
                   href="/about/vision"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Victhaw Vision
                 </Link>
                 <Link
                   href="/about/sponsors"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Sponsors
                 </Link>
                 <Link
                   href="/about/faq"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   FAQs
                 </Link>
                 <Link
                   href="/about/contact"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Contact
                 </Link>
@@ -213,29 +214,29 @@ const Navbar = () => {
             {openDropdown === "visionary" && (
               <div
                 ref={dropdownRef}
-                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#000000] text-white rounded-lg shadow-xl z-50"
+                className="absolute top-full p-3 left-0 mt-2 w-52 bg-[#FFFFFF] text-[#000000] rounded-lg shadow-xl z-50"
               >
                 <Link
                   href="/visionary/home"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Home
                 </Link>
                 <Link
                   href="/visionary/certification"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Certification
                 </Link>
                 <Link
                   href="/visionary/services"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Services
                 </Link>
                 <Link
                   href="/visionary/contact"
-                  className="block px-4 py-2 hover:bg-[#0F0F0F]"
+                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
                 >
                   Contact
                 </Link>
@@ -247,7 +248,8 @@ const Navbar = () => {
         {/* Mobile hamburger menu button */}
         <div className="md:hidden flex items-center">
           <button onClick={() => setIsMenuOpen(true)}>
-            <Image src="/toggle-btn.svg" alt="menu" height={30} width={30} />
+            {/* <Image src="/toggle-btn.svg" alt="menu" height={30} width={30} /> */}
+            <RxHamburgerMenu size={30} className="cursor-pointer" />
           </button>
         </div>
 
@@ -256,7 +258,7 @@ const Navbar = () => {
           {/* Login Button */}
           <Link
             href={"/login"}
-            className="font-navbar font-semibold border border-[#C81E23] text-white rounded-lg py-2 px-8 text-sm hover:bg-[#C81E23] hover:text-white"
+            className="font-navbar font-semibold border border-[#C81E23] text-[#000000] rounded-lg py-2 px-8 text-sm hover:bg-[#C81E23] hover:text-white"
           >
             Login
           </Link>
@@ -264,7 +266,7 @@ const Navbar = () => {
           {/* Register Button */}
           <Link
             href={"/register"}
-            className="font-navbar font-semibold bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-black hover:text-white hover:border-[#C81E23] hover:border"
+            className="font-navbar font-semibold bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-white hover:text-black hover:border-[#C81E23] hover:border"
           >
             Register
           </Link>
@@ -273,7 +275,7 @@ const Navbar = () => {
 
       {/* Mobile Menu dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-[#0F0F0F] text-white z-50 flex flex-col items-start py-5 px-10">
+        <div className="md:hidden fixed inset-0 bg-[#FFFFFF] text-black z-50 flex flex-col items-start py-5 px-10">
           <Link href={"/"} className="md:hidden">
             <Image
               src="/victhaw-logo.svg"
@@ -288,7 +290,8 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-5 right-5"
           >
-            <Image src="/x2.svg" alt="close" height={30} width={30} />
+            {/* <Image src="/x2.svg" alt="close" height={30} width={30} /> */}
+            <RxCross1 size={30} className="cursor-pointer" />
           </button>
 
           {/* Menu links */}
@@ -321,31 +324,31 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/tournament/team"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Team
                   </Link>
                   <Link
                     href="/tournament/rules"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Rules & Guidelines
                   </Link>
                   <Link
                     href="/tournament/schedule"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Schedule
                   </Link>
                   <Link
                     href="/tournament/results"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Results
                   </Link>
                   <Link
                     href="/tournament/prizes"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Prizes
                   </Link>
@@ -381,32 +384,32 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/about/tournament"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     The Tournament
                   </Link>
 
                   <Link
                     href="/about/vision"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Victhaw Vision
                   </Link>
                   <Link
                     href="/about/sponsors"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Sponsors
                   </Link>
                   <Link
                     href="/about/faq"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     FAQs
                   </Link>
                   <Link
                     href="/about/contact"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Contact
                   </Link>
@@ -442,25 +445,25 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/visionary/home"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Home
                   </Link>
                   <Link
                     href="/visionary/certification"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Certification
                   </Link>
                   <Link
                     href="/visionary/services"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Services
                   </Link>
                   <Link
                     href="/visionary/contact"
-                    className="block p-2 hover:bg-[#000000]"
+                    className="block p-2 hover:bg-[#FAFAFA]"
                   >
                     Contact
                   </Link>

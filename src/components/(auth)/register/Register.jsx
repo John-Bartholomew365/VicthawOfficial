@@ -386,7 +386,7 @@ const Register = () => {
             value={formik.values.teamName}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
           />
           {formik.touched.teamName && formik.errors.teamName && (
             <div className="text-red-500 text-sm mt-1">
@@ -404,7 +404,7 @@ const Register = () => {
             value={formik.values.managerName}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-white/10 rounded-md text-black"
           />
           {formik.touched.managerName && formik.errors.managerName && (
             <div className="text-red-500 text-sm mt-1">
@@ -423,7 +423,7 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             maxLength={15}
-            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
           />
           {formik.touched.teamContact && formik.errors.teamContact && (
             <div className="text-red-500 text-sm mt-1">
@@ -441,7 +441,7 @@ const Register = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
           />
           {formik.touched.email && formik.errors.email && (
             <div className="text-red-500 text-sm mt-1">
@@ -459,12 +459,12 @@ const Register = () => {
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-black/40 w-full border-[0.5px] border-black/10 rounded-md text-white"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
           />
           <button
             type="button"
             onClick={togglePasswordVisibility}
-            className="absolute right-3 top-[70%] translate-y-[-50%] text-white opacity-70"
+            className="absolute right-3 top-[70%] translate-y-[-50%] text-black opacity-70"
           >
             {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
           </button>
@@ -486,7 +486,7 @@ const Register = () => {
           />
           <label
             htmlFor="terms"
-            className="ml-2 text-[14px] text-white opacity-70"
+            className="ml-2 text-[14px] text-black opacity-70"
           >
             By continuing, you agree to our{" "}
             <Link href={"/terms"} className="text-[#C81E23] ml-1">

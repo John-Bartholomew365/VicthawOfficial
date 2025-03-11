@@ -20,7 +20,7 @@ const ImpactSection = () => {
           <h2 className="lg:text-[35px] text-[27px] tracking-tight font-bold mb-4">
             The Impact of the Victhaw <br className="lg:block hidden" /> Official Unity Cup
           </h2>
-          <p className="text-[16px] tracking-tight text-[#B0B3B8] m-auto lg:w-[590px] w-auto">
+          <p className="text-[16px] tracking-tight text-[#6B6F76] m-auto lg:w-[590px] w-auto">
             Sports have the power to transform lives, build character, and unite
             people from all walks of life. My goal is to create a platform where
             athletes can showcase their talents, embrace discipline, and inspire
@@ -48,10 +48,10 @@ const ImpactSection = () => {
           data-aos="fade-up"
         >
           {/* Impact Card 1: Community Engagement */}
-          <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
+          <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">16+</div>
             <h3 className="text-xl font-semibold mb-2">Teams</h3>
-            <p className="text-[#B0B3B8] w-auto">
+            <p className="text-[#6B6F76] w-auto">
               Uniting talented football teams from different backgrounds,
               fostering competition, teamwork, and a shared passion for the
               game.
@@ -59,30 +59,30 @@ const ImpactSection = () => {
           </div>
 
           {/* Impact Card 2: Talent Development */}
-          <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
+          <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">250+</div>
             <h3 className="text-xl font-semibold mb-2">Players</h3>
-            <p className="text-[#B0B3B8] w-auto">
+            <p className="text-[#6B6F76] w-auto">
               Offering a platform for athletes to shine, develop their skills,
               and take their football careers to the next level.
             </p>
           </div>
 
           {/* Impact Card 3: Health and Fitness */}
-          <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
+          <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">1K+</div>
             <h3 className="text-xl font-semibold mb-2">Spectators</h3>
-            <p className="text-[#B0B3B8]">
+            <p className="text-[#6B6F76]">
               Bringing the community together to experience the thrill of the
               game while promoting fitness, engagement, and a love for sports.
             </p>
           </div>
 
           {/* Impact Card 4: Economic Benefits */}
-          <div className="bg-[#000000] p-6 rounded-lg shadow-md text-center">
+          <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md text-center">
             <div className="text-[#C81E23] text-4xl font-bold mb-4">10+</div>
             <h3 className="text-xl font-semibold mb-2">Sponsors</h3>
-            <p className="text-[#B0B3B8] w-auto">
+            <p className="text-[#6B6F76] w-auto">
               Providing businesses with valuable exposure, brand visibility, and
               a chance to support grassroots sports development.
             </p>
@@ -96,8 +96,8 @@ const ImpactSection = () => {
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:px-[50px] px-[5px]">
             {/* Anticipation 1 */}
-            <div className="bg-[#000000] p-6 rounded-lg shadow-md">
-              <p className="text-[#B0B3B8] italic">
+            <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md">
+              <p className="text-[#6B6F76] italic">
                 "I can't wait for the Victhaw Official Unity Cup! It's going to
                 be an amazing opportunity to showcase our skills and connect
                 with other talented players."
@@ -112,8 +112,8 @@ const ImpactSection = () => {
             </div>
 
             {/* Anticipation 2 */}
-            <div className="bg-[#000000] p-6 rounded-lg shadow-md">
-              <p className="text-[#B0B3B8] italic">
+            <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md">
+              <p className="text-[#6B6F76] italic">
                 "Sponsoring this event is an exciting opportunity! We are
                 looking forward to being part of something that will bring the
                 community together in a meaningful way."
@@ -130,8 +130,8 @@ const ImpactSection = () => {
             </div>
 
             {/* Anticipation 3 */}
-            <div className="bg-[#000000] p-6 rounded-lg shadow-md">
-              <p className="text-[#B0B3B8] italic">
+            <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md">
+              <p className="text-[#6B6F76] italic">
                 "I'm so excited for the first edition of the tournament! It’s
                 going to be an unforgettable experience, and I can't wait to
                 witness the energy and passion on the field."

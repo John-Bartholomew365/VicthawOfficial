@@ -33,7 +33,7 @@
 //           <h2 className="lg:text-[45px] text-[30px] font-bold mb-4 text-center">
 //             News and Updates
 //           </h2>
-//           <p className="text-[#B0B3B8] mt-3 mb-10 text-center lg:w-[430px] m-auto w-auto">
+//           <p className="text-[#6B6F76] mt-3 mb-10 text-center lg:w-[430px] m-auto w-auto">
 //             Stay updated with the latest news and updates about the Victhaw
 //             Official Unity Cup 1.0.
 //           </p>
@@ -155,10 +155,10 @@ const NewsAndUpdates = () => {
   }, [breakingNews]);
 
   return (
-    <div className="my-[100px] lg:px-[80px] px-[3px] bg-black rounded-md text-white relative">
+    <div className="my-[100px] lg:px-[80px] px-[3px] bg-[#FAFAFA] rounded-md text-black relative">
       <main className="container mx-auto p-4">
         {/* Breaking News - Sticky Section */}
-        <div className="sticky top-20 bg-[#ff0000] text-white text-center py-2 font-semibold animate-pulse rounded-md mb-10 z-10">
+        <div className="sticky top-20 bg-[#ff0000] text-black text-center py-2 font-semibold animate-pulse rounded-md mb-10 z-10">
           {breakingNews[currentNewsIndex]}
         </div>
 
@@ -167,7 +167,7 @@ const NewsAndUpdates = () => {
           <h2 className="lg:text-[45px] text-[30px] font-bold mb-4 text-center">
             News and Updates
           </h2>
-          <p className="text-[#B0B3B8] mt-3 mb-10 text-center lg:w-[430px] m-auto w-auto">
+          <p className="text-[#6B6F76] mt-3 mb-10 text-center lg:w-[430px] m-auto w-auto">
             Stay updated with the latest news and updates about the Victhaw
             Official Unity Cup 1.0.
           </p>
@@ -245,12 +245,12 @@ const NewsAndUpdates = () => {
             ].map((news, index) => (
               <article
                 key={index}
-                className="bg-[#121212] shadow-lg rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-[#1a1a1a] border border-gray-700"
+                className="bg-[#FFFFFF] shadow-lg rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-[#F5F5F5] border border-gray-700"
               >
                 <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
                   {news.text.split(" ")[0]} {news.title}
                 </h3>
-                <p className="text-[#B0B3B8] mb-4">
+                <p className="text-[#6B6F76] mb-4">
                   {news.text.substring(news.text.indexOf(" ") + 1)}
                 </p>
               </article>

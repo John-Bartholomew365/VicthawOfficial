@@ -91,10 +91,10 @@
 //         <h2 className="text-lg font-bold mb-4">Registration Details</h2>
 //         <div className="space-y-6">
 //           <div className="flex justify-between">
-//             <p className="text-[#B0B3B8]">Registration fee:</p>
+//             <p className="text-[#6B6F76]">Registration fee:</p>
 //             <p className="font-bold text-[#C81E23]">{pricingDetails.price}</p>
 //           </div>
-//           <p className="text-[#B0B3B8]">{pricingDetails.description}</p>
+//           <p className="text-[#6B6F76]">{pricingDetails.description}</p>
 //         </div>
 //       </div>
 
@@ -108,7 +108,7 @@
 //               className="lg:flex flex-col lg:flex-row justify-between w-full"
 //             >
 //               {/* Label */}
-//               <p className="text-[#B0B3B8] capitalize">
+//               <p className="text-[#6B6F76] capitalize">
 //                 {key.replace(/([A-Z])/g, " $1")}:
 //               </p>
 
@@ -300,10 +300,10 @@
 //         <h2 className="text-lg font-bold mb-4">Registration Details</h2>
 //         <div className="space-y-6">
 //           <div className="flex justify-between">
-//             <p className="text-[#B0B3B8]">Registration fee:</p>
+//             <p className="text-[#6B6F76]">Registration fee:</p>
 //             <p className="font-bold text-[#C81E23]">{pricingDetails.price}</p>
 //           </div>
-//           <p className="text-[#B0B3B8]">{pricingDetails.description}</p>
+//           <p className="text-[#6B6F76]">{pricingDetails.description}</p>
 //         </div>
 //       </div>
 
@@ -317,7 +317,7 @@
 //               className="lg:flex flex-col lg:flex-row justify-between w-full"
 //             >
 //               {/* Label */}
-//               <p className="text-[#B0B3B8] capitalize">
+//               <p className="text-[#6B6F76] capitalize">
 //                 {key.replace(/([A-Z])/g, " $1")}:
 //               </p>
 
@@ -525,19 +525,19 @@ export default function PaymentPage() {
       <h1 className="text-2xl font-bold mb-4 text-center">Make Payment</h1>
 
       {/* Pricing Details */}
-      <div className="lg:p-6 p-2 rounded-lg shadow-lg bg-[#0F0F0F] w-full">
+      <div className="lg:p-6 p-2 rounded-lg shadow-lg bg-[#FAFAFA] w-full">
         <h2 className="text-lg font-bold mb-4">Registration Details</h2>
         <div className="space-y-6">
           <div className="flex justify-between">
-            <p className="text-[#B0B3B8]">Registration fee:</p>
+            <p className="text-[#6B6F76]">Registration fee:</p>
             <p className="font-bold text-[#C81E23]">{pricingDetails.price}</p>
           </div>
-          <p className="text-[#B0B3B8]">{pricingDetails.description}</p>
+          <p className="text-[#6B6F76]">{pricingDetails.description}</p>
         </div>
       </div>
 
       {/* Account Details */}
-      <div className="p-6 rounded-lg shadow-lg bg-[#000000] w-full mt-8">
+      <div className="p-6 rounded-lg shadow-lg bg-[#FAFAFA] w-full mt-8">
         <h2 className="text-lg font-bold mb-4">Account Details</h2>
         <div className="space-y-6">
           {Object.entries(accountDetails).map(([key, value]) => (
@@ -546,7 +546,7 @@ export default function PaymentPage() {
               className="lg:flex flex-col lg:flex-row justify-between w-full"
             >
               {/* Label */}
-              <p className="text-[#B0B3B8] capitalize">
+              <p className="text-[#6B6F76] capitalize">
                 {key.replace(/([A-Z])/g, " $1")}:
               </p>
 

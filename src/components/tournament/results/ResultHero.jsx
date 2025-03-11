@@ -18,7 +18,7 @@ const ResultsHero = () => {
       <div className="lg:flex lg:flex-row flex-col items-center gap-[140px] my-[100px] lg:pl-[70px] pl-0">
         <div data-aos="fade-right">
           <h1 className="lg:text-[45px] text-[30px]">Match Day Results</h1>
-          <p className="lg:w-[400px] w-auto tracking-tight text-[#B0B3B8] mt-3">
+          <p className="lg:w-[400px] w-auto tracking-tight text-[#6B6F76] mt-3">
             Keep up with all the thrilling moments from the Victhaw Official
             Unity Cup 1.0! Here, you’ll find the latest match results, key
             highlights, and team performances. Stay tuned for more exciting

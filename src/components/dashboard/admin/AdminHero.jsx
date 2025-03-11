@@ -208,7 +208,7 @@
 //                         View Proof
 //                       </a>
 //                     ) : (
-//                       <p className="text-[#B0B3B8]">No proof submitted</p>
+//                       <p className="text-[#6B6F76]">No proof submitted</p>
 //                     )}
 //                   </td>
 //                   <td className="py-4">
@@ -372,7 +372,7 @@
 //     <div className="p-2 lg:w-[960px] w-full tracking-tight mx-auto">
 //       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
 //       <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
-//       <p className="text-[#B0B3B8] text-center mb-8 mt-2">Manage your team's dashboard here, approve payments</p>
+//       <p className="text-[#6B6F76] text-center mb-8 mt-2">Manage your team's dashboard here, approve payments</p>
 
 //       {/* Dashboard Overview */}
 //       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
@@ -443,7 +443,7 @@
 //                         View Proof
 //                       </a>
 //                     ) : (
-//                       <p className="text-[#B0B3B8]">No proof submitted</p>
+//                       <p className="text-[#6B6F76]">No proof submitted</p>
 //                     )}
 //                   </td>
 //                   <td className="py-4 px-4 whitespace-nowrap">
@@ -586,25 +586,25 @@ const AdminHero = () => {
     <div className="p-2 lg:w-[960px] w-full tracking-tight mx-auto">
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
-      <p className="text-[#B0B3B8] text-center mb-8 mt-2">
+      <p className="text-[#6B6F76] text-center mb-8 mt-2">
         Manage your team's dashboard here, approve payments
       </p>
 
       {/* Dashboard Overview */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-        <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
+        <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-lg">
           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
             Registered Teams
           </h2>
           <p className="text-3xl font-bold">{teams.length}</p>
         </div>
-        <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
+        <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-lg">
           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
             Confirmed Payments
           </h2>
           <p className="text-3xl font-bold">{confirmedPayments}</p>
         </div>
-        <div className="bg-[#0F0F0F] p-6 rounded-lg shadow-lg">
+        <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-lg">
           <h2 className="text-lg font-bold text-[#C81E23] mb-2">
             Pending Reviews
           </h2>
@@ -659,7 +659,7 @@ const AdminHero = () => {
                         View Proof
                       </a>
                     ) : (
-                      <p className="text-[#B0B3B8]">No proof submitted</p>
+                      <p className="text-[#6B6F76]">No proof submitted</p>
                     )}
                   </td>
                   <td className="py-4 px-4 whitespace-nowrap">
@@ -739,7 +739,7 @@ const AdminHero = () => {
                       View Proof
                     </a>
                   ) : (
-                    <p className="text-[#B0B3B8]">No proof submitted</p>
+                    <p className="text-[#6B6F76]">No proof submitted</p>
                   )}
                 </td>
                 <td className="py-4 px-4 whitespace-nowrap">

@@ -45,7 +45,7 @@ const CertificationsHero = () => {
         <h1 className="lg:text-[45px] text-[40px] leading-tight font-bold text-white mb-5">
           Certificates & Accomplishments
         </h1>
-        <p className="text-xl text-[#B0B3B8] lg:w-[470px] leading-tight m-auto w-auto mb-16 lg:px-0 px-2">
+        <p className="text-xl text-[#6B6F76] lg:w-[470px] leading-tight m-auto w-auto mb-16 lg:px-0 px-2">
         Discover Victor’s professional qualifications and achievements, highlighting his expertise in fitness coaching and football mentorship.
         </p>
         {/* <div className="bg-[#C81E23] lg:w-[250px] m-auto w-auto text-white px-8 py-4 rounded-lg hover:bg-red-900 transition duration-300">
