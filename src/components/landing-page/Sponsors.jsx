@@ -9,7 +9,7 @@ const Sponsors = () => {
           Become a Sponsor
         </h2>
         <p className="text-[16px] text-[#6B6F76] tracking-tight mb-12 lg:w-[440px] w-auto m-auto">
-          Partner with us to make the <strong>Unity Cup 1.0</strong>a resounding
+          Partner with us to make the <strong>Unity Cup 1.0</strong> a resounding
           success! Sponsoring this event is more than just branding, it’s a
           chance to amplify your visibility, engage with a passionate community,
           and create meaningful connections.

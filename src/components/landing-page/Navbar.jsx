@@ -91,31 +91,31 @@ const Navbar = () => {
               >
                 <Link
                   href="/tournament/team"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Team
                 </Link>
                 <Link
                   href="/tournament/rules"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Rules & Guidelines
                 </Link>
                 <Link
                   href="/tournament/schedule"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76]  hover:bg-[#FAFAFA]"
                 >
                   Schedule
                 </Link>
                 <Link
                   href="/tournament/results"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Results
                 </Link>
                 <Link
                   href="/tournament/prizes"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Prizes
                 </Link>
@@ -154,32 +154,32 @@ const Navbar = () => {
               >
                 <Link
                   href="/about/tournament"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   The Tournament
                 </Link>
 
                 <Link
                   href="/about/vision"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Victhaw Vision
                 </Link>
                 <Link
                   href="/about/sponsors"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Sponsors
                 </Link>
                 <Link
                   href="/about/faq"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   FAQs
                 </Link>
                 <Link
                   href="/about/contact"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Contact
                 </Link>
@@ -218,25 +218,25 @@ const Navbar = () => {
               >
                 <Link
                   href="/visionary/home"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Home
                 </Link>
                 <Link
                   href="/visionary/certification"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Certification
                 </Link>
                 <Link
                   href="/visionary/services"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Services
                 </Link>
                 <Link
                   href="/visionary/contact"
-                  className="block px-4 py-2 hover:bg-[#FAFAFA]"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                 >
                   Contact
                 </Link>
@@ -324,31 +324,31 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/tournament/team"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Team
                   </Link>
                   <Link
                     href="/tournament/rules"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Rules & Guidelines
                   </Link>
                   <Link
                     href="/tournament/schedule"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Schedule
                   </Link>
                   <Link
                     href="/tournament/results"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Results
                   </Link>
                   <Link
                     href="/tournament/prizes"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Prizes
                   </Link>
@@ -384,32 +384,32 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/about/tournament"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     The Tournament
                   </Link>
 
                   <Link
                     href="/about/vision"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Victhaw Vision
                   </Link>
                   <Link
                     href="/about/sponsors"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Sponsors
                   </Link>
                   <Link
                     href="/about/faq"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     FAQs
                   </Link>
                   <Link
                     href="/about/contact"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Contact
                   </Link>
@@ -445,25 +445,25 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/visionary/home"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Home
                   </Link>
                   <Link
                     href="/visionary/certification"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Certification
                   </Link>
                   <Link
                     href="/visionary/services"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Services
                   </Link>
                   <Link
                     href="/visionary/contact"
-                    className="block p-2 hover:bg-[#FAFAFA]"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
                     Contact
                   </Link>
@@ -481,7 +481,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href={"/register"}
-                className="font-navbar font-semibold w-full text-center bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-black hover:text-[#FFFFFF] hover:border-[#C81E23] hover:border"
+                className="font-navbar font-semibold w-full text-center bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-white hover:text-[#000000] hover:border-[#C81E23] hover:border"
               >
                 Register
               </Link>

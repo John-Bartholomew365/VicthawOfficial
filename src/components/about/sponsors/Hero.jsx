@@ -67,7 +67,7 @@ const SponsorsPage = () => {
               Meet our sponsors
             </h1>
           </div>
-          <div className="bg-[#FAFAFA] lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
+          <div className="lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[150px] items-center justify-center">
             <div>
               <Image
                 src="/sponsors1.jpg"
@@ -106,7 +106,7 @@ const SponsorsPage = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#FAFAFA] mt-10 lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
+          <div className="mt-10 lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[100px] items-center justify-center">
             <div className="lg:hidden block ">
               <Image
                 src="/sponsors2.jpg"

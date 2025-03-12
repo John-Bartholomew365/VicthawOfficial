@@ -55,33 +55,33 @@ const AboutSection = () => {
 
       {/* Countdown Timer */}
       <div className="lg:flex hidden flex-wrap justify-center gap-3 lg:gap-5 mt-5 text-white text-lg lg:text-2xl">
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+        <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
           {timeLeft.days} days
         </div>
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+        <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
           {timeLeft.hours} hours
         </div>
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+        <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
           {timeLeft.minutes} minutes
         </div>
-        <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
+        <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[90px] lg:w-auto">
           {timeLeft.seconds} seconds
         </div>
       </div>
       <div className="lg:hidden flex flex-col justify-center items-center mt-5 text-white text-lg">
         <div className="flex gap-3">
-          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+          <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[130px]">
             {timeLeft.days} days
           </div>
-          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+          <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[130px]">
             {timeLeft.hours} hours
           </div>
         </div>
         <div className="flex gap-3 mt-4">
-          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+          <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[130px]">
             {timeLeft.minutes} minutes
           </div>
-          <div className="bg-[#C81E23] px-4 py-2 rounded-md text-center w-[130px]">
+          <div className="bg-[#C90A1D] px-4 py-2 rounded-md text-center w-[130px]">
             {timeLeft.seconds} seconds
           </div>
         </div>
@@ -94,7 +94,9 @@ const AboutSection = () => {
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`cursor-pointer rounded-[20px] py-[10px] px-[20px] lg:px-[30px] ${
-              activeTab === tab ? "bg-[#C81E23] text-[#000000]" : "text-[#000000]"
+              activeTab === tab
+                ? "bg-[#C90A1D] text-[#FFFFFF]"
+                : "text-[#000000]"
             }`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -119,12 +121,13 @@ const AboutSection = () => {
                 Countdown to Glory
               </h1>
               <p className="lg:w-[350px] w-full text-[#6B6F76] tracking-tight mt-2">
-              Mark your calendars!  Join us at Basin, Ilorin, Kwara State on April 12, 2025 for the year's most electrifying tournament.
+                Mark your calendars! Join us at Basin, Ilorin, Kwara State on
+                April 12, 2025 for the year's most electrifying tournament.
               </p>
               <p className="text-[#6B6F76] tracking-tight mt-2 mb-7">
-              Witness top teams compete for the championship title.
+                Witness top teams compete for the championship title.
               </p>
-              <Link href="/about">
+              <Link href="/about/tournament">
                 <button className="bg-[#C81E23] py-[10px] px-[20px] text-white rounded-[6px]">
                   Discover more
                 </button>
@@ -145,7 +148,7 @@ const AboutSection = () => {
               <h1 className="text-[25px] lg:text-[34px] tracking-tight">
                 Our Vision
               </h1>
-              <p className="lg:w-[400px] w-full text-[#B0B3B8] tracking-tight mt-2">
+              <p className="lg:w-[400px] w-full text-[#6B6F76] tracking-tight mt-2">
                 To bring communities together, create memorable moments, and
                 inspire the next generation of football stars.
               </p>

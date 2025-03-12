@@ -16,7 +16,7 @@ const VisionHero = () => {
   return (
     <div className="lg:flex lg:flex-row flex-col items-center gap-[100px] my-[100px] lg:pl-[50px] pl-0">
       <div data-aos="fade-right">
-        <h1 className="lg:text-[45px] tracking-tight text-[30px] leading-tight lg:w-[470px] w-auto">
+        <h1 className="lg:text-[45px] tracking-tighter text-[30px] leading-tight lg:w-[470px] w-auto">
           Where Fitness Passion Meets Purpose
         </h1>
         <p className="text-[#6B6F76] tracking-tight lg:w-[420px] w-auto mt-4">
