@@ -27,7 +27,7 @@ const UpcomingEvents = () => {
             electrifying energy of the game we all love.
           </p>
           <div className="mt-8 flex lg:justify-start justify-center">
-            <Link href={"/tournament/about"}>
+            <Link href={"/about/tournament"}>
               <button className="bg-[#C81E23] py-[10px] px-[20px] text-white rounded-[6px] hover:bg-[#ffffff] hover:text-black hover:border-[#C81E23] hover:border">
                 Learn more
               </button>
