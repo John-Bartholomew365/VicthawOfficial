@@ -26,7 +26,7 @@ const Questions = () => {
     {
       question: "3. What are the age requirements for players?",
       answer: `
-        The tournament is open to players aged 18 to 45 years.
+        The tournament is open to players aged 25 to 45 years.
       `,
     },
     {

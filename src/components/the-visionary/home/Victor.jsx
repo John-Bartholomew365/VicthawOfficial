@@ -114,7 +114,7 @@ const Victor = () => {
             data-aos="fade-up"
             data-aos-once="false"
           >
-            A certified fitness coach with over 7 years of experience in
+            A certified fitness coach with 7 years of professional experience in
             strength training, weight loss, and sports coaching. I specialize in
             helping individuals build muscle, shed excess fat, and enhance their
             overall performance.
