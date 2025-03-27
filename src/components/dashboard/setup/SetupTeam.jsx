@@ -595,7 +595,7 @@ const SetupTeam = () => {
           Welcome to your team's dashboard!
         </h1>
         <h1 className="text-[#6B6F76] mt-2 lg:text-start text-center">
-          Now, setup your team a maximum of 18 players, a coach and an assistant
+          Now, setup your team with a maximum of 18 players, a coach and an assistant
           coach
         </h1>
       </div>

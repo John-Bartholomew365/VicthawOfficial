@@ -50,7 +50,7 @@ const TournamentHighlight = () => {
               <div className="flex flex-col">
                 {" "}
                 <div>
-                  <strong>For Players Aged 25–45:</strong>
+                  <strong>For Players Aged 25–50:</strong>
                 </div>
                 <div>
                   <p className="text-black">
