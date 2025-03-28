@@ -258,8 +258,6 @@
 
 // export default Register;
 
-
-
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -433,7 +431,7 @@ const Register = () => {
         </div>
 
         <div className="mt-7" data-aos="fade-up">
-          <h1 className="font-bold text-[16px]">Email</h1>
+          <h1 className="font-bold text-[16px]">Email address</h1>
           <input
             type="email"
             name="email"
@@ -475,7 +473,14 @@ const Register = () => {
           )}
         </div>
 
-        <div className="mt-7 flex items-center" data-aos="fade-up">
+        <div className="my-5">
+          <h1 className="lg:text-[20px] text-[18px]">Team Requirements</h1>
+          <p className="text-[14px] text-[#6B6F76] mt-[6px]">
+            Please note that each team must consist of 18 players, a coach, and an assistant coach. All players must be between <b>25-50</b> years old.
+          </p>
+        </div>
+
+        <div className="mt-7 flex " data-aos="fade-up">
           <input
             type="checkbox"
             name="terms"
@@ -488,7 +493,8 @@ const Register = () => {
             htmlFor="terms"
             className="ml-2 text-[14px] text-black opacity-70"
           >
-            By continuing, you agree to our{" "}
+            By continuing, you confirm that your team meets our requirements and
+            you agree to our{" "}
             <Link href={"/terms"} className="text-[#C81E23] ml-1">
               terms and conditions
             </Link>
