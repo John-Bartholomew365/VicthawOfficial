@@ -391,7 +391,7 @@ const Footer = () => {
             </Link>
             <Link
               className="bg-[#C90A1D] mx-2 p-2 rounded-full inline-flex items-center justify-center"
-              href="https://wa.me/08106163804"
+              href="https://wa.me/+2348106163804"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -411,12 +411,13 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-            <FaInstagram size={20} className="text-white" />
+              <FaInstagram size={20} className="text-white" />
             </Link>
           </div>
           <div className="mt-4 lg:mb-0 lg:hidden block">
             <p className="copyright text-[#6B6F76] text-[14px] text-center lg:text-left">
-              &copy; 2025 Victhaw Official Unity Cup. <br /> All rights reserved.
+              &copy; 2025 Victhaw Official Unity Cup. <br /> All rights
+              reserved.
             </p>
           </div>
         </div>
