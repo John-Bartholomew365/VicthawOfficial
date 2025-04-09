@@ -594,7 +594,7 @@ const SetupTeam = () => {
         <h1 className="lg:text-[30px] text-[24px] font-bold leading-tight text-[#C81E23] lg:text-start text-center">
           Welcome to your team's dashboard!
         </h1>
-        <h1 className="text-[#6B6F76] mt-2 lg:text-start text-center">
+        <h1 className="text-[#6B6F76] text-[15px] mt-2 lg:text-start text-center">
           Now, setup your team with a maximum of 18 players, a coach and an assistant
           coach
         </h1>
@@ -660,8 +660,9 @@ const SetupTeam = () => {
               id="name"
               name="name"
               value={name}
+              placeholder="e.g Lionel Messi"
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 rounded-lg bg-[#FFFFFF] text-black focus:outline-none focus:border-[#C81E23] "
+              className="w-full p-3 rounded-lg bg-[#FFFFFF] text-black focus:outline-none focus:border-[#C81E23] placeholder:text-[13px]"
             />
           </div>
           <div className="my-3">
@@ -672,7 +673,8 @@ const SetupTeam = () => {
               name="role"
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-full p-3 bg-[#FFFFFF] text-black rounded-lg focus:outline-none focus:border-[#C81E23]"
+              placeholder="e.g Player, Coach, Assistant Coach"
+              className="w-full p-3 bg-[#FFFFFF] text-black  rounded-lg focus:outline-none focus:border-[#C81E23] placeholder:text-[13px]"
             />
           </div>
           <div className="space-y-3">

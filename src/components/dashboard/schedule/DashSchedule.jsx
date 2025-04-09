@@ -81,7 +81,7 @@ const DashSchedule = () => {
         {/* Email Subscription Section */}
 
         <h1 className="my-[16px] font-bold text-center">Get Notified</h1>
-        <p className="text-[#6B6F76] mb-4">
+        <p className="text-[#6B6F76] mb-4 lg:text-start text-center">
           You'll get notified upon the tournament schedule release!
         </p>
       </div>
