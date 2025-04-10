@@ -496,7 +496,7 @@ const teams = [
     name: "Sway Fitness FC",
     description: "A top-tier team.",
     location: "Unity, Ilorin, Kwara State",
-    manager: "Mohammed Aliu",
+    manager: "Adeniji Victor",
     logo: "/sway.png",
   },
   {
