@@ -384,7 +384,7 @@ const Register = () => {
             value={formik.values.teamName}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
           />
           {formik.touched.teamName && formik.errors.teamName && (
             <div className="text-red-500 text-sm mt-1">
@@ -402,7 +402,7 @@ const Register = () => {
             value={formik.values.managerName}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
           />
           {formik.touched.managerName && formik.errors.managerName && (
             <div className="text-red-500 text-sm mt-1">
@@ -421,7 +421,7 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             maxLength={15}
-            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
           />
           {formik.touched.teamContact && formik.errors.teamContact && (
             <div className="text-red-500 text-sm mt-1">
@@ -439,7 +439,7 @@ const Register = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
           />
           {formik.touched.email && formik.errors.email && (
             <div className="text-red-500 text-sm mt-1">
@@ -457,7 +457,7 @@ const Register = () => {
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+            className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
           />
           <button
             type="button"

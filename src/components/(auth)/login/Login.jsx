@@ -286,7 +286,7 @@ const Login = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="e.g example@gmail.com"
-              className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+              className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="text-red-500 text-sm">{formik.errors.email}</div>
@@ -302,7 +302,7 @@ const Login = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="*************"
-              className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black"
+              className="mt-5 p-2 text-[14px] bg-white/40 w-full border-[0.5px] border-black/10 rounded-md text-black outline-none"
             />
             <button
               type="button"
