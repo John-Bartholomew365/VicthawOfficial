@@ -231,10 +231,6 @@
 //   );
 // }
 
-
-
-
-
 "use client";
 import { useState } from "react";
 
@@ -260,7 +256,7 @@ const teams = [
     name: "Leo FC",
     description: "Tactical masterminds.",
     location: "Baseline, Ilorin, Kwara State",
-    manager: "Uthman", 
+    manager: "Uthman",
     logo: "/loe.jpg",
   },
   {
@@ -364,7 +360,7 @@ const teams = [
   //   name: "Leo FC",
   //   description: "Tactical masterminds.",
   //   location: "Baseline, Ilorin, Kwara State",
-  //   manager: "Uthman", 
+  //   manager: "Uthman",
   //   logo: "/loe.jpg",
   // },
 ];
@@ -430,7 +426,6 @@ export default function TeamList() {
           Grab a spot for your team now
         </h1>
       </div> */}
-
 
       <div className="my-16 text-center">
         <h1 className="text-2xl lg:text-3xl font-bold">Support Your Team!</h1>
