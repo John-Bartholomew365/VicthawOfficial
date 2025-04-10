@@ -14,11 +14,11 @@ const TeamHero = () => {
         </p>
       </div>
 
-      <div>
+      {/* <div>
         <h1 className="text-center mt-7 text-[#C90A1D]">
           Stay tuned in. More details coming soon!
         </h1>
-      </div>
+      </div> */}
     </div>
   );
 };

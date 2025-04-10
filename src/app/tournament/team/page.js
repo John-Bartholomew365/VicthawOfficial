@@ -8,7 +8,7 @@ const page = () => {
     <div className="bg-[#FFFFFF] text-black">
       <div className="container lg:px-[30px] px-2">
         <TeamHero />
-        {/* <TeamList /> */}
+        <TeamList />
       </div>
       <Footer />
     </div>
