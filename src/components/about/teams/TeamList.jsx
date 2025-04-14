@@ -275,14 +275,14 @@ const teams = [
     manager: "Damilola Ali",
     logo: "/maracana.png",
   },
-  // {
-  //   id: 6,
-  //   name: "Midnight Rangers",
-  //   description: "Hardworking squad.",
-  //   location: "Geri alimi, Ilorin, Kwara State",
-  //   manager: "Isaiah Johnson",
-  //   logo: "/twelve.png",
-  // },
+  {
+    id: 6,
+    name: "Unilorin Quarters FC",
+    description: "Hardworking squad.",
+    location: "Geri alimi, Ilorin, Kwara State",
+    manager: "Coach Walter",
+    logo: "/unilorin.jpg",
+  },
   // {
   //   id: 7,
   //   name: "Icebreakers",

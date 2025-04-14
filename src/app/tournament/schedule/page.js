@@ -8,6 +8,8 @@ const page = () => {
     <div className="bg-[#FFFFFF] text-black">
       <div className="container lg:px-[50px] px-2">
         <Hero />
+      </div>
+      <div className="container">
         <Fixtures />
       </div>
       <Footer />

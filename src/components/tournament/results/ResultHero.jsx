@@ -36,11 +36,11 @@ const ResultsHero = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <h1 className="text-center text-[20px] mt-7 text-[#C81E23]">
           Stay tuned in. More details coming soon!
         </h1>
-      </div>
+      </div> */}
     </div>
   );
 };

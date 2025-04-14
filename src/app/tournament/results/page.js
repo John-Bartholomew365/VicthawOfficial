@@ -1,4 +1,5 @@
 import Footer from "@/components/landing-page/Footer";
+import LeagueTable from "@/components/tournament/results/LeagueTable";
 import PlayerRankings from "@/components/tournament/results/PlayerRankings";
 import ResultsHero from "@/components/tournament/results/ResultHero";
 import ResultsPage from "@/components/tournament/results/Results";
@@ -11,12 +12,13 @@ const page = () => {
       <div className="container lg:px-[30px] px-2 tracking-tight">
         <ResultsHero />
 
-        {/* <ResultsPage /> */}
+        <ResultsPage />
+        <LeagueTable />
         {/* <PlayerRankings /> */}
+
         {/* <ResultsSection /> */}
       </div>
       <Footer />
-
     </div>
   );
 };
