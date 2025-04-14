@@ -737,7 +737,7 @@ export default function MatchSchedule() {
                           alt={match.home}
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
-                        <p className="text-lg font-semibold">{match.home}</p>
+                        <p className="lg:text-[16px] text-[14px] font-semibold">{match.home}</p>
                       </div>
                       
                       {/* Away Team */}
@@ -747,15 +747,15 @@ export default function MatchSchedule() {
                           alt={match.away}
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
-                        <p className="text-lg font-semibold">{match.away}</p>
+                        <p className="lg:text-[16px] text-[14px] font-semibold">{match.away}</p>
                       </div>
                     </div>
                     
                     {/* Match Time and Date */}
                     <div className="text-right flex flex-col justify-between h-full">
                       <div>
-                        <p className="font-semibold">{match.date}</p>
-                        <p className="text-gray-500">{match.time}</p>
+                        <p className="font-semibold lg:text-[14px] text-[12px]">{match.date}</p>
+                        <p className="text-gray-500 lg:text-[14px] text-[12px]">{match.time}</p>
                       </div>
                       {/* <div className="mt-2">
                         <span className="bg-[#C81E23] text-white text-xs px-2 py-1 rounded">
