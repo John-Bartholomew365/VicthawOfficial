@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const DashSchedule = () => {
@@ -41,14 +42,17 @@ const DashSchedule = () => {
         <h1 className="text-[30px] lg:text-[45px] font-bold text-center">
           Tournament Schedule
         </h1>
-        <p className="text-[#6B6F76] text-center mt-3 m-auto lg:w-[560px] w-auto">
-          The official schedule for the Victhaw Official Unity Cup 1.0 is coming
-          soon! Stay tuned for match dates, times, and venue. We can't wait to
-          share the excitement with you.
+        <p className="text-[#6B6F76] text-center mt-3 m-auto lg:w-[440px] w-auto">
+          {/* The wait is over! The official full schedule for the Victhaw Official
+          Unity Cup 1.0 has been released. Get all the details on match dates,
+          times, and venues at [Insert Link Here]. Get ready for the action! */}
+          The wait is over! The official full schedule for the Victhaw Official
+          Unity Cup 1.0 is officially OUT! See all the match dates, times, and
+          venue information below. Let the excitement begin!
         </p>
 
         {/* Countdown Section */}
-        {isLive ? (
+        {/* {isLive ? (
           <p className="text-[#C81E23] mt-5 font-bold text-[24px]">
             THE TOURNAMENT SCHEDULE IS NOW AVAILABLE!
           </p>
@@ -76,14 +80,27 @@ const DashSchedule = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Email Subscription Section */}
 
-        <h1 className="my-[16px] font-bold text-center">Get Notified</h1>
-        <p className="text-[#6B6F76] mb-4 lg:text-start text-center">
-          You'll get notified upon the tournament schedule release!
-        </p>
+        <Link href={"/tournament/schedule"} className="my-5">
+          <button className="bg-white border-2 border-[#C81E23] text-[#C81E23] hover:bg-gray-50 transition-colors font-medium py-2 px-5 rounded-lg flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                clipRule="evenodd"
+              />
+            </svg>
+            VIEW FULL SCHEDULE
+          </button>
+        </Link>
       </div>
     </div>
   );

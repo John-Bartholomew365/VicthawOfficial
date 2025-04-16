@@ -1232,7 +1232,7 @@ export default function MatchSchedule() {
             onClick={loadMoreMatchdays}
             disabled={isLoading}
             className={`px-4 py-2 ${
-              isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#C81E23] hover:bg-[#A5191E]'
+              isLoading ? 'bg-red-500 opacity-50 cursor-not-allowed' : 'bg-[#C81E23] hover:bg-[#A5191E]'
             } text-white rounded-lg transition`}
           >
             {isLoading ? 'Loading...' : 'Load Next Matchday'}
