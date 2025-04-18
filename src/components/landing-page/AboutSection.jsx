@@ -173,7 +173,7 @@ const AboutSection = () => {
               {/* Should incase live matches are later introduced to the website, I can rechange the CTA button to fit in to what we want */}
               <Link
                 href={
-                  isTournamentLive ? "/about/tournament" : "/about/tournament"
+                  isTournamentLive ? "/tournament/schedule" : "/about/tournament"
                 }
               >
                 <button className="bg-[#C81E23] hover:bg-[#A5161E] transition-colors py-[10px] px-[20px] text-white rounded-[6px]">
