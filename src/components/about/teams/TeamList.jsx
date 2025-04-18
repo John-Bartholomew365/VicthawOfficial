@@ -283,14 +283,14 @@ const teams = [
     manager: "Coach Walter",
     logo: "/unilorin.jpg",
   },
-  // {
-  //   id: 7,
-  //   name: "Icebreakers",
-  //   description: "Upcoming champions.",
-  //   location: "Asa dam, Ilorin, Kwara State",
-  //   manager: "David Ayanda",
-  //   logo: "/five.png",
-  // },
+  {
+    id: 7,
+    name: "Corporate Men FC",
+    description: "Upcoming champions.",
+    location: "Asa dam, Ilorin, Kwara State",
+    manager: "Shola Onipe",
+    logo: "/corporate-ballers.png",
+  },
   // {
   //   id: 8,
   //   name: "Blaze Warriors FC",
