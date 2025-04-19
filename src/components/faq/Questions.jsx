@@ -96,7 +96,7 @@ const Questions = () => {
     {
       question: "10. How many players can be on a team?",
       answer: `
-          Each team must consist of <b style="color: #C81E23;">18 players</b>, including <b style="color: #C81E23;">5 substitutes</b>.
+          Each team must consist of <b style="color: #C81E23;">22 players</b>, including <b style="color: #C81E23;">5 substitutes</b>.
           `,
     },
     {

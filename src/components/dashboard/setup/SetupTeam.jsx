@@ -389,9 +389,6 @@
 
 // export default SetupTeam;
 
-
-
-
 "use client";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
@@ -595,9 +592,12 @@ const SetupTeam = () => {
           Welcome to your team's dashboard!
         </h1>
         <h1 className="text-[#6B6F76] text-[15px] mt-2 lg:text-start text-center">
-          Now, setup your team with a maximum of 18 players, a coach and an assistant
-          coach
+          Now, setup your team with a maximum of 22 players, a coach and an
+          assistant coach
         </h1>
+        <p className="text-[#6B6F76] text-[14px]">
+          Kindly refresh the page to see new team member added
+        </p>
       </div>
       <div className="bg-[#FAFAFA] mt-5 p-6 rounded-lg shadow-lg">
         <h2 className="text-lg font-bold text-[#C81E23] mb-4">Team Setup</h2>
@@ -709,7 +709,9 @@ const SetupTeam = () => {
             <button
               onClick={handlePlayerSubmit}
               className={`mt-4 px-4 py-2 bg-[#C81E23] lg:w-[180px] w-full text-white rounded-lg ${
-                isLoading ? "opacity-70 cursor-not-allowed" : "hover:bg-[#A3181C]"
+                isLoading
+                  ? "opacity-70 cursor-not-allowed"
+                  : "hover:bg-[#A3181C]"
               } transition`}
               disabled={isLoading} // Disable the button when loading
             >

@@ -476,7 +476,7 @@ const Register = () => {
         <div className="my-5">
           <h1 className="lg:text-[20px] text-[18px]">Team Requirements</h1>
           <p className="text-[14px] text-[#6B6F76] mt-[6px]">
-            Please note that each team must consist of 18 players, a coach, and an assistant coach. All players must be between <b>25-50</b> years old.
+            Please note that each team must consist of 22 players, a coach, and an assistant coach. All players must be between <b>25-50</b> years old.
           </p>
         </div>
 

@@ -58,8 +58,8 @@ const TermsAndConditions = () => {
           </p>
           <ul className="list-none text-gray-700 mb-4 ml-5 lg:w-[600px] w-auto">
             <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">
-              A team must consist of a minimum of <strong>15</strong> players
-              and a maximum of <strong>18</strong> players, including
+              A team must consist of a minimum of <strong>18</strong> players
+              and a maximum of <strong>22</strong> players, including
               substitutes.
             </li>
             <li className="before:content-['•'] before:text-[#C81E23] before:mr-2 text-[#6B6F76]">

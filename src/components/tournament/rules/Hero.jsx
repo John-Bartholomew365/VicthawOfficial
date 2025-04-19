@@ -338,7 +338,7 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Each team must register all <b>18 players</b> before the tournament. Unregistered players and officials will not be allowed to participate.
+                  Each team must register all <b>22 players</b> before the tournament. Unregistered players and officials will not be allowed to participate.
                 </p>
               </li>
               <li className="flex gap-3">
