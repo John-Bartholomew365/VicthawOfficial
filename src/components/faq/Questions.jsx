@@ -36,15 +36,15 @@ const Questions = () => {
           <ul style="margin-top: 10px; list-style: none; padding-left: 20px;">
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;">A completed registration form.</span>
+              <span style="color: #000000;">A completed registration form.</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;">A valid ID for each player (e.g., Player name, player image and player role).</span>
+              <span style="color: #000000;">A valid ID for each player (e.g., Player name, player image and player role).</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #FFFFFF;">Proof of payment for the registration fee.</span>
+              <span style="color: #000000;">Proof of payment for the registration fee.</span>
             </li>
           </ul>
         `,
@@ -68,15 +68,15 @@ const Questions = () => {
           <ul style="margin-top: 10px; list-style: none; padding-left: 20px;">
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #BOB3B8;"><b style="color: #FFFFFF;">Champion:</b>  Gold Medal, Trophy, and Cash Prize.</span>
+              <span style="color: #BOB3B8;"><b style="color: #000000;">Champion:</b>  Gold Medal, Trophy, and Cash Prize.</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #BOB3B8;"><b style="color: #FFFFFF;">Runner-up:</b> Silver Medal and Sporting Equipment.</span>
+              <span style="color: #BOB3B8;"><b style="color: #000000;">Runner-up:</b> Silver Medal and Sporting Equipment.</span>
             </li>
             <li>
               <span style="color: #C81E23; margin-right: 10px;">•</span>
-              <span style="color: #BOB3B8;"><b style="color: #FFFFFF;">Individual Awards:</b> Best Player (MVP), Best Goalkeeper, Top Scorer, and Fair Play Award (each recipient will receive a plaque).</span>
+              <span style="color: #BOB3B8;"><b style="color: #000000;">Individual Awards:</b> Best Player (MVP), Best Goalkeeper, Top Scorer, and Fair Play Award (each recipient will receive a plaque).</span>
             </li>
           </ul>
         `,
