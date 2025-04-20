@@ -285,7 +285,7 @@ const teams = [
   },
   {
     id: 7,
-    name: "Corporate Men FC",
+    name: "Corporate Ballers FA",
     description: "Upcoming champions.",
     location: "Asa dam, Ilorin, Kwara State",
     manager: "Shola Onipe",
