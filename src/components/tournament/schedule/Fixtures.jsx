@@ -262,7 +262,7 @@
 //   <div className="space-y-8">
 //     {matchdayKeys.slice(0, visibleMatchdays).map((matchday) => {
 //       const incompleteMatches = fixtures[matchday].filter(match => !match.completed);
-      
+
 //       if (incompleteMatches.length === 0) {
 //         return (
 //           <div key={matchday} className="mb-8">
@@ -441,8 +441,6 @@
 // </div>
 // );
 // }
-
-
 
 // "use client";
 // import { useState, useEffect } from "react";
@@ -707,7 +705,7 @@
 //       <div className="space-y-8">
 //         {matchdayKeys.slice(0, visibleMatchdays).map((matchday) => {
 //           const incompleteMatches = fixtures[matchday].filter(match => !match.completed);
-          
+
 //           if (incompleteMatches.length === 0) {
 //             return (
 //               <div key={matchday} className="mb-8">
@@ -739,7 +737,7 @@
 //                         />
 //                         <p className="lg:text-[16px] text-[14px] font-semibold">{match.home}</p>
 //                       </div>
-                      
+
 //                       {/* Away Team */}
 //                       <div className="flex items-center space-x-2">
 //                         <img
@@ -750,7 +748,7 @@
 //                         <p className="lg:text-[16px] text-[14px] font-semibold">{match.away}</p>
 //                       </div>
 //                     </div>
-                    
+
 //                     {/* Match Time and Date */}
 //                     <div className="text-right flex flex-col justify-between h-full">
 //                       <div>
@@ -896,8 +894,6 @@
 //   );
 // }
 
-
-
 "use client";
 import { useState, useEffect } from "react";
 import {
@@ -914,7 +910,7 @@ const teams = [
   { id: 4, name: "Bankers All Stars FC", logo: "/bankers-fc.png" },
   { id: 5, name: "Maracana FC", logo: "/maracana.png" },
   { id: 6, name: "Unilorin Quarters FC", logo: "/unilorin.jpg" },
-  { id: 7, name: "Corporate Men FC", logo: "/corporate-ballers.png" },
+  { id: 7, name: "Corporate Ballers FA", logo: "/corporate-ballers.png" },
 ];
 
 // Custom fixtures for each matchday
@@ -938,7 +934,7 @@ const customFixtures = {
       time: "04:30pm",
       date: "19/04/2025",
       stage: "Opening Fixture",
-      completed: false,
+      completed: true,
     },
     {
       home: "Sway FC",
@@ -948,7 +944,7 @@ const customFixtures = {
       time: "04:30pm",
       date: "20/04/2025",
       stage: "Opening Fixture",
-      completed: false,
+      completed: true,
     },
   ],
   "Matchday 2": [
@@ -964,7 +960,7 @@ const customFixtures = {
     },
     {
       home: "Leo FC",
-      away: "Corporate Men FC",
+      away: "Corporate Ballers FA",
       homeLogo: "/loe.jpg",
       awayLogo: "/corporate-ballers.png",
       time: "04:00pm",
@@ -989,8 +985,8 @@ const customFixtures = {
       away: "Leo FC",
       homeLogo: "/unilorin.jpg",
       awayLogo: "/loe.jpg",
-      time: "TBD",
-      date: "TBD",
+      time: "01:00pm",
+      date: "03/05/2025",
       stage: "Matchday 3",
       completed: false,
     },
@@ -999,18 +995,18 @@ const customFixtures = {
       away: "Bankers All Stars",
       homeLogo: "/maracana.png",
       awayLogo: "/bankers-fc.png",
-      time: "TBD",
-      date: "TBD",
+      time: "02:40pm",
+      date: "03/05/2025",
       stage: "Matchday 3",
       completed: false,
     },
     {
-      home: "Corporate Men FC",
+      home: "Corporate Ballers FA",
       away: "NBA FC",
       homeLogo: "/corporate-ballers.png",
       awayLogo: "/nba.png",
-      time: "TBD",
-      date: "TBD",
+      time: "05:00pm",
+      date: "03/05/2025",
       stage: "Matchday 3",
       completed: false,
     },
@@ -1021,8 +1017,8 @@ const customFixtures = {
       away: "Unilorin Quarters FC",
       homeLogo: "/sway.png",
       awayLogo: "/unilorin.jpg",
-      time: "TBD",
-      date: "TBD",
+      time: "01:00pm",
+      date: "11/05/2025",
       stage: "Matchday 4",
       completed: false,
     },
@@ -1031,18 +1027,18 @@ const customFixtures = {
       away: "Maracana FC",
       homeLogo: "/loe.jpg",
       awayLogo: "/maracana.png",
-      time: "TBD",
-      date: "TBD",
+      time: "02:40pm",
+      date: "11/05/2025",
       stage: "Matchday 4",
       completed: false,
     },
     {
       home: "Bankers All Stars",
-      away: "Corporate Men FC",
+      away: "Corporate Ballers FA",
       homeLogo: "/bankers-fc.png",
       awayLogo: "/corporate-ballers.png",
-      time: "TBD",
-      date: "TBD",
+      time: "05:00pm",
+      date: "11/05/2025",
       stage: "Matchday 4",
       completed: false,
     },
@@ -1053,8 +1049,8 @@ const customFixtures = {
       away: "Bankers All Stars",
       homeLogo: "/nba.png",
       awayLogo: "/bankers-fc.png",
-      time: "TBD",
-      date: "TBD",
+      time: "01:00pm",
+      date: "17/05/2025",
       stage: "Matchday 5",
       completed: false,
     },
@@ -1063,18 +1059,18 @@ const customFixtures = {
       away: "Maracana FC",
       homeLogo: "/unilorin.jpg",
       awayLogo: "/maracana.png",
-      time: "TBD",
-      date: "TBD",
+      time: "02:40pm",
+      date: "17/05/2025",
       stage: "Matchday 5",
       completed: false,
     },
     {
       home: "Sway FC",
-      away: "Corporate Men FC",
+      away: "Corporate Ballers FA",
       homeLogo: "/sway.png",
       awayLogo: "/corporate-ballers.png",
-      time: "TBD",
-      date: "TBD",
+      time: "05:00pm",
+      date: "17/05/2025",
       stage: "Matchday 5",
       completed: false,
     },
@@ -1085,8 +1081,8 @@ const customFixtures = {
       away: "Sway FC",
       homeLogo: "/loe.jpg",
       awayLogo: "/sway.png",
-      time: "TBD",
-      date: "TBD",
+      time: "01:00pm",
+      date: "25/05/2025",
       stage: "Matchday 6",
       completed: false,
     },
@@ -1095,18 +1091,18 @@ const customFixtures = {
       away: "Unilorin Quarters FC",
       homeLogo: "/nba.png",
       awayLogo: "/unilorin.jpg",
-      time: "TBD",
-      date: "TBD",
+      time: "02:40pm",
+      date: "25/05/2025",
       stage: "Matchday 6",
       completed: false,
     },
     {
       home: "Maracana FC",
-      away: "Corporate Men FC",
+      away: "Corporate Ballers FA",
       homeLogo: "/maracana.png",
       awayLogo: "/corporate-ballers.png",
-      time: "TBD",
-      date: "TBD",
+      time: "05:00pm",
+      date: "25/05/2025",
       stage: "Matchday 6",
       completed: false,
     },
@@ -1114,11 +1110,11 @@ const customFixtures = {
   "Matchday 7": [
     {
       home: "Unilorin Quarters FC",
-      away: "Corporate Men FC",
+      away: "Corporate Ballers FA",
       homeLogo: "/unilorin.jpg",
       awayLogo: "/corporate-ballers.png",
-      time: "TBD",
-      date: "TBD",
+      time: "01:00pm",
+      date: "31/05/2025",
       stage: "Matchday 7",
       completed: false,
     },
@@ -1127,8 +1123,8 @@ const customFixtures = {
       away: "Leo FC",
       homeLogo: "/bankers-fc.png",
       awayLogo: "/loe.jpg",
-      time: "TBD",
-      date: "TBD",
+      time: "02:40pm",
+      date: "31/05/2025",
       stage: "Matchday 7",
       completed: false,
     },
@@ -1137,8 +1133,8 @@ const customFixtures = {
       away: "Sway FC",
       homeLogo: "/nba.png",
       awayLogo: "/sway.png",
-      time: "TBD",
-      date: "TBD",
+      time: "05:00pm",
+      date: "31/05/2025",
       stage: "Matchday 7",
       completed: false,
     },
@@ -1146,25 +1142,25 @@ const customFixtures = {
 };
 
 // Add final matchday
-customFixtures["Final"] = [
-  {
-    id: 99,
-    home: "Top Team",
-    away: "Runner Up",
-    time: "04:30pm",
-    date: "4th May 2025",
-    stage: "Final",
-    homeLogo: "/one.png",
-    awayLogo: "/three.png",
-    completed: true,
-  },
-];
+// customFixtures["Final"] = [
+//   {
+//     id: 99,
+//     home: "Top Team",
+//     away: "Runner Up",
+//     time: "04:30pm",
+//     date: "8th JUne 2025",
+//     stage: "Final",
+//     homeLogo: "/one.png",
+//     awayLogo: "/three.png",
+//     completed: true,
+//   },
+// ];
 
 const matchdayKeys = Object.keys(customFixtures);
 
 export default function MatchSchedule() {
   const [fixtures, setFixtures] = useState(customFixtures);
-  const [visibleMatchdays, setVisibleMatchdays] = useState(1);
+  const [visibleMatchdays, setVisibleMatchdays] = useState(2);
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -1172,7 +1168,7 @@ export default function MatchSchedule() {
   const loadMoreMatchdays = () => {
     setIsLoading(true);
     setTimeout(() => {
-      setVisibleMatchdays(prev => Math.min(prev + 1, matchdayKeys.length));
+      setVisibleMatchdays((prev) => Math.min(prev + 1, matchdayKeys.length));
       setIsLoading(false);
     }, 2000); // 2 seconds delay
   };
@@ -1183,8 +1179,8 @@ export default function MatchSchedule() {
       const now = new Date();
       const updatedFixtures = { ...fixtures };
 
-      matchdayKeys.forEach(matchday => {
-        updatedFixtures[matchday] = updatedFixtures[matchday].map(match => {
+      matchdayKeys.forEach((matchday) => {
+        updatedFixtures[matchday] = updatedFixtures[matchday].map((match) => {
           const matchDate = new Date(`${match.date} ${match.time}`);
           if (!match.completed && now >= matchDate) {
             match.completed = true;
@@ -1205,15 +1201,21 @@ export default function MatchSchedule() {
         <h1 className="text-2xl font-bold mb-7">Match Schedule</h1>
         <div className="space-y-5 mb-6">
           <div className="flex flex-col items-center">
-            <span className="font-bold lg:text-[20px] text-[16px]">Tournament Dates:</span>
-            <span className="text-[#6B6F76]">12th April – 4th May 2025</span>
+            <span className="font-bold lg:text-[20px] text-[16px]">
+              Tournament Dates:
+            </span>
+            <span className="text-[#6B6F76]">12th April – 8th June 2025</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="font-bold lg:text-[20px] text-[16px]">Number of Teams:</span>
+            <span className="font-bold lg:text-[20px] text-[16px]">
+              Number of Teams:
+            </span>
             <span className="text-[#6B6F76]">7 teams competing</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="font-bold lg:text-[20px] text-[16px]">Match Format:</span>
+            <span className="font-bold lg:text-[20px] text-[16px]">
+              Match Format:
+            </span>
             <span className="text-[#6B6F76]">League style</span>
           </div>
         </div>
@@ -1230,14 +1232,21 @@ export default function MatchSchedule() {
       {/* Fixtures List - Updated Layout */}
       <div className="space-y-8">
         {matchdayKeys.slice(0, visibleMatchdays).map((matchday) => {
-          const incompleteMatches = fixtures[matchday].filter(match => !match.completed);
-          
+          const incompleteMatches = fixtures[matchday].filter(
+            (match) => !match.completed
+          );
+
           if (incompleteMatches.length === 0) {
             return (
               <div key={matchday} className="mb-8">
-                <h2 className="text-xl font-bold mb-4 text-center">{matchday}</h2>
+                <h2 className="text-xl font-bold mt-5 text-center">
+                  {matchday}
+                </h2>
                 <div className="text-center py-4 text-gray-500">
                   All matches for this matchday have been completed
+                  <p className="text-gray-500 text-center text-[14px]">
+                    Check the <a className="text-[#C81E23] underline px-[2px]" href="/tournament/results">results</a> page for more info!
+                  </p>
                 </div>
               </div>
             );
@@ -1261,9 +1270,11 @@ export default function MatchSchedule() {
                           alt={match.home}
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
-                        <p className="lg:text-[16px] text-[14px] font-semibold">{match.home}</p>
+                        <p className="lg:text-[16px] text-[14px] font-semibold">
+                          {match.home}
+                        </p>
                       </div>
-                      
+
                       {/* Away Team */}
                       <div className="flex items-center space-x-2">
                         <img
@@ -1271,15 +1282,21 @@ export default function MatchSchedule() {
                           alt={match.away}
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
-                        <p className="lg:text-[16px] text-[14px] font-semibold">{match.away}</p>
+                        <p className="lg:text-[16px] text-[14px] font-semibold">
+                          {match.away}
+                        </p>
                       </div>
                     </div>
-                    
+
                     {/* Match Time and Date */}
                     <div className="text-right flex flex-col justify-between h-full">
                       <div>
-                        <p className="font-semibold lg:text-[14px] text-[12px]">{match.date}</p>
-                        <p className="text-gray-500 lg:text-[14px] text-[12px]">{match.time}</p>
+                        <p className="font-semibold lg:text-[14px] text-[12px]">
+                          {match.date}
+                        </p>
+                        <p className="text-gray-500 lg:text-[14px] text-[12px]">
+                          {match.time}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1297,10 +1314,12 @@ export default function MatchSchedule() {
             onClick={loadMoreMatchdays}
             disabled={isLoading}
             className={`px-4 py-2 ${
-              isLoading ? 'bg-red-500 opacity-50 cursor-not-allowed' : 'bg-[#C81E23] hover:bg-[#A5191E]'
+              isLoading
+                ? "bg-red-500 opacity-50 cursor-not-allowed"
+                : "bg-[#C81E23] hover:bg-[#A5191E]"
             } text-white rounded-lg transition`}
           >
-            {isLoading ? 'Loading...' : 'Load Next Matchday'}
+            {isLoading ? "Loading..." : "Load Next Matchday"}
           </button>
         </div>
       )}
@@ -1350,7 +1369,8 @@ export default function MatchSchedule() {
                   <span className="font-bold">Time:</span> {selectedMatch.time}
                 </p>
                 <p>
-                  <span className="font-bold">Venue:</span> Basin Stadium, Ilorin
+                  <span className="font-bold">Venue:</span> Basin Stadium,
+                  Ilorin
                 </p>
               </div>
 

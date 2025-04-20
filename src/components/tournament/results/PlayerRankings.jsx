@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const statsData = {
   Goals: [
-    { name: "Adeoluwa Adeyemi", team: "Storm United", goals: 12 },
+    { name: "Samuel Olajube", team: "Storm United", goals: 12 },
     { name: "Babajide Adediran", team: "Shadow Rovers", goals: 11 },
     { name: "Chinedu Okorie", team: "Iron Titans", goals: 11 },
     { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", goals: 10 },

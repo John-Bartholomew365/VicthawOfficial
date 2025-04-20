@@ -58,7 +58,7 @@ const Questions = () => {
     {
       question: "6. Where will the matches be played?",
       answer: `
-          All matches will be played at <b style="color: #C81E23;">Basin Stadium, Ilorin, Kwara State,</b> from <b>April 12</b> to <b>May 4</b>
+          All matches will be played at <b style="color: #C81E23;">Basin Stadium, Ilorin, Kwara State,</b> from <b>April 12</b> to <b>June 8</b>
         `,
     },
     {

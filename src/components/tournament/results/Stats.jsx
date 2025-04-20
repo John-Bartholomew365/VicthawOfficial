@@ -39,18 +39,18 @@ export default function Stats({ match }) {
         {/* Stat Row */}
         <div className="flex justify-between items-center">
           <div className="text-[#B0B3B8] text-[14px] text-left">
-            {match.stats?.homePossession || "55%"}
+            {match.stats?.homePossession || "60%"}
           </div>
           <div className="text-[#B0B3B8] text-[14px] font-semibold text-center">
             Possession
           </div>
           <div className="text-[#B0B3B8] text-[14px] text-right">
-            {match.stats?.awayPossession || "45%"}
+            {match.stats?.awayPossession || "40%"}
           </div>
         </div>
 
         {/* Stat Row */}
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <div className="text-[#B0B3B8] text-[14px] text-left">
             {match.stats?.homeShots || "12"}
           </div>
@@ -60,10 +60,10 @@ export default function Stats({ match }) {
           <div className="text-[#B0B3B8] text-[14px] text-right">
             {match.stats?.awayShots || "8"}
           </div>
-        </div>
+        </div> */}
 
         {/* Stat Row */}
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <div className="text-[#B0B3B8] text-[14px] text-left">
             {match.stats?.homeShotsOnTarget || "6"}
           </div>
@@ -73,10 +73,10 @@ export default function Stats({ match }) {
           <div className="text-[#B0B3B8] text-[14px] text-right">
             {match.stats?.awayShotsOnTarget || "4"}
           </div>
-        </div>
+        </div> */}
 
         {/* Stat Row */}
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <div className="text-[#B0B3B8] text-[14px] text-left">
             {match.stats?.homeFouls || "10"}
           </div>
@@ -86,10 +86,10 @@ export default function Stats({ match }) {
           <div className="text-[#B0B3B8] text-[14px] text-right">
             {match.stats?.awayFouls || "12"}
           </div>
-        </div>
+        </div> */}
 
         {/* Stat Row */}
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <div className="text-[#B0B3B8] text-[14px] text-left">
             {match.stats?.homeCorners || "5"}
           </div>
@@ -99,7 +99,7 @@ export default function Stats({ match }) {
           <div className="text-[#B0B3B8] text-[14px] text-right">
             {match.stats?.awayCorners || "4"}
           </div>
-        </div>
+        </div> */}
 
         {/* Stat Row */}
         <div className="flex justify-between items-center">
@@ -123,7 +123,7 @@ export default function Stats({ match }) {
             Red Cards
           </div>
           <div className="text-[#B0B3B8] text-[14px] text-right">
-            {match.stats?.awayRedCards || "1"}
+            {match.stats?.awayRedCards || "0"}
           </div>
         </div>
       </div>
