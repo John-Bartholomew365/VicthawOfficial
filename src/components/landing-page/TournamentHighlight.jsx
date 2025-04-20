@@ -32,7 +32,7 @@ const TournamentHighlight = () => {
               <div className="flex flex-col">
                 {" "}
                 <div>
-                  <strong>16-Team Knockout Competition:</strong>
+                  <strong>7-Team League format Competition:</strong>
                 </div>
                 <div>
                   <p className="text-black">
