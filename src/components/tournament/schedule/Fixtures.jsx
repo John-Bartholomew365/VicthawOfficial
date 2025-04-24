@@ -949,21 +949,21 @@ const customFixtures = {
   ],
   "Matchday 2": [
     {
-      home: "NBA FC",
-      away: "Maracana FC",
-      homeLogo: "/nba.png",
-      awayLogo: "/maracana.png",
-      time: "04:30pm",
-      date: "26/04/2025",
-      stage: "Matchday 2",
-      completed: false,
-    },
-    {
       home: "Leo FC",
       away: "Corporate Ballers FA",
       homeLogo: "/loe.jpg",
       awayLogo: "/corporate-ballers.png",
       time: "04:00pm",
+      date: "26/04/2025",
+      stage: "Matchday 2",
+      completed: false,
+    },
+    {
+      home: "NBA FC",
+      away: "Maracana FC",
+      homeLogo: "/nba.png",
+      awayLogo: "/maracana.png",
+      time: "03:00pm",
       date: "27/04/2025",
       stage: "Matchday 2",
       completed: false,
@@ -1245,7 +1245,14 @@ export default function MatchSchedule() {
                 <div className="text-center py-4 text-gray-500">
                   All matches for this matchday have been completed
                   <p className="text-gray-500 text-center text-[14px]">
-                    Check the <a className="text-[#C81E23] underline px-[2px]" href="/tournament/results">results</a> page for more info!
+                    Check the{" "}
+                    <a
+                      className="text-[#C81E23] underline px-[2px]"
+                      href="/tournament/results"
+                    >
+                      results
+                    </a>{" "}
+                    page for more info!
                   </p>
                 </div>
               </div>

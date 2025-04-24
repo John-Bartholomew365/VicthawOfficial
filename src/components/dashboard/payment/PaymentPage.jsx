@@ -466,7 +466,7 @@ export default function PaymentPage() {
           "Content-Type": "multipart/form-data",
         },
       });
- 
+
 
       toast(response.data.message);
       localStorage.removeItem("userData");
@@ -569,7 +569,7 @@ export default function PaymentPage() {
       </div>
 
       {/* Payment Confirmation */}
-  
+
       <div className="mt-8">
         <h2 className="text-lg font-bold mb-4">Confirm Payment</h2>
         <div className="space-y-3">
@@ -611,7 +611,7 @@ export default function PaymentPage() {
           </button>
         </div>
       </div>
-   
+
       {/* Toast Container */}
       <ToastContainer />
     </div>
