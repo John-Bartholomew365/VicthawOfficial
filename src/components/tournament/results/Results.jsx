@@ -422,7 +422,7 @@ const results = {
       homeLogo: "/nba.png",
       awayLogo: "/maracana.png",
       score: "0-0",
-      winner: "Leo FC",
+      winner: "draw",
       goalscorers: [
         { player: "Player D", team: "Leo FC" /*, time: "22'" */ },
         { player: "Player E", team: "Leo FC" /*, time: "65'" */ },
