@@ -380,18 +380,18 @@ const results = {
   "Matchday 2": [
     {
       id: 1,
-      home: "NBA FC",
-      away: "Maracana FC",
+      home: "Leo FC",
+      away: "Corporate Ballers FA",
       time: "04:30",
       date: "26th April 2025",
       stage: "Matchday 2",
-      homeLogo: "/nba.png",
-      awayLogo: "/maracana.png",
+      homeLogo: "/loe.jpg",
+      awayLogo: "/corporate-ballers.png",
       score: "1-1",
       winner: "Draw",
       goalscorers: [
-        { player: "Player X", team: "NBA FC" /*, time: "28'" */ },
-        { player: "Player Y", team: "Maracana FC" /*, time: "52'" */ },
+        { player: "Boluwatife", team: "Leo FC" /*, time: "45'" */ },
+        { player: "Araromi", team: "Corporate Ballers FA" /*, time: "15'" */ },
       ],
       stats: {
         homeGoals: "1",
@@ -400,7 +400,7 @@ const results = {
         homeShotsOnTarget: "5",
         homeFouls: "9",
         homeCorners: "4",
-        homeYellowCards: "1",
+        homeYellowCards: "0",
         homeRedCards: "0",
         awayGoals: "1",
         awayPossession: "50%",
@@ -408,20 +408,20 @@ const results = {
         awayShotsOnTarget: "5",
         awayFouls: "10",
         awayCorners: "4",
-        awayYellowCards: "2",
+        awayYellowCards: "0",
         awayRedCards: "0",
       },
     },
     {
       id: 2,
-      home: "Leo FC",
-      away: "Corporate Men FC",
-      time: "04:00",
+      home: "NBA FC",
+      away: "Maracana FC",
+      time: "03:00",
       date: "27th April 2025",
       stage: "Matchday 2",
-      homeLogo: "/loe.jpg",
-      awayLogo: "/corporate-ballers.png",
-      score: "2-0",
+      homeLogo: "/nba.png",
+      awayLogo: "/maracana.png",
+      score: "0-0",
       winner: "Leo FC",
       goalscorers: [
         { player: "Player D", team: "Leo FC" /*, time: "22'" */ },
@@ -429,20 +429,20 @@ const results = {
       ],
       stats: {
         homeGoals: "2",
-        homePossession: "58%",
+        homePossession: "50%",
         homeShots: "13",
         homeShotsOnTarget: "7",
         homeFouls: "7",
         homeCorners: "5",
-        homeYellowCards: "1",
+        homeYellowCards: "0",
         homeRedCards: "0",
         awayGoals: "0",
-        awayPossession: "42%",
+        awayPossession: "50%",
         awayShots: "6",
         awayShotsOnTarget: "3",
         awayFouls: "12",
         awayCorners: "3",
-        awayYellowCards: "3",
+        awayYellowCards: "0",
         awayRedCards: "0",
       },
     },
@@ -455,31 +455,31 @@ const results = {
       stage: "Matchday 2",
       homeLogo: "/bankers-fc.png",
       awayLogo: "/sway.png",
-      score: "3-2",
+      score: "1-0",
       winner: "Bankers All Stars",
       goalscorers: [
-        { player: "Player F", team: "Bankers All Stars" /*, time: "15'" */ },
-        { player: "Player G", team: "Sway FC" /*, time: "33'" */ },
-        { player: "Player H", team: "Bankers All Stars" /*, time: "55'" */ },
-        { player: "Player I", team: "Sway FC" /*, time: "68'" */ },
-        { player: "Player J", team: "Bankers All Stars" /*, time: "82'" */ },
+        { player: "Finisi Bamidele", team: "Bankers All Stars" /*, time: "10'" */ },
+        // { player: "Player G", team: "Sway FC" /*, time: "33'" */ },
+        // { player: "Player H", team: "Bankers All Stars" /*, time: "55'" */ },
+        // { player: "Player I", team: "Sway FC" /*, time: "68'" */ },
+        // { player: "Player J", team: "Bankers All Stars" /*, time: "82'" */ },
       ],
       stats: {
         homeGoals: "3",
-        homePossession: "52%",
+        homePossession: "50%",
         homeShots: "16",
         homeShotsOnTarget: "8",
         homeFouls: "11",
         homeCorners: "6",
-        homeYellowCards: "2",
+        homeYellowCards: "0",
         homeRedCards: "0",
         awayGoals: "2",
-        awayPossession: "48%",
+        awayPossession: "50%",
         awayShots: "14",
         awayShotsOnTarget: "7",
         awayFouls: "10",
         awayCorners: "5",
-        awayYellowCards: "3",
+        awayYellowCards: "0",
         awayRedCards: "0",
       },
     },
@@ -585,15 +585,17 @@ export default function ResultsPage() {
       {/* Load More Button */}
       {visibleMatchdays < matchDays.length && (
         <div className="flex justify-center mt-6">
-          {/* <button
+          <button
             onClick={loadMoreMatchdays}
             disabled={isLoading}
             className={`px-4 py-2 ${
-              isLoading ? 'bg-[#C81E23] opacity-70 cursor-not-allowed' : 'bg-[#C81E23] hover:bg-[#A5191E]'
+              isLoading
+                ? "bg-[#C81E23] opacity-70 cursor-not-allowed"
+                : "bg-[#C81E23] hover:bg-[#A5191E]"
             } text-white rounded-lg transition`}
           >
-            {isLoading ? 'Loading...' : 'Load Next Matchday'}
-          </button> */}
+            {isLoading ? "Loading..." : "Load Next Matchday"}
+          </button>
         </div>
       )}
 

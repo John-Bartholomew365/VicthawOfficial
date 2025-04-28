@@ -956,7 +956,7 @@ const customFixtures = {
       time: "04:00pm",
       date: "26/04/2025",
       stage: "Matchday 2",
-      completed: false,
+      completed: true,
     },
     {
       home: "NBA FC",
@@ -966,7 +966,7 @@ const customFixtures = {
       time: "03:00pm",
       date: "27/04/2025",
       stage: "Matchday 2",
-      completed: false,
+      completed: true,
     },
     {
       home: "Bankers All Stars",
@@ -976,7 +976,7 @@ const customFixtures = {
       time: "05:20pm",
       date: "27/04/2025",
       stage: "Matchday 2",
-      completed: false,
+      completed: true,
     },
   ],
   "Matchday 3": [
@@ -985,8 +985,8 @@ const customFixtures = {
       away: "Leo FC",
       homeLogo: "/unilorin.jpg",
       awayLogo: "/loe.jpg",
-      time: "01:00pm",
-      date: "03/05/2025",
+      time: "02:45pm",
+      date: "04/05/2025",
       stage: "Matchday 3",
       completed: false,
     },
@@ -995,8 +995,8 @@ const customFixtures = {
       away: "Bankers All Stars",
       homeLogo: "/maracana.png",
       awayLogo: "/bankers-fc.png",
-      time: "02:40pm",
-      date: "03/05/2025",
+      time: "03:45pm",
+      date: "04/05/2025",
       stage: "Matchday 3",
       completed: false,
     },
@@ -1005,8 +1005,8 @@ const customFixtures = {
       away: "NBA FC",
       homeLogo: "/corporate-ballers.png",
       awayLogo: "/nba.png",
-      time: "05:00pm",
-      date: "03/05/2025",
+      time: "04:45pm",
+      date: "04/05/2025",
       stage: "Matchday 3",
       completed: false,
     },
@@ -1160,7 +1160,7 @@ const matchdayKeys = Object.keys(customFixtures);
 
 export default function MatchSchedule() {
   const [fixtures, setFixtures] = useState(customFixtures);
-  const [visibleMatchdays, setVisibleMatchdays] = useState(2);
+  const [visibleMatchdays, setVisibleMatchdays] = useState(3);
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 

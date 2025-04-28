@@ -104,13 +104,13 @@ export default function Stats({ match }) {
         {/* Stat Row */}
         <div className="flex justify-between items-center">
           <div className="text-[#B0B3B8] text-[14px] text-left">
-            {match.stats?.homeYellowCards || "2"}
+            {match.stats?.homeYellowCards || "0"}
           </div>
           <div className="text-[#B0B3B8] text-[14px] font-semibold text-center">
             Yellow Cards
           </div>
           <div className="text-[#B0B3B8] text-[14px] text-right">
-            {match.stats?.awayYellowCards || "3"}
+            {match.stats?.awayYellowCards || "0"}
           </div>
         </div>
 
