@@ -1020,7 +1020,7 @@ const customFixtures = {
       time: "03:45pm",
       date: "11/05/2025",
       stage: "Matchday 4",
-      completed: false,
+      completed: true,
     },
     {
       home: "Leo FC",
@@ -1030,7 +1030,7 @@ const customFixtures = {
       time: "04:45pm",
       date: "11/05/2025",
       stage: "Matchday 4",
-      completed: false,
+      completed: true,
     },
     {
       home: "Bankers All Stars",
@@ -1040,7 +1040,7 @@ const customFixtures = {
       time: "05:45pm",
       date: "11/05/2025",
       stage: "Matchday 4",
-      completed: false,
+      completed: true,
     },
   ],
   "Matchday 5": [
@@ -1055,7 +1055,7 @@ const customFixtures = {
       completed: false,
     },
     {
-      home: "Unilorin Quarters FC",
+      home: "Unilorin Quarters",
       away: "Maracana FC",
       homeLogo: "/unilorin.jpg",
       awayLogo: "/maracana.png",
@@ -1066,7 +1066,7 @@ const customFixtures = {
     },
     {
       home: "Sway FC",
-      away: "Corporate Ballers FA",
+      away: "Corporate Ballers",
       homeLogo: "/sway.png",
       awayLogo: "/corporate-ballers.png",
       time: "05:45pm",
@@ -1087,20 +1087,20 @@ const customFixtures = {
       completed: false,
     },
     {
-      home: "NBA FC",
-      away: "Unilorin Quarters FC",
-      homeLogo: "/nba.png",
-      awayLogo: "/unilorin.jpg",
+      home: "Maracana FC",
+      away: "Corporate Ballers",
+      homeLogo: "/maracana.png",
+      awayLogo: "/corporate-ballers.png",
       time: "04:45pm",
       date: "25/05/2025",
       stage: "Matchday 6",
       completed: false,
     },
     {
-      home: "Maracana FC",
-      away: "Corporate Ballers FA",
-      homeLogo: "/maracana.png",
-      awayLogo: "/corporate-ballers.png",
+      home: "NBA FC",
+      away: "Unilorin Quarters",
+      homeLogo: "/nba.png",
+      awayLogo: "/unilorin.jpg",
       time: "05:45pm",
       date: "25/05/2025",
       stage: "Matchday 6",
@@ -1109,8 +1109,8 @@ const customFixtures = {
   ],
   "Matchday 7": [
     {
-      home: "Unilorin Quarters FC",
-      away: "Corporate Ballers FA",
+      home: "Unilorin Quarters",
+      away: "Corporate Ballers",
       homeLogo: "/unilorin.jpg",
       awayLogo: "/corporate-ballers.png",
       time: "03:45pm",
@@ -1160,7 +1160,7 @@ const matchdayKeys = Object.keys(customFixtures);
 
 export default function MatchSchedule() {
   const [fixtures, setFixtures] = useState(customFixtures);
-  const [visibleMatchdays, setVisibleMatchdays] = useState(4);
+  const [visibleMatchdays, setVisibleMatchdays] = useState(5);
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
