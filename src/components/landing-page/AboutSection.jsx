@@ -165,7 +165,7 @@ const AboutSection = () => {
                   ? "The tournament is underway at Basin, Ilorin! Catch all the live matches and cheer for your favorite teams."
                   : "Mark your calendars! Join us at Basin, Ilorin, Kwara State on April 12, 2025 for the year's most electrifying tournament."}
               </p>
-              <p className="text-[#6B6F76] tracking-tight mt-2 mb-7">
+              <p className="text-[#6B6F76] tracking-tight mt-2 mb-7 lg:w-[350px] w-full">
                 {isTournamentLive
                   ? "Follow the intense competition as teams battle for the championship trophy."
                   : "Witness top teams compete for the championship title."}

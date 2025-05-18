@@ -1052,7 +1052,7 @@ const customFixtures = {
       time: "03:45pm",
       date: "17/05/2025",
       stage: "Matchday 5",
-      completed: false,
+      completed: true,
     },
     {
       home: "Unilorin Quarters",
@@ -1062,7 +1062,7 @@ const customFixtures = {
       time: "04:45pm",
       date: "17/05/2025",
       stage: "Matchday 5",
-      completed: false,
+      completed: true,
     },
     {
       home: "Sway FC",
@@ -1072,7 +1072,7 @@ const customFixtures = {
       time: "05:45pm",
       date: "17/05/2025",
       stage: "Matchday 5",
-      completed: false,
+      completed: true,
     },
   ],
   "Matchday 6": [
@@ -1160,7 +1160,7 @@ const matchdayKeys = Object.keys(customFixtures);
 
 export default function MatchSchedule() {
   const [fixtures, setFixtures] = useState(customFixtures);
-  const [visibleMatchdays, setVisibleMatchdays] = useState(5);
+  const [visibleMatchdays, setVisibleMatchdays] = useState(6);
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
