@@ -52,7 +52,7 @@ const Questions = () => {
     {
       question: "5. What is the format of the tournament?",
       answer: `
-          The tournament will follow a <b style="color: #C81E23;">knockout style.</b> Teams will compete in elimination rounds, with the winner of each match advancing to the next round until the final.
+          The tournament will follow a <b style="color: #C81E23;">League Phase style.</b> Teams will compete in a league phase, then the top 2 teams will advance to the Final.
         `,
     },
     {
