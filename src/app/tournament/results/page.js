@@ -14,7 +14,7 @@ const page = () => {
 
         <ResultsPage />
         <LeagueTable />
-        {/* <PlayerRankings /> */}
+        <PlayerRankings />
 
         {/* <ResultsSection /> */}
       </div>

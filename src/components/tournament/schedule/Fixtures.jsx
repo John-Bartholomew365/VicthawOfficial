@@ -1084,7 +1084,7 @@ const customFixtures = {
       time: "03:45pm",
       date: "25/05/2025",
       stage: "Matchday 6",
-      completed: false,
+      completed: true,
     },
     {
       home: "Maracana FC",
@@ -1094,7 +1094,7 @@ const customFixtures = {
       time: "04:45pm",
       date: "25/05/2025",
       stage: "Matchday 6",
-      completed: false,
+      completed: true,
     },
     {
       home: "NBA FC",
@@ -1104,7 +1104,7 @@ const customFixtures = {
       time: "05:45pm",
       date: "25/05/2025",
       stage: "Matchday 6",
-      completed: false,
+      completed: true,
     },
   ],
   "Matchday 7": [
@@ -1160,7 +1160,7 @@ const matchdayKeys = Object.keys(customFixtures);
 
 export default function MatchSchedule() {
   const [fixtures, setFixtures] = useState(customFixtures);
-  const [visibleMatchdays, setVisibleMatchdays] = useState(6);
+  const [visibleMatchdays, setVisibleMatchdays] = useState(7);
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -1220,7 +1220,7 @@ export default function MatchSchedule() {
           </div>
         </div>
         <h2 className="text-[#C81E23] mt-4">
-          The Top 2 teams will qualify for the final!
+          The Top 4 teams will qualify for the semi-final!
         </h2>
       </div>
 

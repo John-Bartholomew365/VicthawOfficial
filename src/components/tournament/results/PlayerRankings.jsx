@@ -1,292 +1,632 @@
-"use client";
-import { useState } from "react";
+// import React from "react";
 
-const statsData = {
-  Goals: [
-    { name: "Samuel Olajube", team: "Storm United", goals: 12 },
-    { name: "Babajide Adediran", team: "Shadow Rovers", goals: 11 },
-    { name: "Chinedu Okorie", team: "Iron Titans", goals: 11 },
-    { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", goals: 10 },
-    { name: "Emmanuel Ogunlana", team: "Venom Chargers FC", goals: 10 },
-    { name: "Femi Adeyemi", team: "Midnight Rangers", goals: 9 },
-    { name: "Gbolahan Adeyemi", team: "Icebreakers", goals: 9 },
-    { name: "Hakeem Ogunbiyi", team: "Blaze Warriors FC", goals: 9 },
-    { name: "Ibrahim Adeyemi", team: "Frost Giants FC", goals: 8 },
-    { name: "Jide Ogunlana", team: "Inferno Stars", goals: 8 },
-    { name: "Kehinde Adeyemi", team: "Omega Falcons FC", goals: 7 },
-    { name: "Lanre Ogunbiyi", team: "Arctic Panthers FC", goals: 7 },
-    { name: "Moses Adeyemi", team: "Lunar Predators FC", goals: 7 },
-    { name: "Niyi Ogunlana", team: "Titan Crushers FC", goals: 7 },
-    { name: "Oluwatobi Adeyemi", team: "Shadow Rovers", goals: 6 },
-  ],
-  Assists: [
-    { name: "Adeoluwa Adeyemi", team: "Storm United", assists: 10 },
-    { name: "Babajide Adediran", team: "Shadow Rovers", assists: 9 },
-    { name: "Chinedu Okorie", team: "Iron Titans", assists: 9 },
-    { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", assists: 8 },
-    { name: "Emmanuel Ogunlana", team: "Icebreakers", assists: 8 },
-    { name: "Femi Adeyemi", team: "Blaze Warriors FC", assists: 8 },
-    { name: "Gbolahan Adeyemi", team: "Frost Giants FC", assists: 8 },
-    { name: "Hakeem Ogunbiyi", team: "Inferno Stars", assists: 8 },
-    { name: "Ibrahim Adeyemi", team: "Omega Falcons FC", assists: 7 },
-    { name: "Jide Ogunlana", team: "Arctic Panthers FC", assists: 7 },
-    { name: "Kehinde Adeyemi", team: "Lunar Predators FC", assists: 7 },
-    { name: "Lanre Ogunbiyi", team: "Titan Crushers FC", assists: 7 },
-    { name: "Moses Adeyemi", team: "Shadow Rovers", assists: 6 },
-    { name: "Niyi Ogunlana", team: "Midnight Rangers", assists: 6 },
-    { name: "Oluwatobi Adeyemi", team: "Venom Chargers FC", assists: 5 },
-  ],
-  "Yellow Cards": [
-    { name: "Babajide Adediran", team: "Shadow Rovers", yellowCards: 5 },
-    { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", yellowCards: 4 },
-    { name: "Femi Adeyemi", team: "Titan Crushers FC", yellowCards: 4 },
-    { name: "Chinedu Okorie", team: "Iron Titans", yellowCards: 4 },
-    { name: "Emmanuel Ogunlana", team: "Midnight Rangers", yellowCards: 4 },
-    { name: "Adeoluwa Adeyemi", team: "Storm United", yellowCards: 3 },
-    { name: "Kehinde Adeyemi", team: "Omega Falcons FC", yellowCards: 3 },
-    { name: "Lanre Ogunbiyi", team: "Arctic Panthers FC", yellowCards: 3 },
-    { name: "Moses Adeyemi", team: "Lunar Predators FC", yellowCards: 2 },
-    { name: "Niyi Ogunlana", team: "Titan Crushers FC", yellowCards: 2 },
-    { name: "Oluwatobi Adeyemi", team: "Shadow Rovers", yellowCards: 2 },
-    { name: "Jide Ogunlana", team: "Midnight Rangers", yellowCards: 2 },
-    { name: "Ibrahim Adeyemi", team: "Midnight Rangers", yellowCards: 2 },
-    { name: "Hakeem Ogunbiyi", team: "Venom Chargers FC", yellowCards: 1 },
-    { name: "Gbolahan Adeyemi", team: "Lunar Predators FC", yellowCards: 1 },
-  ],
-  "Red Cards": [
-    { name: "Babajide Adediran", team: "Shadow Rovers", redCards: 3 },
-    { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", redCards: 2 },
-    { name: "Chinedu Okorie", team: "Iron Titans", redCards: 2 },
-    { name: "Adeoluwa Adeyemi", team: "Storm United", redCards: 2 },
-    { name: "Femi Adeyemi", team: "Titan Crushers FC", redCards: 1 },
-    { name: "Jide Ogunlana", team: "Midnight Rangers", redCards: 1 },
-    { name: "Ibrahim Adeyemi", team: "Midnight Rangers", redCards: 1 },
-    { name: "Hakeem Ogunbiyi", team: "Venom Chargers FC", redCards: 1 },
-    { name: "Gbolahan Adeyemi", team: "Inferno Stars", redCards: 1 },
-    { name: "Kehinde Adeyemi", team: "Lunar Predators FC", redCards: 1 },
-    { name: "Lanre Ogunbiyi", team: "Arctic Panthers FC", redCards: 1 },
-    { name: "Moses Adeyemi", team: "Lunar Predators FC", redCards: 1 },
-    { name: "Niyi Ogunlana", team: "Titan Crushers FC", redCards: 1 },
-    { name: "Oluwatobi Adeyemi", team: "Shadow Rovers", redCards: 1 },
-  ],
-};
-
-export default function StatsPage() {
-  const [activeTab, setActiveTab] = useState("Goals");
-  const [visibleCount, setVisibleCount] = useState(5);
-  const data = statsData[activeTab] || [];
-
-  return (
-    <div className="p-6 bg-[#000000] text-white w-full max-w-2xl mx-auto my-[70px]">
-      <h1 className="text-2xl font-bold mb-4">Player Rankings</h1>
-      <div className="flex space-x-4 border-b border-gray-700 pb-2">
-        {Object.keys(statsData).map((tab) => (
-          <button
-            key={tab}
-            className={`px-4 py-2 ${
-              activeTab === tab ? "border-b-2 border-[#C81E23]" : "text-gray-400"
-            }`}
-            onClick={() => {
-              setActiveTab(tab);
-              setVisibleCount(5);
-            }}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-4">
-        {data.slice(0, visibleCount).map((player, index) => (
-          <div
-            key={index}
-            className="flex justify-between items-center border-b border-gray-800 py-2"
-          >
-            <span>
-              {index + 1}. {player.name} ({player.team})
-            </span>
-            <span>
-              {activeTab === "Goals"
-                ? player.goals
-                : activeTab === "Assists"
-                ? player.assists
-                : activeTab === "Yellow Cards"
-                ? player.yellowCards
-                : player.redCards}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      {visibleCount < data.length && (
-        <button
-          className="mt-4 bg-[#C81E23] text-white flex justify-center items-center m-auto px-4 lg:w-[70%] w-full py-2 rounded"
-          onClick={() => setVisibleCount(visibleCount + 5)}
-        >
-          Load More
-        </button>
-      )}
-    </div>
-  );
-}
-
-
-
-// "use client";
-// import { useState } from "react";
-// import { FaFutbol, FaShoePrints, FaRegHandPaper, FaHandPaper } from "react-icons/fa";
-
-// const statsData = {
-//   Goals: [
-//     { name: "Adeoluwa Adeyemi", team: "Storm United", goals: 12 },
-//     { name: "Babajide Adediran", team: "Shadow Rovers", goals: 11 },
-//     { name: "Chinedu Okorie", team: "Iron Titans", goals: 11 },
-//     { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", goals: 10 },
-//     { name: "Emmanuel Ogunlana", team: "Venom Chargers FC", goals: 10 },
-//     { name: "Femi Adeyemi", team: "Midnight Rangers", goals: 9 },
-//     { name: "Gbolahan Adeyemi", team: "Icebreakers", goals: 9 },
-//     { name: "Hakeem Ogunbiyi", team: "Blaze Warriors FC", goals: 9 },
-//     { name: "Ibrahim Adeyemi", team: "Frost Giants FC", goals: 8 },
-//     { name: "Jide Ogunlana", team: "Inferno Stars", goals: 8 },
-//     { name: "Kehinde Adeyemi", team: "Omega Falcons FC", goals: 7 },
-//     { name: "Lanre Ogunbiyi", team: "Arctic Panthers FC", goals: 7 },
-//     { name: "Moses Adeyemi", team: "Lunar Predators FC", goals: 7 },
-//     { name: "Niyi Ogunlana", team: "Titan Crushers FC", goals: 7 },
-//     { name: "Oluwatobi Adeyemi", team: "Shadow Rovers", goals: 6 },
+// const results = {
+//   "Matchday 1": [
+//     {
+//       home: "Leo FC",
+//       away: "NBA FC",
+//       homeLogo: "/loe.jpg",
+//       awayLogo: "/nba.png",
+//       score: "0-3",
+//       goalscorers: [],
+//     },
+//     {
+//       home: "Bankers All Stars",
+//       away: "Unilorin Quarters",
+//       homeLogo: "/bankers-fc.png",
+//       awayLogo: "/unilorin.jpg",
+//       score: "1-0",
+//       goalscorers: [{ player: "Samuel Olajube", team: "Bankers All Stars" }],
+//     },
+//     {
+//       home: "Sway FC",
+//       away: "Maracana FC",
+//       homeLogo: "/sway.png",
+//       awayLogo: "/maracana.png",
+//       score: "0-1",
+//       goalscorers: [{ player: "Sheriff", team: "Maracana FC" }],
+//     },
 //   ],
-//   Assists: [
-//     { name: "Adeoluwa Adeyemi", team: "Storm United", assists: 10 },
-//     { name: "Babajide Adediran", team: "Shadow Rovers", assists: 9 },
-//     { name: "Chinedu Okorie", team: "Iron Titans", assists: 9 },
-//     { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", assists: 8 },
-//     { name: "Emmanuel Ogunlana", team: "Icebreakers", assists: 8 },
-//     { name: "Femi Adeyemi", team: "Blaze Warriors FC", assists: 8 },
-//     { name: "Gbolahan Adeyemi", team: "Frost Giants FC", assists: 8 },
-//     { name: "Hakeem Ogunbiyi", team: "Inferno Stars", assists: 8 },
-//     { name: "Ibrahim Adeyemi", team: "Omega Falcons FC", assists: 7 },
-//     { name: "Jide Ogunlana", team: "Arctic Panthers FC", assists: 7 },
-//     { name: "Kehinde Adeyemi", team: "Lunar Predators FC", assists: 7 },
-//     { name: "Lanre Ogunbiyi", team: "Titan Crushers FC", assists: 7 },
-//     { name: "Moses Adeyemi", team: "Shadow Rovers", assists: 6 },
-//     { name: "Niyi Ogunlana", team: "Midnight Rangers", assists: 6 },
-//     { name: "Oluwatobi Adeyemi", team: "Venom Chargers FC", assists: 5 },
+//   "Matchday 2": [
+//     {
+//       home: "Leo FC",
+//       away: "Corporate Ballers FA",
+//       homeLogo: "/loe.jpg",
+//       awayLogo: "/corporate-ballers.png",
+//       score: "1-1",
+//       goalscorers: [
+//         { player: "Boluwatife", team: "Leo FC" },
+//         { player: "Araromi", team: "Corporate Ballers FA" },
+//       ],
+//     },
+//     {
+//       home: "NBA FC",
+//       away: "Maracana FC",
+//       homeLogo: "/nba.png",
+//       awayLogo: "/maracana.png",
+//       score: "0-0",
+//       goalscorers: [
+//         { player: "Player D", team: "Leo FC" },
+//         { player: "Player E", team: "Leo FC" },
+//       ],
+//     },
+//     {
+//       home: "Bankers All Stars",
+//       away: "Sway FC",
+//       homeLogo: "/bankers-fc.png",
+//       awayLogo: "/sway.png",
+//       score: "1-0",
+//       goalscorers: [{ player: "Finisi Bamidele", team: "Bankers All Stars" }],
+//     },
 //   ],
-//   "Yellow Cards": [
-//     { name: "Babajide Adediran", team: "Shadow Rovers", yellowCards: 5 },
-//     { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", yellowCards: 4 },
-//     { name: "Femi Adeyemi", team: "Titan Crushers FC", yellowCards: 4 },
-//     { name: "Chinedu Okorie", team: "Iron Titans", yellowCards: 4 },
-//     { name: "Emmanuel Ogunlana", team: "Midnight Rangers", yellowCards: 4 },
-//     { name: "Adeoluwa Adeyemi", team: "Storm United", yellowCards: 3 },
-//     { name: "Kehinde Adeyemi", team: "Omega Falcons FC", yellowCards: 3 },
-//     { name: "Lanre Ogunbiyi", team: "Arctic Panthers FC", yellowCards: 3 },
-//     { name: "Moses Adeyemi", team: "Lunar Predators FC", yellowCards: 2 },
-//     { name: "Niyi Ogunlana", team: "Titan Crushers FC", yellowCards: 2 },
-//     { name: "Oluwatobi Adeyemi", team: "Shadow Rovers", yellowCards: 2 },
-//     { name: "Jide Ogunlana", team: "Midnight Rangers", yellowCards: 2 },
-//     { name: "Ibrahim Adeyemi", team: "Midnight Rangers", yellowCards: 2 },
-//     { name: "Hakeem Ogunbiyi", team: "Venom Chargers FC", yellowCards: 1 },
-//     { name: "Gbolahan Adeyemi", team: "Lunar Predators FC", yellowCards: 1 },
+//   "Matchday 3": [
+//     {
+//       home: "Unilorin Quarters",
+//       away: "Leo FC",
+//       homeLogo: "/unilorin.jpg",
+//       awayLogo: "/loe.jpg",
+//       score: "0-0",
+//       goalscorers: [
+//         { player: "Player D", team: "Getho" },
+//         { player: "Player E", team: "Getho" },
+//       ],
+//     },
+//     {
+//       home: "Maracana FC",
+//       away: "Bankers All Stars",
+//       homeLogo: "/maracana.png",
+//       awayLogo: "/bankers-fc.png",
+//       score: "0-0",
+//       goalscorers: [
+//         { player: "Player D", team: "Leo FC" },
+//         { player: "Player E", team: "Leo FC" },
+//       ],
+//     },
+//     {
+//       home: "Corporate Ballers",
+//       away: "NBA FC",
+//       homeLogo: "/corporate-ballers.png",
+//       awayLogo: "/nba.png",
+//       score: "0-0",
+//       goalscorers: [{ player: "Finisi Bamidele", team: "Bankers All Stars" }],
+//     },
 //   ],
-//   "Red Cards": [
-//     { name: "Babajide Adediran", team: "Shadow Rovers", redCards: 3 },
-//     { name: "Daniel Ogunbiyi", team: "Crimson Blazers FC", redCards: 2 },
-//     { name: "Chinedu Okorie", team: "Iron Titans", redCards: 2 },
-//     { name: "Adeoluwa Adeyemi", team: "Storm United", redCards: 2 },
-//     { name: "Femi Adeyemi", team: "Titan Crushers FC", redCards: 1 },
-//     { name: "Jide Ogunlana", team: "Midnight Rangers", redCards: 1 },
-//     { name: "Ibrahim Adeyemi", team: "Midnight Rangers", redCards: 1 },
-//     { name: "Hakeem Ogunbiyi", team: "Venom Chargers FC", redCards: 1 },
-//     { name: "Gbolahan Adeyemi", team: "Inferno Stars", redCards: 1 },
-//     { name: "Kehinde Adeyemi", team: "Lunar Predators FC", redCards: 1 },
-//     { name: "Lanre Ogunbiyi", team: "Arctic Panthers FC", redCards: 1 },
-//     { name: "Moses Adeyemi", team: "Lunar Predators FC", redCards: 1 },
-//     { name: "Niyi Ogunlana", team: "Titan Crushers FC", redCards: 1 },
-//     { name: "Oluwatobi Adeyemi", team: "Shadow Rovers", redCards: 1 },
+//   "Matchday 4": [
+//     {
+//       home: "Sway FC",
+//       away: "Unilorin Quarters",
+//       homeLogo: "/sway.png",
+//       awayLogo: "/unilorin.jpg",
+//       score: "0-1",
+//       goalscorers: [
+//         { player: "Toheeb", team: "Unilorin Quarters" },
+//         { player: "Player E", team: "Getho" },
+//       ],
+//     },
+//     {
+//       home: "Leo FC",
+//       away: "Maracana FC",
+//       homeLogo: "/loe.jpg",
+//       awayLogo: "/maracana.png",
+//       score: "3-0",
+//       goalscorers: [
+//         { player: "Lukman", team: "Leo FC" },
+//         { player: "Lukman", team: "Leo FC" },
+//         { player: "Mujeeb", team: "Leo FC" },
+//       ],
+//     },
+//     {
+//       home: "Bankers All Stars",
+//       away: "Corporate Ballers",
+//       homeLogo: "/bankers-fc.png",
+//       awayLogo: "/corporate-ballers.png",
+//       score: "0-0",
+//       goalscorers: [{ player: "Finisi Bamidele", team: "Getho" }],
+//     },
+//   ],
+//   "Matchday 5": [
+//     {
+//       home: "NBA FC",
+//       away: "Bankers All Stars",
+//       homeLogo: "/nba.png",
+//       awayLogo: "/bankers-fc.png",
+//       score: "0-0",
+//       goalscorers: [
+//         { player: "Toheeb", team: "Getho" },
+//         { player: "Player E", team: "Getho" },
+//       ],
+//     },
+//     {
+//       home: "Unilorin Quarters",
+//       away: "Maracana FC",
+//       homeLogo: "/unilorin.jpg",
+//       awayLogo: "/maracana.png",
+//       score: "0-0",
+//       goalscorers: [
+//         { player: "Lukman", team: "Leo FC" },
+//         { player: "Lukman", team: "Leo FC" },
+//         { player: "Mujeeb", team: "Leo FC" },
+//       ],
+//     },
+//     {
+//       home: "Sway FC",
+//       away: "Corporate Ballers",
+//       homeLogo: "/sway.png",
+//       awayLogo: "/corporate-ballers.png",
+//       score: "0-3",
+//       goalscorers: [],
+//     },
+//   ],
+//   "Matchday 6": [
+//     {
+//       home: "Leo FC",
+//       away: "Sway FC",
+//       homeLogo: "/loe.jpg",
+//       awayLogo: "/sway.png",
+//       score: "1-0",
+//       goalscorers: [
+//         { player: "Mujeeb", team: "Leo FC" },
+//         { player: "Player E", team: "Getho" },
+//       ],
+//     },
+//     {
+//       home: "Maracana FC",
+//       away: "Corporate Ballers",
+//       homeLogo: "/maracana.png",
+//       awayLogo: "/corporate-ballers.png",
+//       score: "4-0",
+//       goalscorers: [
+//         { player: "Atoyebi Sheriff", team: "Maracana FC" },
+//         { player: "Atoyebi Sheriff", team: "Maracana FC" },
+//         { player: "Atoyebi Sheriff", team: "Maracana FC" },
+//         { player: "Babaita", team: "Maracana FC" },
+//       ],
+//     },
+//     {
+//       home: "NBA FC",
+//       away: "Unilorin Quarters",
+//       homeLogo: "/nba.png",
+//       awayLogo: "/unilorin.jpg",
+//       score: "1-1",
+//       goalscorers: [
+//         { player: "Abdulateef", team: "NBA FC" },
+//         { player: "Ladi", team: "Unilorin Quarters" },
+//       ],
+//     },
 //   ],
 // };
 
-// export default function StatsPage() {
-//   const [activeTab, setActiveTab] = useState("Goals");
-//   const [visibleCount, setVisibleCount] = useState(5);
-//   const data = statsData[activeTab] || [];
+// // Create a mapping of team names to their logos
+// const teamLogos = {};
+// Object.values(results).forEach((matchday) => {
+//   matchday.forEach((match) => {
+//     teamLogos[match.home] = match.homeLogo;
+//     teamLogos[match.away] = match.awayLogo;
+//   });
+// });
+
+// const GoalScorersRanking = () => {
+//   // Hardcoded data from the provided manual table
+//   const topScorers = [
+//     { player: "Atoyebi Sheriff", team: "Maracana FC", goals: 3 },
+//     { player: "Lukman", team: "Leo FC", goals: 2 },
+//     { player: "Mujeeb", team: "Leo FC", goals: 2 },
+//     { player: "Abdulateef", team: "NBA FC", goals: 1 },
+//     { player: "Araromi", team: "Corporate Ballers FA", goals: 1 },
+//     { player: "Babaita", team: "Maracana FC", goals: 1 },
+//     { player: "Boluwatife", team: "Leo FC", goals: 1 },
+//     { player: "Finisi Bamidele", team: "Bankers All Stars", goals: 1 },
+//     { player: "Ladi", team: "Unilorin Quarters", goals: 1 },
+//     { player: "Samuel Olajube", team: "Bankers All Stars", goals: 1 },
+//     { player: "Sheriff", team: "Maracana FC", goals: 1 },
+//     { player: "Toheeb", team: "Unilorin Quarters", goals: 1 },
+//   ];
 
 //   return (
-//     <div className="p-6 bg-[#000000] text-white w-full max-w-2xl mx-auto my-[70px]">
-//       <h1 className="text-2xl font-bold mb-4">Player Rankings</h1>
-//       <div className="flex space-x-4 border-b border-gray-700 pb-2">
-//         {Object.keys(statsData).map((tab) => (
-//           <button
-//             key={tab}
-//             className={`px-4 py-2 ${
-//               activeTab === tab ? "border-b-2 border-[#C81E23]" : "text-gray-400"
-//             }`}
-//             onClick={() => {
-//               setActiveTab(tab);
-//               setVisibleCount(5);
-//             }}
-//           >
-//             {tab === "Goals" ? (
-//               <span className="flex items-center">
-//                 Goals <FaFutbol className="text-2xl ml-2" />
-//               </span>
-//             ) : tab === "Assists" ? (
-//               <span className="flex items-center">
-//                 Assists <FaShoePrints className="text-2xl ml-2" />
-//               </span>
-//             ) : tab === "Yellow Cards" ? (
-//               <span className="flex items-center">
-//                 Yellow Cards <FaRegHandPaper className="text-2xl ml-2" />
-//               </span>
-//             ) : (
-//               <span className="flex items-center">
-//                 Red Cards <FaHandPaper className="text-2xl ml-2" />
-//               </span>
-//             )}
-//           </button>
-//         ))}
-//       </div>
-
-//       <div className="mt-4">
-//         {data.slice(0, visibleCount).map((player, index) => (
-//           <div
-//             key={index}
-//             className="flex justify-between items-center border-b border-gray-800 py-2"
-//           >
-//             <span>
-//               {index + 1}. {player.name} ({player.team})
-//             </span>
-//             <span>
-//               {activeTab === "Goals" ? (
-//                 <span className="flex items-center">
-//                   {player.goals}
-//                 </span>
-//               ) : activeTab === "Assists" ? (
-//                 <span className="flex items-center">
-//                   {player.assists}
-//                 </span>
-//               ) : activeTab === "Yellow Cards" ? (
-//                 <span className="flex items-center">
-//                   {player.yellowCards}
-//                 </span>
-//               ) : (
-//                 <span className="flex items-center">
-//                   {player.redCards}
-//                 </span>
-//               )}
-//             </span>
-//           </div>
-//         ))}
-//       </div>
-
-//       {visibleCount < data.length && (
-//         <button
-//           className="mt-4 bg-[#C81E23] text-white flex justify-center items-center m-auto px-4 lg:w-[70%] w-full py-2 rounded"
-//           onClick={() => setVisibleCount(visibleCount + 5)}
-//         >
-//           Load More
-//         </button>
+//     <div className="p-6 max-w-3xl mx-auto tracking-tight mt-16">
+//       <h1 className="text-2xl font-bold mb-7 text-center">
+//         Top Goal Scorers
+//       </h1>
+//       {topScorers.length === 0 ? (
+//         <p className="text-center text-gray-500">No goals scored yet.</p>
+//       ) : (
+//         <div className="overflow-x-auto">
+//           <table className="min-w-full border-collapse border border-gray-300">
+//             <thead>
+//               <tr className="bg-gray-100">
+//                 <th className="border border-gray-300 px-4 py-2 text-left">
+//                   Rank
+//                 </th>
+//                 <th className="border border-gray-300 px-4 py-2 text-left">
+//                   Player
+//                 </th>
+//                 <th className="border border-gray-300 px-4 py-2 text-left">
+//                   Team
+//                 </th>
+//                 <th className="border border-gray-300 px-4 py-2 text-left">
+//                   Goals
+//                 </th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//               {topScorers.map((scorer, index) => (
+//                 <tr
+//                   key={scorer.player}
+//                   className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+//                 >
+//                   <td className="border border-gray-300 px-4 py-2">
+//                     {index + 1}
+//                   </td>
+//                   <td className="border border-gray-300 px-4 py-2">
+//                     {scorer.player}
+//                   </td>
+//                   <td className="border border-gray-300 px-4 py-2">
+//                     <div className="flex items-center space-x-2">
+//                       {teamLogos[scorer.team] ? (
+//                         <img
+//                           src={teamLogos[scorer.team]}
+//                           alt={scorer.team}
+//                           className="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+//                         />
+//                       ) : (
+//                         <span className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 flex items-center justify-center text-gray-500 text-xs">
+//                           No Logo
+//                         </span>
+//                       )}
+//                       <span>{scorer.team}</span>
+//                     </div>
+//                   </td>
+//                   <td className="border border-gray-300 px-4 py-2">
+//                     {scorer.goals}
+//                   </td>
+//                 </tr>
+//               ))}
+//             </tbody>
+//           </table>
+//         </div>
 //       )}
 //     </div>
 //   );
-// }
+// };
+
+// export default GoalScorersRanking;
+
+
+import React from "react";
+
+// The `results` object for logo extraction
+const results = {
+  "Matchday 1": [
+    {
+      home: "Leo FC",
+      away: "NBA FC",
+      homeLogo: "/loe.jpg",
+      awayLogo: "/nba.png",
+      score: "0-3",
+      goalscorers: [],
+    },
+    {
+      home: "Bankers All Stars",
+      away: "Unilorin Quarters",
+      homeLogo: "/bankers-fc.png",
+      awayLogo: "/unilorin.jpg",
+      score: "1-0",
+      goalscorers: [{ player: "Samuel Olajube", team: "Bankers All Stars" }],
+    },
+    {
+      home: "Sway FC",
+      away: "Maracana FC",
+      homeLogo: "/sway.png",
+      awayLogo: "/maracana.png",
+      score: "0-1",
+      goalscorers: [{ player: "Sheriff", team: "Maracana FC" }],
+    },
+  ],
+  "Matchday 2": [
+    {
+      home: "Leo FC",
+      away: "Corporate Ballers FA",
+      homeLogo: "/loe.jpg",
+      awayLogo: "/corporate-ballers.png",
+      score: "1-1",
+      goalscorers: [
+        { player: "Boluwatife", team: "Leo FC" },
+        { player: "Araromi", team: "Corporate Ballers FA" },
+      ],
+    },
+    {
+      home: "NBA FC",
+      away: "Maracana FC",
+      homeLogo: "/nba.png",
+      awayLogo: "/maracana.png",
+      score: "0-0",
+      goalscorers: [
+        { player: "Player D", team: "Leo FC" },
+        { player: "Player E", team: "Leo FC" },
+      ],
+    },
+    {
+      home: "Bankers All Stars",
+      away: "Sway FC",
+      homeLogo: "/bankers-fc.png",
+      awayLogo: "/sway.png",
+      score: "1-0",
+      goalscorers: [{ player: "Finisi Bamidele", team: "Bankers All Stars" }],
+    },
+  ],
+  "Matchday 3": [
+    {
+      home: "Unilorin Quarters",
+      away: "Leo FC",
+      homeLogo: "/unilorin.jpg",
+      awayLogo: "/loe.jpg",
+      score: "0-0",
+      goalscorers: [
+        { player: "Player D", team: "Getho" },
+        { player: "Player E", team: "Getho" },
+      ],
+    },
+    {
+      home: "Maracana FC",
+      away: "Bankers All Stars",
+      homeLogo: "/maracana.png",
+      awayLogo: "/bankers-fc.png",
+      score: "0-0",
+      goalscorers: [
+        { player: "Player D", team: "Leo FC" },
+        { player: "Player E", team: "Leo FC" },
+      ],
+    },
+    {
+      home: "Corporate Ballers",
+      away: "NBA FC",
+      homeLogo: "/corporate-ballers.png",
+      awayLogo: "/nba.png",
+      score: "0-0",
+      goalscorers: [{ player: "Finisi Bamidele", team: "Bankers All Stars" }],
+    },
+  ],
+  "Matchday 4": [
+    {
+      home: "Sway FC",
+      away: "Unilorin Quarters",
+      homeLogo: "/sway.png",
+      awayLogo: "/unilorin.jpg",
+      score: "0-1",
+      goalscorers: [
+        { player: "Toheeb", team: "Unilorin Quarters" },
+        { player: "Player E", team: "Getho" },
+      ],
+    },
+    {
+      home: "Leo FC",
+      away: "Maracana FC",
+      homeLogo: "/loe.jpg",
+      awayLogo: "/maracana.png",
+      score: "3-0",
+      goalscorers: [
+        { player: "Lukman", team: "Leo FC" },
+        { player: "Lukman", team: "Leo FC" },
+        { player: "Mujeeb", team: "Leo FC" },
+      ],
+    },
+    {
+      home: "Bankers All Stars",
+      away: "Corporate Ballers",
+      homeLogo: "/bankers-fc.png",
+      awayLogo: "/corporate-ballers.png",
+      score: "0-0",
+      goalscorers: [{ player: "Finisi Bamidele", team: "Getho" }],
+    },
+  ],
+  "Matchday 5": [
+    {
+      home: "NBA FC",
+      away: "Bankers All Stars",
+      homeLogo: "/nba.png",
+      awayLogo: "/bankers-fc.png",
+      score: "0-0",
+      goalscorers: [
+        { player: "Toheeb", team: "Getho" },
+        { player: "Player E", team: "Getho" },
+      ],
+    },
+    {
+      home: "Unilorin Quarters",
+      away: "Maracana FC",
+      homeLogo: "/unilorin.jpg",
+      awayLogo: "/maracana.png",
+      score: "0-0",
+      goalscorers: [
+        { player: "Lukman", team: "Leo FC" },
+        { player: "Lukman", team: "Leo FC" },
+        { player: "Mujeeb", team: "Leo FC" },
+      ],
+    },
+    {
+      home: "Sway FC",
+      away: "Corporate Ballers",
+      homeLogo: "/sway.png",
+      awayLogo: "/corporate-ballers.png",
+      score: "0-3",
+      goalscorers: [],
+    },
+  ],
+  "Matchday 6": [
+    {
+      home: "Leo FC",
+      away: "Sway FC",
+      homeLogo: "/loe.jpg",
+      awayLogo: "/sway.png",
+      score: "1-0",
+      goalscorers: [
+        { player: "Mujeeb", team: "Leo FC" },
+        { player: "Player E", team: "Getho" },
+      ],
+    },
+    {
+      home: "Maracana FC",
+      away: "Corporate Ballers",
+      homeLogo: "/maracana.png",
+      awayLogo: "/corporate-ballers.png",
+      score: "4-0",
+      goalscorers: [
+        { player: "Atoyebi Sheriff", team: "Maracana FC" },
+        { player: "Atoyebi Sheriff", team: "Maracana FC" },
+        { player: "Atoyebi Sheriff", team: "Maracana FC" },
+        { player: "Babaita", team: "Maracana FC" },
+      ],
+    },
+    {
+      home: "NBA FC",
+      away: "Unilorin Quarters",
+      homeLogo: "/nba.png",
+      awayLogo: "/unilorin.jpg",
+      score: "1-1",
+      goalscorers: [
+        { player: "Abdulateef", team: "NBA FC" },
+        { player: "Ladi", team: "Unilorin Quarters" },
+      ],
+    },
+  ],
+};
+
+// Create a mapping of team names to their logos
+const teamLogos = {};
+Object.values(results).forEach((matchday) => {
+  matchday.forEach((match) => {
+    teamLogos[match.home] = match.homeLogo;
+    teamLogos[match.away] = match.awayLogo;
+  });
+});
+
+const GoalScorersRanking = () => {
+  // Hardcoded data from the provided manual table
+  const topScorers = [
+    { player: "Atoyebi Sheriff", team: "Maracana FC", goals: 3 },
+    { player: "Lukman", team: "Leo FC", goals: 2 },
+    { player: "Mujeeb", team: "Leo FC", goals: 2 },
+    { player: "Abdulateef", team: "NBA FC", goals: 1 },
+    { player: "Araromi", team: "Corporate Ballers FA", goals: 1 },
+    { player: "Babaita", team: "Maracana FC", goals: 1 },
+    { player: "Boluwatife", team: "Leo FC", goals: 1 },
+    { player: "Finisi Bamidele", team: "Bankers All Stars", goals: 1 },
+    { player: "Ladi", team: "Unilorin Quarters", goals: 1 },
+    { player: "Samuel Olajube", team: "Bankers All Stars", goals: 1 },
+    { player: "Sheriff", team: "Maracana FC", goals: 1 },
+    { player: "Toheeb", team: "Unilorin Quarters", goals: 1 },
+  ];
+
+  return (
+    <div className="p-4 sm:p-6 max-w-4xl mx-auto tracking-tight mt-8 sm:mt-16">
+      <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-7 text-center">
+        Top Goal Scorers
+      </h1>
+      {topScorers.length === 0 ? (
+        <p className="text-center text-gray-500 text-sm sm:text-base">
+          No goals scored yet.
+        </p>
+      ) : (
+        <>
+          {/* Table for larger screens (sm and above) */}
+          <div className="hidden sm:block overflow-x-auto">
+            <table
+              className="min-w-full border-collapse border border-gray-300"
+              aria-label="Top Goal Scorers Table"
+            >
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left text-sm sm:text-base">
+                    Rank
+                  </th>
+                  <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left text-sm sm:text-base">
+                    Player
+                  </th>
+                  <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left text-sm sm:text-base">
+                    Team
+                  </th>
+                  <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left text-sm sm:text-base">
+                    Goals
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {topScorers.map((scorer, index) => (
+                  <tr
+                    key={scorer.player}
+                    className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                  >
+                    <td className="border border-gray-300 px-2 sm:px-4 py-2 text-sm sm:text-base">
+                      {index + 1}
+                    </td>
+                    <td className="border border-gray-300 px-2 sm:px-4 py-2 text-sm sm:text-base">
+                      {scorer.player}
+                    </td>
+                    <td className="border border-gray-300 px-2 sm:px-4 py-2 text-sm sm:text-base">
+                      <div className="flex items-center space-x-2">
+                        {teamLogos[scorer.team] ? (
+                          <img
+                            src={teamLogos[scorer.team]}
+                            alt={`${scorer.team} logo`}
+                            className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
+                          />
+                        ) : (
+                          <span className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-200 flex items-center justify-center text-gray-500 text-xs rounded-full">
+                            No Logo
+                          </span>
+                        )}
+                        <span>{scorer.team}</span>
+                      </div>
+                    </td>
+                    <td className="border border-gray-300 px-2 sm:px-4 py-2 text-sm sm:text-base">
+                      {scorer.goals}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Card layout for mobile screens (below sm) */}
+          <div className="block sm:hidden space-y-4">
+            {topScorers.map((scorer, index) => (
+              <div
+                key={scorer.player}
+                className="border border-gray-300 rounded-lg p-4 bg-white shadow-sm"
+                aria-label={`Goal Scorer ${scorer.player}`}
+              >
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-semibold text-gray-600">
+                    Rank: {index + 1}
+                  </span>
+                  <span className="text-sm font-semibold">
+                    Goals: {scorer.goals}
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  {teamLogos[scorer.team] ? (
+                    <img
+                      src={teamLogos[scorer.team]}
+                      alt={`${scorer.team} logo`}
+                      className="w-6 h-6 rounded-full"
+                    />
+                  ) : (
+                    <span className="w-6 h-6 bg-gray-200 flex items-center justify-center text-gray-500 text-xs rounded-full">
+                      No Logo
+                    </span>
+                  )}
+                  <div>
+                    <p className="text-sm font-medium">{scorer.player}</p>
+                    <p className="text-xs text-gray-500">{scorer.team}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default GoalScorersRanking;

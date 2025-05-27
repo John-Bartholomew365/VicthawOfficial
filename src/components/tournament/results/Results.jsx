@@ -422,7 +422,7 @@ const results = {
       homeLogo: "/nba.png",
       awayLogo: "/maracana.png",
       score: "0-0",
-      winner: "draw",
+      winner: "Draw",
       goalscorers: [
         { player: "Player D", team: "Leo FC" /*, time: "22'" */ },
         { player: "Player E", team: "Leo FC" /*, time: "65'" */ },
@@ -458,7 +458,10 @@ const results = {
       score: "1-0",
       winner: "Bankers All Stars",
       goalscorers: [
-        { player: "Finisi Bamidele", team: "Bankers All Stars" /*, time: "10'" */ },
+        {
+          player: "Finisi Bamidele",
+          team: "Bankers All Stars" /*, time: "10'" */,
+        },
         // { player: "Player G", team: "Sway FC" /*, time: "33'" */ },
         // { player: "Player H", team: "Bankers All Stars" /*, time: "55'" */ },
         // { player: "Player I", team: "Sway FC" /*, time: "68'" */ },
@@ -565,7 +568,10 @@ const results = {
       score: "0-0",
       winner: "Draw",
       goalscorers: [
-        { player: "Finisi Bamidele", team: "Bankers All Stars" /*, time: "10'" */ },
+        {
+          player: "Finisi Bamidele",
+          team: "Bankers All Stars" /*, time: "10'" */,
+        },
         // { player: "Player G", team: "Sway FC" /*, time: "33'" */ },
         // { player: "Player H", team: "Bankers All Stars" /*, time: "55'" */ },
         // { player: "Player I", team: "Sway FC" /*, time: "68'" */ },
@@ -779,11 +785,116 @@ const results = {
       stage: "Matchday 3",
       homeLogo: "/sway.png",
       awayLogo: "/corporate-ballers.png",
+      score: "0-3",
+      winner: "Corporate Ballers",
+      walkover: true,
+      goalscorers: [],
+
+      stats: {
+        homeGoals: "0",
+        homePossession: "50%",
+        homeShots: "16",
+        homeShotsOnTarget: "8",
+        homeFouls: "11",
+        homeCorners: "6",
+        homeYellowCards: "0",
+        homeRedCards: "0",
+        awayGoals: "0",
+        awayPossession: "50%",
+        awayShots: "14",
+        awayShotsOnTarget: "7",
+        awayFouls: "10",
+        awayCorners: "5",
+        awayYellowCards: "0",
+        awayRedCards: "0",
+      },
+    },
+  ],
+  "Matchday 6": [
+    {
+      id: 1,
+      home: "Leo FC",
+      away: "Sway FC",
+      time: "03:45pm",
+      date: "25th May 2025",
+      stage: "Matchday 6",
+      homeLogo: "/loe.jpg",
+      awayLogo: "/sway.png",
+      score: "1-0",
+      winner: "Leo FC",
+      goalscorers: [
+        { player: "Mujeeb", team: "Leo FC" /*, time: "22'" */ },
+        { player: "Player E", team: "Getho" /*, time: "65'" */ },
+      ],
+      stats: {
+        homeGoals: "0",
+        homePossession: "50%",
+        homeShots: "10",
+        homeShotsOnTarget: "5",
+        homeFouls: "9",
+        homeCorners: "4",
+        homeYellowCards: "0",
+        homeRedCards: "0",
+        awayGoals: "0",
+        awayPossession: "50%",
+        awayShots: "10",
+        awayShotsOnTarget: "5",
+        awayFouls: "10",
+        awayCorners: "4",
+        awayYellowCards: "0",
+        awayRedCards: "0",
+      },
+    },
+    {
+      id: 2,
+      home: "Maracana FC",
+      away: "Corporate Ballers",
+      time: "04:45pm",
+      date: "25th May 2025",
+      stage: "Matchday 6",
+      homeLogo: "/maracana.png",
+      awayLogo: "/corporate-ballers.png",
+      score: "4-0",
+      winner: "Maracana FC",
+      goalscorers: [
+        { player: "Atoyebi Sheriff", team: "Maracana FC" /*, time: "22'" */ },
+        { player: "Atoyebi Sheriff", team: "Maracana FC" /*, time: "65'" */ },
+        { player: "Atoyebi Sheriff", team: "Maracana FC" /*, time: "65'" */ },
+        { player: "Babaita", team: "Maracana FC" /*, time: "65'" */ },
+      ],
+      stats: {
+        homeGoals: "0",
+        homePossession: "50%",
+        homeShots: "13",
+        homeShotsOnTarget: "7",
+        homeFouls: "7",
+        homeCorners: "5",
+        homeYellowCards: "0",
+        homeRedCards: "0",
+        awayGoals: "0",
+        awayPossession: "50%",
+        awayShots: "6",
+        awayShotsOnTarget: "3",
+        awayFouls: "12",
+        awayCorners: "3",
+        awayYellowCards: "0",
+        awayRedCards: "0",
+      },
+    },
+    {
+      id: 3,
+      home: "NBA FC",
+      away: "Unilorin Quarters",
+      time: "05:45",
+      date: "25th May 2025",
+      stage: "Matchday 6",
+      homeLogo: "/nba.png",
+      awayLogo: "/unilorin.jpg",
       score: "1-1",
       winner: "Draw",
       goalscorers: [
-        { player: "Peter", team: "Sway FC" /*, time: "10'" */ },
-        { player: "Seedorf", team: "Corporate Ballers" /*, time: "33'" */ },
+        { player: "Abdulateef", team: "NBA FC" /*, time: "10'" */ },
+        { player: "Ladi", team: "Unilorin Quarters" /*, time: "33'" */ },
         // { player: "Player H", team: "Bankers All Stars" /*, time: "55'" */ },
         // { player: "Player I", team: "Sway FC" /*, time: "68'" */ },
         // { player: "Player J", team: "Bankers All Stars" /*, time: "82'" */ },
@@ -813,14 +924,14 @@ const results = {
 export default function ResultsPage() {
   const [activeTab, setActiveTab] = useState("goals");
   const [selectedMatch, setSelectedMatch] = useState(null);
-  const [visibleMatchdays, setVisibleMatchdays] = useState(1);
+  const [visibleMatchdays, setVisibleMatchdays] = useState(3);
   const [isLoading, setIsLoading] = useState(false);
   const matchDays = Object.keys(results);
 
   const loadMoreMatchdays = () => {
     setIsLoading(true);
     setTimeout(() => {
-      setVisibleMatchdays((prev) => Math.min(prev + 1, matchDays.length));
+      setVisibleMatchdays((prev) => Math.min(prev + 2, matchDays.length));
       setIsLoading(false);
     }, 1500);
   };
