@@ -1204,7 +1204,7 @@ export default function MatchSchedule() {
             <span className="font-bold lg:text-[20px] text-[16px]">
               Tournament Dates:
             </span>
-            <span className="text-[#6B6F76]">12th April – 8th June 2025</span>
+            <span className="text-[#6B6F76]">12th April – 22nd June 2025</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="font-bold lg:text-[20px] text-[16px]">

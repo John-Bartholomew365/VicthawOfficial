@@ -21,7 +21,7 @@ const UpcomingEvents = () => {
           </h1>
           <p className="lg:w-[430px] tracking-tight w-auto my-3 m-auto text-[#6B6F76]">
             The <strong>Victhaw Official Unity Cup 1.0</strong> will commence on
-            <strong> April 12th to June 8th, 2025!</strong> This highly
+            <strong> April 12th to June 22nd, 2025!</strong> This highly
             anticipated tournament will take place at Basin, Ilorin, Kwara
             State, bringing together top talents, passionate fans, and the
             electrifying energy of the game we all love.
