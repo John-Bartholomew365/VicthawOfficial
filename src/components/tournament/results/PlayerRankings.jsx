@@ -503,7 +503,7 @@ Object.values(results).forEach((matchday) => {
 const GoalScorersRanking = () => {
   // Hardcoded data from the provided manual table
   const topScorers = [
-    { player: "Atoyebi Sheriff", team: "Maracana FC", goals: 3 },
+    { player: "Atoyebi Sheriff", team: "Maracana FC", goals: 4 },
     { player: "Lukman", team: "Leo FC", goals: 2 },
     { player: "Mujeeb", team: "Leo FC", goals: 2 },
     { player: "Abdulateef", team: "NBA FC", goals: 1 },
@@ -513,7 +513,6 @@ const GoalScorersRanking = () => {
     { player: "Finisi Bamidele", team: "Bankers All Stars", goals: 1 },
     { player: "Ladi", team: "Unilorin Quarters", goals: 1 },
     { player: "Samuel Olajube", team: "Bankers All Stars", goals: 1 },
-    { player: "Sheriff", team: "Maracana FC", goals: 1 },
     { player: "Toheeb", team: "Unilorin Quarters", goals: 1 },
   ];
 
