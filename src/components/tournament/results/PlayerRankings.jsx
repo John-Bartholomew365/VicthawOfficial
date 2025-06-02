@@ -511,7 +511,7 @@ const GoalScorersRanking = () => {
     { player: "Babaita", team: "Maracana FC", goals: 1 },
     { player: "Boluwatife", team: "Leo FC", goals: 1 },
     { player: "Finisi Bamidele", team: "Bankers All Stars", goals: 1 },
-    { player: "Ladi", team: "Unilorin Quarters", goals: 1 },
+    { player: "Ladi", team: "Unilorin Quarters", goals: 2 },
     { player: "Samuel Olajube", team: "Bankers All Stars", goals: 1 },
     { player: "Toheeb", team: "Unilorin Quarters", goals: 1 },
   ];
