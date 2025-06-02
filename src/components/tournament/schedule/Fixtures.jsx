@@ -272,7 +272,7 @@ const customFixtures = {
       home: "Semi-Final Winner 1",
       away: "Semi-Final Winner 2",
       homeLogo: "/trophy.svg",
-      awayLogo: "/trophy.svg", 
+      awayLogo: "/trophy.svg",
       time: "04:00pm",
       date: "22/06/2025",
       stage: "Final",
@@ -395,9 +395,12 @@ export default function MatchSchedule() {
                     <span className="font-medium">All matches completed</span>
                   </div>
                   {matchday === "Matchday 7" ? (
-                    <p className="text-gray-600 text-sm">
-                      The league phase has concluded! Here are your semi-finalists.
-                    </p>
+                    <div>
+                      <p className="text-gray-600 text-sm">
+                        The league phase has concluded! 
+                      </p>
+                      <p className="text-gray-600 text-sm">Here are your semi-finalists.</p>
+                    </div>
                   ) : (
                     <p className="text-gray-600 text-sm">
                       Check the{" "}
