@@ -396,8 +396,7 @@ export default function MatchSchedule() {
                   </div>
                   {matchday === "Matchday 7" ? (
                     <p className="text-gray-600 text-sm">
-                      The league phase has concluded! Stay tuned for the
-                      semi-finals.
+                      The league phase has concluded! Here are your semi-finalists.
                     </p>
                   ) : (
                     <p className="text-gray-600 text-sm">
