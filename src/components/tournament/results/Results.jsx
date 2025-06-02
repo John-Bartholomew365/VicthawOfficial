@@ -991,7 +991,7 @@ const results = {
       home: "NBA FC",
       away: "Sway FC",
       time: "05:45",
-      date: "25th May 2025",
+      date: "31st May 2025",
       stage: "Matchday 7",
       homeLogo: "/nba.png",
       awayLogo: "/sway.png",
