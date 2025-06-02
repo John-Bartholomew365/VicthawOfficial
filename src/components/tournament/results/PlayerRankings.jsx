@@ -291,7 +291,6 @@
 
 // export default GoalScorersRanking;
 
-
 import React from "react";
 
 // The `results` object for logo extraction
@@ -504,6 +503,7 @@ const GoalScorersRanking = () => {
   // Hardcoded data from the provided manual table
   const topScorers = [
     { player: "Atoyebi Sheriff", team: "Maracana FC", goals: 4 },
+    { player: "Ladi", team: "Unilorin Quarters", goals: 2 },
     { player: "Lukman", team: "Leo FC", goals: 2 },
     { player: "Mujeeb", team: "Leo FC", goals: 2 },
     { player: "Abdulateef", team: "NBA FC", goals: 1 },
@@ -511,7 +511,6 @@ const GoalScorersRanking = () => {
     { player: "Babaita", team: "Maracana FC", goals: 1 },
     { player: "Boluwatife", team: "Leo FC", goals: 1 },
     { player: "Finisi Bamidele", team: "Bankers All Stars", goals: 1 },
-    { player: "Ladi", team: "Unilorin Quarters", goals: 2 },
     { player: "Samuel Olajube", team: "Bankers All Stars", goals: 1 },
     { player: "Toheeb", team: "Unilorin Quarters", goals: 1 },
   ];
