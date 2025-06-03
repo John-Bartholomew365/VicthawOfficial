@@ -248,9 +248,9 @@ const customFixtures = {
   "Semi Final": [
     {
       home: "Bankers All Stars",
-      away: "Unilorin Quarters",
+      away: "Maracana FC",
       homeLogo: "/bankers-fc.png",
-      awayLogo: "/unilorin.jpg",
+      awayLogo: "/maracana.png",
       time: "03:45pm",
       date: "15/06/2025",
       stage: "Semi Final",
@@ -258,9 +258,9 @@ const customFixtures = {
     },
     {
       home: "NBA FC",
-      away: "Maracana FC",
+      away: "Unilorin Quarters",
       homeLogo: "/nba.png",
-      awayLogo: "/maracana.png",
+      awayLogo: "/unilorin.jpg",
       time: "05:00pm",
       date: "15/06/2025",
       stage: "Semi Final",
