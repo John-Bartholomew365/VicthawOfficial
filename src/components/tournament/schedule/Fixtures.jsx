@@ -254,7 +254,7 @@ const customFixtures = {
       time: "03:45pm",
       date: "15/06/2025",
       stage: "Semi Final",
-      completed: false,
+      completed: true,
     },
     {
       home: "NBA FC",
@@ -272,7 +272,7 @@ const customFixtures = {
       home: "Semi-Final Winner 1",
       away: "Semi-Final Winner 2",
       homeLogo: "/trophy.svg",
-      awayLogo: "/trophy.svg",
+      awayLogo: "/bankers-fc.png",
       time: "04:00pm",
       date: "22/06/2025",
       stage: "Final",
@@ -463,7 +463,7 @@ export default function MatchSchedule() {
                         />
                         <p className="lg:text-[16px] text-[14px] font-semibold">
                           {match.away.includes("Winner")
-                            ? "Winner 1"
+                            ? "Bankers All Stars"
                             : match.away}
                         </p>
                       </div>
@@ -548,7 +548,7 @@ export default function MatchSchedule() {
                   />
                   <p className="font-bold mt-2">
                     {selectedMatch.away.includes("Winner")
-                      ? "Winner 1"
+                      ? "Bankers All Stars"
                       : selectedMatch.away}
                   </p>
                 </div>

@@ -513,6 +513,7 @@ const GoalScorersRanking = () => {
     { player: "Finisi Bamidele", team: "Bankers All Stars", goals: 1 },
     { player: "Samuel Olajube", team: "Bankers All Stars", goals: 1 },
     { player: "Toheeb", team: "Unilorin Quarters", goals: 1 },
+    { player: "Ganee Alabi", team: "Bankers All Stars", goals: 1 },
   ];
 
   return (

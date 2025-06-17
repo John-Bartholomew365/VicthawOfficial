@@ -366,7 +366,7 @@ const Footer = () => {
               </div>
             ) : (
               <p className="text-[18px] text-green-600 font-semibold">
-                The tournament is live now!
+                The tournament is underway!
               </p>
             )}
           </div>
