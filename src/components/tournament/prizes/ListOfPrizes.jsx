@@ -115,7 +115,7 @@ const ListOfPrizes = () => {
                 </p>
               </div>
             </li>
-            <li className="flex items-start gap-3">
+            {/* <li className="flex items-start gap-3">
               <img
                 src="/checkmark.svg"
                 alt="Checkmark"
@@ -127,7 +127,7 @@ const ListOfPrizes = () => {
                   A generous cash reward for the runner-up team.
                 </p>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="lg:block hidden">
