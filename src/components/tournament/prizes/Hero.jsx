@@ -64,10 +64,10 @@ const Hero = () => {
         <div className="my-[50px] lg:flex lg:flex-row flex-col justify-center">
           <div data-aos="fade-left">
             <Image
-              src="/prizes.svg"
+              src="/victhaw-logo.svg"
               alt="logo"
-              height={430}
-              width={430}
+              height={230}
+              width={420}
               className="rounded-md"
             />
           </div>
