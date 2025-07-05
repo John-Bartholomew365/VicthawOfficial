@@ -162,7 +162,7 @@ const HeroSection = () => {
           className="md:w-[55%] text-center md:text-left space-y-5 px-4 md:px-10 lg:mt-0 mt-10"
           data-aos="fade-right"
         >
-          <h1 className="text-4xl lg:text-[58px] font-bold leading-tight tracking-tight">
+          <h1 className="text-[32px] lg:text-[58px] font-bold leading-tight tracking-tight w-full">
             <span className="block">{carousel.firstText}</span>
             <span className="block">{carousel.secondText}</span>
             <span className="block">{carousel.thirdText}</span>
@@ -170,7 +170,7 @@ const HeroSection = () => {
           <p className="text-[16px] text-[#6B6F76] tracking-tight">
             {carousel.subTitle}
           </p>
-          {/* Carousel Indicators */}
+          {/* Carousel Indicators */} 
           <div className="flex justify-center md:justify-start space-x-2 mt-4">
             {slider.map((_, index) => (
               <span

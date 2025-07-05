@@ -122,7 +122,7 @@ const ResultsHero = () => {
             {/* Subtle shimmer effect */}
             <div className="absolute inset-0 bg-[url('/sparkle-pattern.png')] opacity-10 mix-blend-overlay"></div>
             
-            <h2 className="text-white text-[20px] font-bold mb-4 tracking-wider">
+            <h2 className="text-white text-[17px] lg:text-[20px] font-bold mb-4 tracking-wider">
               🏆 UNITY CUP 1.0 CHAMPIONS 🏆
             </h2>
             
@@ -146,7 +146,7 @@ const ResultsHero = () => {
               </motion.div>
               <div>
                 <motion.h1 
-                  className="text-white text-[24px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-100"
+                  className="text-white text-[18px] lg:text-[24px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-100"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
@@ -186,7 +186,7 @@ const ResultsHero = () => {
           </motion.div>
 
           <motion.h1 
-            className="lg:text-[45px] text-[30px] font-bold mt-8 leading-tight"
+            className="lg:text-[45px] text-[28px] font-bold mt-8 leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}

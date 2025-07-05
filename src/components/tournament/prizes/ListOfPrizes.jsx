@@ -539,7 +539,7 @@ const ListOfPrizes = () => {
         <h1 className="text-4xl lg:text-5xl font-bold text-[#C81E23] mb-4">
           Unity Cup 1.0 Award Winners
         </h1>
-        <p className="text-[#6B6F76] text-lg max-w-3xl mx-auto">
+        <p className="text-[#6B6F76] lg:text-[16px] text-[14px] lg:w-[550px] w-auto mx-auto leading-tight">
           Celebrating the exceptional talents and sportsmanship displayed during
           the tournament. These individuals and teams earned their honors
           through outstanding performance and dedication.
@@ -591,7 +591,7 @@ const ListOfPrizes = () => {
                 </span>
                 <span className="text-yellow-600 font-bold">🏆</span>
               </div>
-              <p className="text-[#6B6F76] mb-4">
+              <p className="text-[#6B6F76] mb-4 lg:text-[16px] text-[14px] leading-tight">
                 Awarded for exceptional performance during Unity Cup 1.0
               </p>
               <div className="flex items-center">
@@ -619,12 +619,12 @@ const ListOfPrizes = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Champions Prize */}
-          <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-400">
+          <div className="bg-white p-4 lg:p-6 rounded-xl shadow-md border-t-4 border-yellow-400">
             <div className="flex items-center mb-4">
               <div className="bg-yellow-100 p-3 rounded-full mr-4">
                 <span className="text-yellow-600 text-2xl">🥇</span>
               </div>
-              <h3 className="text-[18px] font-bold">Champions</h3>
+              <h3 className="lg:text-[18px] text-[16px] font-bold">Champions</h3>
             </div>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -639,12 +639,12 @@ const ListOfPrizes = () => {
           </div>
 
           {/* Runner-up Prize */}
-          <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-gray-300">
+          <div className="bg-white p-4 lg:p-6 rounded-xl shadow-md border-t-4 border-gray-300">
             <div className="flex items-center mb-4">
               <div className="bg-gray-100 p-3 rounded-full mr-4">
                 <span className="text-gray-500 text-2xl">🥈</span>
               </div>
-              <h3 className="text-[18px] font-bold">Runner-up</h3>
+              <h3 className="lg:text-[18px] text-[16px] font-bold">Runner-up</h3>
             </div>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -655,12 +655,12 @@ const ListOfPrizes = () => {
           </div>
 
           {/* Individual Awards */}
-          <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-400">
+          <div className="bg-white p-4 lg:p-6 rounded-xl shadow-md border-t-4 border-red-400">
             <div className="flex items-center mb-4">
               <div className="bg-red-100 p-3 rounded-full mr-4">
                 <span className="text-red-500 text-2xl">⭐</span>
               </div>
-              <h3 className="text-[18px] font-bold">Individual Awards</h3>
+              <h3 className="lg:text-[18px] text-[16px] font-bold">Individual Awards</h3>
             </div>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -711,8 +711,8 @@ const ListOfPrizes = () => {
                   className="brightness-90"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#C81E23] mb-2">
+              <div className="lg:p-6 p-4">
+                <h3 className="lg:text-xl text-[18px] font-bold text-[#C81E23] mb-2">
                   {highlight.title}
                 </h3>
                 <p className="text-[#6B6F76]">{highlight.description}</p>
@@ -721,7 +721,7 @@ const ListOfPrizes = () => {
           ))}
         </div>
 
-        <div className="mt-12 bg-[#FFF5F5] p-8 rounded-2xl text-center">
+        <div className="mt-12 bg-[#FFF5F5] lg:p-8 p-4 rounded-2xl text-center">
           <h3 className="text-2xl font-bold text-[#C81E23] mb-4">
             Anticipate Unity Cup 2.0!
           </h3>

@@ -77,7 +77,7 @@ const UpcomingEvents = () => {
 
         {/* Content Section */}
         <div className="lg:w-[55%] lg:pl-3">
-          <h1 className="text-3xl lg:text-5xl font-medium tracking-tight lg:text-left text-center">
+          <h1 className="text-[24px] lg:text-5xl font-medium tracking-tight lg:text-left text-center">
             A Successful Inaugural Tournament
           </h1>
           <p className="mt-6 text-lg text-[#6B6F76] lg:text-left text-center lg:pr-8 leading-relaxed">

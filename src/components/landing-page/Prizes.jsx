@@ -197,7 +197,7 @@ const About = () => {
         <h3 className="bg-[#FAFAFA] h-[30px] w-[73px] rounded-full flex items-center justify-center text-[14px] font-medium text-[#6B6F76]">
           Prizes
         </h3>
-        <h2 className="lg:text-[45px] text-[25px] font-normal text-center leading-tight tracking-tight mt-[40px]">
+        <h2 className="lg:text-[45px] text-[22px] font-[600] text-center leading-tight tracking-tight mt-[40px]">
           Glory Achieved: <br /> What Our Champions Earned!
         </h2>
         <p className="text-[#6B6F76] text-center mt-4 max-w-[500px]">
@@ -239,7 +239,7 @@ const About = () => {
 
         {/* Text Content */}
         <div className="flex flex-col gap-4 lg:w-[40%] w-full">
-          <h2 className="lg:text-[40px] text-[30px] font-normal tracking-tight leading-tight">
+          <h2 className="lg:text-[40px] text-[24px] font-normal tracking-tight leading-tight">
             {prizes[currentIndex].title}
           </h2>
           <ul className="text-[#6B6F76] text-[14px] font-normal tracking-tight space-y-3">

@@ -308,12 +308,12 @@ const Footer = () => {
             >
               Rules
             </Link>
-            <Link
+            {/* <Link
               className="hover:text-[#C90A1D] text-[14px]"
               href={"/tournament/schedule"}
             >
               Schedule
-            </Link>
+            </Link> */}
             <Link
               className="hover:text-[#C90A1D] text-[14px]"
               href={"/tournament/prizes"}

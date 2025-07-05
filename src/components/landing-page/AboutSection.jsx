@@ -264,11 +264,11 @@ const AboutSection = () => {
 
       {/* Success Message */}
       <div className="flex flex-col items-center justify-center mt-8 gap-4">
-        <div className="bg-green-600 text-white px-6 py-3 rounded-full lg:text-xl text-[16px] font-bold">
+        <div className="bg-green-600 text-white lg:px-6 px-4 py-3 rounded-full lg:text-xl text-[16px] font-bold">
           🏆 TOURNAMENT COMPLETED! 🏆
         </div>
         <Link href="/tournament/results">
-          <button className="bg-white border-2 border-[#C81E23] text-[#C81E23] hover:bg-gray-50 transition-colors font-medium py-2 px-5 rounded-lg flex items-center gap-2">
+          <button className="bg-white border-2 border-[#C81E23] text-[#C81E23] hover:bg-gray-50 transition-colors font-medium py-2 px-5 rounded-lg flex items-center gap-2 lg:text-[16px] text-[15px]" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -315,7 +315,7 @@ const AboutSection = () => {
               priority
             />
             <div>
-              <h1 className="text-[25px] font-[600] lg:text-[34px] tracking-tight">
+              <h1 className="text-[23px] font-[600] lg:text-[34px] tracking-tight">
                 A Tournament to Remember
               </h1>
               <p className="lg:w-[350px] w-full text-[#6B6F76] tracking-tight mt-2">
