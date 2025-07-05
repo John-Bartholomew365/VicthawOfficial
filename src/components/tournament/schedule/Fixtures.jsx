@@ -913,7 +913,7 @@ const customFixtures = {
       time: "04:00pm",
       date: "29/06/2025",
       stage: "Final",
-      completed: false,
+      completed: true,
     },
   ],
 };

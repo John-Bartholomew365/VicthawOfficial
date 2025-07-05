@@ -427,7 +427,7 @@ export default function TeamList() {
         </h1>
       </div> */}
 
-      <div className="my-16 text-center">
+      {/* <div className="my-16 text-center">
         <h1 className="text-2xl lg:text-3xl font-bold">Support Your Team!</h1>
         <p className="text-gray-400 lg:w-[450px] w-auto mx-auto mt-3">
           Cheer for your favorite team and be part of the excitement! Follow
@@ -442,6 +442,29 @@ export default function TeamList() {
             className="bg-red-600 tracking-tight text-white px-8 py-3 rounded-md text-lg font-bold hover:bg-red-700 transition duration-300"
           >
             View tournament schedule
+          </a>
+        </div>
+      </div> */}
+
+      <div className="my-16 text-center">
+        <h1 className="text-2xl lg:text-3xl font-bold text-[#C90A1D]">
+          Relive the UNITY CUP 1.0 Action
+        </h1>
+        <p className="text-gray-400 lg:w-[450px] w-auto mx-auto mt-3">
+          Missed the matches? Catch up on highlights, stats, and unforgettable
+          moments from the tournament. <br />
+          <span className="font-medium text-[#0F0F0F]">
+            UNITY CUP 2.0 registrations coming soon!
+          </span>
+        </p>
+        <div className="flex justify-center mt-7">
+          <a
+            href="/tournament/results" // Changed from schedule to highlights/recap
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-red-600 tracking-tight text-white px-8 py-3 rounded-md text-lg font-bold hover:bg-red-700 transition duration-300"
+          >
+            See highlights
           </a>
         </div>
       </div>

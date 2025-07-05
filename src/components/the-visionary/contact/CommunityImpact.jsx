@@ -38,7 +38,7 @@ const CommunityImpact = () => {
 
           {/* Stat 2 */}
           <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-sm">
-            <h3 className="text-4xl font-bold text-[#C81E23] mb-4">16</h3>
+            <h3 className="text-4xl font-bold text-[#C81E23] mb-4">10+</h3>
             <p className="text-[#6B6F76]">Teams in the Unity Cup</p>
           </div>
 

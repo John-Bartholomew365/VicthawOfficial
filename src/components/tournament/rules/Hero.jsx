@@ -30,7 +30,8 @@ const Hero = () => {
         </div>
         <div className="lg:mt-0 mt-10" data-aos="fade-left">
           <Image
-            src="/team.jpg"
+            // src="/team.jpg"
+            src="/refs.jpeg"
             alt="logo"
             height={520}
             width={490}
@@ -48,7 +49,7 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Each team will have <b>11 players,</b> consisting of 
+                  Each team will have <b>11 players,</b> consisting of
                   <b> 10 outfield players</b> and <b>1 goalkeeper.</b>
                 </p>
               </li>
@@ -64,19 +65,24 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  All teams must arrive at the match venue at least{" "}<b>40 minutes</b> before kick-off.
+                  All teams must arrive at the match venue at least{" "}
+                  <b>40 minutes</b> before kick-off.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  A match will commence as long as a team has a minimum of{" "}<b>7 players</b> at kick-off. Late arrivals will not delay the game.
+                  A match will commence as long as a team has a minimum of{" "}
+                  <b>7 players</b> at kick-off. Late arrivals will not delay the
+                  game.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  If a team fails to present at least <b>7 players</b> within{" "}<b>15 minutes</b> after the scheduled kick-off, the opposing team will be awarded the match.
+                  If a team fails to present at least <b>7 players</b> within{" "}
+                  <b>15 minutes</b> after the scheduled kick-off, the opposing
+                  team will be awarded the match.
                 </p>
               </li>
             </ul>
@@ -90,19 +96,22 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Each half will be <b>30 minutes</b> long, with <b>no</b> additional injury time.
+                  Each half will be <b>30 minutes</b> long, with <b>no</b>{" "}
+                  additional injury time.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  The tournament follows a <b>knockout format</b>. In the event of a draw, an extra <b>15 minutes</b> will be played.
+                  The tournament follows a <b>knockout format</b>. In the event
+                  of a draw, an extra <b>15 minutes</b> will be played.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  If the match remains tied after extra time, the winner will be determined through a <b>penalty shootout</b>.
+                  If the match remains tied after extra time, the winner will be
+                  determined through a <b>penalty shootout</b>.
                 </p>
               </li>
             </ul>
@@ -116,13 +125,20 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  To maintain the community spirit of the tournament, <b>no active professional footballers</b> or players currently participating in officially sanctioned tournaments are eligible to participate.
+                  To maintain the community spirit of the tournament,{" "}
+                  <b>no active professional footballers</b> or players currently
+                  participating in officially sanctioned tournaments are
+                  eligible to participate.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  <b>Penalty:</b> Any team found to have fielded an ineligible player will immediately <b>forfeit the match points</b> to their opponent, regardless of the match outcome. The tournament organizers reserve the right to impose further sanctions if deemed necessary.
+                  <b>Penalty:</b> Any team found to have fielded an ineligible
+                  player will immediately <b>forfeit the match points</b> to
+                  their opponent, regardless of the match outcome. The
+                  tournament organizers reserve the right to impose further
+                  sanctions if deemed necessary.
                 </p>
               </li>
             </ul>
@@ -136,19 +152,25 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Each team must register all <b>22 players</b> before the tournament. Unregistered players and officials will not be allowed to participate.
+                  Each team must register all <b>22 players</b> before the
+                  tournament. Unregistered players and officials will not be
+                  allowed to participate.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  The tournament organizers are not responsible for player injuries. Teams are required to bring their <b>medical personnel</b>, although first aid will be available.
+                  The tournament organizers are not responsible for player
+                  injuries. Teams are required to bring their{" "}
+                  <b>medical personnel</b>, although first aid will be
+                  available.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  The referee's decision is <b>final</b>. Any complaints must be addressed to the organizers respectfully.
+                  The referee's decision is <b>final</b>. Any complaints must be
+                  addressed to the organizers respectfully.
                 </p>
               </li>
             </ul>
@@ -162,25 +184,33 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  All players must wear the appropriate equipment, including <b>football boots, shin guards, team uniforms, and uniform socks</b>.
+                  All players must wear the appropriate equipment, including{" "}
+                  <b>
+                    football boots, shin guards, team uniforms, and uniform
+                    socks
+                  </b>
+                  .
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Before each match day, players are required to trim their fingernails short to ensure safety during play.
+                  Before each match day, players are required to trim their
+                  fingernails short to ensure safety during play.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Accessories such as bracelets, chains, beads, and any other jewellery are strictly prohibited on the field.
+                  Accessories such as bracelets, chains, beads, and any other
+                  jewellery are strictly prohibited on the field.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  Players must remain in full team uniform at all times throughout the tournament.
+                  Players must remain in full team uniform at all times
+                  throughout the tournament.
                 </p>
               </li>
             </ul>
@@ -194,13 +224,15 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  <span className="text-black">Yellow Card:</span> A fine of <b>500 Naira</b> will be imposed for each yellow card.
+                  <span className="text-black">Yellow Card:</span> A fine of{" "}
+                  <b>500 Naira</b> will be imposed for each yellow card.
                 </p>
               </li>
               <li className="flex gap-3">
                 <span className="text-red-500">•</span>
                 <p className="text-[#6B6F76] ">
-                  <span className="text-black">Red Card:</span> A fine of <b>1000 Naira</b> will be imposed for each red card.
+                  <span className="text-black">Red Card:</span> A fine of{" "}
+                  <b>1000 Naira</b> will be imposed for each red card.
                 </p>
               </li>
             </ul>
@@ -208,7 +240,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-[90px]">
+      {/* <div className="mt-[90px]">
         <div>
           <h1 className="lg:text-[40px] text-[30px] text-center leading-tight tracking-tight">
             Ready to Compete? <br /> Play Fair, Play Smart!
@@ -228,7 +260,31 @@ const Hero = () => {
         >
           Register now
         </a>
+      </div> */}
+
+      <div className="mt-[90px]">
+        <div>
+          <h1 className="lg:text-[40px] text-[28px] text-center leading-tight tracking-tight">
+            Ready for UNITY CUP 2.0? <br /> Stay Sharp, Stay Ready!
+          </h1>
+          <p className="text-center lg:w-[460px] tracking-tight mt-3 m-auto w-auto text-[#6B6F76]">
+            While we prepare for the next tournament, keep honing your skills.
+            Remember - discipline, respect and fair play make champions both on
+            and off the field.
+          </p>
+        </div>
       </div>
+
+      {/* <div className="mt-[50px] text-center">
+        <a
+          href="/notify-me" // Changed from register to a notify/waitlist page
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#C90A1D] text-white px-8 py-3 rounded-md text-[18px] font-bold hover:bg-[#a8191d] transition duration-300"
+        >
+          Get Notified About 2.0
+        </a>
+      </div> */}
     </div>
   );
 };

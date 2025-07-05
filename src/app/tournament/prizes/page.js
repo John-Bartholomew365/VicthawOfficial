@@ -1,7 +1,7 @@
 import Footer from "@/components/landing-page/Footer";
 import Hero from "@/components/tournament/prizes/Hero";
 import ListOfPrizes from "@/components/tournament/prizes/ListOfPrizes";
-import ReadyPrize from "@/components/tournament/prizes/ReadyPrize";
+// import ReadyPrize from "@/components/tournament/prizes/ReadyPrize";
 import React from "react";
 
 const page = () => {
@@ -10,7 +10,7 @@ const page = () => {
       <div className="container lg:px-[50px] px-2">
         <Hero />
         <ListOfPrizes />
-        <ReadyPrize />
+        {/* <ReadyPrize /> */}
       </div>
       <Footer />
 

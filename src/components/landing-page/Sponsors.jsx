@@ -1,18 +1,79 @@
+// import Link from "next/link";
+// import React from "react";
+
+// const Sponsors = () => {
+//   return (
+//     <div>
+//       <div className="text-center">
+//         <h2 className="lg:text-[45px] text-[30px] tracking-tight font-bold text-black mb-3">
+//           Become a Sponsor
+//         </h2>
+//         <p className="text-[16px] text-[#6B6F76] tracking-tight mb-12 lg:w-[440px] w-auto m-auto">
+//           Partner with us to make the <strong>Unity Cup 1.0</strong> a resounding
+//           success! Sponsoring this event is more than just branding, it’s a
+//           chance to amplify your visibility, engage with a passionate community,
+//           and create meaningful connections.
+//         </p>
+//       </div>
+
+//       <div className="lg:flex lg:flex-row flex-col gap-7 justify-center">
+//         <div className="bg-gradient-to-br from-[#000000] justify-center h-[200px] to-[#C81E23] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto">
+//           <h1 className="text-xl font-bold tracking-tight">Brand Visibility</h1>
+//           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
+//             Your logo on banners, uniforms, and social media platforms for
+//             maximum exposure.
+//           </p>
+//         </div>
+//         <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] h-[200px] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto lg:my-0 my-5">
+//           <h1 className="text-xl font-bold tracking-tight">
+//             Community Engagement
+//           </h1>
+//           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
+//             Connect with hundreds of fans and participants while supporting
+//             local sports.
+//           </p>
+//         </div>
+//         <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] text-[#FFFFFF] h-[200px] rounded-md p-4 lg:w-[30%] w-auto ">
+//           <h1 className="text-xl font-bold tracking-tight">
+//             Networking Opportunities
+//           </h1>
+//           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
+//             Build strong relationships with local businesses and organizations.
+//           </p>
+//         </div>
+//       </div>
+
+//       <div className="mt-12 text-center">
+//         <Link href={"/about/sponsors"}>
+//           <button className="bg-[#C81E23] hover:text-black text-white py-3 px-6 text-lg rounded-md hover:bg-white  hover:border-[#C81E23] hover:border">
+//             Learn more
+//           </button>
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Sponsors;
+
+
+
+
+
+
 import Link from "next/link";
 import React from "react";
 
 const Sponsors = () => {
   return (
-    <div>
+    <div className="my-16">
       <div className="text-center">
         <h2 className="lg:text-[45px] text-[30px] tracking-tight font-bold text-black mb-3">
-          Become a Sponsor
+          Our Valued Sponsors
         </h2>
-        <p className="text-[16px] text-[#6B6F76] tracking-tight mb-12 lg:w-[440px] w-auto m-auto">
-          Partner with us to make the <strong>Unity Cup 1.0</strong> a resounding
-          success! Sponsoring this event is more than just branding, it’s a
-          chance to amplify your visibility, engage with a passionate community,
-          and create meaningful connections.
+        <p className="text-[16px] text-[#6B6F76] tracking-tight mb-12 max-w-[360px] mx-auto leading-tight">
+          Sponsors made Unity Cup 1.0 unforgettable. <br />
+          Join us next time to connect with passionate fans and elevate your brand.
         </p>
       </div>
 
@@ -20,35 +81,38 @@ const Sponsors = () => {
         <div className="bg-gradient-to-br from-[#000000] justify-center h-[200px] to-[#C81E23] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto">
           <h1 className="text-xl font-bold tracking-tight">Brand Visibility</h1>
           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-            Your logo on banners, uniforms, and social media platforms for
-            maximum exposure.
+            Sponsors gained exposure through banners, uniforms, and social media.
           </p>
         </div>
         <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] h-[200px] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto lg:my-0 my-5">
           <h1 className="text-xl font-bold tracking-tight">
-            Community Engagement
+            Community Impact
           </h1>
           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-            Connect with hundreds of fans and participants while supporting
-            local sports.
+            Connected brands with hundreds of passionate fans and players.
           </p>
         </div>
-        <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] text-[#FFFFFF] h-[200px] rounded-md p-4 lg:w-[30%] w-auto ">
+        <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] text-[#FFFFFF] h-[200px] rounded-md p-4 lg:w-[30%] w-auto">
           <h1 className="text-xl font-bold tracking-tight">
-            Networking Opportunities
+            Lasting Connections
           </h1>
           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-            Build strong relationships with local businesses and organizations.
+            Built valuable relationships with local businesses and organizations.
           </p>
         </div>
       </div>
 
-      <div className="mt-12 text-center">
-        <Link href={"/about/sponsors"}>
-          <button className="bg-[#C81E23] hover:text-black text-white py-3 px-6 text-lg rounded-md hover:bg-white  hover:border-[#C81E23] hover:border">
-            Learn more
+      <div className="mt-12 text-center flex flex-col sm:flex-row justify-center gap-4">
+        <Link href="/about/sponsors">
+          <button className="bg-[#C81E23] hover:text-black text-white py-3 px-6 text-lg rounded-md hover:bg-white hover:border-[#C81E23] hover:border transition-all">
+            See sponsors
           </button>
         </Link>
+        {/* <Link href="/become-a-sponsor">
+          <button className="bg-white border border-[#C81E23] text-[#C81E23] py-3 px-6 text-lg rounded-md hover:bg-[#C81E23] hover:text-white transition-all">
+            Express Interest for 2.0
+          </button>
+        </Link> */}
       </div>
     </div>
   );

@@ -14,27 +14,29 @@ const VisionHero = () => {
   }, []);
 
   return (
-    <div className="lg:flex lg:flex-row flex-col items-center gap-[100px] my-[100px] lg:pl-[50px] pl-0">
+    <div className="lg:flex lg:flex-row flex-col-reverse items-center gap-[100px] my-[100px] lg:pl-[50px] pl-0">
       <div data-aos="fade-right">
         <h1 className="lg:text-[45px] tracking-tighter text-[30px] leading-tight lg:w-[470px] w-auto">
           Where Fitness Passion Meets Purpose
         </h1>
         <p className="text-[#6B6F76] tracking-tight lg:w-[420px] w-auto mt-4">
-          Victhaw is a profesional coach, mentor, and fitness expert dedicated
+          Victhaw is a professional coach, mentor, and fitness expert dedicated
           to developing athletes and inspiring individuals. With years of
           experience in sports and community building, he continues to shape the
           next generation of talent through discipline and innovation.
         </p>
       </div>
 
-      <div className="lg:mt-0 mt-10" data-aos="fade-left">
-        <Image
-          src="/victhaw-logo.svg"
-          alt="logo"
-          height={230}
-          width={420}
-          className="rounded-md"
-        />
+      <div className="lg:mt-0 mt-10 relative w-full lg:w-auto" data-aos="fade-left">
+        <div className="lg:h-[500px] h-[350px] w-full">
+          <Image
+            src="/about-vics.jpeg"
+            alt="Victor - Fitness Coach"
+            fill
+            className="rounded-md object-cover"
+            quality={100}
+          />
+        </div>
       </div>
     </div>
   );

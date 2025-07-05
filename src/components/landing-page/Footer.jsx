@@ -259,7 +259,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-[80px] grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
+      <div className="mt-[80px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
         <div>
           <h1 className="text-[#C90A1D] font-bold lg:text-[18px] text-[16px]">
             About
@@ -344,7 +344,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div>
+        {/* <div>
           <h1 className="text-[#C90A1D] font-bold lg:text-[18px] text-[16px]">
             Countdown
           </h1>
@@ -370,7 +370,7 @@ const Footer = () => {
               </p>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div>

@@ -101,12 +101,12 @@ const Navbar = () => {
                 >
                   Rules & Guidelines
                 </Link>
-                <Link
+                {/* <Link
                   href="/tournament/schedule"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76]  hover:bg-[#FAFAFA]"
                 >
                   Schedule
-                </Link>
+                </Link> */}
                 <Link
                   href="/tournament/results"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
@@ -334,12 +334,12 @@ const Navbar = () => {
                   >
                     Rules & Guidelines
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/tournament/schedule"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"
                   >
-                    Schedule
-                  </Link>
+                    Schedule  
+                  </Link> */}
                   <Link
                     href="/tournament/results"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA]"

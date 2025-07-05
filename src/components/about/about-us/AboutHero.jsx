@@ -17,7 +17,7 @@ const AboutHero = () => {
     <div className="lg:flex lg:flex-row flex-col items-center gap-[100px] my-[100px] lg:pl-[50px] pl-0">
       <div data-aos="fade-right">
         <h1 className="lg:text-[45px] lg:w-[471px] w-auto tracking-tight font-bold text-[30px] leading-tight">
-          About the Victhaw Unity Cup 1.0
+          About the Victhaw Unity Cup
         </h1>
         <p className="text-[#6B6F76] tracking-tight lg:w-[420px] w-auto mt-4">
           Get all the essential details about this thrilling tournament, its

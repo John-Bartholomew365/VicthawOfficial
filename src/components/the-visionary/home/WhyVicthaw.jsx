@@ -35,18 +35,18 @@ const WhyVicthaw = () => {
             data-aos="fade-up"
           >
             <Image
-              src="/victor-football.jpg"
+              src="/carried.jpeg"
               alt="Victor on the Football Field"
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            {/* <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
               <p className="text-white text-2xl font-semibold text-center max-w-xs">
                 "Sports have the power to change lives, unite communities, and
                 inspire greatness."
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column: Text Content */}

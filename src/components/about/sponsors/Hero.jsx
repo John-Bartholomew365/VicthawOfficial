@@ -164,7 +164,7 @@ const SponsorsPage = () => {
 
         {isLive ? (
           <p className="text-[#C81E23] mt-5 font-bold text-[24px]">
-            THE TOURNAMENT HAS BEGUN!
+            THE TOURNAMENT HAS ENDED!
           </p>
         ) : (
           <div className="mt-10">
