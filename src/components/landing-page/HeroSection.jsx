@@ -119,7 +119,7 @@ const HeroSection = () => {
       thirdText: "through soccer",
       subTitle:
         "Victhawofficial Unity Cup 1.0 was more than just a tournament - it was a movement! We brought players together to compete and fans to cheer them on, celebrating the love of football.",
-      image: "/img1.jpg",
+      image: "/united.jpeg",
     },
     {
       firstText: "Talents",
