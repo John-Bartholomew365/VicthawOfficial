@@ -495,6 +495,12 @@ const ListOfPrizes = () => {
       image: "/the-two.jpeg",
     },
     {
+      title: "Framed for Greatness",
+      description:
+        "The Nigeria Bar Association (NBA) Chairman, Ilorin Branch, shared a moment with the tournament's Most Valuable Player (MVP) captured in a memorable picture.",
+      image: "/nba-chairman.jpeg",
+    },
+    {
       title: "Champions' Moment",
       description:
         "The winning team's captain lifted the trophy amidst cheers and confetti, creating the most iconic moment of Unity Cup 1.0.",

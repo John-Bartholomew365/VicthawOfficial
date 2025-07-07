@@ -336,8 +336,6 @@ const GoalScorersRanking = () => {
       <div className="flex justify-center mt-7">
         <a
           href="/tournament/prizes"
-          target="_blank"
-          rel="noopener noreferrer"
           className="bg-red-600 tracking-tight text-white px-8 py-3 rounded-md text-[16px] hover:bg-red-700 transition duration-300"
         >
           See full prizes
