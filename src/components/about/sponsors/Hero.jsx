@@ -1,7 +1,14 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { FaInstagram, FaTiktok } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaPhone,
+  FaPhoneAlt,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const SponsorsPage = () => {
   const [days, setDays] = useState(0);
@@ -116,7 +123,7 @@ const SponsorsPage = () => {
                 className="rounded-md"
               />
             </div>
-            <div className="tracking-tight text-start">
+            <div className="tracking-tight text-start mt-5">
               <h1 className="lg:text-[40px] text-[30px] lg:text-start text-center">
                 Sway Fitness
               </h1>
@@ -155,6 +162,48 @@ const SponsorsPage = () => {
               />
             </div>
           </div>
+
+          <div className="lg:p-6 p-0 rounded-lg lg:flex lg:flex-row flex-col gap-[150px] items-center justify-center mt-10">
+            <div>
+              <Image
+                src="/nayo.jpeg"
+                alt="Sponsor 4"
+                width={390}
+                height={430}
+                className="rounded-md "
+              />
+            </div>
+            <div className="tracking-tight text-start lg:mt-0 mt-10">
+              <h1 className="lg:text-[40px] text-[30px] lg:text-start text-center">
+                Nayo Beauty Empire
+              </h1>
+              <p className="text-[#B0B3B8] lg:w-[350px] w-auto lg:text-start text-center mt-3">
+                A versatile beauty expert specializing in flawless makeup &
+                gele, stunning nails, lash extensions, semi-permanent brows,
+                pedicure & manicure, wig revamping, and hair branding — bringing
+                out the best version of you, from head to toe.
+              </p>
+              <div className="mt-7 flex flex-col lg:items-start items-center justify-center">
+                <h1>See more about us</h1>
+                <div className="flex space-x-4 mt-4">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=2348166097928"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="text-[#C81E23] text-[24px]" />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@nayobeauty_empire"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaTiktok className="text-[#C81E23] text-[24px]" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="my-[70px]">
           <h1 className="lg:text-[35px] text-[25px] leading-tight tracking-tight">
@@ -191,6 +240,13 @@ const SponsorsPage = () => {
             </div>
           </div>
         )}
+        <div className="mt-5">
+          <Link href="/tournament/results">
+            <button className="border-[#C81E23] border flex justify-center items-center text-center py-[10px] px-[20px] text-black rounded-[6px] hover:bg-white hover:text-black hover:border-[#C81E23] hover:border transition-all lg:mx-0 mx-auto">
+              See all details
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

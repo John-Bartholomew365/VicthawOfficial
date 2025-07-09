@@ -536,6 +536,12 @@ const ListOfPrizes = () => {
         "The event concluded with group photos of all sub-organizers, marking the successful end of Unity Cup 1.0 and building anticipation for version 2.0.",
       image: "/gather.jpeg",
     },
+    {
+      title: "Curtain Call",
+      description:
+        "Unity Cup 1.0 ended on a memorable note with a group photo featuring key figures, capturing the spirit of unity and success while building anticipation for version 2.0.",
+      image: "/closing.jpeg",
+    },
   ];
 
   return (
@@ -630,7 +636,9 @@ const ListOfPrizes = () => {
               <div className="bg-yellow-100 p-3 rounded-full mr-4">
                 <span className="text-yellow-600 text-2xl">🥇</span>
               </div>
-              <h3 className="lg:text-[18px] text-[16px] font-bold">Champions</h3>
+              <h3 className="lg:text-[18px] text-[16px] font-bold">
+                Champions
+              </h3>
             </div>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -650,7 +658,9 @@ const ListOfPrizes = () => {
               <div className="bg-gray-100 p-3 rounded-full mr-4">
                 <span className="text-gray-500 text-2xl">🥈</span>
               </div>
-              <h3 className="lg:text-[18px] text-[16px] font-bold">Runner-up</h3>
+              <h3 className="lg:text-[18px] text-[16px] font-bold">
+                Runner-up
+              </h3>
             </div>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -666,7 +676,9 @@ const ListOfPrizes = () => {
               <div className="bg-red-100 p-3 rounded-full mr-4">
                 <span className="text-red-500 text-2xl">⭐</span>
               </div>
-              <h3 className="lg:text-[18px] text-[16px] font-bold">Individual Awards</h3>
+              <h3 className="lg:text-[18px] text-[16px] font-bold">
+                Individual Awards
+              </h3>
             </div>
             <ul className="space-y-3">
               <li className="flex items-start">
