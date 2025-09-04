@@ -49,8 +49,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Victhaw Official Unity Cup",
-  description: "The Battle of Champions",
+  title: "Victhaw Official",
+  description: "",
 };
 
 export default function RootLayout({ children }) {

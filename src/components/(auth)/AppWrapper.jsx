@@ -16,7 +16,6 @@
 
 // export default AppWrapper;
 
-
 "use client";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -26,7 +25,16 @@ const AppWrapper = ({ children }) => {
   const pathName = usePathname();
 
   // Check for specific auth-related paths
-  const isAuthPage = ["/register", "/login", "/forgot-password", "/reset-password", "/verify-account", "/verify-email", "/setup", "/payment"].includes(pathName);
+  const isAuthPage = [
+    "/register",
+    "/login",
+    "/forgot-password",
+    "/reset-password",
+    "/verify-account",
+    "/verify-email",
+    "/setup",
+    "/payment",
+  ].includes(pathName);
 
   return (
     <div>
