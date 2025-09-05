@@ -181,7 +181,7 @@ const GetInTouch = () => {
             <MdEmail size={24} />
           </a>
           <a
-            href="https://www.instagram.com/victhawofficial_unitycup"
+            href="https://www.instagram.com/victhawofficial_tribe"
             className="text-[#6B6F76] hover:text-[#C81E23] transition duration-300"
           >
             <FaInstagram size={24} />

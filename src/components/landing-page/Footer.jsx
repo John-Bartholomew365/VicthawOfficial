@@ -407,7 +407,7 @@ const Footer = () => {
 
             <Link
               className="bg-[#C90A1D] p-2 rounded-full inline-flex items-center justify-center"
-              href="https://www.instagram.com/victhawofficial_unitycup"
+              href="https://www.instagram.com/victhawofficial_tribe"
               target="_blank"
               rel="noopener noreferrer"
             >

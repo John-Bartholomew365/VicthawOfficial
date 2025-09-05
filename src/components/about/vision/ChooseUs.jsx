@@ -55,7 +55,7 @@ const ChooseUs = () => {
 
       <div className="flex justify-center">
         <Link
-          href="https://www.instagram.com/victhawofficial"
+          href="https://www.instagram.com/victhawofficial_tribe"
           target="_blank"
           rel="noopener noreferrer"
         >
