@@ -157,14 +157,14 @@ const AboutUs = () => {
         <p className="text-[#6B6F76] text-center m-auto mb-4 lg:w-[500px] w-auto">
           Want to stay updated on future football events? Follow us for more exciting opportunities.
         </p>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <a
             href="/tournament/gallery"
             className="bg-[#C81E23] text-white py-2 px-4 rounded-md hover:bg-[#a8191d] transition duration-300 ease-in-out"
           >
             View gallery
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
