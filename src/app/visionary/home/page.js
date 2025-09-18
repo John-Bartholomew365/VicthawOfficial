@@ -1,4 +1,5 @@
 import Footer from "@/components/landing-page/Footer";
+import PageLoader from "@/components/PageLoader";
 import ImpactSection from "@/components/the-visionary/home/ImpactSection";
 import JourneyStarts from "@/components/the-visionary/home/JournerStarts";
 import JoinMovement from "@/components/the-visionary/home/Services";
@@ -8,16 +9,18 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="bg-[#FFFFFF] text-black tracking-tight">
-      <div className="container lg:px-[30px] px-0">
-        <Victor />
-        <WhyVicthaw />
-        <ImpactSection />
-        <JoinMovement />
-        <JourneyStarts />
+    <PageLoader>
+      <div className="bg-[#FFFFFF] text-black tracking-tight">
+        <div className="container lg:px-[30px] px-0">
+          <Victor />
+          <WhyVicthaw />
+          <ImpactSection />
+          <JoinMovement />
+          <JourneyStarts />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </PageLoader>
   );
 };
 

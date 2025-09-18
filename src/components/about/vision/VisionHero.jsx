@@ -27,14 +27,24 @@ const VisionHero = () => {
         </p>
       </div>
 
-      <div className="lg:mt-0 mt-10 relative w-full lg:w-auto" data-aos="fade-left">
+      <div
+        className="lg:mt-0 mt-10 relative w-full lg:w-auto"
+        data-aos="fade-left"
+      >
         <div className="lg:h-[500px] h-[350px] w-full">
-          <Image
+          {/* <Image
             src="/about-vics.jpeg"
             alt="Victor - Fitness Coach"
             fill
             className="rounded-md object-cover"
             quality={100}
+          /> */}
+          <Image
+            src="/victhaw-logo.svg"
+            alt="logo"
+            height={230}
+            width={420}
+            className="rounded-md"
           />
         </div>
       </div>

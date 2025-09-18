@@ -148,16 +148,16 @@ const GetInTouch = () => {
       <div className="container mx-auto px-4">
         <div className="mb-10">
           <h1 className="lg:text-[40px] leading-tight text-[30px] font-bold text-center tracking-tight">
-            Victhaw Official Unity <br className="lg:block hidden" /> Cup 1.0
+            Victhaw Official
           </h1>
-          <p className="text-[#6B6F76] m-auto mb-6 mt-4 text-center lg:w-[420px] w-auto">
-            Contact us today for inquiries about the tournament, team
-            registration, or sponsorship opportunities.
+          <p className="text-[#6B6F76] m-auto mb-6 mt-4 text-center lg:w-[490px] w-auto">
+            Contact us today for inquiries about the Unity Cup tournament,
+            TRADFIT RHYTHMS, team registration, or sponsorship opportunities.
           </p>
         </div>
         {/* Section Header */}
         <div className="text-center my-5" data-aos="fade-up">
-          <h2 className="text-[25px] lg:text-[35px] tracking-tight font-bold mb-2 text-white">
+          <h2 className="text-[25px] lg:text-[30px] tracking-tight font-bold mb-2 text-black">
             Let’s Connect
           </h2>
           {/* <p className="text-[16px] tracking-tight leading-tight text-[#B0B3B8] m-auto lg:w-[425px] w-auto">

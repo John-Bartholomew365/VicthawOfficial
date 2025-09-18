@@ -1,4 +1,5 @@
 import Footer from "@/components/landing-page/Footer";
+import PageLoader from "@/components/PageLoader";
 import Offering from "@/components/the-visionary/services/Offering";
 import ServiceHero from "@/components/the-visionary/services/ServiceHero";
 import ServicesCta from "@/components/the-visionary/services/ServicesCta";
@@ -7,6 +8,7 @@ import React from "react";
 
 const page = () => {
   return (
+    <PageLoader>
     <div className="bg-[#FFFFFF] text-black tracking-tight">
       <ServiceHero />
       <div className="container lg:px-[30px] px-2">
@@ -16,6 +18,7 @@ const page = () => {
       </div>
       <Footer />
     </div>
+    </PageLoader>
   );
 };
 

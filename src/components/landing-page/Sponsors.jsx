@@ -1,118 +1,85 @@
-// import Link from "next/link";
-// import React from "react";
-
-// const Sponsors = () => {
-//   return (
-//     <div>
-//       <div className="text-center">
-//         <h2 className="lg:text-[45px] text-[30px] tracking-tight font-bold text-black mb-3">
-//           Become a Sponsor
-//         </h2>
-//         <p className="text-[16px] text-[#6B6F76] tracking-tight mb-12 lg:w-[440px] w-auto m-auto">
-//           Partner with us to make the <strong>Unity Cup 1.0</strong> a resounding
-//           success! Sponsoring this event is more than just branding, it’s a
-//           chance to amplify your visibility, engage with a passionate community,
-//           and create meaningful connections.
-//         </p>
-//       </div>
-
-//       <div className="lg:flex lg:flex-row flex-col gap-7 justify-center">
-//         <div className="bg-gradient-to-br from-[#000000] justify-center h-[200px] to-[#C81E23] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto">
-//           <h1 className="text-xl font-bold tracking-tight">Brand Visibility</h1>
-//           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-//             Your logo on banners, uniforms, and social media platforms for
-//             maximum exposure.
-//           </p>
-//         </div>
-//         <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] h-[200px] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto lg:my-0 my-5">
-//           <h1 className="text-xl font-bold tracking-tight">
-//             Community Engagement
-//           </h1>
-//           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-//             Connect with hundreds of fans and participants while supporting
-//             local sports.
-//           </p>
-//         </div>
-//         <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] text-[#FFFFFF] h-[200px] rounded-md p-4 lg:w-[30%] w-auto ">
-//           <h1 className="text-xl font-bold tracking-tight">
-//             Networking Opportunities
-//           </h1>
-//           <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-//             Build strong relationships with local businesses and organizations.
-//           </p>
-//         </div>
-//       </div>
-
-//       <div className="mt-12 text-center">
-//         <Link href={"/about/sponsors"}>
-//           <button className="bg-[#C81E23] hover:text-black text-white py-3 px-6 text-lg rounded-md hover:bg-white  hover:border-[#C81E23] hover:border">
-//             Learn more
-//           </button>
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Sponsors;
-
-
-
-
-
-
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Sponsors = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <div className="my-16">
-      <div className="text-center">
-        <h2 className="lg:text-[45px] text-[30px] tracking-tight font-bold text-black mb-3">
-          Our Valued Sponsors
-        </h2>
-        <p className="text-[16px] text-[#6B6F76] tracking-tight mb-12 max-w-[360px] mx-auto leading-tight">
-          Sponsors made Unity Cup 1.0 unforgettable. <br />
-          Join us next time to connect with passionate fans and elevate your brand.
-        </p>
-      </div>
+    <div className="my-24 px-4 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-100 rounded-full opacity-20 mix-blend-multiply animate-pulse"></div>
+      {/* <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-200 rounded-full opacity-20 mix-blend-multiply animate-pulse delay-1000"></div> */}
+      
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="lg:text-4xl text-3xl font-bold text-gray-900 mb-4 tracking-tight">
+            Our <span className="text-red-600">Valued</span> Sponsors
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Sponsors made Unity Cup 1.0 an unforgettable experience. 
+            Join us next time to connect with passionate fans and elevate your brand presence.
+          </p>
+        </div>
 
-      <div className="lg:flex lg:flex-row flex-col gap-7 justify-center">
-        <div className="bg-gradient-to-br from-[#000000] justify-center h-[200px] to-[#C81E23] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto">
-          <h1 className="text-xl font-bold tracking-tight">Brand Visibility</h1>
-          <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-            Sponsors gained exposure through banners, uniforms, and social media.
-          </p>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-16">
+          <div className={`bg-white rounded-xl shadow-lg p-8 border border-gray-100 transition-all duration-700 transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } hover:shadow-xl hover:-translate-y-1`}>
+            <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-6 rounded-full"></div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Brand Visibility</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Sponsors gained prominent exposure through strategic placement on banners, 
+              team uniforms, and across our social media channels reaching thousands of engaged fans.
+            </p>
+          </div>
+          
+          <div className={`bg-white rounded-xl shadow-lg p-8 border border-gray-100 transition-all duration-700 transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } delay-150 hover:shadow-xl hover:-translate-y-1`}>
+            <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-6 rounded-full"></div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Impact</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Connected forward-thinking brands with hundreds of passionate fans 
+              and players who value corporate support of local sports initiatives.
+            </p>
+          </div>
+          
+          <div className={`bg-white rounded-xl shadow-lg p-8 border border-gray-100 transition-all duration-700 transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } delay-300 hover:shadow-xl hover:-translate-y-1 md:col-span-2 lg:col-span-1`}>
+            <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-6 rounded-full"></div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Lasting Connections</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Built valuable, long-term relationships with local businesses and community 
+              organizations that extend far beyond the tournament.
+            </p>
+          </div>
         </div>
-        <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] h-[200px] text-[#FFFFFF] rounded-md p-4 lg:w-[30%] w-auto lg:my-0 my-5">
-          <h1 className="text-xl font-bold tracking-tight">
-            Community Impact
-          </h1>
-          <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-            Connected brands with hundreds of passionate fans and players.
-          </p>
-        </div>
-        <div className="bg-gradient-to-br from-[#000000] to-[#C81E23] text-[#FFFFFF] h-[200px] rounded-md p-4 lg:w-[30%] w-auto">
-          <h1 className="text-xl font-bold tracking-tight">
-            Lasting Connections
-          </h1>
-          <p className="lg:w-[300px] w-auto mt-3 leading-tight tracking-tight text-[#6B6F76]">
-            Built valuable relationships with local businesses and organizations.
-          </p>
-        </div>
-      </div>
 
-      <div className="mt-12 text-center flex flex-col sm:flex-row justify-center gap-4">
-        <Link href="/about/sponsors">
-          <button className="bg-[#C81E23] hover:text-black text-white py-3 px-6 text-lg rounded-md hover:bg-white hover:border-[#C81E23] hover:border transition-all">
-            See sponsors
-          </button>
-        </Link>
-        {/* <Link href="/become-a-sponsor">
-          <button className="bg-white border border-[#C81E23] text-[#C81E23] py-3 px-6 text-lg rounded-md hover:bg-[#C81E23] hover:text-white transition-all">
-            Express Interest for 2.0
-          </button>
-        </Link> */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl shadow-inner border border-gray-100 max-w-3xl mx-auto mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Interested in Sponsoring Unity Cup 2.0?</h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Join our growing list of partners and connect with an engaged community of sports enthusiasts.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/tournament/sponsors">
+                <button className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow hover:shadow-lg">
+                  See Current Sponsors
+                </button>
+              </Link>
+              {/* <Link href="/become-a-sponsor">
+                <button className="bg-white text-red-600 border border-red-600 hover:bg-red-600 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow hover:shadow-lg">
+                  Express Interest for 2.0
+                </button>
+              </Link> */}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

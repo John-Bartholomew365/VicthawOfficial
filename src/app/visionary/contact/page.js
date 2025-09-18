@@ -1,4 +1,5 @@
 import Footer from "@/components/landing-page/Footer";
+import PageLoader from "@/components/PageLoader";
 import CommunityImpact from "@/components/the-visionary/contact/CommunityImpact";
 import ContactHero from "@/components/the-visionary/contact/ContactHero";
 import GetInTouch from "@/components/the-visionary/contact/GetInTouch";
@@ -6,6 +7,7 @@ import React from "react";
 
 const page = () => {
   return (
+    <PageLoader>
     <div className="bg-[#FFFFFF] text-black tracking-tight">
       <ContactHero />
       <div className="container lg:px-[30px] px-2">
@@ -14,6 +16,7 @@ const page = () => {
       </div>
       <Footer />
     </div>
+    </PageLoader>
   );
 };
 

@@ -7,9 +7,16 @@
   --foreground: #ffffff; */
 }
 
-@font-face {
+/* @font-face {
   font-family: "Inter";
   src: url("/Inter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/OpenSans/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +32,8 @@ body {
   /* color: var(--foreground);
   background: var(--background); */
   background-color: #FFFFFF;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -33,3 +41,8 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
+
+
+  .page-transition {
+    animation: pageTransition 0.5s ease-out;
+  }
