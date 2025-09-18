@@ -23,11 +23,11 @@ export default function TicketsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#C90A1D]/10 to-white py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#C90A1D]/10 to-white py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#C90A1D] mb-4">Choose Your TRADFIT Experience</h1>
+          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#C90A1D] mb-4">Choose Your TRADFIT Experience</h1>
           <p className="text-xl text-[#C90A1D]/80 max-w-3xl mx-auto">
             Select the perfect ticket type for your indigenous dance aerobics journey. Both options guarantee an
             unforgettable cultural fitness experience!
