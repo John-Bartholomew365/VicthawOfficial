@@ -1,35 +1,18 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Image from "next/image";
 
 const InfoHero = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-    });
-  }, []);
-
   return (
     <React.Fragment>
       {/* Vision Section */}
       <section className="py-16">
         <div className="lg:w-[520px] w-auto mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 
-            className="text-3xl font-bold text-gray-900 mb-6"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Our Vision
           </h2>
-          <p 
-            className="text-[16px] leading-tight text-gray-600"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <p className="text-[16px] leading-tight text-gray-600">
             To ignite cultural pride and promote healthy living through a
             one-of-a-kind indigenous dance aerobics experience that celebrates
             tradition, unity, and vitality.
@@ -40,19 +23,12 @@ const InfoHero = () => {
       {/* Event Details */}
       <section className="bg-[#FAFAFA] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 
-            className="text-3xl font-bold text-gray-900 text-center mb-12"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Event Details
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <Image src={"/one-day.jpg"} alt="One Day Event" width={100} height={100} className="rounded-full w-[150px] h-[150px] mb-2" />
               <h3 className="text-lg font-semibold text-gray-900">Duration</h3>
               <p className="text-gray-600">
@@ -60,12 +36,8 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-               <Image src={"/venue-day.jpg"} alt="Venue Day Event" width={100} height={100} className="rounded-full w-[150px] h-[150px] mb-2" />
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <Image src={"/venue-day.jpg"} alt="Venue Day Event" width={100} height={100} className="rounded-full w-[150px] h-[150px] mb-2" />
               <h3 className="text-lg font-semibold text-gray-900">Venue</h3>
               <p className="text-gray-600">
                 Open-air garden decorated with indigenous art, fabrics, and
@@ -73,11 +45,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <Image src={"/kente.jpg"} alt="Kente Event" width={100} height={100} className="rounded-full w-[150px] h-[150px] mb-2" />
               <h3 className="text-lg font-semibold text-gray-900">
                 Dress Code
@@ -88,11 +56,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <Image src={"/music.jpg"} alt="Music Event" width={100} height={100} className="rounded-full w-[150px] h-[150px] mb-2" />
               <h3 className="text-lg font-semibold text-gray-900">Music</h3>
               <p className="text-gray-600">
@@ -112,19 +76,12 @@ const InfoHero = () => {
         <div className="absolute top-1/3 right-12 w-10 h-10 bg-[#C90A1D]/10 rounded-full opacity-40"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 
-            className="text-3xl font-bold text-gray-900 text-center mb-12"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold text-gray-909 text-center mb-12">
             Event Activities
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div 
-              className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group"
-              data-aos="flip-left"
-              data-aos-delay="100"
-            >
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group">
               <div className="mb-4 h-2 w-12 bg-[#C90A1D] rounded-full group-hover:w-16 transition-all"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 relative">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">
@@ -138,11 +95,7 @@ const InfoHero = () => {
               <div className="mt-4 text-sm text-[#C90A1D] font-medium">→ Move to ancestral rhythms</div>
             </div>
 
-            <div 
-              className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group"
-              data-aos="flip-left"
-              data-aos-delay="200"
-            >
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group">
               <div className="mb-4 h-2 w-12 bg-[#C90A1D] rounded-full group-hover:w-16 transition-all"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">
@@ -156,11 +109,7 @@ const InfoHero = () => {
               <div className="mt-4 text-sm text-[#C90A1D] font-medium">→ Feel the ancestral heartbeat</div>
             </div>
 
-            <div 
-              className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group"
-              data-aos="flip-left"
-              data-aos-delay="300"
-            >
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group">
               <div className="mb-4 h-2 w-12 bg-[#C90A1D] rounded-full group-hover:w-16 transition-all"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">
@@ -174,11 +123,7 @@ const InfoHero = () => {
               <div className="mt-4 text-sm text-[#C90A1D] font-medium">→ Heal with traditional wisdom</div>
             </div>
 
-            <div 
-              className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group"
-              data-aos="flip-left"
-              data-aos-delay="400"
-            >
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group">
               <div className="mb-4 h-2 w-12 bg-[#C90A1D] rounded-full group-hover:w-16 transition-all"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">
@@ -192,13 +137,9 @@ const InfoHero = () => {
               <div className="mt-4 text-sm text-[#C90A1D] font-medium">→ Taste ancestral flavors</div>
             </div>
 
-            <div 
-              className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group"
-              data-aos="flip-left"
-              data-aos-delay="500"
-            >
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group">
               <div className="mb-4 h-2 w-12 bg-[#C90A1D] rounded-full group-hover:w-16 transition-all"></div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-gray-909 mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">
                   Fashion Showcase
                 </span>
@@ -210,11 +151,7 @@ const InfoHero = () => {
               <div className="mt-4 text-sm text-[#C90A1D] font-medium">→ Wear your heritage proudly</div>
             </div>
 
-            <div 
-              className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group"
-              data-aos="flip-left"
-              data-aos-delay="600"
-            >
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-[#C90A1D] hover:shadow-xl transition-all group">
               <div className="mb-4 h-2 w-12 bg-[#C90A1D] rounded-full group-hover:w-16 transition-all"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">
@@ -238,19 +175,12 @@ const InfoHero = () => {
         <div className="absolute top-20 right-5 w-14 h-14 bg-[#C90A1D]/10 rounded-full opacity-30"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 
-            className="text-3xl font-bold text-gray-900 text-center mb-12"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Who Should Join
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div 
-              className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
+            <div className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C90A1D]/20 to-orange-100 flex items-center justify-center group-hover:from-[#C90A1D]/30 group-hover:to-orange-200 transition-all">
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">F</span>
               </div>
@@ -262,11 +192,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
+            <div className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C90A1D]/20 to-orange-100 flex items-center justify-center group-hover:from-[#C90A1D]/30 group-hover:to-orange-200 transition-all">
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">C</span>
               </div>
@@ -278,11 +204,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
+            <div className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C90A1D]/20 to-orange-100 flex items-center justify-center group-hover:from-[#C90A1D]/30 group-hover:to-orange-200 transition-all">
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">H</span>
               </div>
@@ -294,11 +216,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
+            <div className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C90A1D]/20 to-orange-100 flex items-center justify-center group-hover:from-[#C90A1D]/30 group-hover:to-orange-200 transition-all">
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">T</span>
               </div>
@@ -310,11 +228,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-              data-aos="zoom-in"
-              data-aos-delay="500"
-            >
+            <div className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C90A1D]/20 to-orange-100 flex items-center justify-center group-hover:from-[#C90A1D]/30 group-hover:to-orange-200 transition-all">
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">A</span>
               </div>
@@ -326,11 +240,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-            >
+            <div className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C90A1D]/20 to-orange-100 flex items-center justify-center group-hover:from-[#C90A1D]/30 group-hover:to-orange-200 transition-all">
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#C90A1D] to-orange-600">B</span>
               </div>
@@ -348,19 +258,12 @@ const InfoHero = () => {
       {/* Why This Matters */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 
-            className="text-3xl font-bold text-gray-900 text-center mb-12"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Why TRADFIT RHYTHMS Matters
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="flex items-center gap-3 text-xl font-semibold text-gray-900">
                 <div className="w-8 h-8 bg-[#C90A1D] rounded-full flex items-center justify-center text-white font-bold">
                   1
@@ -374,11 +277,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="flex items-center gap-3 text-xl font-semibold text-gray-900">
                 <div className="w-8 h-8 bg-[#C90A1D] rounded-full flex items-center justify-center text-white font-bold">
                   2
@@ -392,11 +291,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-right"
-              data-aos-delay="200"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="flex items-center gap-3 text-xl font-semibold text-gray-900">
                 <div className="w-8 h-8 bg-[#C90A1D] rounded-full flex items-center justify-center text-white font-bold">
                   3
@@ -409,11 +304,7 @@ const InfoHero = () => {
               </p>
             </div>
 
-            <div 
-              className="bg-white rounded-lg shadow-md p-6"
-              data-aos="fade-left"
-              data-aos-delay="200"
-            >
+            <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="flex items-center gap-3 text-xl font-semibold text-gray-900">
                 <div className="w-8 h-8 bg-[#C90A1D] rounded-full flex items-center justify-center text-white font-bold">
                   4
@@ -432,46 +323,27 @@ const InfoHero = () => {
       {/* Projected Outcomes */}
       <section className="bg-gray-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 
-            className="text-3xl font-bold text-gray-900 text-center mb-12"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Expected Impact
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div 
-              className="text-center"
-              data-aos="flip-up"
-              data-aos-delay="100"
-            >
+            <div className="text-center">
               <div className="text-4xl font-bold text-[#C90A1D] mb-2">500+</div>
               <p className="text-gray-600">Attendees in first event</p>
             </div>
 
-            <div 
-              className="text-center"
-              data-aos="flip-up"
-              data-aos-delay="200"
-            >
+            <div className="text-center">
               <div className="text-4xl font-bold text-[#C90A1D] mb-2">50K+</div>
               <p className="text-gray-600">Online impressions</p>
             </div>
 
-            <div 
-              className="text-center"
-              data-aos="flip-up"
-              data-aos-delay="300"
-            >
+            <div className="text-center">
               <div className="text-4xl font-bold text-[#C90A1D] mb-2">20+</div>
               <p className="text-gray-600">Vendors engaged</p>
             </div>
 
-            <div 
-              className="text-center"
-              data-aos="flip-up"
-              data-aos-delay="400"
-            >
+            <div className="text-center">
               <div className="text-4xl font-bold text-[#C90A1D] mb-2">∞</div>
               <p className="text-gray-600">Cultural goodwill</p>
             </div>
@@ -482,26 +354,15 @@ const InfoHero = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-            data-aos="fade-up"
-          >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Join the Movement
           </h2>
-          <p 
-            className="text-gray-600 mb-8 lg:w-[480px] w-auto mx-auto leading-tight"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
+          <p className="text-gray-600 mb-8 lg:w-[480px] w-auto mx-auto leading-tight">
             TRADFIT RHYTHMS is more than movement; it is a heartbeat, a
             celebration of who we are, and a call to embrace our bodies,
             culture, and community.
           </p>
-          <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/tradfit/sponsors"
               className="inline-block bg-[#C90A1D] text-white px-6 py-2 rounded-[10px] font-semibold hover:bg-red-700 transition-colors"

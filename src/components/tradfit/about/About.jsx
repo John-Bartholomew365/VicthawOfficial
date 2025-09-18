@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Heart,
   Users,
@@ -9,20 +9,10 @@ import {
   Calendar,
   MapPin,
 } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Link from "next/link";
 import Image from "next/image";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
-    });
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Mission & Vision */}
@@ -30,15 +20,8 @@ const About = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNDOTBBMUQiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjwvZz48L3N2Zz4=')] opacity-50"></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div
-            data-aos="fade-up"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12"
-          >
-            <div
-              data-aos="fade-right"
-              data-aos-delay="100"
-              className="bg-white shadow-xl rounded-2xl p-8 border border-[#F9C6CC]"
-            >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="bg-white shadow-xl rounded-2xl p-8 border border-[#F9C6CC]">
               <div className="flex items-center mb-6">
                 <div className="bg-[#FDF2F3] p-3 rounded-full mr-4">
                   <Target className="h-8 w-8 text-[#C90A1D]" />
@@ -56,11 +39,7 @@ const About = () => {
               </p>
             </div>
 
-            <div
-              data-aos="fade-left"
-              data-aos-delay="100"
-              className="bg-white shadow-xl rounded-2xl p-8 border border-[#F9C6CC]"
-            >
+            <div className="bg-white shadow-xl rounded-2xl p-8 border border-[#F9C6CC]">
               <div className="flex items-center mb-6">
                 <div className="bg-[#FDF2F3] p-3 rounded-full mr-4">
                   <Sparkles className="h-8 w-8 text-[#C90A1D]" />
@@ -82,30 +61,19 @@ const About = () => {
       {/* Program Experience */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-3 lg:px-8">
-          <div data-aos="fade-up">
-            <h2
-              data-aos="fade-up"
-              className="lg:text-[28px] text-[24px] font-bold text-center text-gray-900 mb-4 leading-tight"
-            >
+          <div>
+            <h2 className="lg:text-[28px] text-[24px] font-bold text-center text-gray-909 mb-4 leading-tight">
               The TRADFIT RHYTHMS Experience
             </h2>
 
-            <p
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="text-gray-600 text-center lg:w-[420px] w-auto mx-auto mb-16 leading-tight"
-            >
+            <p className="text-gray-600 text-center lg:w-[420px] w-auto mx-auto mb-16 leading-tight">
               Immerse yourself in a day of cultural celebration, fitness, and
               community connection
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Dance Aerobics */}
-              <div
-                data-aos="flip-left"
-                data-aos-delay="0"
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2"
-              >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
                 <div className="h-48 relative">
                   <Image
                     src="/cultural.jpg"
@@ -126,11 +94,7 @@ const About = () => {
               </div>
 
               {/* Live Music */}
-              <div
-                data-aos="flip-left"
-                data-aos-delay="150"
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2"
-              >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
                 <div className="h-48 relative">
                   <Image
                     src="/talking-drum.jpg"
@@ -152,11 +116,7 @@ const About = () => {
               </div>
 
               {/* Cultural Cuisine */}
-              <div
-                data-aos="flip-left"
-                data-aos-delay="300"
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2"
-              >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
                 <div className="h-48 relative">
                   <Image
                     src="/cuisine.jpg"
@@ -182,29 +142,18 @@ const About = () => {
       {/* Why It Matters */}
       <section className="py-20 bg-gradient-to-br from-[#C90A1D] to-[#8A0614] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-aos="fade-up">
-            <h2
-              data-aos="fade-up"
-              className="lg:text-[28px] text-[24px] font-bold text-center mb-4"
-            >
+          <div>
+            <h2 className="lg:text-[28px] text-[24px] font-bold text-center mb-4">
               Why TRADFIT RHYTHMS Matters
             </h2>
 
-            <p
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="text-center text-white/90 max-w-3xl mx-auto mb-16 lg:w-[400px] w-auto leading-tight"
-            >
+            <p className="text-center text-white/90 max-w-3xl mx-auto mb-16 lg:w-[400px] w-auto leading-tight">
               Our program creates impact across multiple dimensions of community
               and culture
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div
-                data-aos="fade-up"
-                data-aos-delay="0"
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
                   <span className="bg-white/20 p-2 rounded-full mr-3">
                     <Sparkles size={20} />
@@ -217,11 +166,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div
-                data-aos="fade-up"
-                data-aos-delay="150"
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
                   <span className="bg-white/20 p-2 rounded-full mr-3">
                     <Heart size={20} />
@@ -234,11 +179,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div
-                data-aos="fade-up"
-                data-aos-delay="300"
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
                   <span className="bg-white/20 p-2 rounded-full mr-3">
                     <Users size={20} />
@@ -251,11 +192,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div
-                data-aos="fade-up"
-                data-aos-delay="450"
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
                   <span className="bg-white/20 p-2 rounded-full mr-3">
                     <Target size={20} />
@@ -274,27 +211,14 @@ const About = () => {
       {/* Event Details */}
       <section className="lg:py-20 py-14 bg-[#FDF2F3] rounded-[10px]">
         <div className="max-w-6xl mx-auto px-3 lg:px-8">
-          <div
-            data-aos="fade-up"
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
-          >
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="md:flex">
-              <div
-                data-aos="fade-right"
-                className="md:w-1/2 bg-gradient-to-br from-[#C90A1D] to-[#8A0614] lg:p-12 p-8 text-white flex flex-col justify-center"
-              >
-                <h2
-                  data-aos="fade-right"
-                  className="lg:text-3xl text-[24px] font-bold mb-6"
-                >
+              <div className="md:w-1/2 bg-gradient-to-br from-[#C90A1D] to-[#8A0614] lg:p-12 p-8 text-white flex flex-col justify-center">
+                <h2 className="lg:text-3xl text-[24px] font-bold mb-6">
                   Event Details
                 </h2>
 
-                <div
-                  data-aos="fade-right"
-                  data-aos-delay="100"
-                  className="flex items-start mb-6"
-                >
+                <div className="flex items-start mb-6">
                   <Calendar className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Date & Time</h3>
@@ -305,11 +229,7 @@ const About = () => {
                   </div>
                 </div>
 
-                <div
-                  data-aos="fade-right"
-                  data-aos-delay="200"
-                  className="flex items-start mb-6"
-                >
+                <div className="flex items-start mb-6">
                   <MapPin className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Venue Ambience</h3>
@@ -320,11 +240,7 @@ const About = () => {
                   </div>
                 </div>
 
-                <div
-                  data-aos="fade-right"
-                  data-aos-delay="300"
-                  className="flex items-start"
-                >
+                <div className="flex items-start">
                   <Users className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Dress Code</h3>
@@ -336,64 +252,41 @@ const About = () => {
                 </div>
               </div>
 
-              <div data-aos="fade-left" className="md:w-1/2 lg:p-12 p-8">
-                <h3
-                  data-aos="fade-left"
-                  className="text-2xl font-bold text-gray-900 mb-6"
-                >
+              <div className="md:w-1/2 lg:p-12 p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Who Should Attend
                 </h3>
 
                 <ul className="space-y-4">
-                  <li
-                    data-aos="fade-left"
-                    data-aos-delay="100"
-                    className="flex items-start"
-                  >
+                  <li className="flex items-start">
                     <div className="bg-[#FDF2F3] rounded-full p-2 mr-4 flex-shrink-0">
                       <Heart className="h-5 w-5 text-[#C90A1D]" />
                     </div>
                     <span>Fitness lovers seeking unique experiences</span>
                   </li>
 
-                  <li
-                    data-aos="fade-left"
-                    data-aos-delay="200"
-                    className="flex items-start"
-                  >
+                  <li className="flex items-start">
                     <div className="bg-[#FDF2F3] rounded-full p-2 mr-4 flex-shrink-0">
                       <Music className="h-5 w-5 text-[#C90A1D]" />
                     </div>
                     <span>Cultural enthusiasts and creatives</span>
                   </li>
 
-                  <li
-                    data-aos="fade-left"
-                    data-aos-delay="300"
-                    className="flex items-start"
-                  >
+                  <li className="flex items-start">
                     <div className="bg-[#FDF2F3] rounded-full p-2 mr-4 flex-shrink-0">
                       <Target className="h-5 w-5 text-[#C90A1D]" />
                     </div>
                     <span>Health-conscious individuals of all ages</span>
                   </li>
 
-                  <li
-                    data-aos="fade-left"
-                    data-aos-delay="400"
-                    className="flex items-start"
-                  >
+                  <li className="flex items-start">
                     <div className="bg-[#FDF2F3] rounded-full p-2 mr-4 flex-shrink-0">
                       <Users className="h-5 w-5 text-[#C90A1D]" />
                     </div>
                     <span>Tourists, expats, and the Afrocentric diaspora</span>
                   </li>
 
-                  <li
-                    data-aos="fade-left"
-                    data-aos-delay="500"
-                    className="flex items-start"
-                  >
+                  <li className="flex items-start">
                     <div className="bg-[#FDF2F3] rounded-full p-2 mr-4 flex-shrink-0">
                       <Sparkles className="h-5 w-5 text-[#C90A1D]" />
                     </div>
@@ -410,26 +303,18 @@ const About = () => {
       {/* Call to Action */}
       <section className="py-20  text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div data-aos="fade-up">
-            <h2 data-aos="fade-up" className="text-3xl font-bold mb-6">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">
               Join the Movement
             </h2>
 
-            <p
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="mb-10 text-gray-600 lg:w-[470px] w-auto mx-auto leading-tight"
-            >
+            <p className="mb-10 text-gray-600 lg:w-[470px] w-auto mx-auto leading-tight">
               TRADFIT RHYTHMS is more than movement; it is a heartbeat, a
               celebration of who we are, and a call to embrace our bodies,
               culture, and community.
             </p>
 
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="200"
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={"/auth/register"}>
                 <button className="bg-[#C90A1D] text-white px-8 py-2 rounded-full font-semibold hover:bg-[#A30818] lg:text-[16px] text-[18px] transition-colors lg:w-fit w-full">
                   Register Now
@@ -485,7 +370,7 @@ const About = () => {
   }
   .animate-float-slower {
     animation: float-slower 10s ease-in-out infinite;
-  }
+  }
 `}</style>
     </div>
   );
