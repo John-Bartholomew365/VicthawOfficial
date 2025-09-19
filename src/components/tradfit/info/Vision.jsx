@@ -4,7 +4,7 @@ import React from "react";
 const Vision = () => {
   return (
     <div className="lg:flex lg:flex-row flex-col items-center gap-[100px] lg:my-[100px] my-[50px] lg:pl-[50px] pl-0">
-      <div data-aos="fade-right">
+      <div>
         <h1 className="lg:text-[45px] lg:w-[471px] w-auto tracking-tight font-bold text-[30px] leading-tight lg:text-left text-center">
           Our Vision
         </h1>
@@ -15,7 +15,7 @@ const Vision = () => {
         </p>
       </div>
 
-      <div className="lg:mt-0 mt-10" data-aos="fade-left">
+      <div className="lg:mt-0 mt-10">
         <Image
           src="/all-tribe.jpeg"
           alt="logo"
