@@ -1,9 +1,7 @@
-"use client";
+"use client"
 import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
-import Info from "@/components/tradfit/info/Info";
-import AboutHero from "@/components/tradfit/info/InfoHero";
-import Vision from "@/components/tradfit/info/Vision";
+import CollaborationPage from "@/components/tradfit/collaboration/Collaboration";
 import { Howl } from "howler";
 import { useEffect, useRef, useState } from "react";
 
@@ -62,13 +60,8 @@ const Page = () => {
             {error}
           </div>
         )}
-        <div>
-          <Info />
-        </div>
-        <div className="container lg:px-[0px] px-2">
-          <Vision />
-          <AboutHero />
-          {/* <AboutUs /> */}
+        <div className="container lg:px-[10px] px-2">
+          <CollaborationPage />
         </div>
         <Footer />
       </div>

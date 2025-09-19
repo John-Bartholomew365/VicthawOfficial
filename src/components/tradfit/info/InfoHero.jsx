@@ -6,19 +6,6 @@ import Image from "next/image";
 const InfoHero = () => {
   return (
     <React.Fragment>
-      {/* Vision Section */}
-      <section className="py-16">
-        <div className="lg:w-[520px] w-auto mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Our Vision
-          </h2>
-          <p className="text-[16px] leading-tight text-gray-600">
-            To ignite cultural pride and promote healthy living through a
-            one-of-a-kind indigenous dance aerobics experience that celebrates
-            tradition, unity, and vitality.
-          </p>
-        </div>
-      </section>
 
       {/* Event Details */}
       <section className="bg-[#FAFAFA] py-14">

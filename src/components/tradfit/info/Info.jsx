@@ -54,11 +54,7 @@ const Info = () => {
             </span>
 
             {/* Main title */}
-            <h1
-              className="lg:text-[50px] text-[30px] font-bold text-[#C90A1D] mb-6 tracking-tight lg:text-start text-center"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
+            <h1 className="lg:text-[50px] text-[30px] font-bold mb-3 bg-gradient-to-r from-yellow-200 via-orange-200 to-pink-300 bg-clip-text text-transparent animate-gradient lg:text-left text-center">
               TRADFIT RHYTHMS
             </h1>
 
@@ -77,9 +73,9 @@ const Info = () => {
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              A cultural revival, celebration of indigenous heritage, and wellness
-              movement rolled into one. Experience high-energy aerobics merged
-              with rich African/indigenous dance traditions.
+              A cultural revival, celebration of indigenous heritage, and
+              wellness movement rolled into one. Experience high-energy aerobics
+              merged with rich African/indigenous dance traditions.
             </p>
 
             {/* CTA buttons */}

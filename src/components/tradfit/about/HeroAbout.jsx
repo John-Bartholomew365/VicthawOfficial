@@ -69,7 +69,7 @@ const HeroAbout = () => {
             className="lg:text-[56px] text-[36px] font-bold text-white mb-5 leading-tight"
           >
             Move to the Beat of <br className="hidden lg:block" />
-            Your <span className="text-[#C90A1D]">Heritage</span>
+            Your <span className="bg-gradient-to-r from-yellow-200 via-orange-200 to-pink-300 bg-clip-text text-transparent animate-gradient">Heritage</span>
           </h1>
 
           <p

@@ -114,6 +114,12 @@ const Navbar = () => {
                   Sponsors
                 </Link>
                 <Link
+                  href="/tradfit/collaboration"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                >
+                  Collaboration
+                </Link>
+                <Link
                   href="/tradfit/faq"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
@@ -129,13 +135,13 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Tournament Info Dropdown */}
+          {/* Victhaw Official Unity Cup Dropdown */}
           <div className="relative">
             <div
               className="text-sm gap-2 items-center flex cursor-pointer"
               onClick={() => toggleDropdown("tournament")}
             >
-              <div className="font-navbar">Tournament Info</div>
+              <div className="font-navbar">Victhaw Official Unity Cup</div>
               <svg
                 className={`w-4 h-4 ml-1 transition-transform duration-300 ${
                   openDropdown === "tournament" ? "rotate-180" : ""
@@ -362,6 +368,12 @@ const Navbar = () => {
                     Sponsors
                   </Link>
                   <Link
+                    href="/tradfit/collaboration"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    Collaboration
+                  </Link>
+                  <Link
                     href="/tradfit/faq"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
@@ -379,14 +391,14 @@ const Navbar = () => {
 
 
 
-            {/* Tournament Info Dropdown for Mobile */}
+            {/* Victhaw Official Dropdown for Mobile */}
             <div className="w-full">
               <div
                 className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleDropdown("tournament-mobile")}
               >
                 <div className="font-navbar text-[16px] text-[#000000] hover:text-[#C81E23] transition-colors">
-                  Tournament Info
+                  Victhaw Official Unity Cup
                 </div>
                 <svg
                   className={`w-4 h-4 transition-transform duration-300 ${
