@@ -16,8 +16,8 @@
 //       );
 //     }
 
-//     // Construct the base URL
-//     const base_url = `${process.env.BASE_URL}/admin/update-tradit-status/${Id}`;
+//     // Construct the base URL with search parameter
+//     const base_url = `${process.env.BASE_URL}/admin/update-tradit-status?Id=${Id}`;
 
 //     // Extract the token from the request headers
 //     const token = req.headers.get("token");
@@ -42,7 +42,7 @@
 //       },
 //       {
 //         headers: {
-//           token: token, // or "Authorization": `Bearer ${token}` if backend expects it
+//           token: token, // Original token header
 //           "Content-Type": "application/json",
 //         },
 //       }
@@ -71,9 +71,6 @@
 
 
 
-
-
-
 import axios from "axios";
 import { NextResponse } from "next/server";
 
@@ -92,8 +89,8 @@ export async function PATCH(req) {
       );
     }
 
-    // Construct the base URL with search parameter
-    const base_url = `${process.env.BASE_URL}/admin/update-tradit-status?Id=${Id}`;
+    // Construct the correct URL with ID in the path
+    const base_url = `${process.env.BASE_URL}/admin/update-tradit-status/${Id}`;
 
     // Extract the token from the request headers
     const token = req.headers.get("token");
@@ -107,6 +104,7 @@ export async function PATCH(req) {
 
     console.log("Token:", token);
     console.log("Id:", Id);
+    console.log("Full URL:", base_url);
 
     // Make the PATCH request using axios
     const response = await axios.patch(
@@ -118,7 +116,7 @@ export async function PATCH(req) {
       },
       {
         headers: {
-          token: token, // Original token header
+          token: token,
           "Content-Type": "application/json",
         },
       }
