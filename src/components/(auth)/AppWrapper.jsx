@@ -35,7 +35,8 @@ const AppWrapper = ({ children }) => {
     "/setup",
     "/payment",
     "/tradfit/admin",
-    "/auth/login"
+    "/auth/login",
+    "/auth/register",
   ].includes(pathName);
 
   return (

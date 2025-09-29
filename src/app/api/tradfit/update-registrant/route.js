@@ -90,7 +90,7 @@ export async function PATCH(req) {
     }
 
     // Construct the correct URL with ID in the path
-    const base_url = `${process.env.BASE_URL}/admin/update-tradit-status/${Id}`;
+    const base_url = `${process.env.BASE_URL}/admin/update-tradfit-status/${Id}`;
 
     // Extract the token from the request headers
     const token = req.headers.get("token");
