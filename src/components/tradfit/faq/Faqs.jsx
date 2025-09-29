@@ -30,7 +30,13 @@ const FAQPage = () => {
       id: "who-can-participate",
       question: "Who can participate in TRADFIT RHYTHMS?",
       answer:
-        "TRADFIT RHYTHMS is open to everyone! Whether you’re a fitness lover, a cultural enthusiast, health-conscious, a tourist, an expat, part of the Afrocentric diaspora, or even a corporate group, you’re welcome to join in. No prior dance experience is required — just come with your energy, excitement, and readiness to move to the beat of your heritage.",
+        "TRADFIT RHYTHMS is open to everyone! Whether you're a fitness lover, a cultural enthusiast, health-conscious, a tourist, an expat, part of the Afrocentric diaspora, or even a corporate group, you're welcome to join in. No prior dance experience is required — just come with your energy, excitement, and readiness to move to the beat of your heritage.",
+    },
+    {
+      id: "who-will-attend",
+      question: "Who will be attending the event?",
+      answer:
+        "TRADFIT RHYTHMS attracts a diverse and prestigious audience including top government dignitaries, cultural ambassadors, fitness enthusiasts, corporate leaders, and members of the diplomatic community. Our events are attended by influential figures who support cultural preservation and wellness initiatives, creating excellent networking opportunities for all participants.",
     },
     {
       id: "what-to-expect",
@@ -39,10 +45,28 @@ const FAQPage = () => {
         "You'll experience cultural dance aerobics sessions, live music and drumming circles, wellness booths with indigenous herbs and massage, traditional food and drink stalls, fashion showcases featuring indigenous athletic wear, and storytelling or spoken word interludes. The venue is decorated with indigenous art, fabrics, and motifs to create an immersive cultural experience.",
     },
     {
+      id: "ticket-options",
+      question: "What ticket options are available?",
+      answer:
+        "We offer three ticket types: Regular Ticket (₦3,000) for basic access, Regular with Cloth (₦8,000) which includes a custom TRADFIT outfit plus all regular benefits, and VIP Experience (₦12,000) for premium access with exclusive perks and surprises. Each option provides different levels of experience and benefits.",
+    },
+    {
+      id: "regular-with-cloth",
+      question: "What's included in the Regular with Cloth ticket?",
+      answer:
+        "The Regular with Cloth ticket (₦8,000) includes a premium customized TRADFIT outfit specially designed for the event, plus all Regular ticket benefits: access to all dance sessions, community activities, basic refreshments, free WiFi, general parking, and photo opportunities. It's our most popular option for those who want the complete cultural fitness experience.",
+    },
+    {
+      id: "cloth-details",
+      question: "Can you tell me more about the custom TRADFIT clothing?",
+      answer:
+        "The custom TRADFIT clothing is a premium outfit specially designed for our dance aerobics sessions. It's made from quality, breathable fabric perfect for movement, features unique cultural designs, and serves as a memorable souvenir from the event. You'll receive information about sizing and collection after registration. It's designed to be both functional for fitness and representative of our cultural heritage.",
+    },
+    {
       id: "dress-code",
       question: "What should I wear to the event?",
       answer:
-        "We encourage cultural fitness-inspired attire such as Ankara shorts, kente wraps, beads, and other traditional African/indigenous clothing. However, comfortable workout clothes are also perfectly acceptable. The key is to wear something you can move freely in while celebrating cultural heritage.",
+        "We encourage cultural fitness-inspired attire such as Ankara shorts, kente wraps, beads, and other traditional African/indigenous clothing. However, comfortable workout clothes are also perfectly acceptable. The key is to wear something you can move freely in while celebrating cultural heritage. If you purchase the Regular with Cloth ticket, you'll have your custom outfit for the event!",
     },
     {
       id: "fitness-level",
@@ -60,7 +84,7 @@ const FAQPage = () => {
       id: "frequency",
       question: "How often do you hold events?",
       answer:
-        "TRADFIT RHYTHMS is part of a growing series of cultural and wellness experiences. We’ve already hosted events such as our football tournament, with more editions on the way. For TRADFIT RHYTHMS and other programs, we begin with flagship one-day events and plan to expand into recurring series, monthly experiences, and even a national tour. Stay connected through our website and social media for announcements on upcoming events.",
+        "TRADFIT RHYTHMS is part of a growing series of cultural and wellness experiences. We've already hosted events such as our football tournament, with more editions on the way. For TRADFIT RHYTHMS and other programs, we begin with flagship one-day events and plan to expand into recurring series, monthly experiences, and even a national tour. Stay connected through our website and social media for announcements on upcoming events.",
     },
     {
       id: "sponsorship",
@@ -119,7 +143,7 @@ const FAQPage = () => {
             data-aos-delay="300"
           >
             Find answers to common questions about TRADFIT RHYTHMS, our events,
-            and how to get involved in our community.
+            ticket options, and how to get involved in our community.
           </p>
         </div>
       </section>

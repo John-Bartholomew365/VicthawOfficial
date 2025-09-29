@@ -203,7 +203,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center border-t border-white/10 py-8 mt-[80px]">
           <div className="mb-6 lg:mt-0 lg:block hidden">
             <p className="copyright text-[#6B6F76] text-[14px] text-center lg:text-left">
-              &copy; 2025 Victhaw Official Unity Cup. All rights reserved.
+              &copy; 2025 Victhaw Official. All rights reserved.
             </p>
           </div>
           <div className="flex gap-3">
@@ -242,7 +242,7 @@ const Footer = () => {
           </div>
           <div className="mt-4 lg:mb-0 lg:hidden block">
             <p className="copyright text-[#6B6F76] text-[14px] text-center lg:text-left">
-              &copy; 2025 Victhaw Official Unity Cup. <br /> All rights
+              &copy; 2025 Victhaw Official. <br /> All rights
               reserved.
             </p>
           </div>

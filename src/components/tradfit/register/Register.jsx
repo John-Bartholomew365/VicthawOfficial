@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,10 +16,15 @@ export default function RegisterPage() {
     gender: "",
     ageRange: "",
     culture: "",
+    clothingSize: "",
     ticketType: "regular",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
+  const [timeLeft, setTimeLeft] = useState({});
+
+  // Registration deadline: November 28, 2025, 23:59:59
+  const deadline = new Date("2025-11-28T23:59:59").getTime();
 
   useEffect(() => {
     AOS.init({
@@ -26,41 +32,115 @@ export default function RegisterPage() {
       once: true,
       offset: 100,
     });
+
+    // Countdown timer
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = deadline - now;
+
+      if (distance <= 0) {
+        clearInterval(timer);
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+          expired: true,
+        });
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        expired: false,
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Generate a unique ticket ID
-    const ticketId = `TF${Date.now().toString().slice(-6)}`;
+    try {
+      const payload = {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        contact_no: formData.phone,
+        gender: formData.gender,
+        age: formData.ageRange,
+        tribe: formData.culture,
+        ticket_type: formData.ticketType, // Backend expects "regular with cloth"
+        size: formData.clothingSize,
+      };
 
-    const registrations = JSON.parse(
-      localStorage.getItem("tradfit_registrations") || "[]"
-    );
-    const newRegistration = {
-      ...formData,
-      ticketId,
-      registrationDate: new Date().toISOString(),
-      confirmed: false,
-      paymentStatus: "pending",
-      receiptUrl: null,
-    };
-    registrations.push(newRegistration);
-    localStorage.setItem(
-      "tradfit_registrations",
-      JSON.stringify(registrations)
-    );
+      console.log("Sending payload to API:", payload);
 
-    // Store current registration for payment page
-    localStorage.setItem(
-      "current_registration",
-      JSON.stringify(newRegistration)
-    );
+      const response = await axios.post("/api/tradfit/register", payload, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    setTimeout(() => {
-      router.push("/auth/register/payment");
-    }, 1000);
+      const result = response.data;
+      console.log("API response:", result);
+
+      if (result.statusCode === "00") {
+        const registrations = JSON.parse(
+          localStorage.getItem("tradfit_registrations") || "[]"
+        );
+        const newRegistration = {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          gender: formData.gender,
+          ageRange: formData.ageRange,
+          culture: formData.culture,
+          ticketType: formData.ticketType, // Ensure correct ticketType
+          clothingSize: formData.clothingSize || "N/A", // Fallback for clothingSize
+          ticketId: result.data.ticket_id,
+          registrationId: result.data._id, // Store _id for API calls
+          registrationDate: new Date().toISOString(),
+          confirmed: false,
+          paymentStatus: "pending",
+          receiptUrl: null,
+        };
+        console.log("Saving new registration to localStorage:", newRegistration);
+
+        registrations.push(newRegistration);
+        localStorage.setItem(
+          "tradfit_registrations",
+          JSON.stringify(registrations)
+        );
+
+        localStorage.setItem(
+          "current_registration",
+          JSON.stringify(newRegistration)
+        );
+
+        router.push("/auth/register/payment");
+      } else {
+        alert(result.message || "Registration failed. Please try again.");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error("Error submitting registration:", {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+      });
+      alert(
+        error.response?.data?.message ||
+          "An error occurred. Please try again later."
+      );
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field, value) => {
@@ -77,7 +157,6 @@ export default function RegisterPage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Step 1: Personal Information
   const renderStep1 = () => (
     <div data-aos="fade-up" data-aos-delay="200">
       <div className="mb-6">
@@ -135,7 +214,6 @@ export default function RegisterPage() {
     </div>
   );
 
-  // Step 2: Contact Information
   const renderStep2 = () => (
     <div data-aos="fade-up" data-aos-delay="200">
       <div className="mb-6">
@@ -201,7 +279,6 @@ export default function RegisterPage() {
     </div>
   );
 
-  // Step 3: Additional Details
   const renderStep3 = () => (
     <div data-aos="fade-up" data-aos-delay="200">
       <div className="mb-6">
@@ -212,11 +289,10 @@ export default function RegisterPage() {
       </div>
 
       <div className="space-y-6">
-        {/* Gender Selection */}
         <div className="space-y-3" data-aos="fade-up">
           <p className="text-[#C90A1D] font-medium">Gender *</p>
           <div className="flex flex-wrap gap-6">
-            {["male", "female", "other"].map((gender, index) => (
+            {["male", "female"].map((gender, index) => (
               <div
                 key={gender}
                 className="flex items-center space-x-2"
@@ -244,7 +320,6 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        {/* Age Range */}
         <div className="space-y-2" data-aos="fade-up" data-aos-delay="200">
           <label htmlFor="ageRange" className="text-[#C90A1D] font-medium">
             Age Range *
@@ -260,15 +335,14 @@ export default function RegisterPage() {
             <option value="" disabled>
               Select your age range
             </option>
-            <option value="18-25">18-24 years</option>
-            <option value="25-35">25-34 years</option>
-            <option value="35-45">35-44 years</option>
+            <option value="18-24">18-24 years</option>
+            <option value="25-34">25-34 years</option>
+            <option value="35-44">35-44 years</option>
             <option value="45-55">45-54 years</option>
-            <option value="55+">55 & Above</option>
+            <option value="55&above">55 & Above</option>
           </select>
         </div>
 
-        {/* Culture Input - NEW FIELD ADDED */}
         <div className="space-y-2" data-aos="fade-up" data-aos-delay="300">
           <label htmlFor="culture" className="text-[#C90A1D] font-medium">
             Cultural Background
@@ -286,6 +360,32 @@ export default function RegisterPage() {
             Tell us about your cultural heritage
           </p>
         </div>
+
+        <div className="space-y-2" data-aos="fade-up" data-aos-delay="400">
+          <label htmlFor="clothingSize" className="text-[#C90A1D] font-medium">
+            Clothing Size *
+          </label>
+          <select
+            id="clothingSize"
+            value={formData.clothingSize}
+            onChange={(e) => handleInputChange("clothingSize", e.target.value)}
+            className="w-full border border-[#C90A1D]/30 focus:border-[#C90A1D] rounded-md p-3 focus:outline-none transition-all duration-300 focus:ring-2 focus:ring-[#C90A1D]/30"
+            required
+            aria-label="Select your clothing size"
+          >
+            <option value="" disabled>
+              Select your clothing size
+            </option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+          <p className="text-sm text-[#C90A1D]/60">
+            Select your size for event merchandise
+          </p>
+        </div>
       </div>
 
       <div className="mt-6 flex justify-between">
@@ -300,7 +400,7 @@ export default function RegisterPage() {
           type="button"
           onClick={nextStep}
           className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105"
-          disabled={!formData.gender || !formData.ageRange}
+          disabled={!formData.gender || !formData.ageRange || !formData.clothingSize}
         >
           Next Step
         </button>
@@ -308,7 +408,6 @@ export default function RegisterPage() {
     </div>
   );
 
-  // Step 4: Ticket Selection
   const renderStep4 = () => (
     <div data-aos="fade-up" data-aos-delay="200">
       <div className="mb-6">
@@ -344,10 +443,41 @@ export default function RegisterPage() {
               htmlFor="regular"
               className="text-[#C90A1D] font-medium cursor-pointer"
             >
-              Regular Ticket - ₦5,000
+              Regular Ticket - ₦3,000
             </label>
             <p className="text-sm text-[#C90A1D]/80 mt-1">
               Access to all dance sessions, basic amenities, and event materials
+            </p>
+          </div>
+        </div>
+
+        <div
+          className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
+            formData.ticketType === "regular with cloth"
+              ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
+              : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
+          }`}
+          onClick={() => handleInputChange("ticketType", "regular with cloth")}
+          data-aos="fade-left"
+        >
+          <input
+            type="radio"
+            id="regular-with-cloth"
+            name="ticketType"
+            value="regular with cloth"
+            checked={formData.ticketType === "regular with cloth"}
+            onChange={(e) => handleInputChange("ticketType", e.target.value)}
+            className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
+          />
+          <div className="flex-1">
+            <label
+              htmlFor="regular-with-cloth"
+              className="text-[#C90A1D] font-medium cursor-pointer"
+            >
+              Regular Ticket with Cloth - ₦8,000
+            </label>
+            <p className="text-sm text-[#C90A1D]/80 mt-1">
+              All the benefits of the Regular Ticket, plus a customized traditional attire to celebrate your cultural heritage
             </p>
           </div>
         </div>
@@ -375,12 +505,10 @@ export default function RegisterPage() {
               htmlFor="vip"
               className="text-[#C90A1D] font-medium cursor-pointer"
             >
-              VIP Ticket - ₦10,000
+              VIP Ticket - ₦12,000
             </label>
             <p className="text-sm text-[#C90A1D]/80 mt-1">
-              Premium experience with exclusive benefits: front-row access, VIP
-              lounge, complimentary refreshments, special gift package, and
-              personalized attention
+              Premium experience with exclusive benefits: front-row access, VIP lounge, complimentary refreshments, special gift package, and personalized attention
             </p>
           </div>
         </div>
@@ -396,7 +524,7 @@ export default function RegisterPage() {
         </button>
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || timeLeft.expired}
           className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 disabled:bg-[#C90A1D]/50 disabled:transform-none lg:w-fit w-full"
         >
           {isSubmitting ? (
@@ -423,6 +551,8 @@ export default function RegisterPage() {
               </svg>
               Processing...
             </span>
+          ) : timeLeft.expired ? (
+            "Registration Closed"
           ) : (
             "Complete Registration"
           )}
@@ -432,33 +562,75 @@ export default function RegisterPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#C90A1D]/10 to-white py-24 lg:py-24">
-      <div className="container mx-auto px-4 lg:px-24 max-w-2xl">
-        {/* Progress Bar */}
+    <div
+      className="min-h-screen py-24 lg:py-24 bg-cover bg-center relative"
+      style={{
+        backgroundImage: `url('/option3.jpg')`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black/85"></div>
+      <div className="container mx-auto px-4 lg:px-24 max-w-2xl relative z-10">
         <div className="mb-8" data-aos="fade-down">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-[#C90A1D]">
+            <span className="text-sm font-medium text-[#FFFFFF]">
               Step {currentStep} of 4
             </span>
-            <span className="text-sm text-[#C90A1D]/70">
+            <span className="text-sm text-[#FFFFFF]/70">
               {Math.round((currentStep / 4) * 100)}% Complete
             </span>
           </div>
-          <div className="w-full bg-[#C90A1D]/20 rounded-full h-2">
+          <div className="w-full bg-[#FFFFFF]/20 rounded-full h-2">
             <div
-              className="bg-[#C90A1D] h-2 rounded-full transition-all duration-500 ease-in-out"
+              className="bg-[#FFFFFF] h-2 rounded-full transition-all duration-500 ease-in-out"
               style={{ width: `${(currentStep / 4) * 100}%` }}
             ></div>
           </div>
         </div>
 
         <div className="text-center mb-8" data-aos="fade-up">
-          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#C90A1D] mb-3">
+          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#FFFFFF] mb-3">
             Register for TRADFIT RHYTHMS
           </h1>
-          <p className="text-[#C90A1D]/80 leading-tight">
+          <p className="text-[#FFFFFF]/80 leading-tight">
             Join us for an unforgettable indigenous dance aerobics experience!
           </p>
+          {timeLeft.expired ? (
+            <p className="text-[#FFFFFF] font-semibold mt-4 bg-red-600/20 p-4 rounded-lg">
+              Registration has closed. Stay tuned for future events!
+            </p>
+          ) : (
+            <div className="mt-4 bg-[#C90A1D]/10 p-4 rounded-lg">
+              <p className="text-[#FFFFFF] font-semibold">
+                Registration Closes In:
+              </p>
+              <div className="flex justify-center gap-4 mt-2">
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.days || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Days</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.hours || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Hours</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.minutes || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Minutes</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.seconds || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Seconds</span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div
@@ -474,7 +646,6 @@ export default function RegisterPage() {
               {currentStep === 4 && "Select your preferred experience"}
             </p>
           </div>
-
           <div className="p-6 md:p-8">
             <form onSubmit={handleSubmit}>
               {currentStep === 1 && renderStep1()}
@@ -484,24 +655,22 @@ export default function RegisterPage() {
             </form>
           </div>
         </div>
-
         <div
           className="text-center mt-6"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <p className="text-[#C90A1D]/80">
+          <p className="text-[#FFFFFF]/80">
             Want to learn more about ticket benefits?{" "}
             <a
               href="/tradfit/tickets"
-              className="text-[#C90A1D] hover:text-[#A30818] font-medium underline transition-colors duration-300"
+              className="text-[#FFFFFF] hover:text-[#FFFFFE] font-medium underline transition-colors duration-300"
             >
-              Compare VIP vs Regular tickets
+              Compare ticket options
             </a>
           </p>
         </div>
       </div>
-
       <style jsx>{`
         @keyframes pulse {
           0% {
@@ -514,11 +683,9 @@ export default function RegisterPage() {
             transform: scale(1);
           }
         }
-
         .animate-pulse-slow {
           animation: pulse 2s infinite;
         }
-
         input:focus,
         select:focus {
           box-shadow: 0 0 0 3px rgba(201, 10, 29, 0.1);

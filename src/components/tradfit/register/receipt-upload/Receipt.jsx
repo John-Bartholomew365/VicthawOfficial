@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import { Upload, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ReceiptUploadPage() {
   const router = useRouter();
@@ -12,10 +15,34 @@ export default function ReceiptUploadPage() {
   const [isUploading, setIsUploading] = useState(false);
 
   useEffect(() => {
-    const currentReg = localStorage.getItem("current_registration");
-    if (currentReg) {
-      setRegistration(JSON.parse(currentReg));
-    } else {
+    try {
+      const currentReg = localStorage.getItem("current_registration");
+      console.log("Raw current_registration from localStorage:", currentReg);
+
+      if (currentReg) {
+        const parsedReg = JSON.parse(currentReg);
+        console.log("Parsed registration:", parsedReg);
+
+        if (!parsedReg.registrationId || !parsedReg.ticketId) {
+          toast.error("Missing registration details. Please register again.", {
+            position: "top-right",
+          });
+          router.push("/auth/register");
+          return;
+        }
+
+        setRegistration(parsedReg);
+      } else {
+        toast.error("No registration found. Please complete the registration process.", {
+          position: "top-right",
+        });
+        router.push("/auth/register");
+      }
+    } catch (error) {
+      console.error("Error parsing localStorage:", error);
+      toast.error("Invalid registration data. Please register again.", {
+        position: "top-right",
+      });
       router.push("/auth/register");
     }
   }, [router]);
@@ -23,21 +50,22 @@ export default function ReceiptUploadPage() {
   const handleFileSelect = (event) => {
     const file = event.target.files?.[0];
     if (file) {
-      // Check file type
       if (!file.type.startsWith("image/")) {
-        alert("Please select an image file (PNG, JPG, etc.)");
+        toast.error("Please select an image file (PNG, JPG, etc.)", {
+          position: "top-right",
+        });
         return;
       }
 
-      // Check file size (max 5MB)
       if (file.size > 5 * 1024 * 1024) {
-        alert("File size must be less than 5MB");
+        toast.error("File size must be less than 5MB", {
+          position: "top-right",
+        });
         return;
       }
 
       setSelectedFile(file);
 
-      // Create preview URL
       const reader = new FileReader();
       reader.onload = (e) => {
         setPreviewUrl(e.target?.result);
@@ -47,77 +75,150 @@ export default function ReceiptUploadPage() {
   };
 
   const handleUpload = async () => {
-    if (!selectedFile || !registration) return;
+    if (!selectedFile || !registration) {
+      toast.error("Please select a receipt image.", { position: "top-right" });
+      return;
+    }
+
+    if (!registration.registrationId || !registration.ticketId) {
+      toast.error("Registration ID or Ticket ID is missing. Please register again.", {
+        position: "top-right",
+      });
+      router.push("/auth/register");
+      return;
+    }
 
     setIsUploading(true);
 
-    // Simulate file upload (in real app, this would upload to a server)
-    // For now, we'll store the file as base64 in localStorage
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const base64 = e.target?.result;
+    try {
+      const formData = new FormData();
+      formData.append("tradfitId", registration.registrationId);
+      formData.append("receipt", selectedFile);
 
-      // Update registration with receipt
-      const registrations = JSON.parse(
-        localStorage.getItem("tradfit_registrations") || "[]"
-      );
-      const updatedRegistrations = registrations.map((reg) =>
-        reg.ticketId === registration.ticketId
-          ? {
-              ...reg,
-              receiptUrl: base64,
-              paymentStatus: "receipt_uploaded",
-              receiptUploadDate: new Date().toISOString(),
-            }
-          : reg
-      );
+      console.log("Sending API request:", {
+        tradfitId: registration.registrationId,
+        fileName: selectedFile.name,
+        fileSize: (selectedFile.size / 1024 / 1024).toFixed(2) + " MB",
+        fileType: selectedFile.type,
+      });
 
-      localStorage.setItem(
-        "tradfit_registrations",
-        JSON.stringify(updatedRegistrations)
+      const response = await axios.post(
+        "/api/tradfit/upload-receipt",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
 
-      // Update current registration
-      const updatedCurrentReg = {
-        ...registration,
-        receiptUrl: base64,
-        paymentStatus: "receipt_uploaded",
-      };
-      localStorage.setItem(
-        "current_registration",
-        JSON.stringify(updatedCurrentReg)
-      );
+      const result = response.data;
+      console.log("API response:", result);
 
-      setTimeout(() => {
+      if (result.statusCode === "00") {
+        const registrations = JSON.parse(
+          localStorage.getItem("tradfit_registrations") || "[]"
+        );
+        const updatedRegistrations = registrations.map((reg) =>
+          reg.ticketId === registration.ticketId
+            ? {
+                ...reg,
+                receiptUrl: result.data.receipt_url || previewUrl,
+                paymentStatus: "receipt_uploaded",
+                receiptUploadDate: new Date().toISOString(),
+              }
+            : reg
+        );
+
+        localStorage.setItem(
+          "tradfit_registrations",
+          JSON.stringify(updatedRegistrations)
+        );
+
+        const updatedCurrentReg = {
+          ...registration,
+          receiptUrl: result.data.receipt_url || previewUrl,
+          paymentStatus: "receipt_uploaded",
+          receiptUploadDate: new Date().toISOString(),
+        };
+        localStorage.setItem(
+          "current_registration",
+          JSON.stringify(updatedCurrentReg)
+        );
+
+        toast.success("Receipt uploaded successfully!", {
+          position: "top-right",
+        });
+        setTimeout(() => {
+          router.push("/auth/register/confirmation");
+        }, 2000);
+      } else {
+        toast.error(result.message || "Failed to upload receipt.", {
+          position: "top-right",
+        });
         setIsUploading(false);
-        router.push("/auth/register/confirmation");
-      }, 2000);
-    };
-    reader.readAsDataURL(selectedFile);
+      }
+    } catch (error) {
+      console.error("Error uploading receipt:", {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+      });
+      toast.error(
+        error.response?.data?.message ||
+          "An error occurred while uploading the receipt.",
+        { position: "top-right" }
+      );
+      setIsUploading(false);
+    }
+  };
+
+  const getDisplayTicketType = (ticketType) => {
+    switch (ticketType) {
+      case "regular with cloth":
+        return "Regular with Cloth";
+      case "vip":
+        return "VIP";
+      case "regular":
+      default:
+        return "Regular";
+    }
   };
 
   if (!registration) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#C90A1D]/10 to-white flex items-center justify-center">
-        <div className="text-center">
+      <div
+        className="min-h-screen bg-cover bg-center relative flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/option3.jpg')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/85"></div>
+        <div className="text-center relative z-10">
           <Upload
             className="w-16 h-16 text-[#C90A1D] mx-auto mb-4"
             aria-label="Loading icon"
           />
-          <p className="text-[#C90A1D]/80">Loading upload page...</p>
+          <p className="text-[#FFFFFF]/80">Loading upload page...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#C90A1D]/10 to-white py-24">
-      <div className="container mx-auto px-4 lg:px-24 max-w-2xl">
+    <div
+      className="min-h-screen py-24 bg-cover bg-center relative"
+      style={{
+        backgroundImage: `url('/option3.jpg')`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black/85"></div>
+      <div className="container mx-auto px-4 lg:px-24 max-w-2xl relative z-10">
         <div className="text-center mb-8">
-          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#C90A1D] mb-2">
+          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#FFFFFF] mb-2">
             Upload Payment Receipt
           </h1>
-          <p className="text-[#C90A1D]/80 lg:px-0 px-5 leading-tight">
+          <p className="text-[#FFFFFF]/80 lg:px-0 px-5 leading-tight">
             Upload a clear screenshot of your successful payment transaction
           </p>
         </div>
@@ -128,13 +229,12 @@ export default function ReceiptUploadPage() {
               <Upload className="w-5 h-5" aria-label="Upload icon" />
               Receipt Upload - {registration.ticketId}
             </h2>
-            <p className="text-[#C90A1D]/50">
+            <p className="text-[#FFFFFF]/80">
               For {registration.firstName} {registration.lastName} (
-              {registration.ticketType.toUpperCase()} Ticket)
+              {getDisplayTicketType(registration.ticketType)} Ticket)
             </p>
           </div>
           <div className="p-8 space-y-6">
-            {/* Upload Instructions */}
             <div className="bg-[#C90A1D]/5 p-4 rounded-lg border border-[#C90A1D]/30">
               <h3 className="font-semibold text-[#C90A1D] mb-2">
                 Upload Requirements:
@@ -148,7 +248,6 @@ export default function ReceiptUploadPage() {
               </ul>
             </div>
 
-            {/* File Upload */}
             <div className="space-y-4">
               <label htmlFor="receipt" className="text-[#C90A1D] font-medium">
                 Select Receipt Image *
@@ -171,9 +270,7 @@ export default function ReceiptUploadPage() {
                     aria-label="Upload icon"
                   />
                   <span className="text-[#C90A1D] font-medium">
-                    {selectedFile
-                      ? "Change Receipt"
-                      : "Click to upload receipt"}
+                    {selectedFile ? "Change Receipt" : "Click to upload receipt"}
                   </span>
                   <span className="text-sm text-[#C90A1D]/80">
                     PNG, JPG up to 5MB
@@ -182,7 +279,6 @@ export default function ReceiptUploadPage() {
               </div>
             </div>
 
-            {/* File Preview */}
             {previewUrl && (
               <div className="space-y-2">
                 <p className="text-[#C90A1D] font-medium">Receipt Preview:</p>
@@ -200,7 +296,6 @@ export default function ReceiptUploadPage() {
               </div>
             )}
 
-            {/* Upload Button */}
             <button
               onClick={handleUpload}
               disabled={!selectedFile || isUploading}
@@ -230,7 +325,6 @@ export default function ReceiptUploadPage() {
               )}
             </button>
 
-            {/* Warning */}
             <div className="bg-[#C90A1D]/5 p-4 rounded-lg border border-[#C90A1D]/30">
               <div className="flex items-start gap-2">
                 <AlertCircle
@@ -242,15 +336,14 @@ export default function ReceiptUploadPage() {
                     Important Notice:
                   </p>
                   <p className="text-[#C90A1D]/80 text-sm mt-1">
-                    Your registration will be pending until our admin team
-                    verifies your payment receipt. You'll receive your official
-                    ticket once verification is complete.
+                    Your registration will be pending until our admin team verifies your payment receipt. You'll receive your official ticket confirmation via email once verification is complete.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       </div>
     </div>
   );

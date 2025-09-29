@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import axios from "axios"; // Import axios
 import { Shield, Eye, EyeOff } from "lucide-react";
 
 export default function AdminLoginPage() {
@@ -17,32 +18,55 @@ export default function AdminLoginPage() {
     setIsLoading(true);
     setError("");
 
-    // Simple admin credentials (in production, this would be handled securely)
-    const adminCredentials = {
-      username: "tradfit_admin",
-      password: "TradFit2024!",
-    };
+    try {
+      // Prepare payload for API
+      const payload = {
+        email: username, // Using username as email, as per API payload
+        password,
+      };
 
-    // Simulate API call delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Sending login payload:", payload); // Log payload for debugging
 
-    if (username === adminCredentials.username && password === adminCredentials.password) {
-      // Set admin session in localStorage
-      localStorage.setItem(
-        "tradfit_admin_session",
-        JSON.stringify({
-          isAuthenticated: true,
-          loginTime: new Date().toISOString(),
-          username: username,
-        })
+      // Make API call to /api/tradfit/login
+      const response = await axios.post("/api/login", payload, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = response.data;
+      console.log("API response:", result); // Log response for debugging
+
+      if (result.statusCode === "00") {
+        // Store admin session in localStorage
+        localStorage.setItem(
+          "tradfit_admin_session",
+          JSON.stringify({
+            isAuthenticated: true,
+            loginTime: new Date().toISOString(),
+            username: result.data.username || username, // Use API-provided username if available
+            token: result.data.token, // Store token for future API calls
+          })
+        );
+
+        // Redirect to admin dashboard
+        router.push("/tradfit/admin");
+      } else {
+        setError(result.message || "Invalid username or password. Please try again.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Login error:", {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+      });
+      setError(
+        error.response?.data?.message ||
+          "An error occurred. Please try again later."
       );
-
-      router.push("/tradfit/admin");
-    } else {
-      setError("Invalid username or password. Please try again.");
+      setIsLoading(false);
     }
-
-    setIsLoading(false);
   };
 
   return (
@@ -118,15 +142,6 @@ export default function AdminLoginPage() {
               {isLoading ? "Signing in..." : "Sign In"}
             </button>
           </form>
-
-          <div className="mt-6 p-4 bg-[#C90A1D]/5 rounded-lg border border-[#C90A1D]/30">
-            <h4 className="font-semibold text-[#C90A1D] mb-2">Demo Credentials:</h4>
-            <p className="text-sm text-[#C90A1D]/80">
-              <strong>Username:</strong> tradfit_admin
-              <br />
-              <strong>Password:</strong> TradFit2024!
-            </p>
-          </div>
         </div>
       </div>
     </div>

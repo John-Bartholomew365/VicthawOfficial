@@ -95,7 +95,7 @@ const HeroSection = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-0">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
-          {/* Image Section - First on mobile, right on desktop */}
+          {/* Image Section */}
           <div
             className="w-full lg:w-[45%] order-1 lg:order-2 flex justify-center"
             data-aos="fade-left"
@@ -106,13 +106,27 @@ const HeroSection = () => {
                 className="absolute -inset-2 border-2 rounded-lg opacity-30 transition-all duration-700"
                 style={{ borderColor: carousel.accentColor }}
               ></div>
-              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
+              <div
+                className="relative w-full h-full rounded-lg overflow-hidden shadow-lg"
+                style={
+                  carousel.id === "tradfit"
+                    ? {
+                        backgroundImage: `url(/option3.jpg)`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }
+                    : { backgroundColor: "white" }
+                }
+              >
+                {carousel.id === "tradfit" && (
+                  <div className="absolute inset-0 bg-black/80"></div>
+                )}
                 <Image
                   key={carousel.image}
                   src={carousel.image}
                   alt={`${carousel.id} event`}
                   fill
-                  className="object-cover"
+                  className="object-cover relative z-10"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
@@ -120,7 +134,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Text Section - Below image on mobile, left on desktop */}
+          {/* Text Section */}
           <div
             className="w-full lg:w-[55%] order-2 lg:order-1 text-center lg:text-left space-y-6"
             data-aos="fade-right"
@@ -157,7 +171,7 @@ const HeroSection = () => {
                   <span className="block text-[#C90A1D] text-2xl sm:text-3xl md:text-4xl lg:text-[44px]">
                     {carousel.firstText}
                   </span>
-                 <span className="block lg:h-6 h-4 text-gray-800 lg:mt-5 mt-4 text-[19px] lg:text-[27px]">
+                  <span className="block lg:h-6 h-4 text-gray-800 lg:mt-5 mt-4 text-[19px] lg:text-[27px]">
                     {displayText}
                     {isTyping && <span className="animate-pulse">|</span>}
                   </span>

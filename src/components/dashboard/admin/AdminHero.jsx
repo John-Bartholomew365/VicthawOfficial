@@ -737,7 +737,7 @@ const AdminHero = () => {
                       className="text-[#C81E23] hover:underline"
                     >
                       View Proof
-                    </a>
+                    </a> 
                   ) : (
                     <p className="text-[#6B6F76]">No proof submitted</p>
                   )}
