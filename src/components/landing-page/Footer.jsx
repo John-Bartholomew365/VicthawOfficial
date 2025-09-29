@@ -198,7 +198,7 @@ const Footer = () => {
           </div>
         </div> */}
       </div>
-
+ 
       <div>
         <div className="flex flex-col lg:flex-row justify-between items-center border-t border-white/10 py-8 mt-[80px]">
           <div className="mb-6 lg:mt-0 lg:block hidden">
