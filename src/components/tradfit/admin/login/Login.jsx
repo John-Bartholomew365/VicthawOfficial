@@ -50,9 +50,11 @@ export default function AdminLoginPage() {
         );
 
         // Redirect to admin dashboard
-        router.push("/tradfit/admin");
+        router.push("/admin/tradfit");
       } else {
-        setError(result.message || "Invalid username or password. Please try again.");
+        setError(
+          result.message || "Invalid username or password. Please try again."
+        );
         setIsLoading(false);
       }
     } catch (error) {
@@ -74,10 +76,15 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md border border-[#C90A1D]/30 rounded-lg bg-white shadow-lg">
         <div className="text-center p-6">
           <div className="mx-auto w-16 h-16 bg-[#C90A1D]/10 rounded-full flex items-center justify-center mb-4">
-            <Shield className="w-8 h-8 text-[#C90A1D]" aria-label="Shield icon" />
+            <Shield
+              className="w-8 h-8 text-[#C90A1D]"
+              aria-label="Shield icon"
+            />
           </div>
           <h2 className="text-2xl font-bold text-[#C90A1D]">Admin Login</h2>
-          <p className="text-[#C90A1D]/80">Access the TRADFIT RHYTHMS admin dashboard</p>
+          <p className="text-[#C90A1D]/80">
+            Access the TRADFIT RHYTHMS admin dashboard
+          </p>
         </div>
         <div className="p-6">
           <form onSubmit={handleLogin} className="space-y-4">
@@ -119,9 +126,15 @@ export default function AdminLoginPage() {
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? (
-                    <EyeOff className="h-4 w-4 text-[#C90A1D]" aria-label="Eye off icon" />
+                    <EyeOff
+                      className="h-4 w-4 text-[#C90A1D]"
+                      aria-label="Eye off icon"
+                    />
                   ) : (
-                    <Eye className="h-4 w-4 text-[#C90A1D]" aria-label="Eye icon" />
+                    <Eye
+                      className="h-4 w-4 text-[#C90A1D]"
+                      aria-label="Eye icon"
+                    />
                   )}
                 </button>
               </div>

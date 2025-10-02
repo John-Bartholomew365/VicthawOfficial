@@ -37,6 +37,7 @@ const AppWrapper = ({ children }) => {
     "/tradfit/admin",
     "/auth/login",
     "/auth/register",
+    "/admin/tradfit"
   ].includes(pathName);
 
   return (
