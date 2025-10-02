@@ -505,10 +505,10 @@ export default function RegisterPage() {
               htmlFor="vip"
               className="text-[#C90A1D] font-medium cursor-pointer"
             >
-              VIP Ticket - ₦12,000
+              VIP Ticket - ₦20,000
             </label>
             <p className="text-sm text-[#C90A1D]/80 mt-1">
-              Premium experience with exclusive benefits: front-row access, VIP lounge, complimentary refreshments, special gift package, and personalized attention
+             A premium experience awaits — an unforgettable package designed to elevate every moment.
             </p>
           </div>
         </div>

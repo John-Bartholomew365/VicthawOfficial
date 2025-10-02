@@ -47,7 +47,7 @@ export default function PaymentPage() {
   const ticketPrices = {
     regular: 3000,
     "regular with cloth": 8000,
-    vip: 12000,
+    vip: 20000,
   };
 
   const getDisplayTicketType = (ticketType) => {

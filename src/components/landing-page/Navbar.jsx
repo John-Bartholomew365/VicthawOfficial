@@ -108,6 +108,12 @@ const Navbar = () => {
                   About
                 </Link>
                 <Link
+                  href="/tradfit/tickets"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                >
+                  Ticket
+                </Link>
+                <Link
                   href="/tradfit/sponsors"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
@@ -360,6 +366,12 @@ const Navbar = () => {
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     About
+                  </Link>
+                  <Link
+                    href="/tradfit/tickets"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    Ticket
                   </Link>
                   <Link
                     href="/tradfit/sponsors"

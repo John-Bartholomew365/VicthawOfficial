@@ -48,7 +48,7 @@ const FAQPage = () => {
       id: "ticket-options",
       question: "What ticket options are available?",
       answer:
-        "We offer three ticket types: Regular Ticket (₦3,000) for basic access, Regular with Cloth (₦8,000) which includes a custom TRADFIT outfit plus all regular benefits, and VIP Experience (₦12,000) for premium access with exclusive perks and surprises. Each option provides different levels of experience and benefits.",
+        "We offer three ticket types: Regular Ticket (₦3,000) for basic access, Regular with Cloth (₦8,000) which includes a custom TRADFIT outfit plus all regular benefits, and VIP Experience (₦20,000) for premium access with exclusive perks and surprises. Each option provides different levels of experience and benefits.",
     },
     {
       id: "regular-with-cloth",
