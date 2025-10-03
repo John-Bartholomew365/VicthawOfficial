@@ -7,7 +7,7 @@ export async function POST(req) {
     const body = await req.json();
     console.log("Incoming body:", body);
 
-    // Build payload for backend
+    // Build payload for backend - ADD subscribe_to_updates
     const payload = {
       first_name: body.first_name,
       last_name: body.last_name,
@@ -18,10 +18,12 @@ export async function POST(req) {
       tribe: body.tribe,
       ticket_type: body.ticket_type, // "regular" | "vip"
       size: body.size, // "S" | "M" | "L" | "XL" | "XXL"
+      subscribe_to_updates: body.subscribe_to_updates,
     };
 
     const base_url = `${process.env.BASE_URL}/auth/register/tradfit`;
     console.log("Sending request to:", base_url);
+    console.log("Payload being sent to backend:", payload);
 
     const response = await axios.post(base_url, payload, {
       headers: {

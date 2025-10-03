@@ -18,6 +18,7 @@ export default function RegisterPage() {
     culture: "",
     clothingSize: "",
     ticketType: "regular",
+    subscribeToUpdates: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
@@ -52,7 +53,9 @@ export default function RegisterPage() {
 
       setTimeLeft({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000),
         expired: false,
@@ -75,8 +78,9 @@ export default function RegisterPage() {
         gender: formData.gender,
         age: formData.ageRange,
         tribe: formData.culture,
-        ticket_type: formData.ticketType, // Backend expects "regular with cloth"
+        ticket_type: formData.ticketType,
         size: formData.clothingSize,
+        subscribe_to_updates: formData.subscribeToUpdates ? 'true' : 'false', // FIXED: Convert to string
       };
 
       console.log("Sending payload to API:", payload);
@@ -102,16 +106,20 @@ export default function RegisterPage() {
           gender: formData.gender,
           ageRange: formData.ageRange,
           culture: formData.culture,
-          ticketType: formData.ticketType, // Ensure correct ticketType
-          clothingSize: formData.clothingSize || "N/A", // Fallback for clothingSize
+          ticketType: formData.ticketType,
+          clothingSize: formData.clothingSize || "N/A",
+          subscribeToUpdates: formData.subscribeToUpdates,
           ticketId: result.data.ticket_id,
-          registrationId: result.data._id, // Store _id for API calls
+          registrationId: result.data._id,
           registrationDate: new Date().toISOString(),
           confirmed: false,
           paymentStatus: "pending",
           receiptUrl: null,
         };
-        console.log("Saving new registration to localStorage:", newRegistration);
+        console.log(
+          "Saving new registration to localStorage:",
+          newRegistration
+        );
 
         registrations.push(newRegistration);
         localStorage.setItem(
@@ -400,7 +408,9 @@ export default function RegisterPage() {
           type="button"
           onClick={nextStep}
           className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105"
-          disabled={!formData.gender || !formData.ageRange || !formData.clothingSize}
+          disabled={
+            !formData.gender || !formData.ageRange || !formData.clothingSize
+          }
         >
           Next Step
         </button>
@@ -410,105 +420,139 @@ export default function RegisterPage() {
 
   const renderStep4 = () => (
     <div data-aos="fade-up" data-aos-delay="200">
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold text-[#C90A1D] mb-2">
-          Select Your Ticket
-        </h3>
-        <p className="text-[#C90A1D]/70">
-          Choose the experience that suits you best
-        </p>
+      <div>
+        <div className="mb-6">
+          <h3 className="text-xl font-semibold text-[#C90A1D] mb-2">
+            Select Your Ticket
+          </h3>
+          <p className="text-[#C90A1D]/70">
+            Choose the experience that suits you best
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <div
+            className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
+              formData.ticketType === "regular"
+                ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
+                : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
+            }`}
+            onClick={() => handleInputChange("ticketType", "regular")}
+            data-aos="fade-right"
+          >
+            <input
+              type="radio"
+              id="regular"
+              name="ticketType"
+              value="regular"
+              checked={formData.ticketType === "regular"}
+              onChange={(e) => handleInputChange("ticketType", e.target.value)}
+              className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
+            />
+            <div className="flex-1">
+              <label
+                htmlFor="regular"
+                className="text-[#C90A1D] font-medium cursor-pointer"
+              >
+                Regular Ticket - ₦3,000
+              </label>
+              <p className="text-sm text-[#C90A1D]/80 mt-1">
+                Access to all dance sessions, basic amenities, and event
+                materials
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
+              formData.ticketType === "regular with cloth"
+                ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
+                : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
+            }`}
+            onClick={() =>
+              handleInputChange("ticketType", "regular with cloth")
+            }
+            data-aos="fade-left"
+          >
+            <input
+              type="radio"
+              id="regular-with-cloth"
+              name="ticketType"
+              value="regular with cloth"
+              checked={formData.ticketType === "regular with cloth"}
+              onChange={(e) => handleInputChange("ticketType", e.target.value)}
+              className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
+            />
+            <div className="flex-1">
+              <label
+                htmlFor="regular-with-cloth"
+                className="text-[#C90A1D] font-medium cursor-pointer"
+              >
+                Regular Ticket with Cloth - ₦8,000
+              </label>
+              <p className="text-sm text-[#C90A1D]/80 mt-1">
+                All the benefits of the Regular Ticket, plus a customized
+                traditional attire to celebrate your cultural heritage
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
+              formData.ticketType === "vip"
+                ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
+                : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
+            }`}
+            onClick={() => handleInputChange("ticketType", "vip")}
+            data-aos="fade-left"
+          >
+            <input
+              type="radio"
+              id="vip"
+              name="ticketType"
+              value="vip"
+              checked={formData.ticketType === "vip"}
+              onChange={(e) => handleInputChange("ticketType", e.target.value)}
+              className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
+            />
+            <div className="flex-1">
+              <label
+                htmlFor="vip"
+                className="text-[#C90A1D] font-medium cursor-pointer"
+              >
+                VIP Ticket - ₦20,000
+              </label>
+              <p className="text-sm text-[#C90A1D]/80 mt-1">
+                A premium experience awaits — an unforgettable package designed
+                to elevate every moment.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="space-y-4">
-        <div
-          className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
-            formData.ticketType === "regular"
-              ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
-              : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
-          }`}
-          onClick={() => handleInputChange("ticketType", "regular")}
-          data-aos="fade-right"
-        >
+      {/* NEW SUBSCRIBE TO UPDATES CHECKBOX */}
+      <div className="space-y-3 mt-10" data-aos="fade-up" data-aos-delay="500">
+        <div className="flex items-start space-x-3 lg:p-4 p-3 border border-[#C90A1D]/30 rounded-lg bg-[#C90A1D]/5 hover:bg-[#C90A1D]/10 transition-all duration-300">
           <input
-            type="radio"
-            id="regular"
-            name="ticketType"
-            value="regular"
-            checked={formData.ticketType === "regular"}
-            onChange={(e) => handleInputChange("ticketType", e.target.value)}
-            className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
+            type="checkbox"
+            id="subscribeToUpdates"
+            checked={formData.subscribeToUpdates}
+            onChange={(e) =>
+              handleInputChange("subscribeToUpdates", e.target.checked)
+            }
+            className="mt-1 w-5 h-5 border-2 border-[#C90A1D] rounded focus:ring-[#C90A1D] focus:ring-2 text-[#C90A1D] bg-white cursor-pointer transition-all duration-300"
           />
           <div className="flex-1">
             <label
-              htmlFor="regular"
-              className="text-[#C90A1D] font-medium cursor-pointer"
+              htmlFor="subscribeToUpdates"
+              className="text-[#C90A1D] font-medium cursor-pointer text-lg leading-tight"
             >
-              Regular Ticket - ₦3,000
+             Stay in the Rhythm!
             </label>
-            <p className="text-sm text-[#C90A1D]/80 mt-1">
-              Access to all dance sessions, basic amenities, and event materials
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
-            formData.ticketType === "regular with cloth"
-              ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
-              : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
-          }`}
-          onClick={() => handleInputChange("ticketType", "regular with cloth")}
-          data-aos="fade-left"
-        >
-          <input
-            type="radio"
-            id="regular-with-cloth"
-            name="ticketType"
-            value="regular with cloth"
-            checked={formData.ticketType === "regular with cloth"}
-            onChange={(e) => handleInputChange("ticketType", e.target.value)}
-            className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
-          />
-          <div className="flex-1">
-            <label
-              htmlFor="regular-with-cloth"
-              className="text-[#C90A1D] font-medium cursor-pointer"
-            >
-              Regular Ticket with Cloth - ₦8,000
-            </label>
-            <p className="text-sm text-[#C90A1D]/80 mt-1">
-              All the benefits of the Regular Ticket, plus a customized traditional attire to celebrate your cultural heritage
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={`flex items-start space-x-4 p-4 border rounded-lg cursor-pointer transition-all duration-300 ${
-            formData.ticketType === "vip"
-              ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
-              : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
-          }`}
-          onClick={() => handleInputChange("ticketType", "vip")}
-          data-aos="fade-left"
-        >
-          <input
-            type="radio"
-            id="vip"
-            name="ticketType"
-            value="vip"
-            checked={formData.ticketType === "vip"}
-            onChange={(e) => handleInputChange("ticketType", e.target.value)}
-            className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
-          />
-          <div className="flex-1">
-            <label
-              htmlFor="vip"
-              className="text-[#C90A1D] font-medium cursor-pointer"
-            >
-              VIP Ticket - ₦20,000
-            </label>
-            <p className="text-sm text-[#C90A1D]/80 mt-1">
-             A premium experience awaits — an unforgettable package designed to elevate every moment.
+            <p className="text-sm text-[#C90A1D]/80 mt-2 leading-relaxed">
+              Be the first to know about exclusive events, early bird discounts,
+              and exciting cultural gatherings! Join our inner circle and never
+              miss a beat of our vibrant community celebrations.
             </p>
           </div>
         </div>
@@ -689,6 +733,38 @@ export default function RegisterPage() {
         input:focus,
         select:focus {
           box-shadow: 0 0 0 3px rgba(201, 10, 29, 0.1);
+        }
+
+        /* Custom checkbox styling to maintain red color */
+        input[type="checkbox"] {
+          appearance: none;
+          -webkit-appearance: none;
+          background-color: white;
+          border: 2px solid #c90a1d;
+          border-radius: 4px;
+          cursor: pointer;
+          position: relative;
+        }
+
+        input[type="checkbox"]:checked {
+          background-color: #c90a1d;
+          border-color: #c90a1d;
+        }
+
+        input[type="checkbox"]:checked::before {
+          content: "✓";
+          position: absolute;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        input[type="checkbox"]:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(201, 10, 29, 0.3);
         }
       `}</style>
     </div>

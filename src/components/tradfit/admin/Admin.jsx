@@ -16,6 +16,8 @@ import {
   XCircle,
   Upload,
   AlertCircle,
+  Bell,
+  BellOff,
 } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,6 +30,7 @@ export default function AdminPage() {
   const [filterAgeRange, setFilterAgeRange] = useState("all");
   const [filterGender, setFilterGender] = useState("all");
   const [filterPaymentStatus, setFilterPaymentStatus] = useState("all");
+  const [filterSubscribeUpdates, setFilterSubscribeUpdates] = useState("all");
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -70,6 +73,7 @@ export default function AdminPage() {
               clothingSize: reg.size || "N/A",
               paymentStatus: reg.payment_status,
               status: reg.status,
+              subscribeToUpdates: reg.subscribe_to_updates === 'true', // FIXED: Convert string to boolean
               receiptUrl,
             };
           });
@@ -107,13 +111,18 @@ export default function AdminPage() {
       const matchesPaymentStatus =
         filterPaymentStatus === "all" ||
         reg.paymentStatus === filterPaymentStatus;
+      const matchesSubscribeUpdates =
+        filterSubscribeUpdates === "all" ||
+        (filterSubscribeUpdates === "subscribed" && reg.subscribeToUpdates) ||
+        (filterSubscribeUpdates === "not-subscribed" && !reg.subscribeToUpdates);
 
       return (
         matchesSearch &&
         matchesTicketType &&
         matchesAgeRange &&
         matchesGender &&
-        matchesPaymentStatus
+        matchesPaymentStatus &&
+        matchesSubscribeUpdates
       );
     });
 
@@ -125,6 +134,7 @@ export default function AdminPage() {
     filterAgeRange,
     filterGender,
     filterPaymentStatus,
+    filterSubscribeUpdates,
   ]);
 
   const handlePaymentAction = async (id, action) => {
@@ -196,6 +206,7 @@ export default function AdminPage() {
       "Ticket ID",
       "Payment Status",
       "Status",
+      "Subscribe to Updates", // Added to CSV export
     ];
     const csvContent = [
       headers.join(","),
@@ -213,6 +224,7 @@ export default function AdminPage() {
           reg.ticketId,
           reg.paymentStatus,
           reg.status,
+          reg.subscribeToUpdates ? "Yes" : "No", // Added this field
         ].join(",")
       ),
     ].join("\n");
@@ -234,6 +246,7 @@ export default function AdminPage() {
     confirmed: registrations.filter((r) => r.paymentStatus === "confirmed").length,
     pending: registrations.filter((r) => r.paymentStatus === "pending").length,
     submitted: registrations.filter((r) => r.paymentStatus === "submitted").length,
+    subscribed: registrations.filter((r) => r.subscribeToUpdates).length, // New stat
   };
 
   return (
@@ -250,7 +263,7 @@ export default function AdminPage() {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-4 mb-8">
           <div className="border border-[#C90A1D]/30 rounded-lg bg-white p-4 text-center">
             <Users className="w-8 h-8 text-[#C90A1D] mx-auto mb-2" aria-label="Total registrations icon" />
             <p className="text-2xl font-bold text-[#C90A1D]">{stats.total}</p>
@@ -281,6 +294,12 @@ export default function AdminPage() {
             <p className="text-2xl font-bold text-[#C90A1D]">{stats.submitted}</p>
             <p className="text-sm text-[#C90A1D]/80">Receipts Submitted</p>
           </div>
+          {/* New Stat Card for Subscribers */}
+          <div className="border border-[#C90A1D]/30 rounded-lg bg-white p-4 text-center">
+            <Bell className="w-8 h-8 text-[#C90A1D] mx-auto mb-2" aria-label="Subscribers icon" />
+            <p className="text-2xl font-bold text-[#C90A1D]">{stats.subscribed}</p>
+            <p className="text-sm text-[#C90A1D]/80">Want Updates</p>
+          </div>
         </div>
 
         {/* Filters and Search */}
@@ -292,7 +311,7 @@ export default function AdminPage() {
             </h2>
           </div>
           <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
               <div className="relative">
                 <Search className="w-4 h-4 absolute left-3 top-3 text-[#C90A1D]" aria-label="Search icon" />
                 <input
@@ -348,6 +367,17 @@ export default function AdminPage() {
                 <option value="submitted">Receipt Submitted</option>
                 <option value="confirmed">Confirmed</option>
               </select>
+              {/* New Filter for Subscribe to Updates */}
+              <select
+                value={filterSubscribeUpdates}
+                onChange={(e) => setFilterSubscribeUpdates(e.target.value)}
+                className="w-full border border-[#C90A1D]/30 focus:border-[#C90A1D] rounded-md p-2 focus:outline-none"
+                aria-label="Filter by subscription preference"
+              >
+                <option value="all">All Subscriptions</option>
+                <option value="subscribed">Want Updates</option>
+                <option value="not-subscribed">Don't Want Updates</option>
+              </select>
               <button
                 onClick={exportToCSV}
                 className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md p-2 flex items-center justify-center gap-2"
@@ -378,6 +408,7 @@ export default function AdminPage() {
                     <th className="p-3 text-left text-[#C90A1D] font-semibold whitespace-nowrap sm:p-2 text-sm sm:text-base">Contact</th>
                     <th className="p-3 text-left text-[#C90A1D] font-semibold whitespace-nowrap sm:p-2 text-sm sm:text-base">Demographics</th>
                     <th className="p-3 text-left text-[#C90A1D] font-semibold whitespace-nowrap sm:p-2 text-sm sm:text-base">Ticket</th>
+                    <th className="p-3 text-left text-[#C90A1D] font-semibold whitespace-nowrap sm:p-2 text-sm sm:text-base">Updates</th>
                     <th className="p-3 text-left text-[#C90A1D] font-semibold whitespace-nowrap sm:p-2 text-sm sm:text-base">Payment Status</th>
                     <th className="p-3 text-left text-[#C90A1D] font-semibold whitespace-nowrap sm:p-2 text-sm sm:text-base">Actions</th>
                   </tr>
@@ -433,6 +464,22 @@ export default function AdminPage() {
                             : "Regular"}
                         </span>
                         <p className="text-sm text-[#C90A1D]/80 mt-1">Size: {registration.clothingSize}</p>
+                      </td>
+                      {/* New Subscribe to Updates Column */}
+                      <td className="p-3 sm:p-2 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          {registration.subscribeToUpdates ? (
+                            <>
+                              <Bell className="w-4 h-4 text-green-600" aria-label="Subscribed icon" />
+                              <span className="text-green-600 text-sm font-medium">Wants Updates</span>
+                            </>
+                          ) : (
+                            <>
+                              <BellOff className="w-4 h-4 text-gray-400" aria-label="Not subscribed icon" />
+                              <span className="text-gray-500 text-sm">No Updates</span>
+                            </>
+                          )}
+                        </div>
                       </td>
                       <td className="p-3 sm:p-2 whitespace-nowrap">
                         <div className="space-y-1">
@@ -526,6 +573,20 @@ export default function AdminPage() {
                     : "Regular"}{" "}
                   Ticket)
                 </p>
+                {/* Added subscription info to modal */}
+                <div className="flex items-center gap-2 mt-2">
+                  {selectedRegistration.subscribeToUpdates ? (
+                    <>
+                      <Bell className="w-4 h-4 text-green-600" />
+                      <span className="text-green-600 text-sm">Wants future event updates</span>
+                    </>
+                  ) : (
+                    <>
+                      <BellOff className="w-4 h-4 text-gray-400" />
+                      <span className="text-gray-500 text-sm">Not interested in updates</span>
+                    </>
+                  )}
+                </div>
               </div>
               <div className="space-y-4">
                 <img
