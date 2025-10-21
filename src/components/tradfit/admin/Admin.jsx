@@ -590,11 +590,11 @@ export default function AdminPage() {
               </div>
               <div className="space-y-4">
                 <img
-                  src={selectedRegistration.receiptUrl || "/placeholder.svg"}
+                  src={selectedRegistration.receiptUrl || "/white.png"}
                   alt="Payment receipt"
                   className="max-w-full h-auto max-h-96 mx-auto rounded border border-[#C90A1D]/30"
                   onError={(e) => {
-                    e.target.src = "/placeholder.svg";
+                    e.target.src = "/white.png";
                   }}
                 />
                 <div className="lg:flex block lg:space-y-0 space-y-3 gap-2 justify-center">

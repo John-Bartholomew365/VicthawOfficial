@@ -23,6 +23,7 @@ export default function RegisterPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [timeLeft, setTimeLeft] = useState({});
+  const [error, setError] = useState("");
 
   // Registration deadline: November 28, 2025, 23:59:59
   const deadline = new Date("2025-11-28T23:59:59").getTime();
@@ -65,22 +66,42 @@ export default function RegisterPage() {
     return () => clearInterval(timer);
   }, []);
 
+  const validateForm = () => {
+    if (!formData.firstName.trim()) return "First name is required";
+    if (!formData.lastName.trim()) return "Last name is required";
+    if (!formData.email.trim()) return "Email is required";
+    if (!/^\S+@\S+\.\S+$/.test(formData.email)) return "Valid email is required";
+    if (!formData.phone.trim()) return "Phone number is required";
+    if (!formData.gender) return "Gender is required";
+    if (!formData.ageRange) return "Age range is required";
+    if (!formData.clothingSize) return "Clothing size is required";
+    return null;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
       const payload = {
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        email: formData.email,
-        contact_no: formData.phone,
+        first_name: formData.firstName.trim(),
+        last_name: formData.lastName.trim(),
+        email: formData.email.trim().toLowerCase(),
+        contact_no: formData.phone.trim(),
         gender: formData.gender,
         age: formData.ageRange,
-        tribe: formData.culture,
+        tribe: formData.culture.trim(),
         ticket_type: formData.ticketType,
         size: formData.clothingSize,
-        subscribe_to_updates: formData.subscribeToUpdates ? 'true' : 'false', // FIXED: Convert to string
+        subscribe_to_updates: formData.subscribeToUpdates,
       };
 
       console.log("Sending payload to API:", payload);
@@ -89,6 +110,7 @@ export default function RegisterPage() {
         headers: {
           "Content-Type": "application/json",
         },
+        // timeout: 30000, // 30 second timeout
       });
 
       const result = response.data;
@@ -134,7 +156,7 @@ export default function RegisterPage() {
 
         router.push("/auth/register/payment");
       } else {
-        alert(result.message || "Registration failed. Please try again.");
+        setError(result.message || "Registration failed. Please try again.");
         setIsSubmitting(false);
       }
     } catch (error) {
@@ -143,16 +165,28 @@ export default function RegisterPage() {
         response: error.response?.data,
         status: error.response?.status,
       });
-      alert(
-        error.response?.data?.message ||
-          "An error occurred. Please try again later."
-      );
+      
+      let errorMessage = "An error occurred. Please try again later.";
+      
+      if (error.code === 'NETWORK_ERROR' || error.message.includes('Network Error')) {
+        errorMessage = "Network error. Please check your connection and try again.";
+      } else if (error.response?.status === 413) {
+        errorMessage = "Request too large. Please try again with smaller data.";
+      } else if (error.response?.data?.message) {
+        errorMessage = error.response.data.message;
+      } else if (error.message.includes('timeout')) {
+        errorMessage = "Request timeout. Please try again.";
+      }
+      
+      setError(errorMessage);
       setIsSubmitting(false);
     }
   };
 
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (error) setError("");
   };
 
   const nextStep = () => {
@@ -213,8 +247,8 @@ export default function RegisterPage() {
         <button
           type="button"
           onClick={nextStep}
-          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer"
-          disabled={!formData.firstName || !formData.lastName}
+          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          disabled={!formData.firstName.trim() || !formData.lastName.trim()}
         >
           Next Step
         </button>
@@ -278,8 +312,8 @@ export default function RegisterPage() {
         <button
           type="button"
           onClick={nextStep}
-          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105"
-          disabled={!formData.email || !formData.phone}
+          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          disabled={!formData.email.trim() || !formData.phone.trim()}
         >
           Next Step
         </button>
@@ -407,7 +441,7 @@ export default function RegisterPage() {
         <button
           type="button"
           onClick={nextStep}
-          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105"
+          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           disabled={
             !formData.gender || !formData.ageRange || !formData.clothingSize
           }
@@ -530,7 +564,7 @@ export default function RegisterPage() {
           </div>
         </div>
       </div>
-      {/* NEW SUBSCRIBE TO UPDATES CHECKBOX */}
+      
       <div className="space-y-3 mt-10" data-aos="fade-up" data-aos-delay="500">
         <div className="flex items-start space-x-3 lg:p-4 p-3 border border-[#C90A1D]/30 rounded-lg bg-[#C90A1D]/5 hover:bg-[#C90A1D]/10 transition-all duration-300">
           <input
@@ -558,6 +592,13 @@ export default function RegisterPage() {
         </div>
       </div>
 
+      {/* Error Display */}
+      {error && (
+        <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-md" data-aos="fade-up">
+          <p className="text-red-700 font-medium">{error}</p>
+        </div>
+      )}
+
       <div className="mt-8 lg:flex block justify-between">
         <button
           type="button"
@@ -569,7 +610,7 @@ export default function RegisterPage() {
         <button
           type="submit"
           disabled={isSubmitting || timeLeft.expired}
-          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 disabled:bg-[#C90A1D]/50 disabled:transform-none lg:w-fit w-full"
+          className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 disabled:bg-[#C90A1D]/50 disabled:transform-none lg:w-fit w-full disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">
