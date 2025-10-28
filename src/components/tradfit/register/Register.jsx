@@ -66,6 +66,32 @@ export default function RegisterPage() {
     return () => clearInterval(timer);
   }, []);
 
+  // Enhanced logging function
+  const logError = (context, error, extraData = {}) => {
+    const errorLog = {
+      timestamp: new Date().toISOString(),
+      context,
+      error: {
+        message: error.message,
+        name: error.name,
+        stack: error.stack,
+        code: error.code,
+      },
+      userData: {
+        email: formData.email,
+        step: currentStep,
+      },
+      extraData,
+      userAgent: navigator?.userAgent,
+      url: window?.location.href,
+    };
+
+    console.error("🚨 REGISTRATION ERROR:", errorLog);
+    
+    // You can also send this to your error tracking service
+    // sendToErrorTrackingService(errorLog);
+  };
+
   const validateForm = () => {
     if (!formData.firstName.trim()) return "First name is required";
     if (!formData.lastName.trim()) return "Last name is required";
@@ -104,19 +130,22 @@ export default function RegisterPage() {
         subscribe_to_updates: formData.subscribeToUpdates,
       };
 
-      console.log("Sending payload to API:", payload);
+      console.log("📤 Sending registration payload:", payload);
 
       const response = await axios.post("/api/tradfit/register", payload, {
         headers: {
           "Content-Type": "application/json",
         },
-        // timeout: 30000, // 30 second timeout
+        timeout: 45000, // Increased timeout to 45 seconds
+        validateStatus: (status) => status < 500, // Don't throw on 4xx errors
       });
 
+      console.log("✅ API response received:", response.data);
+
       const result = response.data;
-      console.log("API response:", result);
 
       if (result.statusCode === "00") {
+        // Save to localStorage
         const registrations = JSON.parse(
           localStorage.getItem("tradfit_registrations") || "[]"
         );
@@ -138,10 +167,8 @@ export default function RegisterPage() {
           paymentStatus: "pending",
           receiptUrl: null,
         };
-        console.log(
-          "Saving new registration to localStorage:",
-          newRegistration
-        );
+
+        console.log("💾 Saving registration to localStorage:", newRegistration);
 
         registrations.push(newRegistration);
         localStorage.setItem(
@@ -154,30 +181,65 @@ export default function RegisterPage() {
           JSON.stringify(newRegistration)
         );
 
+        // Success logging
+        console.log("🎉 Registration successful, redirecting to payment");
         router.push("/auth/register/payment");
       } else {
-        setError(result.message || "Registration failed. Please try again.");
+        const errorMsg = result.message || "Registration failed. Please try again.";
+        logError("API returned error status", new Error(errorMsg), { apiResponse: result });
+        setError(errorMsg);
         setIsSubmitting(false);
       }
     } catch (error) {
-      console.error("Error submitting registration:", {
-        message: error.message,
-        response: error.response?.data,
-        status: error.response?.status,
-      });
-      
+      // Enhanced error handling with detailed logging
       let errorMessage = "An error occurred. Please try again later.";
-      
-      if (error.code === 'NETWORK_ERROR' || error.message.includes('Network Error')) {
-        errorMessage = "Network error. Please check your connection and try again.";
-      } else if (error.response?.status === 413) {
-        errorMessage = "Request too large. Please try again with smaller data.";
-      } else if (error.response?.data?.message) {
-        errorMessage = error.response.data.message;
-      } else if (error.message.includes('timeout')) {
-        errorMessage = "Request timeout. Please try again.";
+      let errorContext = "unknown_error";
+
+      if (axios.isAxiosError(error)) {
+        if (error.code === 'ECONNABORTED') {
+          errorMessage = "Request timeout. Please check your connection and try again.";
+          errorContext = "request_timeout";
+        } else if (error.response) {
+          // Server responded with error status
+          const status = error.response.status;
+          errorContext = `http_${status}`;
+          
+          switch (status) {
+            case 400:
+              errorMessage = error.response.data?.message || "Invalid request data. Please check your information.";
+              break;
+            case 413:
+              errorMessage = "Request too large. Please try again.";
+              break;
+            case 429:
+              errorMessage = "Too many requests. Please wait a moment and try again.";
+              break;
+            case 500:
+              errorMessage = "Server error. Our team has been notified. Please try again later.";
+              break;
+            case 503:
+              errorMessage = "Service temporarily unavailable. Please try again in a few minutes.";
+              break;
+            default:
+              errorMessage = error.response.data?.message || `Server error (${status}). Please try again.`;
+          }
+        } else if (error.request) {
+          // Request made but no response received
+          errorContext = "network_error";
+          errorMessage = "Network error. Please check your internet connection and try again.";
+        }
+      } else if (error instanceof Error) {
+        errorContext = "client_error";
+        errorMessage = error.message || "An unexpected error occurred.";
       }
-      
+
+      logError(errorContext, error, {
+        axiosError: axios.isAxiosError(error),
+        responseStatus: error.response?.status,
+        responseData: error.response?.data,
+        requestData: error.config?.data
+      });
+
       setError(errorMessage);
       setIsSubmitting(false);
     }
@@ -592,10 +654,23 @@ export default function RegisterPage() {
         </div>
       </div>
 
-      {/* Error Display */}
+      {/* Enhanced Error Display */}
       {error && (
         <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-md" data-aos="fade-up">
-          <p className="text-red-700 font-medium">{error}</p>
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <h3 className="text-sm font-medium text-red-800">Registration Error</h3>
+              <p className="text-sm text-red-700 mt-1">{error}</p>
+              <p className="text-sm text-red-600 mt-2">
+                If this continues, please contact support with the timestamp from browser console.
+              </p>
+            </div>
+          </div>
         </div>
       )}
 
