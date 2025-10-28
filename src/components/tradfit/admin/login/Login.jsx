@@ -35,6 +35,7 @@ export default function AdminLoginPage() {
     console.error("🚨 LOGIN ERROR:", errorLog);
   };
 
+  // BULLETPROOF LOGIN FUNCTION
   const handleLogin = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -61,129 +62,92 @@ export default function AdminLoginPage() {
       }
     }
 
-    try {
-      // Prepare payload for API
-      const payload = {
-        email: username.trim().toLowerCase(),
-        password: password.trim(),
-      };
+    const payload = {
+      email: username.trim().toLowerCase(),
+      password: password.trim(),
+    };
 
-      console.log("📤 Sending login payload for:", payload.email);
+    console.log("🚀 Starting login for:", payload.email);
 
-      // Make API call to /api/login with enhanced configuration
-      const response = await axios.post("/api/login", payload, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        timeout: 30000, // 30 seconds timeout
-        validateStatus: (status) => status < 500, // Don't throw on 4xx errors
-      });
+    // RETRY CONFIGURATION
+    const maxRetries = 2;
+    const retryDelay = 1000;
+    let lastError = null;
 
-      console.log("✅ API login response received:", {
-        status: response.status,
-        statusCode: response.data?.statusCode,
-        hasData: !!response.data
-      });
-
-      const result = response.data;
-
-      if (result.statusCode === "00" && result.data) {
-        // Store admin session in localStorage
-        const adminSession = {
-          isAuthenticated: true,
-          loginTime: new Date().toISOString(),
-          username: result.data.username || username,
-          email: result.data.email || username,
-          token: result.data.token || result.data.access_token,
-          userData: result.data, // Store entire user data for future use
-          requestId: result.requestId, // Store request ID for debugging
-        };
-
-        localStorage.setItem("tradfit_admin_session", JSON.stringify(adminSession));
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        console.log(`🔄 Login attempt ${attempt} of ${maxRetries}`);
         
-        // Also store token separately for easy access
-        if (result.data.token || result.data.access_token) {
-          localStorage.setItem("admin_token", result.data.token || result.data.access_token);
-        }
-
-        console.log("🎉 Admin login successful, redirecting to dashboard...");
-        
-        // Redirect to admin dashboard
-        router.push("/admin/tradfit");
-      } else {
-        const errorMsg = result.message || "Invalid username or password. Please try again.";
-        logLoginError("API returned error status", new Error(errorMsg), { 
-          apiResponse: result,
-          statusCode: result.statusCode 
+        const response = await axios.post("/api/login", payload, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          timeout: 15000,
+          validateStatus: (status) => status < 500,
         });
-        setError(errorMsg);
-        setIsLoading(false);
-      }
-    } catch (error) {
-      // Enhanced error handling with detailed logging
-      let errorMessage = "An error occurred during login. Please try again later.";
-      let errorContext = "unknown_login_error";
 
-      if (axios.isAxiosError(error)) {
-        if (error.code === 'ECONNABORTED') {
-          errorMessage = "Login timeout. Please check your connection and try again.";
-          errorContext = "login_timeout";
-        } else if (error.response) {
-          // Server responded with error status
-          const status = error.response.status;
-          errorContext = `login_http_${status}`;
+        console.log(`✅ Login attempt ${attempt} response received`);
+
+        const result = response.data;
+
+        if (result.statusCode === "00" && result.data) {
+          // SUCCESS - Store session
+          const adminSession = {
+            isAuthenticated: true,
+            loginTime: new Date().toISOString(),
+            username: result.data.username || username,
+            email: result.data.email || username,
+            token: result.data.token || result.data.access_token,
+            userData: result.data,
+          };
+
+          localStorage.setItem("tradfit_admin_session", JSON.stringify(adminSession));
           
-          switch (status) {
-            case 400:
-              errorMessage = error.response.data?.message || "Invalid login data. Please check your information.";
-              break;
-            case 401:
-              errorMessage = "Invalid username or password. Please try again.";
-              break;
-            case 403:
-              errorMessage = "Access denied. Your account may be restricted.";
-              break;
-            case 404:
-              errorMessage = "Account not found. Please check your username/email.";
-              break;
-            case 408:
-              errorMessage = "Login timeout. Please try again.";
-              break;
-            case 423:
-              errorMessage = "Account temporarily locked. Please try again later or contact support.";
-              break;
-            case 429:
-              errorMessage = "Too many login attempts. Please wait a moment.";
-              break;
-            case 500:
-              errorMessage = "Server error during login. Our team has been notified.";
-              break;
-            case 503:
-              errorMessage = "Authentication service unavailable. Please try again later.";
-              break;
-            default:
-              errorMessage = error.response.data?.message || `Login error (${status}). Please try again.`;
+          if (result.data.token || result.data.access_token) {
+            localStorage.setItem("admin_token", result.data.token || result.data.access_token);
           }
-        } else if (error.request) {
-          // Request made but no response received
-          errorContext = "login_network_error";
-          errorMessage = "Network error. Please check your internet connection and try again.";
+
+          console.log("🎉 Login successful, redirecting...");
+          router.push("/admin/tradfit");
+          return;
+        } else {
+          lastError = new Error(result.message || "Invalid credentials");
+          console.log(`❌ Login attempt ${attempt} failed:`, result.message);
+          break; // Don't retry for auth failures
         }
-      } else if (error instanceof Error) {
-        errorContext = "login_client_error";
-        errorMessage = error.message || "An unexpected error occurred during login.";
+      } catch (error) {
+        lastError = error;
+        console.error(`❌ Login attempt ${attempt} error:`, error.message);
+
+        // Don't retry for client errors
+        if (error.response?.status >= 400 && error.response?.status < 500) {
+          break;
+        }
+
+        // Wait before retrying
+        if (attempt < maxRetries) {
+          console.log(`⏳ Waiting ${retryDelay}ms before retry...`);
+          await new Promise(resolve => setTimeout(resolve, retryDelay));
+        }
       }
-
-      logLoginError(errorContext, error, {
-        axiosError: axios.isAxiosError(error),
-        responseStatus: error.response?.status,
-        responseData: error.response?.data,
-        requestId: error.response?.data?.requestId
-      });
-
-      setError(errorMessage);
-      setIsLoading(false);
     }
+
+    // ALL ATTEMPTS FAILED
+    let errorMessage = "Login failed. Please try again.";
+    
+    if (lastError?.response?.data?.message) {
+      errorMessage = lastError.response.data.message;
+    } else if (lastError?.message?.includes('timeout')) {
+      errorMessage = "Connection timeout. Please try again.";
+    } else if (lastError?.message?.includes('Network Error')) {
+      errorMessage = "Network error. Please check your connection.";
+    } else if (lastError?.message) {
+      errorMessage = lastError.message;
+    }
+
+    console.error("💥 All login attempts failed");
+    setError(errorMessage);
+    setIsLoading(false);
   };
 
   const clearError = () => {
@@ -283,9 +247,6 @@ export default function AdminLoginPage() {
                   <div className="ml-3">
                     <h3 className="text-sm font-medium text-red-800">Login Error</h3>
                     <p className="text-sm text-red-700 mt-1">{error}</p>
-                    {/* <p className="text-xs text-red-600 mt-2">
-                      If this continues, please check the browser console for details.
-                    </p> */}
                   </div>
                 </div>
               </div>
@@ -307,15 +268,6 @@ export default function AdminLoginPage() {
               )}
             </button>
           </form>
-
-          {/* Debug info for development */}
-          {process.env.NODE_ENV === 'development' && error && (
-            <div className="mt-4 p-3 bg-gray-100 rounded-md">
-              <p className="text-xs text-gray-600">
-                {/* <strong>Debug Info:</strong> Check browser console for detailed error logs. */}
-              </p>
-            </div>
-          )}
         </div>
       </div>
     </div>
