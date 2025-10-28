@@ -144,7 +144,7 @@ export async function POST(req) {
 
     return NextResponse.json(
       {
-        message: "Registration service is busy. Your information has been saved locally and will be processed shortly.",
+        message: "",
         statusCode: "03", // Special code for "try again later but data is safe"
         requestId,
       },
