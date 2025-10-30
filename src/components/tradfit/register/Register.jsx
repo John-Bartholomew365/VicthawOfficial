@@ -17,16 +17,13 @@ export default function RegisterPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [timeLeft, setTimeLeft] = useState({});
   const [error, setError] = useState("");
-  const [apiStatus, setApiStatus] = useState("unknown"); // "unknown", "online", "offline"
+ /*  const [apiStatus, setApiStatus] = useState("unknown"); // "unknown", "online", "offline" */
 
   const deadline = new Date("2025-11-28T23:59:59").getTime();
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true, offset: 100 });
-    
-    // Check API status on load
-    checkApiStatus();
-
+     
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = deadline - now;
@@ -47,144 +44,107 @@ export default function RegisterPage() {
     return () => clearInterval(timer);
   }, []);
 
-  // CHECK API STATUS
-  const checkApiStatus = async () => {
-    try {
-      const testResponse = await fetch('/api/tradfit/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ test: true })
-      });
-      setApiStatus(testResponse.ok ? "online" : "offline");
-    } catch {
-      setApiStatus("offline");
-    }
-  };
-
+  
   // ULTIMATE SUBMIT FUNCTION WITH FALLBACKS
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    
-    const validationError = validateForm();
-    if (validationError) {
-      setError(validationError);
-      return;
+  e.preventDefault();
+  setError("");
+  
+  const validationError = validateForm();
+  if (validationError) {
+    setError(validationError);
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const payload = formatPayload(formData);
+    const result = await registerUser(payload);
+
+    if (result?.statusCode === "00") {
+      await saveRegistrationSuccess(result, payload); 
+      router.push("/auth/register/payment");
+    } else {
+      throw new Error(`${result?.message} : ${result?.details.error}` || "Registration failed");
     }
+  } catch (err) { 
+    setError(err.message || "Something went wrong, please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
-    setIsSubmitting(true);
-    console.log("🚀 ULTIMATE REGISTRATION STARTED");
+/* -----------------------------
+ *  HELPER FUNCTIONS
+ * ----------------------------- */
 
-    const payload = {
-      first_name: formData.firstName.trim(),
-      last_name: formData.lastName.trim(),
-      email: formData.email.trim().toLowerCase(),
-      contact_no: formData.phone.trim(),
-      gender: formData.gender,
-      age: formData.ageRange,
-      tribe: formData.culture.trim(),
-      ticket_type: formData.ticketType,
-      size: formData.clothingSize,
-      subscribe_to_updates: formData.subscribeToUpdates,
-    };
+// ✅ Format payload cleanly
+const formatPayload = (data) => ({
+  first_name: data.firstName.trim(),
+  last_name: data.lastName.trim(),
+  email: data.email.trim().toLowerCase(),
+  contact_no: data.phone.trim(),
+  gender: data.gender,
+  age: data.ageRange,
+  tribe: data.culture.trim(),
+  ticket_type: data.ticketType,
+  size: data.clothingSize,
+  subscribe_to_updates: data.subscribeToUpdates,
+});
 
-    // METHOD 1: Try direct API first
-    try {
-      console.log("🔄 METHOD 1: Direct API call");
-      const response = await fetch('/api/tradfit/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+// ✅ API call with centralized error handling
+const registerUser = async (payload) => {
+  const response = await fetch("/api/tradfit/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
 
-      if (response.ok) {
-        const result = await response.json();
-        
-        if (result.statusCode === "00") {
-          await saveRegistrationSuccess(result, payload);
-          console.log("🎉 METHOD 1 SUCCESS");
-          router.push("/auth/register/payment");
-          return;
-        } else {
-          throw new Error(result.message || "Registration failed");
-        }
-      } else {
-        throw new Error(`HTTP ${response.status}`);
-      }
-    } catch (error) {
-      console.log("❌ METHOD 1 failed:", error.message);
-      
-      // METHOD 2: Try with axios as fallback
-      try {
-        console.log("🔄 METHOD 2: Axios fallback");
-        const response = await axios.post('/api/tradfit/register', payload, {
-          timeout: 10000,
-          headers: { 'Content-Type': 'application/json' }
-        });
+  /* if (!response.ok) {
+    throw new Error(`HTTP ${response.status} - ${response.statusText}`);
+  } */
 
-        if (response.data.statusCode === "00") {
-          await saveRegistrationSuccess(response.data, payload);
-          console.log("🎉 METHOD 2 SUCCESS");
-          router.push("/auth/register/payment");
-          return;
-        } else {
-          throw new Error(response.data.message || "Registration failed");
-        }
-      } catch (error2) {
-        console.log("❌ METHOD 2 failed:", error2.message);
-        
-        // METHOD 3: Emergency local storage fallback
-        try {
-          console.log("🔄 METHOD 3: Local storage emergency save");
-          await emergencyLocalSave(payload);
-          console.log("🎉 METHOD 3 SUCCESS - Saved locally");
-          router.push("/auth/register/payment");
-          return;
-        } catch (error3) {
-          console.log("❌ METHOD 3 failed:", error3.message);
-          
-          // FINAL FALLBACK: Show error but allow manual continuation
-          setError(`
-            We're experiencing high demand. Your information has been saved locally. 
-            Click "Continue to Payment" to proceed, and we'll process your registration shortly.
-          `);
-          await emergencyLocalSave(payload);
-          setIsSubmitting(false);
-        }
-      }
-    }
+  const result = await response.json();
+  return result;
+};
+
+// ✅ Save to local storage safely
+const saveRegistrationSuccess = async (result, payload) => {
+  const registrationData = {
+    firstName: payload.first_name,
+    lastName: payload.last_name,
+    email: payload.email,
+    phone: payload.contact_no,
+    gender: payload.gender,
+    ageRange: payload.age,
+    culture: payload.tribe,
+    ticketType: payload.ticket_type,
+    clothingSize: payload.size,
+    subscribeToUpdates: payload.subscribe_to_updates,
+    ticketId: result.data?.ticket_id || null,
+    registrationId: result.data?._id || null,
+    registrationDate: new Date().toISOString(),
+    confirmed: false,
+    paymentStatus: "pending",
+    receiptUrl: null,
+    apiRegistered: true,
   };
 
-  // SAVE SUCCESSFUL REGISTRATION
-  const saveRegistrationSuccess = async (result, payload) => {
-    const newRegistration = {
-      firstName: payload.first_name,
-      lastName: payload.last_name,
-      email: payload.email,
-      phone: payload.contact_no,
-      gender: payload.gender,
-      ageRange: payload.age,
-      culture: payload.tribe,
-      ticketType: payload.ticket_type,
-      clothingSize: payload.size,
-      subscribeToUpdates: payload.subscribe_to_updates,
-      ticketId: result.data.ticket_id,
-      registrationId: result.data._id,
-      registrationDate: new Date().toISOString(),
-      confirmed: false,
-      paymentStatus: "pending",
-      receiptUrl: null,
-      apiRegistered: true,
-    };
+  try {
+    const existing = JSON.parse(localStorage.getItem("tradfit_registrations") || "[]");
+    const updated = [...existing, registrationData];
 
-    const registrations = JSON.parse(localStorage.getItem("tradfit_registrations") || "[]");
-    registrations.push(newRegistration);
-    localStorage.setItem("tradfit_registrations", JSON.stringify(registrations));
-    localStorage.setItem("current_registration", JSON.stringify(newRegistration));
-  };
+    localStorage.setItem("tradfit_registrations", JSON.stringify(updated));
+    localStorage.setItem("current_registration", JSON.stringify(registrationData));
+  } catch (storageErr) {
+    console.error("⚠️ Failed to save registration:", storageErr);
+  }
+};
+
 
   // EMERGENCY LOCAL SAVE
-  const emergencyLocalSave = async (payload) => {
+ /*  const emergencyLocalSave = async (payload) => {
     const tempRegistration = {
       firstName: payload.first_name,
       lastName: payload.last_name,
@@ -212,7 +172,7 @@ export default function RegisterPage() {
     localStorage.setItem("current_registration", JSON.stringify(tempRegistration));
     
     return true;
-  };
+  }; */
 
   const validateForm = () => {
     if (!formData.firstName.trim()) return "First name is required";
@@ -604,7 +564,7 @@ export default function RegisterPage() {
       </div>
 
       {/* API Status Indicator */}
-      {apiStatus === "offline" && (
+     {/*  {apiStatus === "offline" && (
         <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
           <div className="flex items-center">
             <svg className="w-4 h-4 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -615,7 +575,7 @@ export default function RegisterPage() {
             </p>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Enhanced Error Display */}
       {error && (
