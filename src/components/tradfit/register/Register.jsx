@@ -9,32 +9,47 @@ import "aos/dist/aos.css";
 export default function RegisterPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    firstName: "", lastName: "", email: "", phone: "", gender: "", 
-    ageRange: "", culture: "", clothingSize: "", ticketType: "regular", 
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    gender: "",
+    ageRange: "",
+    culture: "",
+    clothingSize: "",
+    ticketType: "regular",
     subscribeToUpdates: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [timeLeft, setTimeLeft] = useState({});
   const [error, setError] = useState("");
- /*  const [apiStatus, setApiStatus] = useState("unknown"); // "unknown", "online", "offline" */
+  /*  const [apiStatus, setApiStatus] = useState("unknown"); // "unknown", "online", "offline" */
 
   const deadline = new Date("2025-11-28T23:59:59").getTime();
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true, offset: 100 });
-     
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = deadline - now;
       if (distance <= 0) {
         clearInterval(timer);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0, expired: true });
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+          expired: true,
+        });
         return;
       }
       setTimeLeft({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000),
         expired: false,
@@ -44,107 +59,113 @@ export default function RegisterPage() {
     return () => clearInterval(timer);
   }, []);
 
-  
   // ULTIMATE SUBMIT FUNCTION WITH FALLBACKS
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setError("");
-  
-  const validationError = validateForm();
-  if (validationError) {
-    setError(validationError);
-    return;
-  }
+    e.preventDefault();
+    setError("");
 
-  setIsSubmitting(true);
-
-  try {
-    const payload = formatPayload(formData);
-    const result = await registerUser(payload);
-
-    if (result?.statusCode === "00") {
-      await saveRegistrationSuccess(result, payload); 
-      router.push("/auth/register/payment");
-    } else {
-      throw new Error(`${result?.message} : ${result?.details.error}` || "Registration failed");
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      return;
     }
-  } catch (err) { 
-    setError(err.message || "Something went wrong, please try again.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
 
-/* -----------------------------
- *  HELPER FUNCTIONS
- * ----------------------------- */
+    setIsSubmitting(true);
 
-// ✅ Format payload cleanly
-const formatPayload = (data) => ({
-  first_name: data.firstName.trim(),
-  last_name: data.lastName.trim(),
-  email: data.email.trim().toLowerCase(),
-  contact_no: data.phone.trim(),
-  gender: data.gender,
-  age: data.ageRange,
-  tribe: data.culture.trim(),
-  ticket_type: data.ticketType,
-  size: data.clothingSize,
-  subscribe_to_updates: data.subscribeToUpdates,
-});
+    try {
+      const payload = formatPayload(formData);
+      const result = await registerUser(payload);
 
-// ✅ API call with centralized error handling
-const registerUser = async (payload) => {
-  const response = await fetch("/api/tradfit/register", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
+      if (result?.statusCode === "00") {
+        await saveRegistrationSuccess(result, payload);
+        router.push("/auth/register/payment");
+      } else {
+        throw new Error(
+          `${result?.message} : ${result?.details.error}` ||
+            "Registration failed"
+        );
+      }
+    } catch (err) {
+      setError(err.message || "Something went wrong, please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  /* -----------------------------
+   *  HELPER FUNCTIONS
+   * ----------------------------- */
+
+  // ✅ Format payload cleanly
+  const formatPayload = (data) => ({
+    first_name: data.firstName.trim(),
+    last_name: data.lastName.trim(),
+    email: data.email.trim().toLowerCase(),
+    contact_no: data.phone.trim(),
+    gender: data.gender,
+    age: data.ageRange,
+    tribe: data.culture.trim(),
+    ticket_type: data.ticketType,
+    size: data.clothingSize,
+    subscribe_to_updates: data.subscribeToUpdates.toString(),
   });
 
-  /* if (!response.ok) {
+  // ✅ API call with centralized error handling
+  const registerUser = async (payload) => {
+    const response = await fetch("/api/tradfit/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    /* if (!response.ok) {
     throw new Error(`HTTP ${response.status} - ${response.statusText}`);
   } */
 
-  const result = await response.json();
-  return result;
-};
-
-// ✅ Save to local storage safely
-const saveRegistrationSuccess = async (result, payload) => {
-  const registrationData = {
-    firstName: payload.first_name,
-    lastName: payload.last_name,
-    email: payload.email,
-    phone: payload.contact_no,
-    gender: payload.gender,
-    ageRange: payload.age,
-    culture: payload.tribe,
-    ticketType: payload.ticket_type,
-    clothingSize: payload.size,
-    subscribeToUpdates: payload.subscribe_to_updates,
-    ticketId: result.data?.ticket_id || null,
-    registrationId: result.data?._id || null,
-    registrationDate: new Date().toISOString(),
-    confirmed: false,
-    paymentStatus: "pending",
-    receiptUrl: null,
-    apiRegistered: true,
+    const result = await response.json();
+    return result;
   };
 
-  try {
-    const existing = JSON.parse(localStorage.getItem("tradfit_registrations") || "[]");
-    const updated = [...existing, registrationData];
+  // ✅ Save to local storage safely
+  const saveRegistrationSuccess = async (result, payload) => {
+    const registrationData = {
+      firstName: payload.first_name,
+      lastName: payload.last_name,
+      email: payload.email,
+      phone: payload.contact_no,
+      gender: payload.gender,
+      ageRange: payload.age,
+      culture: payload.tribe,
+      ticketType: payload.ticket_type,
+      clothingSize: payload.size,
+      subscribeToUpdates: payload.subscribe_to_updates,
+      ticketId: result.data?.ticket_id || null,
+      registrationId: result.data?._id || null,
+      registrationDate: new Date().toISOString(),
+      confirmed: false,
+      paymentStatus: "pending",
+      receiptUrl: null,
+      apiRegistered: true,
+    };
 
-    localStorage.setItem("tradfit_registrations", JSON.stringify(updated));
-    localStorage.setItem("current_registration", JSON.stringify(registrationData));
-  } catch (storageErr) {
-    console.error("⚠️ Failed to save registration:", storageErr);
-  }
-};
+    try {
+      const existing = JSON.parse(
+        localStorage.getItem("tradfit_registrations") || "[]"
+      );
+      const updated = [...existing, registrationData];
 
+      localStorage.setItem("tradfit_registrations", JSON.stringify(updated));
+      localStorage.setItem(
+        "current_registration",
+        JSON.stringify(registrationData)
+      );
+    } catch (storageErr) {
+      console.error("⚠️ Failed to save registration:", storageErr);
+    }
+  };
 
   // EMERGENCY LOCAL SAVE
- /*  const emergencyLocalSave = async (payload) => {
+  /*  const emergencyLocalSave = async (payload) => {
     const tempRegistration = {
       firstName: payload.first_name,
       lastName: payload.last_name,
@@ -178,7 +199,8 @@ const saveRegistrationSuccess = async (result, payload) => {
     if (!formData.firstName.trim()) return "First name is required";
     if (!formData.lastName.trim()) return "Last name is required";
     if (!formData.email.trim()) return "Email is required";
-    if (!/^\S+@\S+\.\S+$/.test(formData.email)) return "Valid email is required";
+    if (!/^\S+@\S+\.\S+$/.test(formData.email))
+      return "Valid email is required";
     if (!formData.phone.trim()) return "Phone number is required";
     if (!formData.gender) return "Gender is required";
     if (!formData.ageRange) return "Age range is required";
@@ -378,7 +400,9 @@ const saveRegistrationSuccess = async (result, payload) => {
             required
             aria-label="Select your age range"
           >
-            <option value="" disabled>Select your age range</option>
+            <option value="" disabled>
+              Select your age range
+            </option>
             <option value="18-24">18-24 years</option>
             <option value="25-34">25-34 years</option>
             <option value="35-44">35-44 years</option>
@@ -400,7 +424,9 @@ const saveRegistrationSuccess = async (result, payload) => {
             placeholder="e.g., Yoruba, Igbo, Hausa, Fulani, etc."
             aria-label="Cultural Background"
           />
-          <p className="text-sm text-[#C90A1D]/60">Tell us about your cultural heritage</p>
+          <p className="text-sm text-[#C90A1D]/60">
+            Tell us about your cultural heritage
+          </p>
         </div>
 
         <div className="space-y-2" data-aos="fade-up" data-aos-delay="400">
@@ -415,14 +441,18 @@ const saveRegistrationSuccess = async (result, payload) => {
             required
             aria-label="Select your clothing size"
           >
-            <option value="" disabled>Select your clothing size</option>
+            <option value="" disabled>
+              Select your clothing size
+            </option>
             <option value="S">S</option>
             <option value="M">M</option>
             <option value="L">L</option>
             <option value="XL">XL</option>
             <option value="XXL">XXL</option>
           </select>
-          <p className="text-sm text-[#C90A1D]/60">Select your size for event merchandise</p>
+          <p className="text-sm text-[#C90A1D]/60">
+            Select your size for event merchandise
+          </p>
         </div>
       </div>
 
@@ -438,7 +468,9 @@ const saveRegistrationSuccess = async (result, payload) => {
           type="button"
           onClick={nextStep}
           className="bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md px-6 py-2 font-medium transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-          disabled={!formData.gender || !formData.ageRange || !formData.clothingSize}
+          disabled={
+            !formData.gender || !formData.ageRange || !formData.clothingSize
+          }
         >
           Next Step
         </button>
@@ -453,7 +485,9 @@ const saveRegistrationSuccess = async (result, payload) => {
           <h3 className="text-xl font-semibold text-[#C90A1D] mb-2">
             Select Your Ticket
           </h3>
-          <p className="text-[#C90A1D]/70">Choose the experience that suits you best</p>
+          <p className="text-[#C90A1D]/70">
+            Choose the experience that suits you best
+          </p>
         </div>
 
         <div className="space-y-4">
@@ -476,11 +510,15 @@ const saveRegistrationSuccess = async (result, payload) => {
               className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
             />
             <div className="flex-1">
-              <label htmlFor="regular" className="text-[#C90A1D] font-medium cursor-pointer">
+              <label
+                htmlFor="regular"
+                className="text-[#C90A1D] font-medium cursor-pointer"
+              >
                 Regular Ticket - ₦3,000
               </label>
               <p className="text-sm text-[#C90A1D]/80 mt-1">
-                Access to all dance sessions, basic amenities, and event materials
+                Access to all dance sessions, basic amenities, and event
+                materials
               </p>
             </div>
           </div>
@@ -491,7 +529,9 @@ const saveRegistrationSuccess = async (result, payload) => {
                 ? "border-[#C90A1D] bg-[#C90A1D]/5 shadow-md"
                 : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
             }`}
-            onClick={() => handleInputChange("ticketType", "regular with cloth")}
+            onClick={() =>
+              handleInputChange("ticketType", "regular with cloth")
+            }
             data-aos="fade-left"
           >
             <input
@@ -504,11 +544,15 @@ const saveRegistrationSuccess = async (result, payload) => {
               className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
             />
             <div className="flex-1">
-              <label htmlFor="regular-with-cloth" className="text-[#C90A1D] font-medium cursor-pointer">
+              <label
+                htmlFor="regular-with-cloth"
+                className="text-[#C90A1D] font-medium cursor-pointer"
+              >
                 Regular Ticket with Cloth - ₦8,000
               </label>
               <p className="text-sm text-[#C90A1D]/80 mt-1">
-                All the benefits of the Regular Ticket, plus a customized traditional attire
+                All the benefits of the Regular Ticket, plus a customized
+                traditional attire
               </p>
             </div>
           </div>
@@ -532,7 +576,10 @@ const saveRegistrationSuccess = async (result, payload) => {
               className="mt-1 border-[#C90A1D] text-[#C90A1D] focus:ring-[#C90A1D]"
             />
             <div className="flex-1">
-              <label htmlFor="vip" className="text-[#C90A1D] font-medium cursor-pointer">
+              <label
+                htmlFor="vip"
+                className="text-[#C90A1D] font-medium cursor-pointer"
+              >
                 VIP Ticket - ₦20,000
               </label>
               <p className="text-sm text-[#C90A1D]/80 mt-1">
@@ -542,29 +589,35 @@ const saveRegistrationSuccess = async (result, payload) => {
           </div>
         </div>
       </div>
-      
+
       <div className="space-y-3 mt-10" data-aos="fade-up" data-aos-delay="500">
         <div className="flex items-start space-x-3 lg:p-4 p-3 border border-[#C90A1D]/30 rounded-lg bg-[#C90A1D]/5 hover:bg-[#C90A1D]/10 transition-all duration-300">
           <input
             type="checkbox"
             id="subscribeToUpdates"
             checked={formData.subscribeToUpdates}
-            onChange={(e) => handleInputChange("subscribeToUpdates", e.target.checked)}
+            onChange={(e) =>
+              handleInputChange("subscribeToUpdates", e.target.checked)
+            }
             className="mt-1 w-5 h-5 border-2 border-[#C90A1D] rounded focus:ring-[#C90A1D] focus:ring-2 text-[#C90A1D] bg-white cursor-pointer transition-all duration-300"
           />
           <div className="flex-1">
-            <label htmlFor="subscribeToUpdates" className="text-[#C90A1D] font-medium cursor-pointer text-lg leading-tight">
-             Stay in the Rhythm!
+            <label
+              htmlFor="subscribeToUpdates"
+              className="text-[#C90A1D] font-medium cursor-pointer text-lg leading-tight"
+            >
+              Stay in the Rhythm!
             </label>
             <p className="text-sm text-[#C90A1D]/80 mt-2 leading-relaxed">
-              Be the first to know about exclusive events, early bird discounts, and exciting cultural gatherings!
+              Be the first to know about exclusive events, early bird discounts,
+              and exciting cultural gatherings!
             </p>
           </div>
         </div>
       </div>
 
       {/* API Status Indicator */}
-     {/*  {apiStatus === "offline" && (
+      {/*  {apiStatus === "offline" && (
         <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
           <div className="flex items-center">
             <svg className="w-4 h-4 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -579,15 +632,28 @@ const saveRegistrationSuccess = async (result, payload) => {
 
       {/* Enhanced Error Display */}
       {error && (
-        <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-md" data-aos="fade-up">
+        <div
+          className="mt-6 p-4 bg-red-50 border border-red-200 rounded-md"
+          data-aos="fade-up"
+        >
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              <svg
+                className="h-5 w-5 text-red-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clipRule="evenodd"
+                />
               </svg>
             </div>
             <div className="ml-3">
-              <h3 className="text-sm font-medium text-red-800">System Notice</h3>
+              <h3 className="text-sm font-medium text-red-800">
+                System Notice
+              </h3>
               <p className="text-sm text-red-700 mt-1">{error}</p>
               <p className="text-xs text-red-600 mt-2">
                 Your information is safe. Click the button below to continue.
@@ -612,9 +678,25 @@ const saveRegistrationSuccess = async (result, payload) => {
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">
-              <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <svg
+                className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               Processing...
             </span>
@@ -629,38 +711,79 @@ const saveRegistrationSuccess = async (result, payload) => {
   );
 
   return (
-    <div className="min-h-screen py-24 lg:py-24 bg-cover bg-center relative" style={{ backgroundImage: `url('/option3.jpg')` }}>
+    <div
+      className="min-h-screen py-24 lg:py-24 bg-cover bg-center relative"
+      style={{ backgroundImage: `url('/option3.jpg')` }}
+    >
       <div className="absolute inset-0 bg-black/85"></div>
       <div className="container mx-auto px-4 lg:px-24 max-w-2xl relative z-10">
         <div className="mb-8" data-aos="fade-down">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-[#FFFFFF]">Step {currentStep} of 4</span>
-            <span className="text-sm text-[#FFFFFF]/70">{Math.round((currentStep / 4) * 100)}% Complete</span>
+            <span className="text-sm font-medium text-[#FFFFFF]">
+              Step {currentStep} of 4
+            </span>
+            <span className="text-sm text-[#FFFFFF]/70">
+              {Math.round((currentStep / 4) * 100)}% Complete
+            </span>
           </div>
           <div className="w-full bg-[#FFFFFF]/20 rounded-full h-2">
-            <div className="bg-[#FFFFFF] h-2 rounded-full transition-all duration-500 ease-in-out" style={{ width: `${(currentStep / 4) * 100}%` }}></div>
+            <div
+              className="bg-[#FFFFFF] h-2 rounded-full transition-all duration-500 ease-in-out"
+              style={{ width: `${(currentStep / 4) * 100}%` }}
+            ></div>
           </div>
         </div>
 
         <div className="text-center mb-8" data-aos="fade-up">
-          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#FFFFFF] mb-3">Register for TRADFIT RHYTHMS</h1>
-          <p className="text-[#FFFFFF]/80 leading-tight">Join us for an unforgettable indigenous dance aerobics experience!</p>
+          <h1 className="lg:text-[30px] text-[26px] font-bold text-[#FFFFFF] mb-3">
+            Register for TRADFIT RHYTHMS
+          </h1>
+          <p className="text-[#FFFFFF]/80 leading-tight">
+            Join us for an unforgettable indigenous dance aerobics experience!
+          </p>
           {timeLeft.expired ? (
-            <p className="text-[#FFFFFF] font-semibold mt-4 bg-red-600/20 p-4 rounded-lg">Registration has closed. Stay tuned for future events!</p>
+            <p className="text-[#FFFFFF] font-semibold mt-4 bg-red-600/20 p-4 rounded-lg">
+              Registration has closed. Stay tuned for future events!
+            </p>
           ) : (
             <div className="mt-4 bg-[#C90A1D]/10 p-4 rounded-lg">
-              <p className="text-[#FFFFFF] font-semibold">Registration Closes In:</p>
+              <p className="text-[#FFFFFF] font-semibold">
+                Registration Closes In:
+              </p>
               <div className="flex justify-center gap-4 mt-2">
-                <div className="text-center"><span className="block text-2xl font-bold text-[#FFFFFF]">{timeLeft.days || 0}</span><span className="text-sm text-[#FFFFFF]/80">Days</span></div>
-                <div className="text-center"><span className="block text-2xl font-bold text-[#FFFFFF]">{timeLeft.hours || 0}</span><span className="text-sm text-[#FFFFFF]/80">Hours</span></div>
-                <div className="text-center"><span className="block text-2xl font-bold text-[#FFFFFF]">{timeLeft.minutes || 0}</span><span className="text-sm text-[#FFFFFF]/80">Minutes</span></div>
-                <div className="text-center"><span className="block text-2xl font-bold text-[#FFFFFF]">{timeLeft.seconds || 0}</span><span className="text-sm text-[#FFFFFF]/80">Seconds</span></div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.days || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Days</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.hours || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Hours</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.minutes || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Minutes</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-2xl font-bold text-[#FFFFFF]">
+                    {timeLeft.seconds || 0}
+                  </span>
+                  <span className="text-sm text-[#FFFFFF]/80">Seconds</span>
+                </div>
               </div>
             </div>
           )}
         </div>
 
-        <div className="shadow-xl border border-[#C90A1D]/30 rounded-lg bg-white overflow-hidden" data-aos="zoom-in">
+        <div
+          className="shadow-xl border border-[#C90A1D]/30 rounded-lg bg-white overflow-hidden"
+          data-aos="zoom-in"
+        >
           <div className="bg-[#C90A1D] text-white p-6">
             <h2 className="text-2xl font-bold">Event Registration</h2>
             <p className="text-white/80">
@@ -679,11 +802,18 @@ const saveRegistrationSuccess = async (result, payload) => {
             </form>
           </div>
         </div>
-        
-        <div className="text-center mt-6" data-aos="fade-up" data-aos-delay="300">
+
+        <div
+          className="text-center mt-6"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <p className="text-[#FFFFFF]/80">
             Want to learn more about ticket benefits?{" "}
-            <a href="/tradfit/tickets" className="text-[#FFFFFF] hover:text-[#FFFFFE] font-medium underline transition-colors duration-300">
+            <a
+              href="/tradfit/tickets"
+              className="text-[#FFFFFF] hover:text-[#FFFFFE] font-medium underline transition-colors duration-300"
+            >
               Compare ticket options
             </a>
           </p>

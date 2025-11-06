@@ -10,7 +10,7 @@ export async function POST(req) {
 
     const response = await axios.post(baseUrl, body, {
       headers: { "Content-Type": "application/json" },
-      timeout: 15000, // prevent hanging requests (15s)
+      timeout: 20000, // prevent hanging requests (20s)
       validateStatus: () => true, // allow handling all status codes manually
     });
 
