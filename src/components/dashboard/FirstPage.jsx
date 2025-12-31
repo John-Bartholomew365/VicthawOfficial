@@ -8,7 +8,7 @@
 //   const router = useRouter();
 
 //   const handleProceed = () => {
-//     if (agreed) {
+//     if (agreed) { 
 //       router.push("/dashboard/payment");
 //     }
 //   };
