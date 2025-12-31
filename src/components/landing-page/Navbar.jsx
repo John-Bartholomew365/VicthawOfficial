@@ -65,7 +65,6 @@ const Navbar = () => {
 
         {/* Navigation links visible on larger screens */}
         <div className="hidden md:flex gap-[30px]">
-
           {/* Tradfit Dropdown */}
           <div className="relative">
             <div
@@ -108,10 +107,10 @@ const Navbar = () => {
                   About
                 </Link>
                 <Link
-                  href="/tradfit/tickets"
+                  href="/tradfit/gallery"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
-                  Ticket
+                  Gallery
                 </Link>
                 <Link
                   href="/tradfit/sponsors"
@@ -132,10 +131,10 @@ const Navbar = () => {
                   FAQs
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/tradfit/report"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
-                  Contact
+                  Report
                 </Link>
               </div>
             )}
@@ -326,8 +325,7 @@ const Navbar = () => {
         >
           {/* Menu links */}
           <div className="flex flex-col justify-start font-navbar items-start gap-6 w-full">
-
-              {/* About Dropdown for Mobile */}
+            {/* About Dropdown for Mobile */}
             <div className="w-full">
               <div
                 className="flex items-center justify-between cursor-pointer"
@@ -359,7 +357,7 @@ const Navbar = () => {
                     href="/tradfit/info"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
-                   Info
+                    Info
                   </Link>
                   <Link
                     href="/tradfit/about"
@@ -368,10 +366,10 @@ const Navbar = () => {
                     About
                   </Link>
                   <Link
-                    href="/tradfit/tickets"
+                    href="/tradfit/gallery"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
-                    Ticket
+                    Gallery
                   </Link>
                   <Link
                     href="/tradfit/sponsors"
@@ -392,16 +390,14 @@ const Navbar = () => {
                     FAQs
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/tradfit/report"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
-                    Contact
+                    Report
                   </Link>
                 </div>
               )}
             </div>
-
-
 
             {/* Victhaw Official Dropdown for Mobile */}
             <div className="w-full">

@@ -36,10 +36,10 @@ const HeroSection = () => {
       thirdText: "of Your Heritage",
       subTitle:
         "A cultural revival, celebration of indigenous heritage, and wellness movement rolled into one. Experience high-energy aerobics merged with rich African/indigenous dance traditions.",
-      image: "/hero-trad.png",
+      image: "/tradfit.jpeg",
       ctaPrimary: {
-        text: "Join Now",
-        link: "/auth/register",
+        text: "Event Highlights",
+        link: "/tradfit/gallery",
       },
       ctaSecondary: {
         text: "Learn More",
@@ -106,21 +106,7 @@ const HeroSection = () => {
                 className="absolute -inset-2 border-2 rounded-lg opacity-30 transition-all duration-700"
                 style={{ borderColor: carousel.accentColor }}
               ></div>
-              <div
-                className="relative w-full h-full rounded-lg overflow-hidden shadow-lg"
-                style={
-                  carousel.id === "tradfit"
-                    ? {
-                        backgroundImage: `url(/option3.jpg)`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }
-                    : { backgroundColor: "white" }
-                }
-              >
-                {carousel.id === "tradfit" && (
-                  <div className="absolute inset-0 bg-black/80"></div>
-                )}
+              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
                 <Image
                   key={carousel.image}
                   src={carousel.image}

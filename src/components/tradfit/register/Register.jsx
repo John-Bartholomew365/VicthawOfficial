@@ -26,7 +26,7 @@ export default function RegisterPage() {
   const [error, setError] = useState("");
   /*  const [apiStatus, setApiStatus] = useState("unknown"); // "unknown", "online", "offline" */
 
-  const deadline = new Date("2025-11-28T23:59:59").getTime();
+  const deadline = new Date("2025-12-31T23:59:59").getTime();
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true, offset: 100 });
