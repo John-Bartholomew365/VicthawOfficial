@@ -153,7 +153,7 @@ const GetInTouch = () => {
           <p className="text-[#6B6F76] m-auto mb-6 mt-4 text-center lg:w-[490px] w-auto">
             Contact us today for inquiries about the Unity Cup tournament,
             TRADFIT RHYTHMS, team registration, or sponsorship opportunities.
-          </p>
+          </p>  
         </div>
         {/* Section Header */}
         <div className="text-center my-5" data-aos="fade-up">
