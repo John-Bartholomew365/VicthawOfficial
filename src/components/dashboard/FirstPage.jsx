@@ -11,7 +11,7 @@
 //     if (agreed) { 
 //       router.push("/dashboard/payment");
 //     }
-//   };
+//   }; 
 
 //   return (
 //     <div className="mt-24  flex flex-col justify-center">
