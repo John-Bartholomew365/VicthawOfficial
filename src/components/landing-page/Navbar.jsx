@@ -306,10 +306,10 @@ const Navbar = () => {
 
           {/* Register Button */}
           <Link
-            href={"/auth/register"}
+            href={"/visionary/contact"}
             className="font-navbar font-semibold bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-white hover:text-black hover:border-[#C81E23] hover:border transition-colors"
           >
-            Register
+            Contact Us
           </Link>
         </div>
       </div>
@@ -532,10 +532,10 @@ const Navbar = () => {
                 Login
               </Link> */}
               <Link
-                href={"/auth/register"}
+                href={"/visionary/contact"}
                 className="font-navbar font-semibold w-full text-center bg-[#C81E23] text-white py-2 px-8 text-sm rounded-lg hover:bg-white hover:text-[#000000] hover:border-[#C81E23] hover:border transition-colors"
               >
-                Register
+                Contact Us
               </Link>
             </div>
           </div>
