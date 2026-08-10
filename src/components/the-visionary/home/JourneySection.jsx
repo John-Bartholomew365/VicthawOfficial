@@ -21,8 +21,8 @@ const JourneySection = () => {
           </h2>
           <p className="text-[16px] text-[#B0B3B8] mx-auto max-w-md">
             From a dream to reality, the Victhaw Official Unity Cup has been a
-            journey of passion, dedication, and community. Here's how it all
-            began and where we're headed.
+            journey of passion, dedication, and community. Here&apos;s how it all
+            began and where we&apos;re headed.
           </p>
         </div>
 

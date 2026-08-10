@@ -519,7 +519,7 @@ export default function TeamList() {
             </div>
           ) : (
             <p className="text-center text-[#B0B3B8] mt-5">
-              No results for "{searchQuery}"
+              No results for &quot;{searchQuery}&quot;
             </p>
           )}
         </div>

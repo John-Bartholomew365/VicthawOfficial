@@ -112,7 +112,7 @@ const PrivacyPage = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Children's Privacy</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Children&apos;s Privacy</h2>
               <div className="text-gray-600 space-y-4">
                 <p>
                   Our services are not directed to children under 13. We do not knowingly collect personal information
@@ -127,7 +127,7 @@ const PrivacyPage = () => {
               <div className="text-gray-600 space-y-4">
                 <p>
                   We may update this Privacy Policy from time to time. We will notify you of any material changes by
-                  posting the new policy on our website and updating the "Last Updated" date below.
+                  posting the new policy on our website and updating the &quot;Last Updated&quot; date below.
                 </p>
               </div>
             </div>

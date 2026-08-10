@@ -331,7 +331,7 @@ const Login = () => {
           </div>
         </form>
         <div className="mb-5 flex gap-3" data-aos="fade-up">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link href={"/register"} className="font-bold">
             Register
           </Link>

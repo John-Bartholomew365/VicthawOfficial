@@ -169,7 +169,7 @@ const Hero = () => {
               <li className="flex gap-3">
                 <span className="text-[#C90A1D]">•</span>
                 <p className="text-[#6B6F76]">
-                  The referee's decision is <b>final</b>. Any complaints must be
+                  The referee&apos;s decision is <b>final</b>. Any complaints must be
                   addressed to the organizers respectfully.
                 </p>
               </li>

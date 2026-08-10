@@ -53,7 +53,7 @@
 //           <p>
 //             Bankers All Stars FC is an elite football club formed by veteran
 //             bankers and financial professionals. Known for their strategic
-//             play and financial discipline on the pitch, they've dominated
+//             play and financial discipline on the pitch, they&apos;ve dominated
 //             the league with their unique blend of experience and tactical
 //             brilliance.
 //           </p>
@@ -96,8 +96,8 @@
 
 //         <h2 className="font-[600] pt-7 text-black text-xl">Our Legacy</h2>
 //         <p>
-//           The name "Bankers All Stars" carries weight in football circles.
-//           Originating from an old bankers' association, this team has
+//           The name &quot;Bankers All Stars&quot; carries weight in football circles.
+//           Originating from an old bankers&apos; association, this team has
 //           evolved from casual matches between financial institutions to
 //           becoming professional champions. Our players may be veterans, but
 //           their experience creates an unstoppable force on the pitch.
@@ -111,7 +111,7 @@
 //           </li>
 //           <li>Must demonstrate exceptional football IQ and discipline</li>
 //           <li>
-//             Commitment to the team's values of integrity and excellence
+//             Commitment to the team&apos;s values of integrity and excellence
 //           </li>
 //         </ul>
 
@@ -120,9 +120,9 @@
 //             Our Championship Philosophy
 //           </h2>
 //           <p className="italic">
-//             "We play the game like we manage portfolios - with precision,
+//             &quot;We play the game like we manage portfolios - with precision,
 //             strategy, and an eye for opportunity. Every match is an
-//             investment, and we always deliver returns."
+//             investment, and we always deliver returns.&quot;
 //           </p>
 //           <p className="mt-4 text-right">- Bankers All Stars FC Motto</p>
 //         </div>
@@ -189,7 +189,7 @@ export function Bankers() {
               <p>
                 Bankers All Stars FC is an elite football club formed by veteran
                 bankers and financial professionals. Known for their strategic
-                play and financial discipline on the pitch, they've dominated
+                play and financial discipline on the pitch, they&apos;ve dominated
                 the league with their unique blend of experience and tactical
                 brilliance.
               </p>
@@ -232,8 +232,8 @@ export function Bankers() {
 
             <h2 className="font-[600] pt-7 text-black text-xl">Our Legacy</h2>
             <p>
-              The name "Bankers All Stars" carries weight in football circles.
-              Originating from an old bankers' association, this team has
+              The name &quot;Bankers All Stars&quot; carries weight in football circles.
+              Originating from an old bankers&apos; association, this team has
               evolved from casual matches between financial institutions to
               becoming professional champions. Our players may be veterans, but
               their experience creates an unstoppable force on the pitch.
@@ -247,7 +247,7 @@ export function Bankers() {
               </li>
               <li>Must demonstrate exceptional football IQ and discipline</li>
               <li>
-                Commitment to the team's values of integrity and excellence
+                Commitment to the team&apos;s values of integrity and excellence
               </li>
             </ul>
 
@@ -256,9 +256,9 @@ export function Bankers() {
                 Our Championship Philosophy
               </h2>
               <p className="italic">
-                "We play the game like we manage portfolios - with precision,
+                &quot;We play the game like we manage portfolios - with precision,
                 strategy, and an eye for opportunity. Every match is an
-                investment, and we always deliver returns."
+                investment, and we always deliver returns.&quot;
               </p>
               <p className="mt-4 text-right">- Bankers All Stars FC Motto</p>
             </div>
@@ -316,7 +316,7 @@ export function Bankers() {
               <p>
                 Bankers All Stars FC is an elite football club formed by veteran
                 bankers and financial professionals. Known for their strategic
-                play and financial discipline on the pitch, they've dominated
+                play and financial discipline on the pitch, they&apos;ve dominated
                 the league with their unique blend of experience and tactical
                 brilliance.
               </p>
@@ -364,8 +364,8 @@ export function Bankers() {
             <div>
               <h2 className="font-[600] pt-7 text-black text-xl">Our Legacy</h2>
               <p className="mt-2">
-                The name "Bankers All Stars" carries weight in football circles.
-                Originating from an old bankers' association, this team has
+                The name &quot;Bankers All Stars&quot; carries weight in football circles.
+                Originating from an old bankers&apos; association, this team has
                 evolved from casual matches between financial institutions to
                 becoming professional champions. Our players may be veterans,
                 but their experience creates an unstoppable force on the pitch.
@@ -384,7 +384,7 @@ export function Bankers() {
                 </li>
                 <li>Must demonstrate exceptional football IQ and discipline</li>
                 <li>
-                  Commitment to the team's values of integrity and excellence
+                  Commitment to the team&apos;s values of integrity and excellence
                 </li>
               </ul>
             </div>
@@ -395,9 +395,9 @@ export function Bankers() {
                 Our Championship Philosophy
               </h2>
               <p className="italic">
-                "We play the game like we manage portfolios - with precision,
+                &quot;We play the game like we manage portfolios - with precision,
                 strategy, and an eye for opportunity. Every match is an
-                investment, and we always deliver returns."
+                investment, and we always deliver returns.&quot;
               </p>
               <p className="mt-4 text-right">- Bankers All Stars FC Motto</p>
             </div>

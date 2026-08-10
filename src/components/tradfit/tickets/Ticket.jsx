@@ -86,7 +86,7 @@ export default function TicketsPage() {
             <div className="p-6">
               <div className="space-y-4 mb-6">
                 <h3 className="text-lg font-semibold text-[#C90A1D] mb-4">
-                  What's Included:
+                  What&apos;s Included:
                 </h3>
                 {regularBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
@@ -139,7 +139,7 @@ export default function TicketsPage() {
             <div className="p-6 bg-gradient-to-b from-[#C90A1D]/5 to-white">
               <div className="space-y-4 mb-6">
                 <h3 className="text-lg font-semibold text-[#C90A1D] mb-4">
-                  What's Included:
+                  What&apos;s Included:
                 </h3>
                 {regularWithClothBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">

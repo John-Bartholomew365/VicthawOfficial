@@ -52,7 +52,7 @@ export function NBA() {
                 Team Overview
               </h2>
               <p>
-                NBA FC represents the Nigerian Bar Association's sporting division. 
+                NBA FC represents the Nigerian Bar Association&apos;s sporting division. 
                 While primarily handling legal matters, the NBA also has a strong 
                 sports department that formed this competitive football team. 
                 They bring the same discipline and strategic thinking from the 
@@ -69,7 +69,7 @@ export function NBA() {
                 <p className="mt-2">
                   A legal mind with a passion for football, Coach Barrister 
                   combines courtroom strategy with sporting tactics. Known for 
-                  his ability to "argue" his way through tough matches, he 
+                  his ability to &quot;argue&quot; his way through tough matches, he 
                   leads the team with a unique blend of legal precision and 
                   football flair. His halftime speeches are said to be as 
                   compelling as closing arguments.
@@ -81,15 +81,15 @@ export function NBA() {
                   Team Specialties
                 </h2>
                 <ul className="list-disc ml-5 space-y-2">
-                  <li>Tactical formations (The "Legal Formation" strategy)</li>
+                  <li>Tactical formations (The &quot;Legal Formation&quot; strategy)</li>
                   <li>
-                    Precision passing (The "Exhibit A" passing game)
+                    Precision passing (The &quot;Exhibit A&quot; passing game)
                   </li>
                   <li>
-                    Strong defense (The "Objection Sustained" defense)
+                    Strong defense (The &quot;Objection Sustained&quot; defense)
                   </li>
                   <li>
-                    Last-minute goals (The "Closing Argument" play)
+                    Last-minute goals (The &quot;Closing Argument&quot; play)
                   </li>
                 </ul>
               </div>
@@ -100,7 +100,7 @@ export function NBA() {
               The Nigerian Bar Association, while primarily focused on legal 
               matters, maintains a vibrant sports department. NBA FC was formed 
               as part of this initiative, bringing together legal professionals 
-              with football talent. They've quickly risen through the ranks to 
+              with football talent. They&apos;ve quickly risen through the ranks to 
               become formidable competitors in the league.
             </p>
 
@@ -121,9 +121,9 @@ export function NBA() {
                 Our Playing Philosophy
               </h2>
               <p className="italic">
-                "We approach football like we approach the law - with strategy, 
+                &quot;We approach football like we approach the law - with strategy, 
                 precision, and an unwavering commitment to justice on the pitch. 
-                Every match is a case to be won."
+                Every match is a case to be won.&quot;
               </p>
               <p className="mt-4 text-right">- NBA FC Motto</p>
             </div>
@@ -178,7 +178,7 @@ export function NBA() {
                 Team Overview
               </h2>
               <p>
-                NBA FC represents the Nigerian Bar Association's sporting division. 
+                NBA FC represents the Nigerian Bar Association&apos;s sporting division. 
                 While primarily handling legal matters, the NBA also has a strong 
                 sports department that formed this competitive football team. 
                 They bring the same discipline and strategic thinking from the 
@@ -197,7 +197,7 @@ export function NBA() {
                 <p className="mt-2">
                   A legal mind with a passion for football, Coach Barrister 
                   combines courtroom strategy with sporting tactics. Known for 
-                  his ability to "argue" his way through tough matches, he 
+                  his ability to &quot;argue&quot; his way through tough matches, he 
                   leads the team with a unique blend of legal precision and 
                   football flair. His halftime speeches are said to be as 
                   compelling as closing arguments.
@@ -210,15 +210,15 @@ export function NBA() {
                   Team Specialties
                 </h2>
                 <ul className="list-disc ml-5 space-y-2">
-                  <li>Tactical formations (The "Legal Formation" strategy)</li>
+                  <li>Tactical formations (The &quot;Legal Formation&quot; strategy)</li>
                   <li>
-                    Precision passing (The "Exhibit A" passing game)
+                    Precision passing (The &quot;Exhibit A&quot; passing game)
                   </li>
                   <li>
-                    Strong defense (The "Objection Sustained" defense)
+                    Strong defense (The &quot;Objection Sustained&quot; defense)
                   </li>
                   <li>
-                    Last-minute goals (The "Closing Argument" play)
+                    Last-minute goals (The &quot;Closing Argument&quot; play)
                   </li>
                 </ul>
               </div>
@@ -231,7 +231,7 @@ export function NBA() {
                 The Nigerian Bar Association, while primarily focused on legal 
                 matters, maintains a vibrant sports department. NBA FC was formed 
                 as part of this initiative, bringing together legal professionals 
-                with football talent. They've quickly risen through the ranks to 
+                with football talent. They&apos;ve quickly risen through the ranks to 
                 become formidable competitors in the league.
               </p>
             </div>
@@ -259,9 +259,9 @@ export function NBA() {
                 Our Playing Philosophy
               </h2>
               <p className="italic">
-                "We approach football like we approach the law - with strategy, 
+                &quot;We approach football like we approach the law - with strategy, 
                 precision, and an unwavering commitment to justice on the pitch. 
-                Every match is a case to be won."
+                Every match is a case to be won.&quot;
               </p>
               <p className="mt-4 text-right">- NBA FC Motto</p>
             </div>

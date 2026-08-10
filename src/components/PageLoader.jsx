@@ -22,6 +22,7 @@ const PageLoader = ({ children }) => {
               src="/victhaw-logo.svg"
               alt="logo"
               fill
+              sizes="96px"
               className="rounded-full animate-rolling-spin"
             />
           </div>

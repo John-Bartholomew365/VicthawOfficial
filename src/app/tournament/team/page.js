@@ -1,7 +1,7 @@
-import TeamHero from "@/components/about/teams/TeamHero";
-import TeamList from "@/components/about/teams/TeamList";
 import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
+import TeamHero from "@/components/unity-cup-2/TeamHero";
+import TeamList from "@/components/unity-cup-2/TeamList";
 import React from "react";
 
 const page = () => {

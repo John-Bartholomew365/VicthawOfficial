@@ -83,7 +83,7 @@ export function Maracana() {
                 <ul className="list-disc ml-5 space-y-2">
                   <li>Mixed-generation play (Experience meets youthful energy)</li>
                   <li>
-                    Five-aside football tradition (The "Adewole Special")
+                    Five-aside football tradition (The &quot;Adewole Special&quot;)
                   </li>
                   <li>
                     Casual meets competitive (Serious football, good vibes)
@@ -116,7 +116,7 @@ export function Maracana() {
                 Open to all skilled players who respect the game
               </li>
               <li>
-                Regulars who form the core "Adewole Crew"
+                Regulars who form the core &quot;Adewole Crew&quot;
               </li>
             </ul>
 
@@ -125,9 +125,9 @@ export function Maracana() {
                 Our Football Philosophy
               </h2>
               <p className="italic">
-                "At Maracana FC, we play hard but never forget why we started - 
+                &quot;At Maracana FC, we play hard but never forget why we started - 
                 for the love of the game. Our field is where young legs learn from 
-                wise minds, and where every match feels like coming home."
+                wise minds, and where every match feels like coming home.&quot;
               </p>
               <p className="mt-4 text-right">- Maracana FC Creed</p>
             </div>
@@ -216,7 +216,7 @@ export function Maracana() {
                 <ul className="list-disc ml-5 space-y-2">
                   <li>Mixed-generation play (Experience meets youthful energy)</li>
                   <li>
-                    Five-aside football tradition (The "Adewole Special")
+                    Five-aside football tradition (The &quot;Adewole Special&quot;)
                   </li>
                   <li>
                     Casual meets competitive (Serious football, good vibes)
@@ -256,7 +256,7 @@ export function Maracana() {
                   Open to all skilled players who respect the game
                 </li>
                 <li>
-                  Regulars who form the core "Adewole Crew"
+                  Regulars who form the core &quot;Adewole Crew&quot;
                 </li>
               </ul>
             </div>
@@ -267,9 +267,9 @@ export function Maracana() {
                 Our Football Philosophy
               </h2>
               <p className="italic">
-                "At Maracana FC, we play hard but never forget why we started - 
+                &quot;At Maracana FC, we play hard but never forget why we started - 
                 for the love of the game. Our field is where young legs learn from 
-                wise minds, and where every match feels like coming home."
+                wise minds, and where every match feels like coming home.&quot;
               </p>
               <p className="mt-4 text-right">- Maracana FC Creed</p>
             </div>

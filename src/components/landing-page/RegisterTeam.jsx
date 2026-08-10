@@ -62,23 +62,25 @@ const RegisterTeam = () => {
 
         <div className="lg:text-start text-center">
           <h1 className="lg:text-[40px] lg:w-[400px] w-auto leading-tight tracking-tight text-[30px] lg:mt-0 mt-5">
-            Relive the Unity Cup 1.0 Action!
+            The Road to Unity Cup 2.0!
           </h1>
           <p className="lg:w-[410px] w-auto text-[#6B6F76] mt-3 mb-8 leading-tight">
-            While team registration for 1.0 has closed, you can still experience the excitement. 
-            Stay tuned for Unity Cup 2.0 - bigger, better, and coming soon!
+            Get ready for the next chapter of the tournament that unites
+            communities. Follow Unity Cup 2.0, cheer for your favourite teams,
+            and stay tuned for registration details - bigger and better than
+            ever!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
-            <Link href="/tournament/results">
+            <Link href="/tournament/schedule">
               <button className="bg-[#C81E23] text-white py-2 px-10 lg:px-6 text-lg rounded-md hover:bg-white hover:text-black hover:border-[#C81E23] hover:border transition-all">
-                See Highlights
+                View Schedule
               </button>
             </Link>
-            {/* <Link href="/notify-me">
+            <Link href="/tournament/team">
               <button className="bg-white border border-[#C81E23] text-[#C81E23] py-2 px-6 text-lg rounded-md hover:bg-[#C81E23] hover:text-white transition-all">
-                Notify Me About 2.0
+                Meet the Teams
               </button>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

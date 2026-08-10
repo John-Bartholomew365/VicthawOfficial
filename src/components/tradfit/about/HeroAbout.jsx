@@ -77,7 +77,7 @@ const HeroAbout = () => {
             data-aos-delay="200"
             className="lg:text-[18px] text-[16px] text-white/90 lg:w-[540px] w-auto mx-auto mb-10 lg:px-4 px-2 leading-tight"
           >
-            TRADFIT RHYTHMS is not just a dance aerobics program; it's a
+            TRADFIT RHYTHMS is not just a dance aerobics program; it&apos;s a
             cultural revival, a celebration of indigenous heritage, and a
             wellness movement rolled into one.
           </p>

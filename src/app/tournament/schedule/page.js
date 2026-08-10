@@ -1,7 +1,7 @@
 import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
-import Fixtures from "@/components/tournament/schedule/Fixtures";
-import Hero from "@/components/tournament/schedule/Hero";
+import Fixtures from "@/components/unity-cup-2/Fixtures";
+import ScheduleHero from "@/components/unity-cup-2/ScheduleHero";
 import React from "react";
 
 const page = () => {
@@ -9,7 +9,7 @@ const page = () => {
     <PageLoader>
       <div className="bg-[#FFFFFF] text-black">
         <div className="container lg:px-[50px] px-2">
-          <Hero />
+          <ScheduleHero />
         </div>
         <div className="container">
           <Fixtures />

@@ -13,19 +13,19 @@ const HeroSection = () => {
   const slider = [
     {
       id: "football",
-      firstText: "We united the",
+      firstText: "Uniting the",
       secondText: "community",
       thirdText: "through soccer",
       subTitle:
-        "Victhawofficial Unity Cup 1.0 was more than just a tournament - it was a movement! We brought players together to compete and fans to cheer them on, celebrating the love of football.",
+        "Victhaw Official Unity Cup 2.0 is here! 8 teams, 2 groups, one champion. Follow the action, cheer for your favourite team, and be part of the movement that unites our community through football.",
       image: "/thrill.jpeg",
       ctaPrimary: {
-        text: "Tournament Highlights",
-        link: "/tournament/results",
+        text: "View Schedule",
+        link: "/tournament/schedule",
       },
       ctaSecondary: {
-        text: "View Prizes",
-        link: "/tournament/prizes",
+        text: "Meet the Teams",
+        link: "/tournament/team",
       },
       accentColor: "#C81E23",
     },

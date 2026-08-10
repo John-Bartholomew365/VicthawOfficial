@@ -37,8 +37,9 @@ const WhyVicthaw = () => {
             <Image
               src="/carried.jpeg"
               alt="Victor on the Football Field"
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
               className="rounded-lg"
             />
             {/* <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">

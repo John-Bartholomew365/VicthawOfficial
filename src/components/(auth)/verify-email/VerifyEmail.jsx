@@ -115,7 +115,7 @@ const VerifyEmail = () => {
         </div>
 
         <div className="mb-5 flex gap-3" data-aos="fade-up">
-          Don't have receive a code?{" "}
+          Don&apos;t have receive a code?{" "}
           {timerActive ? (
             <span className="font-bold text-[#C81E23]">
               Resend in 00:{seconds < 10 ? `0${seconds}` : seconds}

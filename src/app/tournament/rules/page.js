@@ -1,6 +1,6 @@
 import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
-import Hero from "@/components/tournament/rules/Hero";
+import Rules from "@/components/unity-cup-2/Rules";
 import React from "react";
 
 const page = () => {
@@ -8,7 +8,7 @@ const page = () => {
     <PageLoader>
       <div className="bg-[#FFFFFF] text-black">
         <div className="container lg:px-[50px] px-2">
-          <Hero />
+          <Rules />
         </div>
         <Footer />
       </div>

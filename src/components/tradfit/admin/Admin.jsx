@@ -376,7 +376,7 @@ export default function AdminPage() {
               >
                 <option value="all">All Subscriptions</option>
                 <option value="subscribed">Want Updates</option>
-                <option value="not-subscribed">Don't Want Updates</option>
+                <option value="not-subscribed">Don&apos;t Want Updates</option>
               </select>
               <button
                 onClick={exportToCSV}

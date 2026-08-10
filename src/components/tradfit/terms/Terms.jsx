@@ -226,8 +226,8 @@ const TermsPage = () => {
               <div className="text-gray-600 space-y-4">
                 <p>
                   We may update these Terms and Conditions from time to time.
-                  Changes will be posted on our website with an updated "Last
-                  Modified" date. Continued participation in our events after
+                  Changes will be posted on our website with an updated &quot;Last
+                  Modified&quot; date. Continued participation in our events after
                   changes are posted constitutes acceptance of the new terms.
                 </p>
               </div>

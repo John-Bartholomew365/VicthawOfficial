@@ -256,7 +256,7 @@ const ImpactSection = () => {
             {/* Testimonial 1 */}
             <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md">
               <p className="text-[#6B6F76] italic">
-                "The Unity Cup 1.0 was an incredible experience! We got to showcase our skills against top competition while building lasting connections."
+                &quot;The Unity Cup 1.0 was an incredible experience! We got to showcase our skills against top competition while building lasting connections.&quot;
               </p>
               <div className="mt-4 flex items-center">
                 {getAvatarFallback("Kolapo James")}
@@ -270,7 +270,7 @@ const ImpactSection = () => {
             {/* Testimonial 2 */}
             <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md">
               <p className="text-[#6B6F76] italic">
-                "Sponsoring this event was rewarding. The energy and community spirit exceeded our expectations."
+                &quot;Sponsoring this event was rewarding. The energy and community spirit exceeded our expectations.&quot;
               </p>
               <div className="mt-4 flex items-center">
                 {getAvatarFallback("Abubakar Sheikh")}
@@ -284,7 +284,7 @@ const ImpactSection = () => {
             {/* Testimonial 3 */}
             <div className="bg-[#FAFAFA] p-6 rounded-lg shadow-md">
               <p className="text-[#6B6F76] italic">
-                "The tournament atmosphere was electric! I've never seen our community come together like this for sports."
+                &quot;The tournament atmosphere was electric! I&apos;ve never seen our community come together like this for sports.&quot;
               </p>
               <div className="mt-4 flex items-center">
                 {getAvatarFallback("Isaiah Johnson")}

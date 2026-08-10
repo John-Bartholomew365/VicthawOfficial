@@ -587,7 +587,7 @@ const AdminHero = () => {
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
       <p className="text-[#6B6F76] text-center mb-8 mt-2">
-        Manage your team's dashboard here, approve payments
+        Manage your team&apos;s dashboard here, approve payments
       </p>
 
       {/* Dashboard Overview */}

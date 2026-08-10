@@ -88,7 +88,7 @@ export default function TermsAgreement() {
           <div className="flex gap-2">
             <FaCheckCircle className="text-green-500" />
             <p className="text-black">
-              Secure your team's spot in the tournament.
+              Secure your team&apos;s spot in the tournament.
             </p>
           </div>
           <div className="flex gap-2">

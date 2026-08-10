@@ -80,6 +80,7 @@ const About = () => {
                     alt="Cultural Dance Aerobics"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">
@@ -101,6 +102,7 @@ const About = () => {
                     alt="Live Music & Drumming"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">
@@ -123,6 +125,7 @@ const About = () => {
                     alt="Traditional Cuisine"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">

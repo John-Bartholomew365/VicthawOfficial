@@ -116,12 +116,18 @@ const Footer = () => {
             >
               Rules
             </Link>
-            {/* <Link
+            <Link
               className="hover:text-[#C90A1D] text-[14px]"
               href={"/tournament/schedule"}
             >
               Schedule
-            </Link> */}
+            </Link>
+            <Link
+              className="hover:text-[#C90A1D] text-[14px]"
+              href={"/tournament/results"}
+            >
+              Results
+            </Link>
             <Link
               className="hover:text-[#C90A1D] text-[14px]"
               href={"/tournament/prizes"}
@@ -136,6 +142,12 @@ const Footer = () => {
             </Link>
             <Link className="hover:text-[#C90A1D] text-[14px]" href={"/tournament/faq"}>
               FAQs
+            </Link>
+            <Link
+              className="hover:text-[#C90A1D] text-[14px]"
+              href={"/archive/unity-cup-1.0"}
+            >
+              Unity Cup 1.0 (Archive)
             </Link>
           </div>
         </div>

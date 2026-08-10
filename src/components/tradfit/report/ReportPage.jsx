@@ -425,10 +425,10 @@ export default function EventReportPage() {
 
                 <div className="mt-8 p-6 bg-[#C81E23]/5 rounded-xl border border-[#C81E23]/20">
                   <p className="text-gray-700 italic">
-                    "Participants engaged actively, danced along, and enjoyed
+                    &quot;Participants engaged actively, danced along, and enjoyed
                     the rich cultural infusion. The live performance by Chi
                     sufficient & the Trophy Band thrilled attendees and
-                    reinforced the fusion of fitness and culture."
+                    reinforced the fusion of fitness and culture.&quot;
                   </p>
                 </div>
               </div>

@@ -176,16 +176,16 @@ const Navbar = () => {
                   About
                 </Link>
                 <Link
-                  href="/tournament/team"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
-                >
-                  Team
-                </Link>
-                <Link
                   href="/tournament/rules"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Rules & Guidelines
+                </Link>
+                <Link
+                  href="/tournament/schedule"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                >
+                  Schedule
                 </Link>
                 <Link
                   href="/tournament/results"
@@ -200,11 +200,25 @@ const Navbar = () => {
                   Prizes
                 </Link>
                 <Link
+                  href="/tournament/faq"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                >
+                  FAQs
+                </Link>
+                <Link
                   href="/tournament/sponsors"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Sponsors
                 </Link>
+                <div className="border-t border-gray-200 mt-2 pt-2">
+                  <Link
+                    href="/archive/unity-cup-1.0"
+                    className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    Unity Cup 1.0 (Archive)
+                  </Link>
+                </div>
               </div>
             )}
           </div>
@@ -434,16 +448,16 @@ const Navbar = () => {
                     About
                   </Link>
                   <Link
-                    href="/tournament/team"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
-                  >
-                    Team
-                  </Link>
-                  <Link
                     href="/tournament/rules"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Rules & Guidelines
+                  </Link>
+                  <Link
+                    href="/tournament/schedule"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    Schedule
                   </Link>
                   <Link
                     href="/tournament/results"
@@ -458,11 +472,25 @@ const Navbar = () => {
                     Prizes
                   </Link>
                   <Link
+                    href="/tournament/faq"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    FAQs
+                  </Link>
+                  <Link
                     href="/tournament/sponsors"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Sponsors
                   </Link>
+                  <div className="border-t border-gray-200 mt-2 pt-2">
+                    <Link
+                      href="/archive/unity-cup-1.0"
+                      className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    >
+                      Unity Cup 1.0 (Archive)
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

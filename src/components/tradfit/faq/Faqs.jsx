@@ -207,9 +207,9 @@ const FAQPage = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            We're excited to hear from you! Whether you have questions about
+            We&apos;re excited to hear from you! Whether you have questions about
             TRADFIT RHYTHMS or want to explore partnership opportunities, reach
-            out and we'll respond as soon as possible.
+            out and we&apos;ll respond as soon as possible.
           </p>
           <div
             className="flex flex-col sm:flex-row justify-center gap-4"

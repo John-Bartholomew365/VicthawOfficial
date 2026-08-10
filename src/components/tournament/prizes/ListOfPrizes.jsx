@@ -569,8 +569,9 @@ const ListOfPrizes = () => {
               <Image
                 src={winner.image}
                 alt={winner.name}
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                style={{ objectFit: "cover" }}
                 className="brightness-90"
                 priority={index < 3} // Prioritize loading first few images
               />
@@ -724,8 +725,9 @@ const ListOfPrizes = () => {
                 <Image
                   src={highlight.image}
                   alt={highlight.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
                   className="brightness-90"
                 />
               </div>
@@ -744,7 +746,7 @@ const ListOfPrizes = () => {
             Anticipate Unity Cup 2.0!
           </h3>
           <p className="text-[16px] text-[#6B6F76] lg:w-[640px] w-auto mx-auto">
-            After the tremendous success of Unity Cup 1.0, we're already working
+            After the tremendous success of Unity Cup 1.0, we&apos;re already working
             hard to make version 2.0 even more spectacular. Stay tuned for
             announcements about teams, venues, and an even bigger prize pool!
           </p>

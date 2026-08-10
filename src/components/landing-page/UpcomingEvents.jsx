@@ -70,6 +70,7 @@ const UpcomingEvents = () => {
               alt="Tournament venue"
               fill
               className="object-cover"
+              sizes="100vw"
               priority
             />
           </div>
@@ -78,18 +79,18 @@ const UpcomingEvents = () => {
         {/* Content Section */}
         <div className="lg:w-[55%] lg:pl-3">
           <h1 className="text-[24px] lg:text-5xl font-medium tracking-tight lg:text-left text-center">
-            A Successful Inaugural Tournament
+            An Unmissable Tournament Awaits
           </h1>
           <p className="mt-6 text-lg text-[#6B6F76] lg:text-left text-center lg:pr-8 leading-relaxed">
-            The <strong className="text-black">Victhaw Official Unity Cup 1.0</strong> was held from{" "}
-            <strong className="text-black">April 12th to June 29th, 2025</strong> at Basin, Ilorin, Kwara
-            State. The tournament brought together top talents, passionate fans, and
-            created unforgettable football memories.
+            The <strong className="text-black">Victhaw Official Unity Cup 2.0</strong> brings 8 teams together for a
+            group-stage battle, semi-final showdowns, and a grand final at
+            Basin, Ilorin, Kwara State. Top talents, passionate fans, and the
+            electrifying energy of the game we all love.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
-            <Link href="/tournament/highlights">
+            <Link href="/tournament/schedule">
               <button className="bg-[#C81E23] py-3 px-8 text-white rounded-lg hover:bg-white hover:text-black hover:border-2 hover:border-[#C81E23] transition-all duration-300 text-lg font-medium lg:w-fit w-[85%] lg:mx-0 mx-auto flex justify-center">
-                Relive the Moments
+                View Schedule
               </button>
             </Link>
           </div>
@@ -103,6 +104,7 @@ const UpcomingEvents = () => {
               alt="Tournament venue"
               fill
               className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
           </div>

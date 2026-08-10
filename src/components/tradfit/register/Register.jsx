@@ -231,7 +231,7 @@ export default function RegisterPage() {
         <h3 className="text-xl font-semibold text-[#C90A1D] mb-2">
           Personal Information
         </h3>
-        <p className="text-[#C90A1D]/70">Let's get to know you better</p>
+        <p className="text-[#C90A1D]/70">Let&apos;s get to know you better</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

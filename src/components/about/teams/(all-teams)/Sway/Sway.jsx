@@ -83,7 +83,7 @@ export function SwayFitness() {
                   Team Advantages
                 </h2>
                 <ul className="list-disc ml-5 space-y-2">
-                  <li>Superior physical conditioning (The "Sway Edge")</li>
+                  <li>Superior physical conditioning (The &quot;Sway Edge&quot;)</li>
                   <li>
                     Injury-resistant players (Gym-strengthened muscles)
                   </li>
@@ -128,10 +128,10 @@ export function SwayFitness() {
                 Our Training Creed
               </h2>
               <p className="italic">
-                "We don't just play football - we train for it. Every squat, 
+                &quot;We don&apos;t just play football - we train for it. Every squat, 
                 every sprint, every session in the gym translates to dominance 
-                on the pitch. At Sway Fitness FC, we're building complete 
-                football athletes."
+                on the pitch. At Sway Fitness FC, we&apos;re building complete 
+                football athletes.&quot;
               </p>
               <p className="mt-4 text-right">- Sway Fitness FC Philosophy</p>
             </div>
@@ -220,7 +220,7 @@ export function SwayFitness() {
                   Team Advantages
                 </h2>
                 <ul className="list-disc ml-5 space-y-2">
-                  <li>Superior physical conditioning (The "Sway Edge")</li>
+                  <li>Superior physical conditioning (The &quot;Sway Edge&quot;)</li>
                   <li>
                     Injury-resistant players (Gym-strengthened muscles)
                   </li>
@@ -274,10 +274,10 @@ export function SwayFitness() {
                 Our Training Creed
               </h2>
               <p className="italic">
-                "We don't just play football - we train for it. Every squat, 
+                &quot;We don&apos;t just play football - we train for it. Every squat, 
                 every sprint, every session in the gym translates to dominance 
-                on the pitch. At Sway Fitness FC, we're building complete 
-                football athletes."
+                on the pitch. At Sway Fitness FC, we&apos;re building complete 
+                football athletes.&quot;
               </p>
               <p className="mt-4 text-right">- Sway Fitness FC Philosophy</p>
             </div>

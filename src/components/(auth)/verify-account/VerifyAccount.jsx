@@ -294,7 +294,7 @@ const VerifyAccount = () => {
           </button>
         </div>
         <div className="mb-5 flex gap-3" data-aos="fade-up">
-          Didn't receive a code?{" "}
+          Didn&apos;t receive a code?{" "}
           {timerActive ? (
             <span className="font-bold text-[#C81E23]">
               Resend in 00:{seconds < 10 ? `0${seconds}` : seconds}

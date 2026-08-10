@@ -53,7 +53,7 @@ export function Leo() {
                 Leo FC is a grassroots football initiative founded by a
                 passionate young football enthusiast dedicated to nurturing
                 emerging talent. The team primarily consists of students and
-                young players, blended with a few experienced mentors who've
+                young players, blended with a few experienced mentors who&apos;ve
                 completed their education. This unique mix creates an
                 environment where raw talent meets street-smart football wisdom,
                 producing exciting, dynamic players with tremendous potential.
@@ -63,7 +63,7 @@ export function Leo() {
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-[#FAFAFA] p-6 rounded-lg border border-gray-100">
                 <h2 className="font-[600] text-black text-lg mb-2">
-                  Founder's Vision
+                  Founder&apos;s Vision
                 </h2>
                 <p className="text-black/80 font-bold">
                   The Young Football Believer
@@ -74,7 +74,7 @@ export function Leo() {
                   His vision combines opportunity creation for young players
                   with maintaining the authentic spirit of street football. The
                   team serves as both a proving ground for student athletes and
-                  a community for football-loving professionals who've kept
+                  a community for football-loving professionals who&apos;ve kept
                   their passion for the game.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export function Leo() {
             <p>
               Leo FC embodies the vibrant energy of young footballers chasing
               their dreams while balancing education and life responsibilities.
-              The team's culture blends the discipline of structured training
+              The team&apos;s culture blends the discipline of structured training
               with the creativity of street football. Regular five-aside matches
               serve as both training ground and talent showcase, where players
               develop the technical skills and football IQ needed to compete at
@@ -108,11 +108,11 @@ export function Leo() {
             <h2 className="font-[600] pt-7 text-black text-xl">
               Team Composition
             </h2>
-            <p>Leo FC's unique player mix includes:</p>
+            <p>Leo FC&apos;s unique player mix includes:</p>
             <ul className="list-disc space-y-4 ml-8">
               <li>Student athletes balancing football and education</li>
               <li>Young talents developing through five-aside football</li>
-              <li>Seasoned players who've transitioned to working life</li>
+              <li>Seasoned players who&apos;ve transitioned to working life</li>
               <li>Hustlers who maintain their football passion</li>
             </ul>
 
@@ -121,10 +121,10 @@ export function Leo() {
                 Our Development Philosophy
               </h2>
               <p className="italic">
-                "At Leo FC, we believe every young lion deserves their chance to
+                &quot;At Leo FC, we believe every young lion deserves their chance to
                 roar. Our pitch is where students become footballers, where
                 street skills meet tactical discipline, and where passion gets
-                its opportunity to shine."
+                its opportunity to shine.&quot;
               </p>
               <p className="mt-4 text-right">- Leo FC Creed</p>
             </div>
@@ -180,7 +180,7 @@ export function Leo() {
                 Leo FC is a grassroots football initiative founded by a
                 passionate young football enthusiast dedicated to nurturing
                 emerging talent. The team primarily consists of students and
-                young players, blended with a few experienced mentors who've
+                young players, blended with a few experienced mentors who&apos;ve
                 completed their education. This unique mix creates an
                 environment where raw talent meets street-smart football wisdom,
                 producing exciting, dynamic players with tremendous potential.
@@ -192,7 +192,7 @@ export function Leo() {
               {/* Founder */}
               <div className="bg-[#FAFAFA] p-6 rounded-lg border border-gray-100">
                 <h2 className="font-[600] text-black text-lg mb-2">
-                  Founder's Vision
+                  Founder&apos;s Vision
                 </h2>
                 <p className="text-black/80 font-bold">
                   The Young Football Believer
@@ -203,7 +203,7 @@ export function Leo() {
                   His vision combines opportunity creation for young players
                   with maintaining the authentic spirit of street football. The
                   team serves as both a proving ground for student athletes and
-                  a community for football-loving professionals who've kept
+                  a community for football-loving professionals who&apos;ve kept
                   their passion for the game.
                 </p>
               </div>
@@ -230,7 +230,7 @@ export function Leo() {
               <p className="mt-2">
                 Leo FC embodies the vibrant energy of young footballers chasing
                 their dreams while balancing education and life
-                responsibilities. The team's culture blends the discipline of
+                responsibilities. The team&apos;s culture blends the discipline of
                 structured training with the creativity of street football.
                 Regular five-aside matches serve as both training ground and
                 talent showcase, where players develop the technical skills and
@@ -243,11 +243,11 @@ export function Leo() {
               <h2 className="font-[600] pt-7 text-black text-xl">
                 Team Composition
               </h2>
-              <p className="mt-2">Leo FC's unique player mix includes:</p>
+              <p className="mt-2">Leo FC&apos;s unique player mix includes:</p>
               <ul className="list-disc space-y-4 ml-8 mt-2">
                 <li>Student athletes balancing football and education</li>
                 <li>Young talents developing through five-aside football</li>
-                <li>Seasoned players who've transitioned to working life</li>
+                <li>Seasoned players who&apos;ve transitioned to working life</li>
                 <li>Hustlers who maintain their football passion</li>
               </ul>
             </div>
@@ -258,10 +258,10 @@ export function Leo() {
                 Our Development Philosophy
               </h2>
               <p className="italic">
-                "At Leo FC, we believe every young lion deserves their chance to
+                &quot;At Leo FC, we believe every young lion deserves their chance to
                 roar. Our pitch is where students become footballers, where
                 street skills meet tactical discipline, and where passion gets
-                its opportunity to shine."
+                its opportunity to shine.&quot;
               </p>
               <p className="mt-4 text-right">- Leo FC Creed</p>
             </div>

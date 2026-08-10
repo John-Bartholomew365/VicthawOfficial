@@ -213,8 +213,8 @@ export default function ConfirmationPage() {
                   Payment Under Review
                 </h3>
                 <p className="text-[#FFFFFF]/80 mb-3">
-                  We've received your payment receipt and it's currently being
-                  reviewed by our admin team. You'll receive your official
+                  We&apos;ve received your payment receipt and it&apos;s currently being
+                  reviewed by our admin team. You&apos;ll receive your official
                   ticket confirmation via email once verification is complete.
                 </p>
                 <div className="bg-[#FFFFFF]/10 p-3 rounded border border-[#FFFFFF]/30">

@@ -59,7 +59,7 @@ const Certifications = () => {
             List of Certifications
           </h2>
           <p className="text-lg tracking-tight text-[#6B6F76] m-auto lg:w-[470px] w-auto">
-          Victor's certifications demonstrate his dedication to excellence and ongoing growth in fitness and sports coaching.
+          Victor&apos;s certifications demonstrate his dedication to excellence and ongoing growth in fitness and sports coaching.
           </p>
         </div>
 

@@ -356,7 +356,7 @@ const SponsorsPage = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Join us in creating impact and building authentic connections with our vibrant community. Let's bring this vision to life together
+            Join us in creating impact and building authentic connections with our vibrant community. Let&apos;s bring this vision to life together
           </p>
           <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"

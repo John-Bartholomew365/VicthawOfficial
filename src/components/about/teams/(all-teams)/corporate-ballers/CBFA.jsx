@@ -126,10 +126,10 @@ export function CorporateBallers() {
                 Our Academy Creed
               </h2>
               <p className="italic">
-                "At Corporate Ballers, we don't just train footballers - we develop 
+                &quot;At Corporate Ballers, we don&apos;t just train footballers - we develop 
                 complete athletes and individuals. Through disciplined training, 
                 structured progression, and professional standards, we unlock the 
-                God-given potential in every player entrusted to our care."
+                God-given potential in every player entrusted to our care.&quot;
               </p>
               <p className="mt-4 text-right">- CBFA Philosophy</p>
             </div>
@@ -270,10 +270,10 @@ export function CorporateBallers() {
                 Our Academy Creed
               </h2>
               <p className="italic">
-                "At Corporate Ballers, we don't just train footballers - we develop 
+                &quot;At Corporate Ballers, we don&apos;t just train footballers - we develop 
                 complete athletes and individuals. Through disciplined training, 
                 structured progression, and professional standards, we unlock the 
-                God-given potential in every player entrusted to our care."
+                God-given potential in every player entrusted to our care.&quot;
               </p>
               <p className="mt-4 text-right">- CBFA Philosophy</p>
             </div>

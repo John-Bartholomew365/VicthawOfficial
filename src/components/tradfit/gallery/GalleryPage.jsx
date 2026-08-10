@@ -559,7 +559,7 @@ export default function GalleryPage() {
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
             <p className="lg:text-[20px] text-[15px] italic opacity-95 leading-relaxed transition-all duration-500 font-medium">
-              "{culturalQuotes[activeQuote]}"
+              &quot;{culturalQuotes[activeQuote]}&quot;
             </p>
             <div className="mt-3 sm:mt-4 flex justify-center space-x-1">
               {culturalQuotes.map((_, idx) => (
@@ -614,6 +614,7 @@ export default function GalleryPage() {
                     src={image.src}
                     alt={image.alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className={`object-cover transition-all duration-700 ${
                       hoveredImage === image.id ? "scale-110" : "scale-100"
                     }`}
@@ -816,6 +817,7 @@ export default function GalleryPage() {
                     src={picture.src}
                     alt={picture.alt}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     className={`object-cover transition-all duration-700 ${
                       hoveredImage === picture.id ? "scale-110" : "scale-100"
                     }`}
@@ -980,6 +982,7 @@ export default function GalleryPage() {
                 src={selectedPictureData.src}
                 alt={selectedPictureData.alt}
                 fill
+                sizes="100vw"
                 className="object-contain"
                 priority
               />
@@ -1040,7 +1043,7 @@ export default function GalleryPage() {
             </h2>
 
             <p className="mx-auto mb-10 max-w-2xl lg:text-[18px] text-[16px] text-gray-600">
-              This is just a glimpse. The real magic happens when you're moving with 300+ others to the beat of your heritage.
+              This is just a glimpse. The real magic happens when you&apos;re moving with 300+ others to the beat of your heritage.
             </p>
 
             <div className="flex flex-col gap-6 sm:flex-row sm:justify-center">

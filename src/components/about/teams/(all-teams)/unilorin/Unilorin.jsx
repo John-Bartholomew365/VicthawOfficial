@@ -71,8 +71,8 @@ export function UnilorinQuarters() {
                   A local legend who brings together players from all walks of life, 
                   Coach Walter has a unique ability to blend different generations 
                   into a cohesive team. Known for his inclusive approach and Saturday 
-                  morning training sessions, he's the glue that holds this diverse 
-                  squad together. His philosophy is simple: "Football is for everyone."
+                  morning training sessions, he&apos;s the glue that holds this diverse 
+                  squad together. His philosophy is simple: &quot;Football is for everyone.&quot;
                 </p>
               </div>
 
@@ -81,7 +81,7 @@ export function UnilorinQuarters() {
                   Team Specialties
                 </h2>
                 <ul className="list-disc ml-5 space-y-2">
-                  <li>Mixed-generation teamwork (The "Community Blend")</li>
+                  <li>Mixed-generation teamwork (The &quot;Community Blend&quot;)</li>
                   <li>
                     Saturday morning football rituals
                   </li>
@@ -100,7 +100,7 @@ export function UnilorinQuarters() {
               Unilorin Quarters FC was born from the love of football in the 
               neighborhoods around the University of Ilorin. What started as casual 
               Saturday matches at the Quarters field evolved into a proper team. 
-              Though they haven't been around too long, they've quickly become a 
+              Though they haven&apos;t been around too long, they&apos;ve quickly become a 
               beloved part of the local sports scene, representing the vibrant 
               community spirit of the area.
             </p>
@@ -125,9 +125,9 @@ export function UnilorinQuarters() {
                 Our Community Philosophy
               </h2>
               <p className="italic">
-                "We may come from different generations and backgrounds, but on 
-                this pitch we're one team. Saturday mornings at the Unilorin Quarters field 
-                are where friendships are made and football dreams live."
+                &quot;We may come from different generations and backgrounds, but on 
+                this pitch we&apos;re one team. Saturday mornings at the Unilorin Quarters field 
+                are where friendships are made and football dreams live.&quot;
               </p>
               <p className="mt-4 text-right">- Unilorin Quarters FC Motto</p>
             </div>
@@ -203,8 +203,8 @@ export function UnilorinQuarters() {
                   A local legend who brings together players from all walks of life, 
                   Coach Walter has a unique ability to blend different generations 
                   into a cohesive team. Known for his inclusive approach and Saturday 
-                  morning training sessions, he's the glue that holds this diverse 
-                  squad together. His philosophy is simple: "Football is for everyone."
+                  morning training sessions, he&apos;s the glue that holds this diverse 
+                  squad together. His philosophy is simple: &quot;Football is for everyone.&quot;
                 </p>
               </div>
 
@@ -214,7 +214,7 @@ export function UnilorinQuarters() {
                   Team Specialties
                 </h2>
                 <ul className="list-disc ml-5 space-y-2">
-                  <li>Mixed-generation teamwork (The "Community Blend")</li>
+                  <li>Mixed-generation teamwork (The &quot;Community Blend&quot;)</li>
                   <li>
                     Saturday morning football rituals
                   </li>
@@ -235,7 +235,7 @@ export function UnilorinQuarters() {
                 Unilorin Quarters FC was born from the love of football in the 
                 neighborhoods around the University of Ilorin. What started as casual 
                 Saturday matches at the Quarters field evolved into a proper team. 
-                Though they haven't been around too long, they've quickly become a 
+                Though they haven&apos;t been around too long, they&apos;ve quickly become a 
                 beloved part of the local sports scene, representing the vibrant 
                 community spirit of the area.
               </p>
@@ -267,9 +267,9 @@ export function UnilorinQuarters() {
                 Our Community Philosophy
               </h2>
               <p className="italic">
-                "We may come from different generations and backgrounds, but on 
-                this pitch we're one team. Saturday mornings at the Unilorin Quarters field 
-                are where friendships are made and football dreams live."
+                &quot;We may come from different generations and backgrounds, but on 
+                this pitch we&apos;re one team. Saturday mornings at the Unilorin Quarters field 
+                are where friendships are made and football dreams live.&quot;
               </p>
               <p className="mt-4 text-right">- Unilorin Quarters FC Motto</p>
             </div>

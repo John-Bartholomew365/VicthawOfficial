@@ -158,7 +158,7 @@ const About = () => {
       description: [
         "Gold Medals awarded to every winning player",
         "The gleaming Champion's Trophy claimed by victors",
-        "Cash Prize that rewarded their hard work and triumph!",
+        "Cash Prize that rewards their hard work and triumph!",
       ],
       image: "/thrill.jpeg",
     },
@@ -198,10 +198,10 @@ const About = () => {
           Prizes
         </h3>
         <h2 className="lg:text-[45px] text-[22px] font-[600] text-center leading-tight tracking-tight mt-[40px]">
-          Glory Achieved: <br /> What Our Champions Earned!
+          Rewards of Glory: <br /> What Champions Take Home!
         </h2>
         <p className="text-[#6B6F76] text-center mt-4 max-w-[500px]">
-          Unity Cup 1.0 winners claimed these prestigious prizes. Stay tuned for even greater rewards in future tournaments!
+          Unity Cup 2.0 champions will claim these prestigious prizes. Compete, conquer, and take your glory!
         </p>
       </div>
 
@@ -213,6 +213,7 @@ const About = () => {
             alt={prizes[currentIndex].title}
             fill
             className="object-cover rounded-lg"
+            sizes="100vw"
             priority
           />
         </div>
@@ -259,7 +260,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Link href="/tournament/prizes">
               <button className="bg-[#C81E23] flex justify-center items-center text-center py-[10px] px-[20px] text-white rounded-[6px] hover:bg-white hover:text-black hover:border-[#C81E23] hover:border transition-all lg:w-fit w-[85%] lg:mx-0 mx-auto">
-                See all Winners
+                See Full Prizes
               </button>
             </Link>
           </div>
@@ -272,6 +273,7 @@ const About = () => {
             alt={prizes[currentIndex].title}
             fill
             className="object-cover rounded-lg"
+            sizes="(max-width: 1024px) 100vw, 40vw"
             priority
           />
         </div>

@@ -355,7 +355,7 @@ const collaborations = [
         </tr>
         <tr>
           <td style={{ padding: "10px 0" }}>
-            We pay attention to Arts, workouts, nutrition/meal plans as well as the psychological process in the clients' fitness and art journey.
+            We pay attention to Arts, workouts, nutrition/meal plans as well as the psychological process in the clients&apos; fitness and art journey.
           </td>
         </tr>
         <tr>
@@ -561,7 +561,7 @@ export default function CollaborationPage() {
               Partnership Network
             </h2>
             <p className="text-gray-600 lg:w-[500px] w-auto mx-auto">
-              Together, we're creating impactful experiences that celebrate
+              Together, we&apos;re creating impactful experiences that celebrate
               culture, promote fitness, and unite communities across Nigeria.
             </p>
           </div>

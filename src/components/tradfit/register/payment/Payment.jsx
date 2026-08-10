@@ -263,7 +263,7 @@ export default function PaymentPage() {
                 className="w-full bg-[#C90A1D] hover:bg-[#A30818] text-white rounded-md py-3 flex items-center justify-center gap-2 disabled:bg-[#C90A1D]/50"
                 aria-label="Proceed to upload receipt"
               >
-                I've Made Payment - Upload Receipt
+                I&apos;ve Made Payment - Upload Receipt
                 <ArrowRight className="w-4 h-4" aria-label="Arrow right icon" />
               </button>
             </div>

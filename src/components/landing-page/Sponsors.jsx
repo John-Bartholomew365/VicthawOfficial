@@ -21,7 +21,7 @@ const Sponsors = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Sponsors made Unity Cup 1.0 an unforgettable experience. 
-            Join us next time to connect with passionate fans and elevate your brand presence.
+            Join us for Unity Cup 2.0 to connect with passionate fans and elevate your brand presence.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ const Sponsors = () => {
             <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-6 rounded-full"></div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Brand Visibility</h3>
             <p className="text-gray-600 leading-relaxed">
-              Sponsors gained prominent exposure through strategic placement on banners, 
+              Sponsors gain prominent exposure through strategic placement on banners, 
               team uniforms, and across our social media channels reaching thousands of engaged fans.
             </p>
           </div>
@@ -43,7 +43,7 @@ const Sponsors = () => {
             <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-6 rounded-full"></div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Impact</h3>
             <p className="text-gray-600 leading-relaxed">
-              Connected forward-thinking brands with hundreds of passionate fans 
+              Connect forward-thinking brands with hundreds of passionate fans 
               and players who value corporate support of local sports initiatives.
             </p>
           </div>
@@ -54,7 +54,7 @@ const Sponsors = () => {
             <div className="w-16 h-1 bg-gradient-to-r from-red-600 to-orange-500 mb-6 rounded-full"></div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Lasting Connections</h3>
             <p className="text-gray-600 leading-relaxed">
-              Built valuable, long-term relationships with local businesses and community 
+              Build valuable, long-term relationships with local businesses and community 
               organizations that extend far beyond the tournament.
             </p>
           </div>

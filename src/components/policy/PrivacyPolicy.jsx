@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
             unauthorized access, disclosure, alteration, or destruction. We use
             industry-standard security practices to safeguard your data.
           </p>
-          <h3 className="text-xl font-bold mb-2 mt-16">5. Children's Privacy</h3>
+          <h3 className="text-xl font-bold mb-2 mt-16">5. Children&apos;s Privacy</h3>
           <p className="text-[#6B6F76] mb-4 lg:w-[500px] w-auto">
             Our website and services are not intended for children under the age
             of 13. We do not knowingly collect personal information from

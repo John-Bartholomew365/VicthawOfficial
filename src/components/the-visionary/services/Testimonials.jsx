@@ -140,7 +140,7 @@ const Testimonials = () => {
             What People Are Saying
           </h2>
           <p className="text-lg tracking-tight text-[#6B6F76] m-auto lg:w-[470px] w-auto">
-            Hear from those who have experienced Victor's coaching and
+            Hear from those who have experienced Victor&apos;s coaching and
             mentorship firsthand.
           </p>
         </div>
@@ -156,7 +156,7 @@ const Testimonials = () => {
               className="bg-[#FAFAFA] p-6 rounded-lg shadow-md"
             >
               <p className="text-[#6B6F76] italic mb-6">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gray-700 rounded-full mr-4 flex items-center justify-center text-white">
