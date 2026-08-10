@@ -6,6 +6,15 @@ import ResultsHero from "@/components/tournament/results/ResultHero";
 import ResultsPage from "@/components/tournament/results/Results";
 import React from "react";
 
+export const metadata = {
+  title: "Unity Cup 1.0 – Results & Standings",
+  description:
+    "Final results, standings and player rankings from the Victhaw Unity Cup 1.0.",
+  alternates: {
+    canonical: "/archive/unity-cup-1.0/results",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

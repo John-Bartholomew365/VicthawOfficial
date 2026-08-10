@@ -7,6 +7,15 @@ import Victor from "@/components/the-visionary/home/Victor";
 import WhyVicthaw from "@/components/the-visionary/home/WhyVicthaw";
 import React from "react";
 
+export const metadata = {
+  title: "The Visionary",
+  description:
+    "The Visionary by Victhaw Official — empowering growth through certification, professional services and community impact.",
+  alternates: {
+    canonical: "/visionary/home",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

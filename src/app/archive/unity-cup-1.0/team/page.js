@@ -4,6 +4,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "Unity Cup 1.0 – Teams",
+  description:
+    "The teams that competed in the Victhaw Unity Cup 1.0 tournament.",
+  alternates: {
+    canonical: "/archive/unity-cup-1.0/team",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

@@ -3,6 +3,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Contact Victhaw Official — reach out for enquiries, partnerships, sponsorship and the Unity Cup.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

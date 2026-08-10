@@ -3,6 +3,15 @@ import NewsUpdates from "@/components/news/NewsUpdates";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "News & Updates",
+  description:
+    "Latest news and updates from Victhaw Official — Unity Cup 2.0, Tradfit Rhythms and community events.",
+  alternates: {
+    canonical: "/news",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

@@ -3,6 +3,19 @@ import PageLoader from "@/components/PageLoader";
 import PrivacyPolicy from "@/components/policy/PrivacyPolicy";
 import React from "react";
 
+export const metadata = {
+  title: "Privacy Policy",
+  description:
+    "Read the privacy policy for Victhaw Official — how we collect, use and protect your information.",
+  alternates: {
+    canonical: "/policy",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

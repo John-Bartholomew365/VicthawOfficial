@@ -3,6 +3,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "FAQs – Unity Cup 2.0",
+  description:
+    "Answers to common questions about the Unity Cup 2.0 — registration, schedule, rules, teams and more.",
+  alternates: {
+    canonical: "/tournament/faq",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

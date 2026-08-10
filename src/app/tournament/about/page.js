@@ -3,6 +3,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "About Unity Cup 2.0",
+  description:
+    "Everything about the Victhaw Unity Cup 2.0 — tournament dates, match formats, the 8 competing teams and the battle for the trophy.",
+  alternates: {
+    canonical: "/tournament/about",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

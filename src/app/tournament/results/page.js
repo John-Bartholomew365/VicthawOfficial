@@ -6,6 +6,15 @@ import ResultsPage from "@/components/unity-cup-2/Results";
 import TopScorers from "@/components/unity-cup-2/TopScorers";
 import React from "react";
 
+export const metadata = {
+  title: "Results & Standings – Unity Cup 2.0",
+  description:
+    "Live Unity Cup 2.0 match scores, group standings, top scorers and player stats as the tournament unfolds.",
+  alternates: {
+    canonical: "/tournament/results",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

@@ -4,6 +4,15 @@ import Hero from "@/components/tournament/prizes/Hero";
 import ListOfPrizes from "@/components/tournament/prizes/ListOfPrizes";
 import React from "react";
 
+export const metadata = {
+  title: "Unity Cup 1.0 – Prizes",
+  description:
+    "The prizes and awards won at the Victhaw Unity Cup 1.0 tournament.",
+  alternates: {
+    canonical: "/archive/unity-cup-1.0/prizes",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

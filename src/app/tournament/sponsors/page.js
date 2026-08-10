@@ -3,6 +3,15 @@ import PageLoader from "@/components/PageLoader";
 import Sponsors from "@/components/unity-cup-2/Sponsors";
 import React from "react";
 
+export const metadata = {
+  title: "Sponsors – Unity Cup 2.0",
+  description:
+    "Meet the sponsors powering Unity Cup 2.0 and learn how to partner with Victhaw Official.",
+  alternates: {
+    canonical: "/tournament/sponsors",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

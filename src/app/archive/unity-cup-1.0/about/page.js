@@ -4,6 +4,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "Unity Cup 1.0 – About",
+  description:
+    "About the debut Victhaw Unity Cup 1.0 — the story, the format and how the Battle of Champions began.",
+  alternates: {
+    canonical: "/archive/unity-cup-1.0/about",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

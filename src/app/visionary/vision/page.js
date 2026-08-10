@@ -4,6 +4,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "Our Vision",
+  description:
+    "The vision behind Victhaw Official and The Visionary — why we build, inspire and empower communities.",
+  alternates: {
+    canonical: "/visionary/vision",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

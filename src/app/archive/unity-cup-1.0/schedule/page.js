@@ -4,6 +4,15 @@ import Footer from "@/components/landing-page/Footer";
 import PageLoader from "@/components/PageLoader";
 import React from "react";
 
+export const metadata = {
+  title: "Unity Cup 1.0 – Schedule",
+  description:
+    "The full match schedule from the Victhaw Unity Cup 1.0 — fixtures, dates and kick-off times.",
+  alternates: {
+    canonical: "/archive/unity-cup-1.0/schedule",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

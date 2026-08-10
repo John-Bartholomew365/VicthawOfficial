@@ -6,6 +6,15 @@ import ServicesCta from "@/components/the-visionary/services/ServicesCta";
 import Testimonials from "@/components/the-visionary/services/Testimonials";
 import React from "react";
 
+export const metadata = {
+  title: "Services – The Visionary",
+  description:
+    "Explore the services offered by The Visionary through Victhaw Official — tailored solutions for growth and excellence.",
+  alternates: {
+    canonical: "/visionary/services",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>

@@ -5,6 +5,15 @@ import Certifications from "@/components/the-visionary/certification/Certificati
 import FinalCerti from "@/components/the-visionary/certification/FinalCerti";
 import React from "react";
 
+export const metadata = {
+  title: "Certification – The Visionary",
+  description:
+    "Get certified with The Visionary — structured certification programmes by Victhaw Official that build real-world skills.",
+  alternates: {
+    canonical: "/visionary/certification",
+  },
+};
+
 const page = () => {
   return (
     <PageLoader>
