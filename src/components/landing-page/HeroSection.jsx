@@ -29,6 +29,7 @@ const HeroSection = () => {
       },
       accentColor: "#C81E23",
     },
+    
     {
       id: "tradfit",
       firstText: "TRADFIT RHYTHMS",
