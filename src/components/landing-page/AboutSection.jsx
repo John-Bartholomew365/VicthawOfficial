@@ -21,7 +21,7 @@ const AboutSection = () => {
 
       {/* Tournament Message */}
       <div className="flex flex-col items-center justify-center mt-8 gap-4">
-        <div className="bg-green-600 text-white lg:px-6 px-4 py-3 rounded-full lg:text-xl text-[16px] font-bold">
+        <div className="bg-green-600 text-white lg:px-6 px-4 py-3 rounded-full lg:text-xl text-[15px] font-bold">
           🏆 8 TEAMS. 2 GROUPS. 1 CHAMPION. 🏆
         </div>
         <Link href="/tournament/schedule">
