@@ -182,6 +182,12 @@ const Navbar = () => {
                   Rules & Guidelines
                 </Link>
                 <Link
+                  href="/tournament/team"
+                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                >
+                  Teams
+                </Link>
+                <Link
                   href="/tournament/schedule"
                   className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
@@ -216,7 +222,7 @@ const Navbar = () => {
                     href="/archive/unity-cup-1.0"
                     className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
-                    Unity Cup 1.0 (Archive)
+                    Unity Cup 1.0
                   </Link>
                 </div>
               </div>
@@ -454,6 +460,12 @@ const Navbar = () => {
                     Rules & Guidelines
                   </Link>
                   <Link
+                    href="/tournament/team"
+                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    Teams
+                  </Link>
+                  <Link
                     href="/tournament/schedule"
                     className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
@@ -488,7 +500,7 @@ const Navbar = () => {
                       href="/archive/unity-cup-1.0"
                       className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                     >
-                      Unity Cup 1.0 (Archive)
+                      Unity Cup 1.0
                     </Link>
                   </div>
                 </div>

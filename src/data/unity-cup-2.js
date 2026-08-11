@@ -1,9 +1,9 @@
 // =============================================================
 // UNITY CUP 2.0 - TOURNAMENT DATA
 // -------------------------------------------------------------
-// Fixtures, groups and dates are real. Items still marked
-// "(PLACEHOLDER)" (managers, results, scorers, sponsors, prize
-// amounts) should be replaced as they become available.
+// Fixtures, groups, dates, team managers and top scorers are real.
+// Items still marked "(PLACEHOLDER)" (goalscorers per match, sponsors,
+// prize amounts) should be replaced as they become available.
 // =============================================================
 
 export const edition = {
@@ -97,7 +97,7 @@ export const teams = [
     image: "/first-stars.jpeg",
     group: "B",
     tagline: "Rising With Purpose",
-    manager: "TBD (PLACEHOLDER)",
+    manager: "ALAGBE TUNDE ISAAC",
     overview:
       "FIRST STARS FC are a determined side making their Unity Cup debut. (PLACEHOLDER - replace with the real 2.0 team profile.)",
     specialties: [
@@ -125,7 +125,7 @@ export const teams = [
     image: "/kwaita.jpeg",
     group: "B",
     tagline: "Proud, United, Determined",
-    manager: "TBD (PLACEHOLDER)",
+    manager: "EBENZER OSUJI",
     overview:
       "KWAITA UNITED FC represent their community with pride and play a competitive, team-first brand of football. (PLACEHOLDER - replace with the real 2.0 team profile.)",
     specialties: [
@@ -153,7 +153,7 @@ export const teams = [
     image: "/glamour.jpeg",
     group: "A",
     tagline: "Style Meets Substance",
-    manager: "TBD (PLACEHOLDER)",
+    manager: "TOSIN OSHIN",
     overview:
       "GLAMOUR FC bring flair and confidence to the pitch, mixing attractive football with a winning mentality. (PLACEHOLDER - replace with the real 2.0 team profile.)",
     specialties: [
@@ -181,7 +181,7 @@ export const teams = [
     image: "/phoenix.jpeg",
     group: "B",
     tagline: "Rising From The Ashes",
-    manager: "TBD (PLACEHOLDER)",
+    manager: "AKERELE TOBI",
     overview:
       "PHOENIX LEGEND FC are built on resilience and a never-give-up mentality, ready to rise in Unity Cup 2.0. (PLACEHOLDER - replace with the real 2.0 team profile.)",
     specialties: [
@@ -209,7 +209,7 @@ export const teams = [
     image: "/fortunate.jpeg",
     group: "A",
     tagline: "Blessed To Compete",
-    manager: "TBD (PLACEHOLDER)",
+    manager: "YAHAYA MUSA",
     overview:
       "FORTUNATE FC are a hardworking, ambitious side making their Unity Cup debut in 2.0. (PLACEHOLDER - replace with the real 2.0 team profile.)",
     specialties: [
@@ -237,7 +237,7 @@ export const teams = [
     image: "/excel-stars.jpeg",
     group: "B",
     tagline: "Excellence In Motion",
-    manager: "TBD (PLACEHOLDER)",
+    manager: "YUSUF WILFRED",
     overview:
       "EXCEL STARS FC strive for excellence in everything they do, combining skill, discipline, and ambition. (PLACEHOLDER - replace with the real 2.0 team profile.)",
     specialties: [
@@ -362,13 +362,32 @@ const matchResults = {
   "Group A - Matchday 1|bankers-all-stars|corporate-ballers": {
     homeScore: 0,
     awayScore: 1,
+    goalscorers: [
+      { player: "TAIWO TITTA", team: "Corporate Ballers", time: "30'" },
+    ],
   },
-  "Group A - Matchday 1|glamour|fortunate": { homeScore: 1, awayScore: 1 },
+  "Group A - Matchday 1|glamour|fortunate": {
+    homeScore: 1,
+    awayScore: 1,
+    goalscorers: [
+      { player: "KUNLE ADEYANJU", team: "Glamour", time: "6'" },
+      { player: "KINGSLEY", team: "Fortunate", time: "60'" },
+    ],
+  },
   "Group B - Matchday 1|kwaita-united|phoenix-legend": {
     homeScore: 2,
     awayScore: 1,
+    goalscorers: [
+      { player: "ISIAKA OLAWALE", team: "Kwaita United", time: "20'" },
+      { player: "OLAWALE SODIQ", team: "Phoenix Legend", time: "45'" },
+      { player: "ISIAKA OLAWALE", team: "Kwaita United", time: "56'" },
+    ],
   },
-  "Group B - Matchday 1|first-stars|excel-stars": { homeScore: 1, awayScore: 0 },
+  "Group B - Matchday 1|first-stars|excel-stars": {
+    homeScore: 1,
+    awayScore: 0,
+    goalscorers: [{ player: "GAGO", team: "First Stars", time: "60'" }],
+  },
 };
 
 const completedMatchdayOne = [
@@ -423,7 +442,7 @@ const buildResultRound = (round) => ({
             : null
           : null,
       walkover: false,
-      goalscorers: [],
+      goalscorers: result ? result.goalscorers || [] : [],
       stats: null,
     };
   }),
@@ -509,10 +528,47 @@ const computeStandings = () => {
 export const leagueTable = computeStandings();
 
 // -------------------------------------------------------------
-// TOP SCORERS (placeholder - none yet)
+// TOP SCORERS
 // -------------------------------------------------------------
 
-export const topScorers = [];
+export const topScorers = [
+  {
+    player: "ISIAKA OLAWALE",
+    team: "Kwaita United",
+    logo: "/kwaita.jpeg",
+    goals: 2,
+  },
+  {
+    player: "KINGSLEY",
+    team: "Fortunate",
+    logo: "/fortunate.jpeg",
+    goals: 1,
+  },
+  {
+    player: "TAIWO TITTA",
+    team: "Corporate Ballers",
+    logo: "/corporate-ballers.png",
+    goals: 1,
+  },
+  {
+    player: "KUNLE ADEYANJU",
+    team: "Glamour",
+    logo: "/glamour.jpeg",
+    goals: 1,
+  },
+  {
+    player: "OLAWALE SODIQ",
+    team: "Phoenix Legend",
+    logo: "/phoenix.jpeg",
+    goals: 1,
+  },
+  {
+    player: "GAGO",
+    team: "First Stars",
+    logo: "/first-stars.jpeg",
+    goals: 1,
+  },
+];
 
 // -------------------------------------------------------------
 // PRIZES (placeholder - amounts to be confirmed)

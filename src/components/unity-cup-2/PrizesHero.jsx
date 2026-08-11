@@ -33,8 +33,8 @@ const PrizesHero = () => {
               <Image
                 src="/advanced-cup.jpeg"
                 alt="Unity Cup 2.0 Trophy, Golden Ball and Golden Glove"
-                height={230}
-                width={420}
+                height={170}
+                width={390}
                 className="rounded-md"
               />
             </div>
@@ -48,8 +48,8 @@ const PrizesHero = () => {
               <Image
                 src="/advanced-cup.jpeg"
                 alt="Unity Cup 2.0 Trophy, Golden Ball and Golden Glove"
-                height={230}
-                width={420}
+                height={170}
+                width={390}
                 className="rounded-md"
               />
             </div>
