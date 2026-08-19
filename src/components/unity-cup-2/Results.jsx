@@ -114,6 +114,15 @@ const Results = () => {
                               </p>
                             )}
                           </div>
+                        ) : match.postponed ? (
+                          <div className="text-center">
+                            <p className="font-bold text-[16px] text-orange-500 uppercase">
+                              Postponed
+                            </p>
+                            <p className="text-gray-500 text-[12px]">
+                              {match.date}
+                            </p>
+                          </div>
                         ) : (
                           <div className="text-center">
                             <p className="font-bold text-[18px] text-gray-400">
@@ -187,7 +196,7 @@ const Results = () => {
         <div>
           <h3 className="font-bold text-green-800">Results are live</h3>
           <p className="text-green-600 text-sm">
-            Matchday 1 scores are in! New results, goalscorers and stats will
+            Matchdays 1 &amp; 2 scores are in! New results, goalscorers and stats will
             be added here as soon as each match is played. Venue: {edition.venue}
           </p>
         </div>

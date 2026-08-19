@@ -290,22 +290,6 @@ export function getTeam(slug) {
 
 export const fixtures = [
   {
-    round: "Group A - Matchday 2",
-    stage: "Group Stage",
-    matches: [
-      { home: "corporate-ballers", away: "glamour", date: "Sat 15 Aug 2026", time: "4:00 PM", completed: false },
-      { home: "fortunate", away: "bankers-all-stars", date: "Sat 15 Aug 2026", time: "5:20 PM", completed: false },
-    ],
-  },
-  {
-    round: "Group B - Matchday 2",
-    stage: "Group Stage",
-    matches: [
-      { home: "kwaita-united", away: "first-stars", date: "Sun 16 Aug 2026", time: "4:00 PM", completed: false },
-      { home: "phoenix-legend", away: "excel-stars", date: "Sun 16 Aug 2026", time: "5:20 PM", completed: false },
-    ],
-  },
-  {
     round: "Group A - Matchday 3",
     stage: "Group Stage",
     matches: [
@@ -388,6 +372,35 @@ const matchResults = {
     awayScore: 0,
     goalscorers: [{ player: "GAGO", team: "First Stars", time: "60'" }],
   },
+  "Group A - Matchday 2|fortunate|bankers-all-stars": {
+    homeScore: 1,
+    awayScore: 3,
+    goalscorers: [
+      { player: "Ololade Hassan", team: "Bankers All Stars", time: "4'" },
+      { player: "Samuel Coco", team: "Bankers All Stars", time: "25'" },
+      { player: "Hakeem Oyan", team: "Bankers All Stars", time: "86'" },
+      { player: "KINGSLEY", team: "Fortunate", time: "50'" },
+    ],
+  },
+  "Group B - Matchday 2|kwaita-united|first-stars": {
+    homeScore: 2,
+    awayScore: 0,
+    goalscorers: [
+      { player: "Adigun", team: "Kwaita United", time: "4'" },
+      { player: "Own Goal", team: "First Stars", time: "37'" },
+    ],
+  },
+  "Group B - Matchday 2|phoenix-legend|excel-stars": {
+    homeScore: 2,
+    awayScore: 3,
+    goalscorers: [
+      { player: "Ladi", team: "Phoenix Legend", time: "3'" },
+      { player: "Oba", team: "Excel Stars", time: "13'" },
+      { player: "Alaro", team: "Excel Stars", time: "28'" },
+      { player: "Ladi", team: "Phoenix Legend", time: "41'" },
+      { player: "Kabir", team: "Excel Stars", time: "46'" },
+    ],
+  },
 };
 
 const completedMatchdayOne = [
@@ -417,6 +430,22 @@ const completedMatchdayOne = [
         completed: true,
       },
       { home: "first-stars", away: "excel-stars", date: "Sun 9 Aug 2026", time: "5:20 PM", completed: true },
+    ],
+  },
+  {
+    round: "Group A - Matchday 2",
+    stage: "Group Stage",
+    matches: [
+      { home: "corporate-ballers", away: "glamour", date: "Sat 15 Aug 2026", time: "4:00 PM", completed: false, postponed: true },
+      { home: "fortunate", away: "bankers-all-stars", date: "Sat 15 Aug 2026", time: "5:20 PM", completed: true },
+    ],
+  },
+  {
+    round: "Group B - Matchday 2",
+    stage: "Group Stage",
+    matches: [
+      { home: "kwaita-united", away: "first-stars", date: "Sun 16 Aug 2026", time: "4:00 PM", completed: true },
+      { home: "phoenix-legend", away: "excel-stars", date: "Sun 16 Aug 2026", time: "5:20 PM", completed: true },
     ],
   },
 ];
@@ -542,7 +571,13 @@ export const topScorers = [
     player: "KINGSLEY",
     team: "Fortunate",
     logo: "/fortunate.jpeg",
-    goals: 1,
+    goals: 2,
+  },
+  {
+    player: "Ladi",
+    team: "Phoenix Legend",
+    logo: "/phoenix.jpeg",
+    goals: 2,
   },
   {
     player: "TAIWO TITTA",
@@ -566,6 +601,48 @@ export const topScorers = [
     player: "GAGO",
     team: "First Stars",
     logo: "/first-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "Ololade Hassan",
+    team: "Bankers All Stars",
+    logo: "/bankers-fc.png",
+    goals: 1,
+  },
+  {
+    player: "Samuel Coco",
+    team: "Bankers All Stars",
+    logo: "/bankers-fc.png",
+    goals: 1,
+  },
+  {
+    player: "Hakeem Oyan",
+    team: "Bankers All Stars",
+    logo: "/bankers-fc.png",
+    goals: 1,
+  },
+  {
+    player: "Adigun",
+    team: "Kwaita United",
+    logo: "/kwaita.jpeg",
+    goals: 1,
+  },
+  {
+    player: "Oba",
+    team: "Excel Stars",
+    logo: "/excel-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "Alaro",
+    team: "Excel Stars",
+    logo: "/excel-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "Kabir",
+    team: "Excel Stars",
+    logo: "/excel-stars.jpeg",
     goals: 1,
   },
 ];
