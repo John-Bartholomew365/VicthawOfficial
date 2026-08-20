@@ -114,15 +114,6 @@ const Results = () => {
                               </p>
                             )}
                           </div>
-                        ) : match.postponed ? (
-                          <div className="text-center">
-                            <p className="font-bold text-[16px] text-orange-500 uppercase">
-                              Postponed
-                            </p>
-                            <p className="text-gray-500 text-[12px]">
-                              {match.date}
-                            </p>
-                          </div>
                         ) : (
                           <div className="text-center">
                             <p className="font-bold text-[18px] text-gray-400">

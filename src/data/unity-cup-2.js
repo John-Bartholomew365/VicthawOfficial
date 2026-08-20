@@ -382,6 +382,11 @@ const matchResults = {
       { player: "KINGSLEY", team: "Fortunate", time: "50'" },
     ],
   },
+  "Group A - Matchday 2|corporate-ballers|glamour": {
+    homeScore: 0,
+    awayScore: 0,
+    goalscorers: [],
+  },
   "Group B - Matchday 2|kwaita-united|first-stars": {
     homeScore: 2,
     awayScore: 0,
@@ -436,7 +441,7 @@ const completedMatchdayOne = [
     round: "Group A - Matchday 2",
     stage: "Group Stage",
     matches: [
-      { home: "corporate-ballers", away: "glamour", date: "Sat 15 Aug 2026", time: "4:00 PM", completed: false, postponed: true },
+      { home: "corporate-ballers", away: "glamour", date: "Wed 19 Aug 2026", time: "4:00 PM", completed: true },
       { home: "fortunate", away: "bankers-all-stars", date: "Sat 15 Aug 2026", time: "5:20 PM", completed: true },
     ],
   },
