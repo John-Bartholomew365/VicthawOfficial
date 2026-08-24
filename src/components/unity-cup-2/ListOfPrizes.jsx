@@ -75,7 +75,7 @@ const ListOfPrizes = () => {
         </h2>
         <p className="text-[#6B6F76] max-w-md mx-auto mt-3">
           Final cash prizes and award amounts for Unity Cup 2.0 will be
-          confirmed and updated here before the tournament begins.
+          confirmed and updated here.
         </p>
       </div>
     </div>

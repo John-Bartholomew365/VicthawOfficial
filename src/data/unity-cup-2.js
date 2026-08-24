@@ -10,8 +10,8 @@ export const edition = {
   version: "2.0",
   fullTitle: "Victhaw Official Unity Cup 2.0",
   shortTitle: "Unity Cup 2.0",
-  dates: "August 8th - September 6th, 2026",
-  venue: "Basin Stadium, Ilorin, Kwara State",
+  dates: "August 8th - September 13th, 2026",
+  venue: "Lower River Niger Basin, Ilorin, Kwara State",
   format: "Group Stage (Groups A & B) + Semi-Finals + Third Place + Final",
   numberOfTeams: 8,
   accentColor: "#C81E23",
@@ -290,47 +290,31 @@ export function getTeam(slug) {
 
 export const fixtures = [
   {
-    round: "Group A - Matchday 3",
-    stage: "Group Stage",
-    matches: [
-      { home: "corporate-ballers", away: "fortunate", date: "Sat 22 Aug 2026", time: "4:00 PM", completed: false },
-      { home: "bankers-all-stars", away: "glamour", date: "Sat 22 Aug 2026", time: "5:20 PM", completed: false },
-    ],
-  },
-  {
-    round: "Group B - Matchday 3",
-    stage: "Group Stage",
-    matches: [
-      { home: "excel-stars", away: "kwaita-united", date: "Sun 23 Aug 2026", time: "4:00 PM", completed: false },
-      { home: "phoenix-legend", away: "first-stars", date: "Sun 23 Aug 2026", time: "5:20 PM", completed: false },
-    ],
-  },
-  {
     round: "Semi Final 1",
     stage: "Semi Final",
     matches: [
-      { home: "Winner Group A", away: "Runner-up Group B", date: "Sun 30 Aug 2026", time: "4:00 PM", completed: false },
+      { home: "corporate-ballers", away: "first-stars", date: "Sun 6 Sep 2026", time: "3:00 PM", completed: false },
     ],
   },
   {
     round: "Semi Final 2",
     stage: "Semi Final",
     matches: [
-      { home: "Winner Group B", away: "Runner-up Group A", date: "Sun 30 Aug 2026", time: "5:20 PM", completed: false },
+      { home: "kwaita-united", away: "bankers-all-stars", date: "Sun 6 Sep 2026", time: "4:20 PM", completed: false },
     ],
   },
   {
     round: "Third Place Match",
     stage: "Third Place",
     matches: [
-      { home: "Loser Semi Final 1", away: "Loser Semi Final 2", date: "Sat 5 Sep 2026", time: "4:00 PM", completed: false },
+      { home: "Loser Semi Final 1", away: "Loser Semi Final 2", date: "Sun 13 Sep 2026", time: "3:00 PM", completed: false },
     ],
   },
   {
     round: "Final",
     stage: "Final",
     matches: [
-      { home: "Winner Semi Final 1", away: "Winner Semi Final 2", date: "Sun 6 Sep 2026", time: "4:00 PM", completed: false },
+      { home: "Winner Semi Final 1", away: "Winner Semi Final 2", date: "Sun 13 Sep 2026", time: "4:20 PM", completed: false },
     ],
   },
 ];
@@ -338,7 +322,7 @@ export const fixtures = [
 // -------------------------------------------------------------
 // RESULTS
 // -------------------------------------------------------------
-// Matchday 1 has been played. Unplayed matches show null scores.
+// All group stage matches have been played. Unplayed knockout matches show null scores.
 // Add new scores to `matchResults` keyed by "<round>|<home>|<away>".
 // -------------------------------------------------------------
 
@@ -406,6 +390,39 @@ const matchResults = {
       { player: "Kabir", team: "Excel Stars", time: "46'" },
     ],
   },
+  "Group A - Matchday 3|corporate-ballers|fortunate": {
+    homeScore: 4,
+    awayScore: 0,
+    goalscorers: [
+      { player: "TAIWO TITTA", team: "Corporate Ballers", time: "7'" },
+      { player: "TAIWO TITTA", team: "Corporate Ballers", time: "20'" },
+      { player: "AKEEB", team: "Corporate Ballers", time: "25'" },
+      { player: "AKEEB", team: "Corporate Ballers", time: "60'" },
+    ],
+  },
+  "Group A - Matchday 3|bankers-all-stars|glamour": {
+    homeScore: 1,
+    awayScore: 1,
+    goalscorers: [
+      { player: "KUNLE ADEYANJU", team: "Glamour", time: "55'" },
+      { player: "OLOLADE HASSAN", team: "Bankers All Stars", time: "60+3'" },
+    ],
+  },
+  "Group B - Matchday 3|phoenix-legend|first-stars": {
+    homeScore: 0,
+    awayScore: 2,
+    goalscorers: [
+      { player: "ROMOULD OKAFOR", team: "First Stars", time: "15'" },
+      { player: "SALAUDEEN AFEEZ", team: "First Stars", time: "45'" },
+    ],
+  },
+  "Group B - Matchday 3|excel-stars|kwaita-united": {
+    homeScore: 1,
+    awayScore: 1,
+    goalscorers: [
+      { player: "OZIOKO EMEKA", team: "Excel Stars", time: "50'" },
+    ],
+  },
 };
 
 const completedMatchdayOne = [
@@ -453,6 +470,22 @@ const completedMatchdayOne = [
       { home: "phoenix-legend", away: "excel-stars", date: "Sun 16 Aug 2026", time: "5:20 PM", completed: true },
     ],
   },
+  {
+    round: "Group A - Matchday 3",
+    stage: "Group Stage",
+    matches: [
+      { home: "corporate-ballers", away: "fortunate", date: "Sat 22 Aug 2026", time: "4:00 PM", completed: true },
+      { home: "bankers-all-stars", away: "glamour", date: "Sat 22 Aug 2026", time: "5:20 PM", completed: true },
+    ],
+  },
+  {
+    round: "Group B - Matchday 3",
+    stage: "Group Stage",
+    matches: [
+      { home: "excel-stars", away: "kwaita-united", date: "Sun 23 Aug 2026", time: "4:00 PM", completed: true },
+      { home: "phoenix-legend", away: "first-stars", date: "Sun 23 Aug 2026", time: "5:20 PM", completed: true },
+    ],
+  },
 ];
 
 const buildResultRound = (round) => ({
@@ -482,7 +515,7 @@ const buildResultRound = (round) => ({
   }),
 });
 
-// Results keep Matchday 1 (played) while the schedule page starts at Matchday 2.
+// Results include all completed group stage rounds and knockout fixtures.
 export const results = [
   ...completedMatchdayOne.map(buildResultRound),
   ...fixtures.map(buildResultRound),
@@ -562,10 +595,16 @@ const computeStandings = () => {
 export const leagueTable = computeStandings();
 
 // -------------------------------------------------------------
-// TOP SCORERS
+// TOP SCORERS (updated after group stage)
 // -------------------------------------------------------------
 
 export const topScorers = [
+  {
+    player: "TAIWO TITTA",
+    team: "Corporate Ballers",
+    logo: "/corporate-ballers.png",
+    goals: 3,
+  },
   {
     player: "ISIAKA OLAWALE",
     team: "Kwaita United",
@@ -585,16 +624,22 @@ export const topScorers = [
     goals: 2,
   },
   {
-    player: "TAIWO TITTA",
-    team: "Corporate Ballers",
-    logo: "/corporate-ballers.png",
-    goals: 1,
-  },
-  {
     player: "KUNLE ADEYANJU",
     team: "Glamour",
     logo: "/glamour.jpeg",
-    goals: 1,
+    goals: 2,
+  },
+  {
+    player: "Ololade Hassan",
+    team: "Bankers All Stars",
+    logo: "/bankers-fc.png",
+    goals: 2,
+  },
+  {
+    player: "AKEEB",
+    team: "Corporate Ballers",
+    logo: "/corporate-ballers.png",
+    goals: 2,
   },
   {
     player: "OLAWALE SODIQ",
@@ -606,12 +651,6 @@ export const topScorers = [
     player: "GAGO",
     team: "First Stars",
     logo: "/first-stars.jpeg",
-    goals: 1,
-  },
-  {
-    player: "Ololade Hassan",
-    team: "Bankers All Stars",
-    logo: "/bankers-fc.png",
     goals: 1,
   },
   {
@@ -646,6 +685,24 @@ export const topScorers = [
   },
   {
     player: "Kabir",
+    team: "Excel Stars",
+    logo: "/excel-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "ROMOULD OKAFOR",
+    team: "First Stars",
+    logo: "/first-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "SALAUDEEN AFEEZ",
+    team: "First Stars",
+    logo: "/first-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "OZIOKO EMEKA",
     team: "Excel Stars",
     logo: "/excel-stars.jpeg",
     goals: 1,
@@ -706,7 +763,7 @@ export const faqs = [
   {
     question: "When does Unity Cup 2.0 take place?",
     answer:
-      "Unity Cup 2.0 runs from August 8th to September 6th, 2026 at Basin Stadium, Ilorin, Kwara State. Group games are played every weekend, with the semi-finals on 30th August, the third place match on 5th September and the final on 6th September.",
+      "Unity Cup 2.0 runs from August 8th to September 13th, 2026 at Lower River Niger Basin, Ilorin, Kwara State. Group games are played every weekend, with the semi-finals on 6th September and the final on 13th September.",
   },
   {
     question: "How many teams are participating in Unity Cup 2.0?",
@@ -741,12 +798,12 @@ export const faqs = [
   {
     question: "How do teams qualify for the semi-finals?",
     answer:
-      "The top 2 teams from each group advance to the semi-finals. Semi Final 1 pairs the Winner of Group A against the Runner-up of Group B, while Semi Final 2 pairs the Winner of Group B against the Runner-up of Group A.",
+      "The top 2 teams from each group advance to the semi-finals. Semi Final 1 pairs the Winner of Group A against the Runner-up of Group B, while Semi Final 2 pairs the Winner of Group B against the Runner-up of Group A. The semi-finals take place on 6th September 2026.",
   },
   {
     question: "Is there a third place match?",
     answer:
-      "Yes. The losers of the two semi-finals contest the third place match on 5th September 2026 to decide who finishes third.",
+      "Yes. The losers of the two semi-finals contest the third place match on 13th September 2026 to decide who finishes third.",
   },
   {
     question: "How are the league standings ranked?",

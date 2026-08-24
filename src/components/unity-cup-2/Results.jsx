@@ -187,8 +187,8 @@ const Results = () => {
         <div>
           <h3 className="font-bold text-green-800">Results are live</h3>
           <p className="text-green-600 text-sm">
-            Matchdays 1 &amp; 2 scores are in! New results, goalscorers and stats will
-            be added here as soon as each match is played. Venue: {edition.venue}
+            Group stage complete! Semi-final and knockout results will
+            be added here as each match is played. Venue: {edition.venue}
           </p>
         </div>
       </div>
