@@ -105,6 +105,11 @@ const Results = () => {
                             <p className="font-bold text-[20px]">
                               {match.homeScore} - {match.awayScore}
                             </p>
+                            {match.pens && (
+                              <p className="text-gray-600 text-[13px] font-medium">
+                                Pens: {match.pens.home} - {match.pens.away}
+                              </p>
+                            )}
                             <p className="text-gray-500 text-[12px]">
                               {match.date}
                             </p>
@@ -159,6 +164,9 @@ const Results = () => {
             </div>
             <p className="text-sm text-gray-500 mb-4">
               {selectedMatch.round} · {selectedMatch.date} · {selectedMatch.time}
+              {selectedMatch.pens && (
+                <> · Pens: {selectedMatch.pens.home} - {selectedMatch.pens.away}</>
+              )}
             </p>
 
             <h4 className="font-semibold mb-3 text-gray-800">Goal Scorers</h4>

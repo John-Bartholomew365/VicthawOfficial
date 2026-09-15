@@ -10,8 +10,8 @@ export const edition = {
   version: "2.0",
   fullTitle: "Victhaw Official Unity Cup 2.0",
   shortTitle: "Unity Cup 2.0",
-  dates: "August 8th - September 13th, 2026",
-  venue: "Lower River Niger Basin, Ilorin, Kwara State",
+  dates: "August 8th - September 20th, 2026",
+  venue: "Lower River Niger Basin, Basin Road, Ilorin, Kwara State",
   format: "Group Stage (Groups A & B) + Semi-Finals + Third Place + Final",
   numberOfTeams: 8,
   accentColor: "#C81E23",
@@ -290,31 +290,17 @@ export function getTeam(slug) {
 
 export const fixtures = [
   {
-    round: "Semi Final 1",
-    stage: "Semi Final",
-    matches: [
-      { home: "corporate-ballers", away: "first-stars", date: "Sun 6 Sep 2026", time: "3:00 PM", completed: false },
-    ],
-  },
-  {
-    round: "Semi Final 2",
-    stage: "Semi Final",
-    matches: [
-      { home: "kwaita-united", away: "bankers-all-stars", date: "Sun 6 Sep 2026", time: "4:20 PM", completed: false },
-    ],
-  },
-  {
     round: "Third Place Match",
     stage: "Third Place",
     matches: [
-      { home: "Loser Semi Final 1", away: "Loser Semi Final 2", date: "Sun 13 Sep 2026", time: "3:00 PM", completed: false },
+      { home: "first-stars", away: "bankers-all-stars", date: "Sun 20 Sep 2026", time: "2:00 PM", completed: false },
     ],
   },
   {
     round: "Final",
     stage: "Final",
     matches: [
-      { home: "Winner Semi Final 1", away: "Winner Semi Final 2", date: "Sun 13 Sep 2026", time: "4:20 PM", completed: false },
+      { home: "corporate-ballers", away: "kwaita-united", date: "Sun 20 Sep 2026", time: "3:30 PM", completed: false },
     ],
   },
 ];
@@ -423,6 +409,20 @@ const matchResults = {
       { player: "OZIOKO EMEKA", team: "Excel Stars", time: "50'" },
     ],
   },
+  "Semi Final 1|corporate-ballers|first-stars": {
+    homeScore: 0,
+    awayScore: 0,
+    goalscorers: [],
+    pens: { home: 6, away: 5 },
+  },
+  "Semi Final 2|kwaita-united|bankers-all-stars": {
+    homeScore: 1,
+    awayScore: 1,
+    goalscorers: [
+      { player: "Ololade Hassan", team: "Bankers All Stars", time: "75'" },
+    ],
+    pens: { home: 5, away: 4 },
+  },
 };
 
 const completedMatchdayOne = [
@@ -486,6 +486,20 @@ const completedMatchdayOne = [
       { home: "phoenix-legend", away: "first-stars", date: "Sun 23 Aug 2026", time: "5:20 PM", completed: true },
     ],
   },
+  {
+    round: "Semi Final 1",
+    stage: "Semi Final",
+    matches: [
+      { home: "corporate-ballers", away: "first-stars", date: "Sun 6 Sep 2026", time: "3:00 PM", completed: true },
+    ],
+  },
+  {
+    round: "Semi Final 2",
+    stage: "Semi Final",
+    matches: [
+      { home: "kwaita-united", away: "bankers-all-stars", date: "Sun 13 Sep 2026", time: "4:20 PM", completed: true },
+    ],
+  },
 ];
 
 const buildResultRound = (round) => ({
@@ -510,6 +524,7 @@ const buildResultRound = (round) => ({
           : null,
       walkover: false,
       goalscorers: result ? result.goalscorers || [] : [],
+      pens: result ? result.pens || null : null,
       stats: null,
     };
   }),
@@ -600,6 +615,12 @@ export const leagueTable = computeStandings();
 
 export const topScorers = [
   {
+    player: "Ololade Hassan",
+    team: "Bankers All Stars",
+    logo: "/bankers-fc.png",
+    goals: 3,
+  },
+  {
     player: "TAIWO TITTA",
     team: "Corporate Ballers",
     logo: "/corporate-ballers.png",
@@ -627,12 +648,6 @@ export const topScorers = [
     player: "KUNLE ADEYANJU",
     team: "Glamour",
     logo: "/glamour.jpeg",
-    goals: 2,
-  },
-  {
-    player: "Ololade Hassan",
-    team: "Bankers All Stars",
-    logo: "/bankers-fc.png",
     goals: 2,
   },
   {
@@ -763,7 +778,7 @@ export const faqs = [
   {
     question: "When does Unity Cup 2.0 take place?",
     answer:
-      "Unity Cup 2.0 runs from August 8th to September 13th, 2026 at Lower River Niger Basin, Ilorin, Kwara State. Group games are played every weekend, with the semi-finals on 6th September and the final on 13th September.",
+      "Unity Cup 2.0 runs from August 8th to September 20th, 2026 at Lower River Niger Basin, Basin Road, Ilorin, Kwara State. Group games are played every weekend, with the semi-finals on 6th September and the final on 20th September.",
   },
   {
     question: "How many teams are participating in Unity Cup 2.0?",
@@ -803,7 +818,7 @@ export const faqs = [
   {
     question: "Is there a third place match?",
     answer:
-      "Yes. The losers of the two semi-finals contest the third place match on 13th September 2026 to decide who finishes third.",
+      "Yes. The losers of the two semi-finals contest the third place match on 20th September 2026 to decide who finishes third.",
   },
   {
     question: "How are the league standings ranked?",
