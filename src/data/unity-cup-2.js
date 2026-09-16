@@ -419,6 +419,7 @@ const matchResults = {
     homeScore: 1,
     awayScore: 1,
     goalscorers: [
+      { player: "Emeka", team: "Kwaita United", time: "67'" },
       { player: "Ololade Hassan", team: "Bankers All Stars", time: "75'" },
     ],
     pens: { home: 5, away: 4 },
@@ -720,6 +721,12 @@ export const topScorers = [
     player: "OZIOKO EMEKA",
     team: "Excel Stars",
     logo: "/excel-stars.jpeg",
+    goals: 1,
+  },
+  {
+    player: "Emeka",
+    team: "Kwaita United",
+    logo: "/kwaita.jpeg",
     goals: 1,
   },
 ];
