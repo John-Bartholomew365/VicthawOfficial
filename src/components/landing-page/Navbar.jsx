@@ -96,43 +96,43 @@ const Navbar = () => {
               >
                 <Link
                   href="/tradfit/info"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Info
                 </Link>
                 <Link
                   href="/tradfit/about"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   About
                 </Link>
                 <Link
                   href="/tradfit/gallery"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Gallery
                 </Link>
                 <Link
                   href="/tradfit/sponsors"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Sponsors
                 </Link>
                 <Link
                   href="/tradfit/collaboration"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Collaboration
                 </Link>
                 <Link
                   href="/tradfit/faq"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   FAQs
                 </Link>
                 <Link
                   href="/tradfit/report"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Report
                 </Link>
@@ -171,56 +171,50 @@ const Navbar = () => {
               >
                 <Link
                   href="/tournament/about"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   About
                 </Link>
                 <Link
-                  href="/tournament/rules"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
-                >
-                  Rules & Guidelines
-                </Link>
-                <Link
                   href="/tournament/team"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Teams
                 </Link>
                 <Link
-                  href="/tournament/schedule"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
-                >
-                  Schedule
-                </Link>
-                <Link
                   href="/tournament/results"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Results
                 </Link>
                 <Link
                   href="/tournament/prizes"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Prizes
                 </Link>
                 <Link
-                  href="/tournament/faq"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  href="/tournament/gallery"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
-                  FAQs
+                  Gallery
                 </Link>
                 <Link
-                  href="/tournament/sponsors"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  href="/tournament/rules"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
-                  Sponsors
+                  Rules & Guidelines
+                </Link>
+                <Link
+                  href="/tournament/faq"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                >
+                  FAQs
                 </Link>
                 <div className="border-t border-gray-200 mt-2 pt-2">
                   <Link
                     href="/archive/unity-cup-1.0"
-                    className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Unity Cup 1.0
                   </Link>
@@ -260,25 +254,25 @@ const Navbar = () => {
               >
                 <Link
                   href="/visionary/home"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   href="/visionary/certification"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Certification
                 </Link>
                 <Link
                   href="/visionary/services"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Services
                 </Link>
                 <Link
                   href="/visionary/contact"
-                  className="block px-4 py-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                 >
                   Contact
                 </Link>
@@ -375,43 +369,43 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/tradfit/info"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Info
                   </Link>
                   <Link
                     href="/tradfit/about"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     About
                   </Link>
                   <Link
                     href="/tradfit/gallery"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Gallery
                   </Link>
                   <Link
                     href="/tradfit/sponsors"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Sponsors
                   </Link>
                   <Link
                     href="/tradfit/collaboration"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Collaboration
                   </Link>
                   <Link
                     href="/tradfit/faq"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     FAQs
                   </Link>
                   <Link
                     href="/tradfit/report"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Report
                   </Link>
@@ -449,56 +443,50 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/tournament/about"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     About
                   </Link>
                   <Link
-                    href="/tournament/rules"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
-                  >
-                    Rules & Guidelines
-                  </Link>
-                  <Link
                     href="/tournament/team"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Teams
                   </Link>
                   <Link
-                    href="/tournament/schedule"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
-                  >
-                    Schedule
-                  </Link>
-                  <Link
                     href="/tournament/results"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Results
                   </Link>
                   <Link
                     href="/tournament/prizes"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Prizes
                   </Link>
                   <Link
-                    href="/tournament/faq"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    href="/tournament/gallery"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
-                    FAQs
+                    Gallery
                   </Link>
                   <Link
-                    href="/tournament/sponsors"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    href="/tournament/rules"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
-                    Sponsors
+                    Rules & Guidelines
+                  </Link>
+                  <Link
+                    href="/tournament/faq"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                  >
+                    FAQs
                   </Link>
                   <div className="border-t border-gray-200 mt-2 pt-2">
                     <Link
                       href="/archive/unity-cup-1.0"
-                      className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                      className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                     >
                       Unity Cup 1.0
                     </Link>
@@ -537,25 +525,25 @@ const Navbar = () => {
                 <div className="mt-2 pl-4">
                   <Link
                     href="/visionary/home"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Home
                   </Link>
                   <Link
                     href="/visionary/certification"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Certification
                   </Link>
                   <Link
                     href="/visionary/services"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Services
                   </Link>
                   <Link
                     href="/visionary/contact"
-                    className="block p-2 text-[14px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
                   >
                     Contact
                   </Link>

@@ -1,10 +1,11 @@
 "use client"
 import AboutSection from "@/components/landing-page/AboutSection";
+import ChampionSpotlight from "@/components/landing-page/ChampionSpotlight";
 import Footer from "@/components/landing-page/Footer";
+import GalleryTeaser from "@/components/landing-page/GalleryTeaser";
 import HeroSection from "@/components/landing-page/HeroSection";
 import Prizes from "@/components/landing-page/Prizes";
 import RegisterTeam from "@/components/landing-page/RegisterTeam";
-import Sponsors from "@/components/landing-page/Sponsors";
 import TournamentHighlight from "@/components/landing-page/TournamentHighlight";
 import UpcomingEvents from "@/components/landing-page/UpcomingEvents";
 import PageLoader from "@/components/PageLoader";
@@ -68,10 +69,11 @@ export default function Home() {
           </div>
         )}
         <HeroSection />
+        <ChampionSpotlight />
         <AboutSection />
         <TournamentHighlight />
+        <GalleryTeaser />
         <Prizes />
-        <Sponsors />
         <RegisterTeam />
         <UpcomingEvents />
       </div>

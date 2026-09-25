@@ -13,19 +13,20 @@ const HeroSection = () => {
   const slider = [
     {
       id: "football",
-      firstText: "Uniting the",
-      secondText: "community",
-      thirdText: "through soccer",
+      firstText: "Unity Cup 2.0",
+      secondText: "Champions",
+      thirdText: "Crowned",
       subTitle:
-        "Victhaw Official Unity Cup 2.0 is here! 8 teams, 2 groups, one champion. Follow the action, cheer for your favourite team, and be part of the movement that unites our community through football.",
-      image: "/thrill.jpeg",
+        "8 teams, 2 groups, one unforgettable final. Victhaw Official Unity Cup 2.0 is complete — relive every result, meet the champions, and see the moments that united our community through football.",
+      image: "/champion-trophy-v3.jpg",
+      imageFit: "contain",
       ctaPrimary: {
-        text: "View Schedule",
-        link: "/tournament/schedule",
+        text: "See Full Results",
+        link: "/tournament/results",
       },
       ctaSecondary: {
-        text: "Meet the Teams",
-        link: "/tournament/team",
+        text: "View Gallery",
+        link: "/tournament/gallery",
       },
       accentColor: "#C81E23",
     },
@@ -102,18 +103,39 @@ const HeroSection = () => {
             data-aos="fade-left"
             data-aos-delay="300"
           >
-            <div className="w-full max-w-md lg:max-w-lg h-64 sm:h-80 md:h-96 lg:h-[400px] relative">
+            <div
+              className={`relative ${
+                carousel.imageFit === "contain"
+                  ? "w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[480px] h-[440px] sm:h-[500px] md:h-[560px] lg:h-[620px]"
+                  : "w-full max-w-md lg:max-w-lg h-64 sm:h-80 md:h-96 lg:h-[400px]"
+              }`}
+            >
               <div
                 className="absolute -inset-2 border-2 rounded-lg opacity-30 transition-all duration-700"
                 style={{ borderColor: carousel.accentColor }}
               ></div>
-              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
+              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg bg-gray-100">
+                {carousel.imageFit === "contain" && (
+                  <Image
+                    key={`${carousel.image}-bg`}
+                    src={carousel.image}
+                    alt=""
+                    aria-hidden="true"
+                    fill
+                    className="object-cover scale-110 blur-2xl opacity-60"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                )}
                 <Image
                   key={carousel.image}
                   src={carousel.image}
                   alt={`${carousel.id} event`}
                   fill
-                  className="object-cover relative z-10"
+                  className={`relative z-10 ${
+                    carousel.imageFit === "contain"
+                      ? "object-contain"
+                      : "object-cover"
+                  }`}
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />

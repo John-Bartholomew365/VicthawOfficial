@@ -15,7 +15,7 @@ const AboutSection = () => {
         </h1>
         <p className="text-center text-lg text-[#6B6F76] mt-3 lg:w-[470px] w-auto mx-auto leading-tight">
           A bigger, bolder edition of the football tournament that unites
-          communities and showcases incredible talent!
+          communities and showcases incredible talent — now in the books!
         </p>
       </div>
 
@@ -24,7 +24,7 @@ const AboutSection = () => {
         <div className="bg-green-600 text-white lg:px-6 px-4 py-3 rounded-full lg:text-xl text-[15px] font-bold">
           🏆 8 TEAMS. 2 GROUPS. 1 CHAMPION. 🏆
         </div>
-        <Link href="/tournament/schedule">
+        <Link href="/tournament/results">
           <button className="bg-white border-2 border-[#C81E23] text-[#C81E23] hover:bg-gray-50 transition-colors font-medium py-2 px-5 rounded-lg flex items-center gap-2 lg:text-[16px] text-[15px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const AboutSection = () => {
                 clipRule="evenodd"
               />
             </svg>
-            VIEW FULL SCHEDULE
+            VIEW FULL RESULTS
           </button>
         </Link>
       </div>
@@ -73,16 +73,16 @@ const AboutSection = () => {
             />
             <div>
               <h1 className="text-[23px] font-[600] lg:text-[34px] tracking-tight">
-                The Next Chapter Begins
+                A Chapter Well Played
               </h1>
               <p className="lg:w-[350px] w-full text-[#6B6F76] tracking-tight mt-2">
-                Unity Cup 2.0 takes the tournament to the next level at{" "}
+                Unity Cup 2.0 took the tournament to the next level at{" "}
                 {edition.venue}, with 8 teams split into two competitive
                 groups.
               </p>
               <p className="text-[#6B6F76] tracking-tight mt-2 mb-7 lg:w-[350px] w-full">
                 Group stage drama, semi-final showdowns, and a grand final that
-                will crown the new champion.
+                crowned {edition.champion.teamName} champions of the tournament.
               </p>
               <Link href="/tournament/team">
                 <button className="bg-[#C81E23] hover:bg-[#A5161E] transition-colors py-[10px] px-[20px] text-white rounded-[6px]">

@@ -9,7 +9,7 @@ import { edition } from "@/data/unity-cup-2";
 const aboutSections = [
   {
     title: "The Victhaw Official Unity Cup 2.0",
-    body: "Unity Cup 2.0 is the next chapter of the high-stakes football tournament that unites teams from different backgrounds in a celebration of competitive spirit and sportsmanship. It builds on the success of Unity Cup 1.0, featuring 8 teams, bigger groups, and the same passion for the beautiful game.",
+    body: "Unity Cup 2.0 was the next chapter of the high-stakes football tournament that unites teams from different backgrounds in a celebration of competitive spirit and sportsmanship. It built on the success of Unity Cup 1.0, with 8 teams, bigger groups, and the same passion for the beautiful game.",
   },
   {
     title: "Our Mission",
@@ -17,23 +17,19 @@ const aboutSections = [
   },
   {
     title: "Tournament Format",
-    body: "The competition features a group stage with Groups A and B, followed by the semi-finals, a third place match and a grand final. The top 2 teams from each group advance to the knockout phase, where the best teams battle for the championship.",
+    body: "The competition featured a group stage with Groups A and B, followed by the semi-finals, a third place match and a grand final. The top 2 teams from each group advanced to the knockout phase, where Kwaita United ultimately came out on top.",
   },
   {
     title: "The Teams",
-    body: "Defending champions Bankers All Stars return alongside 7 ambitious squads ready to write their own history. Check the Teams page to meet every side competing in Unity Cup 2.0.",
-  },
-  {
-    title: "Our Partners",
-    body: "This tournament is made possible through the support of our valued sponsors and partners who share our passion for sports and community development. Sponsorship details will be announced on the Sponsors page.",
+    body: "Defending champions Bankers All Stars were joined by 7 ambitious squads, all looking to write their own history. Check the Teams page to meet every side that competed in Unity Cup 2.0.",
   },
   {
     title: "Community Impact",
-    body: "Beyond the matches, Unity Cup 2.0 brings people together through fan engagement activities, live updates, and interactive events that create lasting memories.",
+    body: "Beyond the matches, Unity Cup 2.0 brought people together through fan engagement activities, live updates, and closing-ceremony celebrations that created lasting memories.",
   },
   {
     title: "Get Involved",
-    body: "Whether you're a player, a fan, or a sponsor, there's a place for you in Unity Cup 2.0. Follow the tournament on social media, cheer for your favourite team, and be part of the excitement.",
+    body: "Whether you're a player, a fan, or a sponsor, there's a place for you at the next Unity Cup. Follow us on social media to be the first to hear about the next edition.",
   },
 ];
 
@@ -83,15 +79,15 @@ const About = () => {
 
         <div className="my-[60px]">
           <p className="text-[#6B6F76] text-center m-auto mb-4 lg:w-[500px] w-auto">
-            Want to follow the journey of Unity Cup 2.0? Check the schedule and
-            results to stay on top of every match.
+            Want to relive the journey of Unity Cup 2.0? Check the full results
+            and see how every match played out.
           </p>
           <div className="flex justify-center gap-4">
             <Link
-              href="/tournament/schedule"
+              href="/tournament/results"
               className="bg-[#C81E23] text-white py-2 px-4 rounded-md hover:bg-[#a8191d] transition duration-300 ease-in-out"
             >
-              View Schedule
+              View Results
             </Link>
             <Link
               href="/tournament/team"

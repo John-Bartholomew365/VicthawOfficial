@@ -195,8 +195,7 @@ const Results = () => {
         <div>
           <h3 className="font-bold text-green-800">Results are live</h3>
           <p className="text-green-600 text-sm">
-            Group stage complete! Semi-final and knockout results will
-            be added here as each match is played. Venue: {edition.venue}
+            Tournament complete! Unity Cup 2.0 champions: {edition.champion.teamName}. Full results, goalscorers and stats for every match. Venue: {edition.venue}
           </p>
         </div>
       </div>

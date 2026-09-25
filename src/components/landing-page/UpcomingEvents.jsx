@@ -79,18 +79,18 @@ const UpcomingEvents = () => {
         {/* Content Section */}
         <div className="lg:w-[55%] lg:pl-3">
           <h1 className="text-[24px] lg:text-5xl font-medium tracking-tight lg:text-left text-center">
-            An Unmissable Tournament Awaits
+            An Unmissable Tournament, Delivered
           </h1>
           <p className="mt-6 text-lg text-[#6B6F76] lg:text-left text-center lg:pr-8 leading-relaxed">
-            The <strong className="text-black">Victhaw Official Unity Cup 2.0</strong> brings 8 teams together for a
+            The <strong className="text-black">Victhaw Official Unity Cup 2.0</strong> brought 8 teams together for a
             group-stage battle, semi-final showdowns, and a grand final at
             Basin, Ilorin, Kwara State. Top talents, passionate fans, and the
             electrifying energy of the game we all love.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
-            <Link href="/tournament/schedule">
+            <Link href="/tournament/gallery">
               <button className="bg-[#C81E23] py-3 px-8 text-white rounded-lg hover:bg-white hover:text-black hover:border-2 hover:border-[#C81E23] transition-all duration-300 text-lg font-medium lg:w-fit w-[85%] lg:mx-0 mx-auto flex justify-center">
-                View Schedule
+                Relive the Moments
               </button>
             </Link>
           </div>

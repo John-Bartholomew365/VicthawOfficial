@@ -9,29 +9,29 @@ const rulesSections = [
   {
     title: "Tournament Format (2.0)",
     items: [
-      "Unity Cup 2.0 features 8 teams split into Group A and Group B, with 4 teams in each group.",
-      "Every team plays the other three teams in its group once during the group stage.",
-      "The top 2 teams from each group advance to the semi-finals.",
-      "The winners of the two semi-finals meet in the Grand Final to decide the champion.",
+      "Unity Cup 2.0 featured 8 teams split into Group A and Group B, with 4 teams in each group.",
+      "Every team played the other three teams in its group once during the group stage.",
+      "The top 2 teams from each group advanced to the semi-finals.",
+      "The winners of the two semi-finals met in the Grand Final to decide the champion.",
     ],
   },
   {
     title: "Team Composition & Match Rules",
     items: [
-      "Each team will have 11 players, consisting of 10 outfield players and 1 goalkeeper.",
-      "Teams are allowed a maximum of 9 substitutes, with only 5 permitted to enter during play. An additional concussion substitution is allowed if needed after the 5th substitution.",
-      "All teams must arrive at the match venue at least 40 minutes before kick-off.",
-      "A match will commence as long as a team has a minimum of 7 players at kick-off. Late arrivals will not delay the game.",
-      "If a team fails to present at least 7 players within 15 minutes after the scheduled kick-off, the opposing team will be awarded the match.",
+      "Each team had 11 players, consisting of 10 outfield players and 1 goalkeeper.",
+      "Teams were allowed a maximum of 9 substitutes, with only 5 permitted to enter during play. An additional concussion substitution was allowed if needed after the 5th substitution.",
+      "All teams were required to arrive at the match venue at least 40 minutes before kick-off.",
+      "A match commenced as long as a team had a minimum of 7 players at kick-off. Late arrivals did not delay the game.",
+      "If a team failed to present at least 7 players within 15 minutes after the scheduled kick-off, the opposing team was awarded the match.",
     ],
   },
   {
     title: "Match Duration & Tie Resolution",
     items: [
-      "Each half will be 30 minutes long, with no additional injury time.",
-      "During the group stage, matches that end level are recorded as draws.",
-      "In the semi-finals and final, if the score is level after full time, an extra 15 minutes will be played.",
-      "If the match remains tied after extra time, the winner will be determined through a penalty shootout.",
+      "Each half was 30 minutes long, with no additional injury time.",
+      "During the group stage, matches that ended level were recorded as draws.",
+      "In the semi-finals and final, if the score was level after full time, an extra 15 minutes was played.",
+      "If the match remained tied after extra time, the winner was determined through a penalty shootout.",
     ],
   },
   {
@@ -84,9 +84,9 @@ const Rules = () => {
             Tournament Rules <br /> and Guidelines
           </h1>
           <p className="text-[#6B6F76] lg:w-[380px] w-auto mt-4">
-            Clear and fair rules are in place to ensure a safe, competitive, and
-            well-organized tournament while promoting sportsmanship and
-            teamwork.
+            The official rules that kept Unity Cup 2.0 safe, competitive and
+            well-organized, while promoting sportsmanship and teamwork
+            throughout.
           </p>
         </div>
         <div className="lg:mt-0 mt-10" data-aos="fade-left">
@@ -131,11 +131,11 @@ const Rules = () => {
       <div className="mt-[90px]">
         <div>
           <h1 className="lg:text-[40px] text-[28px] text-center leading-tight tracking-tight">
-            Ready for {edition.shortTitle}? <br /> Stay Sharp, Stay Ready!
+            Discipline, Respect, Fair Play
           </h1>
           <p className="text-center lg:w-[460px] tracking-tight mt-3 m-auto w-auto text-[#6B6F76]">
-            Remember - discipline, respect and fair play make champions both on
-            and off the field.
+            These values shaped every match of {edition.shortTitle} — on and
+            off the field.
           </p>
         </div>
       </div>

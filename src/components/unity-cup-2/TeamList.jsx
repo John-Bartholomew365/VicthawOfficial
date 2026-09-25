@@ -95,18 +95,18 @@ export default function TeamList() {
 
       <div className="my-16 text-center">
         <h1 className="text-2xl lg:text-3xl font-bold text-[#C90A1D]">
-          The Road to the Cup Begins Here
+          The Road to the Cup
         </h1>
         <p className="text-gray-400 lg:w-[450px] w-auto mx-auto mt-3">
-          Group stage. Knockout drama. One champion. Follow every team&apos;s
-          journey through Unity Cup 2.0.
+          Group stage. Knockout drama. One champion. See how every team&apos;s
+          journey through Unity Cup 2.0 played out.
         </p>
         <div className="flex justify-center mt-7">
           <Link
-            href="/tournament/schedule"
+            href="/tournament/results"
             className="bg-red-600 tracking-tight text-white px-8 py-3 rounded-md text-lg font-bold hover:bg-red-700 transition duration-300"
           >
-            View tournament schedule
+            View tournament results
           </Link>
         </div>
       </div>

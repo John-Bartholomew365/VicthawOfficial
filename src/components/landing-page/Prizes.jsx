@@ -157,10 +157,10 @@ const About = () => {
       title: "Champion team",
       description: [
         "Gold Medals awarded to every winning player",
-        "The gleaming Champion's Trophy claimed by victors",
-        "Cash Prize that rewards their hard work and triumph!",
+        "The gleaming Champion's Trophy claimed by Kwaita United",
+        "Cash Prize that rewarded their hard work and triumph!",
       ],
-      image: "/thrill.jpeg",
+      image: "/champion-trophy-v3.jpg",
     },
     {
       title: "Runners-up",
@@ -178,7 +178,7 @@ const About = () => {
         "Best Goalkeeper – Recognized as the ultimate shot-stopper",
         "Top Scorer – Crowned as the deadliest finisher of the competition",
       ],
-      image: "/best2.jpeg",
+      image: "/prize-winners-group.jpg",
     },
   ];
 
@@ -201,7 +201,7 @@ const About = () => {
           Rewards of Glory: <br /> What Champions Take Home!
         </h2>
         <p className="text-[#6B6F76] text-center mt-4 max-w-[500px]">
-          Unity Cup 2.0 champions will claim these prestigious prizes. Compete, conquer, and take your glory!
+          These are the prestigious prizes Unity Cup 2.0&apos;s champions and standout players took home at the closing ceremony.
         </p>
       </div>
 

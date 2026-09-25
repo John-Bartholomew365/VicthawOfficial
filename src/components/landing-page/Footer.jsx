@@ -118,15 +118,15 @@ const Footer = () => {
             </Link>
             <Link
               className="hover:text-[#C90A1D] text-[14px]"
-              href={"/tournament/schedule"}
-            >
-              Schedule
-            </Link>
-            <Link
-              className="hover:text-[#C90A1D] text-[14px]"
               href={"/tournament/results"}
             >
               Results
+            </Link>
+            <Link
+              className="hover:text-[#C90A1D] text-[14px]"
+              href={"/tournament/gallery"}
+            >
+              Gallery
             </Link>
             <Link
               className="hover:text-[#C90A1D] text-[14px]"
@@ -136,9 +136,6 @@ const Footer = () => {
             </Link>
             <Link className="hover:text-[#C90A1D] text-[14px]" href={"/news"}>
               News & Updates
-            </Link>
-            <Link className="hover:text-[#C90A1D] text-[14px]" href={"/tournament/sponsors"}>
-              Sponsors
             </Link>
             <Link className="hover:text-[#C90A1D] text-[14px]" href={"/tournament/faq"}>
               FAQs
@@ -173,12 +170,6 @@ const Footer = () => {
               href={"/policy"}
             >
               Privacy
-            </Link>
-            <Link
-              className="hover:text-[#C90A1D] text-[14px]"
-              href={"/tournament/sponsors"}
-            >
-              Become a sponsor
             </Link>
           </div>
         </div>

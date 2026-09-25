@@ -54,11 +54,11 @@ const ResultsHero = () => {
               transition={{ type: "spring" }}
             >
               <p className="text-yellow-200 font-semibold">
-                The quest for a new champion begins.
+                Champions crowned: {edition.champion.teamName}.
               </p>
               <p className="text-white/90 mt-2 text-[14px]">
-                Defending champions Bankers All Stars lead the charge as{" "}
-                {edition.numberOfTeams} teams battle for glory.
+                {edition.numberOfTeams} teams. One unforgettable final. See
+                every result from the tournament below.
               </p>
             </motion.div>
           </motion.div>
@@ -78,25 +78,33 @@ const ResultsHero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
           >
-            Keep up with all the thrilling moments from {edition.fullTitle}.
-            Here you&apos;ll find the latest match results, key highlights, and
-            team performances as the tournament unfolds.
+            Relive every result from {edition.fullTitle} — full scores, key
+            highlights, and team performances from group stage through to the
+            final.
           </motion.p>
         </div>
 
         <motion.div
-          className="lg:mt-0 mt-10"
+          className="lg:mt-0 mt-10 relative"
           data-aos="fade-left"
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <Image
-            src="/victhaw-logo.svg"
-            alt="Victhaw logo"
-            height={230}
-            width={420}
-            className="rounded-md drop-shadow-lg"
-          />
+          <div className="relative w-[320px] h-[230px] lg:w-[420px] lg:h-[280px] rounded-xl overflow-hidden shadow-2xl">
+            <Image
+              src={edition.champion.image}
+              alt={`${edition.champion.teamName} — Unity Cup 2.0 champions`}
+              fill
+              sizes="(max-width: 1024px) 320px, 420px"
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
+              <p className="text-white font-bold text-[15px] tracking-wide">
+                {edition.champion.teamName} — Unity Cup 2.0 Champions
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>

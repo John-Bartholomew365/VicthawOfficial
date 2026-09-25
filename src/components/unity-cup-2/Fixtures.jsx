@@ -81,7 +81,24 @@ const Fixtures = () => {
 
       {/* All Rounds (progressively revealed via Load More) */}
       <div className="mt-8 space-y-10">
-        {visibleFixtures.map((round) => (
+        {visibleFixtures.length === 0 ? (
+          <div className="bg-gray-50 rounded-lg p-8 text-center space-y-2">
+            <p className="font-semibold text-gray-700">
+              Tournament complete!
+            </p>
+            <p className="text-gray-500 text-sm">
+              Unity Cup 2.0 has concluded. Check the results page for all match
+              scores, goalscorers and the final standings.
+            </p>
+            <a
+              href="/tournament/results"
+              className="inline-block mt-3 bg-[#C81E23] text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition"
+            >
+              View Results
+            </a>
+          </div>
+        ) : (
+          visibleFixtures.map((round) => (
           <div key={round.round}>
             <h2 className="text-xl font-bold text-center flex items-center justify-center gap-2 mb-4">
               {round.stage === "Final" && <FaTrophy className="text-yellow-500" />}
@@ -124,7 +141,8 @@ const Fixtures = () => {
               })}
             </div>
           </div>
-        ))}
+        ))
+        )}
       </div>
 
       {/* Load More Button */}

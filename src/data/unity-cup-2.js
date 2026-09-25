@@ -17,9 +17,10 @@ export const edition = {
   accentColor: "#C81E23",
   heroImage: "/victhaw-logo.svg",
   champion: {
-    teamSlug: null,
-    teamName: "TBD",
-    announced: false,
+    teamSlug: "kwaita-united",
+    teamName: "Kwaita United",
+    announced: true,
+    image: "/champion-kwaita-united.jpg",
   },
 };
 
@@ -288,22 +289,7 @@ export function getTeam(slug) {
 // Kick-off times: first match 4:00 PM, second match 5:20 PM.
 // -------------------------------------------------------------
 
-export const fixtures = [
-  {
-    round: "Third Place Match",
-    stage: "Third Place",
-    matches: [
-      { home: "first-stars", away: "bankers-all-stars", date: "Sun 20 Sep 2026", time: "2:00 PM", completed: false },
-    ],
-  },
-  {
-    round: "Final",
-    stage: "Final",
-    matches: [
-      { home: "corporate-ballers", away: "kwaita-united", date: "Sun 20 Sep 2026", time: "3:30 PM", completed: false },
-    ],
-  },
-];
+export const fixtures = [];
 
 // -------------------------------------------------------------
 // RESULTS
@@ -424,6 +410,17 @@ const matchResults = {
     ],
     pens: { home: 5, away: 4 },
   },
+  "Third Place Match|first-stars|bankers-all-stars": {
+    homeScore: 0,
+    awayScore: 0,
+    goalscorers: [],
+    pens: { home: 3, away: 4 },
+  },
+  "Final|corporate-ballers|kwaita-united": {
+    homeScore: 0,
+    awayScore: 1,
+    goalscorers: [{ player: "Dennis", team: "Kwaita United", time: "37'" }],
+  },
 };
 
 const completedMatchdayOne = [
@@ -499,6 +496,20 @@ const completedMatchdayOne = [
     stage: "Semi Final",
     matches: [
       { home: "kwaita-united", away: "bankers-all-stars", date: "Sun 13 Sep 2026", time: "4:20 PM", completed: true },
+    ],
+  },
+  {
+    round: "Third Place Match",
+    stage: "Third Place",
+    matches: [
+      { home: "first-stars", away: "bankers-all-stars", date: "Sun 20 Sep 2026", time: "2:00 PM", completed: true },
+    ],
+  },
+  {
+    round: "Final",
+    stage: "Final",
+    matches: [
+      { home: "corporate-ballers", away: "kwaita-united", date: "Sun 20 Sep 2026", time: "3:30 PM", completed: true },
     ],
   },
 ];
@@ -616,15 +627,15 @@ export const leagueTable = computeStandings();
 
 export const topScorers = [
   {
-    player: "Ololade Hassan",
-    team: "Bankers All Stars",
-    logo: "/bankers-fc.png",
-    goals: 3,
-  },
-  {
     player: "TAIWO TITTA",
     team: "Corporate Ballers",
     logo: "/corporate-ballers.png",
+    goals: 3,
+  },
+  {
+    player: "Ololade Hassan",
+    team: "Bankers All Stars",
+    logo: "/bankers-fc.png",
     goals: 3,
   },
   {
@@ -729,6 +740,12 @@ export const topScorers = [
     logo: "/kwaita.jpeg",
     goals: 1,
   },
+  {
+    player: "Dennis",
+    team: "Kwaita United",
+    logo: "/kwaita.jpeg",
+    goals: 1,
+  },
 ];
 
 // -------------------------------------------------------------
@@ -771,11 +788,203 @@ export const prizes = [
       "Golden Glove - Best Goalkeeper of the Tournament",
       "Top Scorer Award",
       "Fair Play Award",
+      "Best Coach of the Tournament",
     ],
   },
 ];
 
-export const awards = [];
+// -------------------------------------------------------------
+// AWARD WINNERS (Unity Cup 2.0 closing ceremony)
+// -------------------------------------------------------------
+
+export const awards = [
+  {
+    key: "best-player",
+    title: "Golden Ball — Best Player",
+    player: "Shola Onipe Lawal",
+    team: "Corporate Ballers FA",
+    image: "/award-best-player.jpg",
+  },
+  {
+    key: "top-scorer",
+    title: "Top Scorer Award",
+    player: "Taiwo Titta",
+    team: "Corporate Ballers FA",
+    image: "/award-top-scorer.jpg",
+  },
+  {
+    key: "best-goalkeeper",
+    title: "Golden Glove — Best Goalkeeper",
+    player: "Rhema",
+    team: "Corporate Ballers FA",
+    image: "/award-best-goalkeeper.jpg",
+  },
+  {
+    key: "fair-play",
+    title: "Fair Play Award",
+    player: "Excel All Stars",
+    team: "Excel All Stars",
+    image: "/award-fair-play.jpg",
+  },
+  {
+    key: "best-coach",
+    title: "Best Coach of the Tournament",
+    player: "Ebenezer Osuji",
+    team: "Kwaita United FC",
+    image: "/award-best-coach.jpg",
+  },
+];
+
+// -------------------------------------------------------------
+// PHOTO GALLERY (curated highlights)
+// -------------------------------------------------------------
+
+export const gallery = [
+  {
+    key: "teams-greeting",
+    image: "/gallery/teams-greeting.jpg",
+    caption: "Sportsmanship first — sides greet each other before kickoff.",
+    category: "Matchday",
+  },
+  {
+    key: "midfield-tussle",
+    image: "/gallery/midfield-tussle.jpg",
+    caption: "Shoulder to shoulder in the fight for midfield.",
+    category: "Matchday",
+  },
+  {
+    key: "focused-player",
+    image: "/gallery/focused-player.jpg",
+    caption: "Locked in — a Unity Cup 2.0 player stays focused on the game.",
+    category: "Matchday",
+  },
+  {
+    key: "battle-for-the-ball",
+    image: "/gallery/battle-for-the-ball.jpg",
+    caption: "No ball given away easily out on the pitch.",
+    category: "Matchday",
+  },
+  {
+    key: "beating-the-marker",
+    image: "/gallery/beating-the-marker.jpg",
+    caption: "Skill on show as a player looks to beat his marker.",
+    category: "Matchday",
+  },
+  {
+    key: "composed-on-the-ball",
+    image: "/gallery/composed-on-the-ball.jpg",
+    caption: "Composed on the ball, even under pressure.",
+    category: "Matchday",
+  },
+  {
+    key: "turning-the-defender",
+    image: "/gallery/turning-the-defender.jpg",
+    caption: "Turning defenders inside out on the counter.",
+    category: "Matchday",
+  },
+  {
+    key: "fifty-fifty-challenge",
+    image: "/gallery/fifty-fifty-challenge.jpg",
+    caption: "A fierce 50-50 challenge for possession.",
+    category: "Matchday",
+  },
+  {
+    key: "goalkeeper-clearance",
+    image: "/gallery/goalkeeper-clearance.jpg",
+    caption: "Between the sticks — a goalkeeper readies his clearance.",
+    category: "Matchday",
+  },
+  {
+    key: "box-scramble",
+    image: "/gallery/box-scramble.jpg",
+    caption: "Bodies committed in the box as the action heats up.",
+    category: "Matchday",
+  },
+  {
+    key: "teammates-walk-out",
+    image: "/gallery/teammates-walk-out.jpg",
+    caption: "Teammates, side by side, walking out together.",
+    category: "Matchday",
+  },
+  {
+    key: "officials-walkout",
+    image: "/gallery/officials-walkout.jpg",
+    caption: "Match officials lead the walk-out in style.",
+    category: "Ceremony",
+  },
+  {
+    key: "guests-of-honour-1",
+    image: "/gallery/guests-of-honour-1.jpg",
+    caption: "Guests of honour grace the Unity Cup 2.0 closing ceremony.",
+    category: "Ceremony",
+  },
+  {
+    key: "guests-of-honour-2",
+    image: "/gallery/guests-of-honour-2.jpg",
+    caption: "Dignitaries and special guests join the celebrations.",
+    category: "Ceremony",
+  },
+  {
+    key: "coaches-and-officials",
+    image: "/gallery/coaches-and-officials.jpg",
+    caption: "Coaches and officials share a moment pitch-side.",
+    category: "Ceremony",
+  },
+  {
+    key: "team-huddle",
+    image: "/gallery/team-huddle.jpg",
+    caption: "A team huddles together before taking the field.",
+    category: "Teams",
+  },
+  {
+    key: "walking-off-united",
+    image: "/gallery/walking-off-united.jpg",
+    caption: "Walking off united, whatever the result.",
+    category: "Teams",
+  },
+  {
+    key: "team-photo-with-officials",
+    image: "/gallery/team-photo-with-officials.jpg",
+    caption: "A proud team photo alongside tournament officials.",
+    category: "Teams",
+  },
+  {
+    key: "squad-photo",
+    image: "/gallery/squad-photo.jpg",
+    caption: "All smiles — a squad photo to remember.",
+    category: "Teams",
+  },
+  {
+    key: "guests-gathering",
+    image: "/gallery/guests-gathering.jpg",
+    caption: "Officials and guests gather for the closing ceremony.",
+    category: "Ceremony",
+  },
+  {
+    key: "post-match-respect",
+    image: "/gallery/post-match-respect.jpg",
+    caption: "Respect on display as rivals embrace after the final whistle.",
+    category: "Matchday",
+  },
+  {
+    key: "corporate-ballers-duo",
+    image: "/gallery/corporate-ballers-duo.jpg",
+    caption: "Corporate Ballers FA — teammates pose for the camera.",
+    category: "Teams",
+  },
+  {
+    key: "event-crew",
+    image: "/gallery/event-crew.jpg",
+    caption: "Behind the scenes — the crew that kept Unity Cup 2.0 running.",
+    category: "Ceremony",
+  },
+  {
+    key: "tournament-mc",
+    image: "/gallery/tournament-mc.jpg",
+    caption: "The voice of the tournament keeps the crowd hyped.",
+    category: "Ceremony",
+  },
+];
 
 // -------------------------------------------------------------
 // FAQ (placeholder answers)
@@ -783,19 +992,24 @@ export const awards = [];
 
 export const faqs = [
   {
-    question: "When does Unity Cup 2.0 take place?",
+    question: "Who won Unity Cup 2.0?",
     answer:
-      "Unity Cup 2.0 runs from August 8th to September 20th, 2026 at Lower River Niger Basin, Basin Road, Ilorin, Kwara State. Group games are played every weekend, with the semi-finals on 6th September and the final on 20th September.",
+      "Kwaita United FC were crowned champions of the Victhaw Official Unity Cup 2.0 after a hard-fought final. See the Results page for the full scoreline and every match from the tournament.",
   },
   {
-    question: "How many teams are participating in Unity Cup 2.0?",
+    question: "When did Unity Cup 2.0 take place?",
     answer:
-      "Unity Cup 2.0 features 8 competitive teams split into two groups of four - Group A and Group B.",
+      "Unity Cup 2.0 ran from August 8th to September 20th, 2026 at Lower River Niger Basin, Basin Road, Ilorin, Kwara State. Group games were played every weekend, with the semi-finals on 6th September and the final on 20th September.",
   },
   {
-    question: "What is the format of Unity Cup 2.0?",
+    question: "How many teams took part in Unity Cup 2.0?",
     answer:
-      "The 8 teams are drawn into Groups A and B and each team plays the other three teams in its group once. The top 2 teams from each group advance to the semi-finals: Winner Group A vs Runner-up Group B and Winner Group B vs Runner-up Group A. The semi-final winners meet in the final, while the semi-final losers contest the third place match.",
+      "Unity Cup 2.0 featured 8 competitive teams split into two groups of four - Group A and Group B.",
+  },
+  {
+    question: "What was the format of Unity Cup 2.0?",
+    answer:
+      "The 8 teams were drawn into Groups A and B and each team played the other three teams in its group once. The top 2 teams from each group advanced to the semi-finals: Winner Group A vs Runner-up Group B and Winner Group B vs Runner-up Group A. The semi-final winners met in the final, while the semi-final losers contested the third place match.",
   },
   {
     question: "Who won Unity Cup 1.0?",
@@ -803,59 +1017,44 @@ export const faqs = [
       "Bankers All Stars FC were crowned champions of the inaugural Unity Cup 1.0 after beating NBA FC 1-0 in the final on 29th June.",
   },
   {
-    question: "Are the teams from Unity Cup 1.0 returning for 2.0?",
+    question: "Did the teams from Unity Cup 1.0 return for 2.0?",
     answer:
-      "Yes - defending champions Bankers All Stars and Corporate Ballers FA are joined by six new teams: GLAMOUR FC, FORTUNATE FC, KWAITA UNITED FC, FIRST STARS FC, PHOENIX LEGEND FC and EXCEL STARS FC.",
+      "Yes - defending champions Bankers All Stars and Corporate Ballers FA were joined by six new teams: GLAMOUR FC, FORTUNATE FC, KWAITA UNITED FC, FIRST STARS FC, PHOENIX LEGEND FC and EXCEL STARS FC.",
   },
   {
-    question: "Where can I find the fixtures, results and standings?",
+    question: "Where can I find the full results and standings?",
     answer:
-      "Visit the Schedule and Results pages to see match dates, times, scores, and the live league standings for both groups.",
+      "Visit the Results page to see every match score, the final league standings for both groups, and the top scorers.",
   },
   {
-    question: "What time do matches start?",
+    question: "How were the league standings ranked?",
     answer:
-      "The first match on each match day kicks off at 4:00 PM and the second match at 5:20 PM.",
+      "Teams earned 3 points for a win, 1 point for a draw and 0 points for a loss. Standings were ranked by points, then goal difference, and teams level on both were separated by goals scored.",
   },
   {
-    question: "How do teams qualify for the semi-finals?",
+    question: "What happened if a knockout match was level after full time?",
     answer:
-      "The top 2 teams from each group advance to the semi-finals. Semi Final 1 pairs the Winner of Group A against the Runner-up of Group B, while Semi Final 2 pairs the Winner of Group B against the Runner-up of Group A. The semi-finals take place on 6th September 2026.",
+      "In the semi-finals, third place match and final, level scores after full time led to 15 minutes of extra time. If the match was still tied, the winner was decided by a penalty shootout.",
   },
   {
-    question: "Is there a third place match?",
+    question: "What individual awards were given out?",
     answer:
-      "Yes. The losers of the two semi-finals contest the third place match on 20th September 2026 to decide who finishes third.",
+      "The Golden Ball for Best Player went to Shola Onipe Lawal, the Golden Glove for Best Goalkeeper went to Rhema, the Top Scorer award went to Taiwo Titta (all Corporate Ballers FA), the Fair Play award went to Excel All Stars, and Best Coach of the Tournament went to Ebenezer Osuji of champions Kwaita United FC. See the Prizes page for photos of every winner.",
   },
   {
-    question: "How are the league standings ranked?",
+    question: "Where was the tournament held?",
     answer:
-      "Teams earn 3 points for a win, 1 point for a draw and 0 points for a loss. Standings are ranked by points, then goal difference, and teams level on both are separated by goals scored.",
+      "All matches took place at Basin Stadium, Lower River Niger Basin, Ilorin, Kwara State.",
   },
   {
-    question: "What happens if a knockout match is level after full time?",
+    question: "Is there a photo gallery from the tournament?",
     answer:
-      "In the semi-finals, third place match and final, level scores after full time lead to 15 minutes of extra time. If the match is still tied, the winner is decided by a penalty shootout.",
+      "Yes - browse match action, closing ceremony and team photos on the Gallery page.",
   },
   {
-    question: "What are the individual awards up for grabs?",
+    question: "How can I follow Victhaw Official for future editions?",
     answer:
-      "Individual honours include the Golden Ball for the best player of the tournament, the Golden Glove for the best goalkeeper, and a Top Scorer award, alongside the Fair Play award.",
-  },
-  {
-    question: "Where is the tournament held?",
-    answer:
-      "All matches take place at Basin Stadium, Ilorin, Kwara State.",
-  },
-  {
-    question: "How can I follow the tournament for live updates?",
-    answer:
-      "Follow Victhaw Official on our social media channels for live match updates, and check the Results page here for the latest scores, standings and highlights.",
-  },
-  {
-    question: "How can I sponsor or partner with Unity Cup 2.0?",
-    answer:
-      "We welcome sponsors and partners. Reach out via WhatsApp at +2348106163804 or email victhawofficial@gmail.com to discuss sponsorship opportunities and brand visibility.",
+      "Follow Victhaw Official on our social media channels to be the first to hear about the next Unity Cup, Tradfit Rhythms, and other Victhaw events.",
   },
 ];
 
@@ -877,6 +1076,7 @@ export default {
   topScorers,
   prizes,
   awards,
+  gallery,
   faqs,
   sponsors,
 };
