@@ -104,10 +104,10 @@ const HeroSection = () => {
             data-aos-delay="300"
           >
             <div
-              className={`relative ${
+              className={`relative h-[440px] sm:h-[500px] md:h-[560px] lg:h-[620px] ${
                 carousel.imageFit === "contain"
-                  ? "w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[480px] h-[440px] sm:h-[500px] md:h-[560px] lg:h-[620px]"
-                  : "w-full max-w-md lg:max-w-lg h-64 sm:h-80 md:h-96 lg:h-[400px]"
+                  ? "w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[480px]"
+                  : "w-full max-w-md lg:max-w-lg"
               }`}
             >
               <div
