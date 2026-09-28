@@ -44,7 +44,7 @@ const Info = () => {
 
         <div className="w-full mx-auto px-4 sm:px-6 lg:pl-24 flex flex-col lg:flex-row items-center relative z-10">
           {/* Left-aligned content */}
-          <div className="lg:w-1/2 text-left" data-aos="fade-right">
+          <div className="lg:w-1/2 text-left" data-aos="fade-up">
             <span
               className="flex w-fit bg-white/90 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg lg:mx-0 mx-auto lg:justify-start justify-center"
               data-aos="fade-in"
@@ -100,7 +100,7 @@ const Info = () => {
           </div>
 
           {/* Right-aligned image */}
-          <div className="lg:w-[70%] mt-3 lg:mt-0" data-aos="fade-left">
+          <div className="lg:w-[70%] mt-3 lg:mt-0" data-aos="fade-up">
             <Image
               src="/tradfit2.png"
               alt="Tradfit Rhythms"

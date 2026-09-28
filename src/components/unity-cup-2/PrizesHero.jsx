@@ -17,7 +17,7 @@ const PrizesHero = () => {
     <div>
       <div className="my-[80px] lg:block hidden" data-aos="fade-up">
         <div className="lg:flex lg:flex-row flex-col-reverse items-center justify-center gap-[100px] lg:pr-[50px] pr-0">
-          <div data-aos="fade-right">
+          <div data-aos="fade-up">
             <h1 className="lg:text-[50px] text-[30px] lg:text-start text-center leading-tight tracking-tight">
               Prizes and Awards
             </h1>
@@ -29,7 +29,7 @@ const PrizesHero = () => {
             </p>
           </div>
           <div className="my-[50px] lg:flex lg:flex-row flex-col justify-center">
-            <div data-aos="fade-left">
+            <div data-aos="fade-up">
               <Image
                 src="/advanced-cup.jpeg"
                 alt="Unity Cup 2.0 Trophy, Golden Ball and Golden Glove"
@@ -44,7 +44,7 @@ const PrizesHero = () => {
       <div className="my-[80px] lg:hidden block" data-aos="fade-up">
         <div className="lg:flex lg:flex-row flex-col-reverse items-center justify-center gap-[100px] lg:pr-[50px] pr-0">
           <div className="my-[50px] lg:flex lg:flex-row flex-col justify-center">
-            <div data-aos="fade-right">
+            <div data-aos="fade-up">
               <Image
                 src="/advanced-cup.jpeg"
                 alt="Unity Cup 2.0 Trophy, Golden Ball and Golden Glove"
@@ -54,7 +54,7 @@ const PrizesHero = () => {
               />
             </div>
           </div>
-          <div data-aos="fade-left">
+          <div data-aos="fade-up">
             <h1 className="lg:text-[50px] text-[30px] lg:text-start text-center leading-tight tracking-tight">
               Prizes and Awards
             </h1>

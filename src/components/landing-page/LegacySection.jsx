@@ -9,8 +9,8 @@ const LegacySection = () => {
     <section className="my-20">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="relative order-2 lg:order-1"
@@ -28,8 +28,8 @@ const LegacySection = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="order-1 lg:order-2 text-center lg:text-left"

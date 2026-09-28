@@ -94,7 +94,7 @@ const HeroSection = () => {
           {/* Image Section */}
           <div
             className="w-full lg:w-[45%] order-1 lg:order-2 flex justify-center"
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-delay="300"
           >
             <div
@@ -140,7 +140,7 @@ const HeroSection = () => {
           {/* Text Section */}
           <div
             className="w-full lg:w-[55%] order-2 lg:order-1 text-center lg:text-left space-y-6"
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="200"
           >
             {carousel.id === "football" ? (

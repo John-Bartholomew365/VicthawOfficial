@@ -52,7 +52,7 @@
 //   return (
 //     <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center justify-center min-h-screen p-3 lg:pr-16 pr-0">
 //       {/* Services Info for mobile*/}
-//       <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 lg:max-w-md w-auto" data-aos="fade-left">
+//       <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 lg:max-w-md w-auto" data-aos="fade-up">
 //         <h2 className="lg:text-[35px] text-[28px] lg:text-start text-center font-bold text-[#FFFFFF]">
 //           My Expert <span className="text-[#C81E23]">Services</span>
 //         </h2>
@@ -75,7 +75,7 @@
 //       {/* Services List */}
 //       <div
 //         className="space-y-2 bg-[#000000] p-6 rounded-xl"
-//         data-aos="fade-right"
+//         data-aos="fade-up"
 //       >
 //         {services.map((service, index) => (
 //           <div
@@ -115,7 +115,7 @@
 //       {/* Services Info */}
 //       {/* <div
 //         className="lg:ml-10 ml-0 lg:mt-0 mt-7 lg:block hidden max-w-md"
-//         data-aos="fade-left"
+//         data-aos="fade-up"
 //       >
 //         <h2 className="text-4xl lg:text-start text-center font-bold text-[#FFFFFF]">
 //           My Awesome <span className="text-[#C81E23]">Services</span>
@@ -206,7 +206,7 @@ export default function Services() {
   return (
     <div className="lg:flex lg:flex-row flex-col gap-[70px] items-center justify-center min-h-screen p-3 lg:pr-16 pr-0 overflow-x-hidden">
       {/* Services Info for mobile*/}
-      <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 lg:max-w-md w-full" data-aos="fade-left">
+      <div className="lg:ml-10 ml-0 lg:mb-0 mb-7 lg:max-w-md w-full" data-aos="fade-up">
         <h2 className="lg:text-[35px] text-[28px] lg:text-start text-center font-bold text-[#000000]">
           My Expert <span className="text-[#C81E23]">Services</span>
         </h2>
@@ -229,7 +229,7 @@ export default function Services() {
       {/* Services List */}
       <div
         className="space-y-2 bg-[#FAFAFA] p-6 rounded-xl w-full lg:w-auto"
-        data-aos="fade-right"
+        data-aos="fade-up"
       >
         {services.map((service, index) => (
           <div

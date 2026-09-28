@@ -95,7 +95,7 @@ const HeroAbout = () => {
         {/* Responsive Animated floating elements */}
         {/* Top Left Drum */}
         <div
-          data-aos="fade-right"
+          data-aos="fade-up"
           data-aos-delay="400"
           className="absolute left-4 sm:left-8 md:left-12 lg:left-20 top-1/5 sm:top-1/4 opacity-70 animate-float"
         >
@@ -104,7 +104,7 @@ const HeroAbout = () => {
 
         {/* Top Right Music */}
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-delay="500"
           className="absolute right-4 sm:right-8 md:right-12 lg:right-24 top-2/4 sm:top-2/3 opacity-70 animate-float-reverse"
         >

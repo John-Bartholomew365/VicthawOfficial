@@ -13,8 +13,8 @@ const ChampionSpotlight = () => {
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Photo */}
         <motion.div
-          initial={{ opacity: 0, x: -24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="relative order-1"
@@ -40,8 +40,8 @@ const ChampionSpotlight = () => {
 
         {/* Text */}
         <motion.div
-          initial={{ opacity: 0, x: 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="order-2 text-center lg:text-left"

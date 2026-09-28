@@ -16,7 +16,7 @@
 //   return (
 //     <div className="my-[100px]" data-aos="fade-up">
 //       <div className="lg:flex lg:flex-row flex-col items-center gap-[140px] my-[100px] lg:pl-[70px] pl-0">
-//         <div data-aos="fade-right">
+//         <div data-aos="fade-up">
 //           <h1 className="lg:text-[45px] text-[30px]">Match Day Results</h1>
 //           <p className="lg:w-[400px] w-auto tracking-tight text-[#6B6F76] mt-3">
 //             Keep up with all the thrilling moments from the Victhaw Official
@@ -25,7 +25,7 @@
 //             games as the tournament unfolds!
 //           </p>
 //         </div>
-//         <div className="lg:mt-0 mt-10" data-aos="fade-left">
+//         <div className="lg:mt-0 mt-10" data-aos="fade-up">
 //           <Image
 //             src="/victhaw-logo.svg"
 //             alt="logo"
@@ -93,7 +93,7 @@ const ResultsHero = () => {
   return (
     <div className="my-[100px]" data-aos="fade-up">
       <div className="lg:flex lg:flex-row flex-col items-center gap-[140px] my-[100px] lg:pl-[40px] pl-0">
-        <div data-aos="fade-right" className="lg:text-left text-center relative">
+        <div data-aos="fade-up" className="lg:text-left text-center relative">
           {/* Animated Floating Trophy Badge */}
           <motion.div
             initial="hidden"
@@ -128,8 +128,8 @@ const ResultsHero = () => {
             
             <motion.div 
               className="flex items-center justify-center lg:justify-start"
-              initial={{ x: -20 }}
-              animate={{ x: 0 }}
+              initial={{ y: -20 }}
+              animate={{ y: 0 }}
               transition={{ type: "spring" }}
             >
               <motion.div 
@@ -207,7 +207,7 @@ const ResultsHero = () => {
         
         <motion.div 
           className="lg:mt-0 mt-10"
-          data-aos="fade-left"
+          data-aos="fade-up"
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 300 }}
         >

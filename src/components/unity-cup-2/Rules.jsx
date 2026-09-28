@@ -80,7 +80,7 @@ const Rules = () => {
         className="lg:flex lg:flex-row flex-col items-center justify-center gap-[100px]"
         data-aos="fade-up"
       >
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
           <h1 className="lg:text-[50px] text-[30px] text-black leading-tight tracking-tight">
             Tournament Rules <br /> and Guidelines
           </h1>
@@ -90,7 +90,7 @@ const Rules = () => {
             throughout.
           </p>
         </div>
-        <div className="lg:mt-0 mt-10" data-aos="fade-left">
+        <div className="lg:mt-0 mt-10" data-aos="fade-up">
           <Image
             src="/refs.jpeg"
             alt="Referees"

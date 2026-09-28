@@ -9,8 +9,8 @@ const RegisterTeam = () => {
     <div className="my-[100px] lg:ml-[90px] ml-[10px] mr-[10px] lg:mr-[90px]">
       <div className="lg:flex lg:flex-row flex-col gap-[100px] items-center">
         <motion.div
-          initial={{ opacity: 0, x: -24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="relative w-full lg:w-[420px] h-[280px] rounded-md overflow-hidden"

@@ -248,7 +248,7 @@ export default function RegisterPage() {
             className="w-full border border-[#C90A1D]/30 focus:border-[#C90A1D] rounded-md p-3 focus:outline-none transition-all duration-300 focus:ring-2 focus:ring-[#C90A1D]/30 outline-none"
             placeholder="Enter your first name"
             aria-label="First Name"
-            data-aos="fade-right"
+            data-aos="fade-up"
           />
         </div>
         <div className="space-y-2">
@@ -264,7 +264,7 @@ export default function RegisterPage() {
             className="w-full border border-[#C90A1D]/30 focus:border-[#C90A1D] rounded-md p-3 focus:outline-none transition-all duration-300 focus:ring-2 focus:ring-[#C90A1D]/30"
             placeholder="Enter your last name"
             aria-label="Last Name"
-            data-aos="fade-left"
+            data-aos="fade-up"
           />
         </div>
       </div>
@@ -498,7 +498,7 @@ export default function RegisterPage() {
                 : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
             }`}
             onClick={() => handleInputChange("ticketType", "regular")}
-            data-aos="fade-right"
+            data-aos="fade-up"
           >
             <input
               type="radio"
@@ -532,7 +532,7 @@ export default function RegisterPage() {
             onClick={() =>
               handleInputChange("ticketType", "regular with cloth")
             }
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <input
               type="radio"
@@ -564,7 +564,7 @@ export default function RegisterPage() {
                 : "border-[#C90A1D]/30 hover:border-[#C90A1D]/50"
             }`}
             onClick={() => handleInputChange("ticketType", "vip")}
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <input
               type="radio"

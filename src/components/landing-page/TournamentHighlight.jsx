@@ -40,8 +40,8 @@ const TournamentHighlight = () => {
       <div className="lg:flex lg:flex-row flex-col items-center justify-center lg:ml-[70px] ml-0">
         {/* Left Image */}
         <motion.div
-          initial={{ opacity: 0, x: -24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="w-full lg:w-1/2 flex justify-center lg:justify-start"

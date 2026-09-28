@@ -106,7 +106,7 @@ const SponsorsPage = () => {
             {/* Platinum Sponsor */}
             <div 
               className="bg-white rounded-lg shadow-md p-6 border-2 border-[#C90A1D]"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="100"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -149,7 +149,7 @@ const SponsorsPage = () => {
             {/* Gold Sponsor */}
             <div 
               className="bg-white rounded-lg shadow-md p-6 border-2 border-yellow-500"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="100"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -190,7 +190,7 @@ const SponsorsPage = () => {
             {/* Silver Sponsor */}
             <div 
               className="bg-white rounded-lg shadow-md p-6 border-2 border-gray-300"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -217,7 +217,7 @@ const SponsorsPage = () => {
             {/* Vendor Package */}
             <div 
               className="bg-white rounded-lg shadow-md p-6 border-2 border-blue-300"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
               <div className="flex items-center gap-3 mb-4">

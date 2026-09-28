@@ -23,7 +23,7 @@ const ResultsHero = () => {
   return (
     <div className="my-[100px]" data-aos="fade-up">
       <div className="lg:flex lg:flex-row flex-col items-center gap-[140px] my-[100px] lg:pl-[40px] pl-0">
-        <div data-aos="fade-right" className="lg:text-left text-center relative">
+        <div data-aos="fade-up" className="lg:text-left text-center relative">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -49,8 +49,8 @@ const ResultsHero = () => {
               🏆 UNITY CUP 2.0 🏆
             </h2>
             <motion.div
-              initial={{ x: -20 }}
-              animate={{ x: 0 }}
+              initial={{ y: -20 }}
+              animate={{ y: 0 }}
               transition={{ type: "spring" }}
             >
               <p className="text-yellow-200 font-semibold">
@@ -86,7 +86,7 @@ const ResultsHero = () => {
 
         <motion.div
           className="lg:mt-0 mt-10 relative"
-          data-aos="fade-left"
+          data-aos="fade-up"
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
