@@ -214,9 +214,12 @@ const Navbar = () => {
                 <div className="border-t border-gray-200 mt-2 pt-2">
                   <Link
                     href="/archive/unity-cup-1.0"
-                    className="block px-4 py-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                    className="flex items-center justify-between px-4 py-2 text-[16px] font-semibold text-[#C81E23] hover:bg-red-50 rounded-md transition-colors"
                   >
                     Unity Cup 1.0
+                    <span className="text-[10px] uppercase tracking-wide bg-[#C81E23] text-white px-2 py-0.5 rounded-full">
+                      Legacy
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -486,9 +489,12 @@ const Navbar = () => {
                   <div className="border-t border-gray-200 mt-2 pt-2">
                     <Link
                       href="/archive/unity-cup-1.0"
-                      className="block p-2 text-[16px] text-[#6B6F76] hover:bg-[#FAFAFA] transition-colors"
+                      className="flex items-center justify-between p-2 text-[16px] font-semibold text-[#C81E23] hover:bg-red-50 rounded-md transition-colors"
                     >
                       Unity Cup 1.0
+                      <span className="text-[10px] uppercase tracking-wide bg-[#C81E23] text-white px-2 py-0.5 rounded-full">
+                        Legacy
+                      </span>
                     </Link>
                   </div>
                 </div>

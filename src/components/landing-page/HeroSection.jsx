@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { edition } from "@/data/unity-cup-2";
 
 const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -13,9 +14,9 @@ const HeroSection = () => {
   const slider = [
     {
       id: "football",
-      firstText: "Unity Cup 2.0",
-      secondText: "Champions",
-      thirdText: "Crowned",
+      eyebrow: "UNITY CUP 2.0 · TOURNAMENT COMPLETE",
+      title: "Champions Crowned",
+      tagline: edition.theme,
       subTitle:
         "8 teams, 2 groups, one unforgettable final. Victhaw Official Unity Cup 2.0 is complete — relive every result, meet the champions, and see the moments that united our community through football.",
       image: "/champion-trophy-v3.jpg",
@@ -30,12 +31,12 @@ const HeroSection = () => {
       },
       accentColor: "#C81E23",
     },
-    
+
     {
       id: "tradfit",
-      firstText: "TRADFIT RHYTHMS",
-      secondText: "Move to the Beat",
-      thirdText: "of Your Heritage",
+      eyebrow: "TRADFIT RHYTHMS",
+      title: "",
+      tagline: "Move to the Beat of Your Heritage",
       subTitle:
         "A cultural revival, celebration of indigenous heritage, and wellness movement rolled into one. Experience high-energy aerobics merged with rich African/indigenous dance traditions.",
       image: "/tradfit.jpeg",
@@ -52,8 +53,6 @@ const HeroSection = () => {
   ];
 
   const carousel = slider[activeSlide];
-  const fullText =
-    carousel.secondText + (carousel.thirdText ? " " + carousel.thirdText : "");
 
   useEffect(() => {
     AOS.init({
@@ -69,29 +68,24 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Typewriter effect for the TradFit slide only
+  // Typewriter effect for the tagline line
   useEffect(() => {
-    if (carousel.id === "tradfit") {
-      setIsTyping(true);
-      setDisplayText("");
+    setIsTyping(true);
+    setDisplayText("");
 
-      let i = 0;
-      const typingInterval = setInterval(() => {
-        if (i < fullText.length) {
-          setDisplayText(fullText.substring(0, i + 1));
-          i++;
-        } else {
-          setIsTyping(false);
-          clearInterval(typingInterval);
-        }
-      }, 80);
+    let i = 0;
+    const typingInterval = setInterval(() => {
+      if (i < carousel.tagline.length) {
+        setDisplayText(carousel.tagline.substring(0, i + 1));
+        i++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typingInterval);
+      }
+    }, 60);
 
-      return () => clearInterval(typingInterval);
-    } else {
-      setDisplayText(fullText);
-      setIsTyping(false);
-    }
-  }, [activeSlide, fullText, carousel.id]);
+    return () => clearInterval(typingInterval);
+  }, [activeSlide, carousel.tagline]);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-0">
@@ -151,34 +145,32 @@ const HeroSection = () => {
           >
             {carousel.id === "football" ? (
               <>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold leading-tight tracking-tight">
-                  <span
-                    className="block opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.2s" }}
-                  >
-                    {carousel.firstText}
-                  </span>
-                  <span
-                    className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-red-600"
-                    style={{
-                      backgroundSize: "200% 200%",
-                    }}
-                  >
-                    {carousel.secondText}
-                  </span>
-                  <span
-                    className="block opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.6s" }}
-                  >
-                    {carousel.thirdText}
-                  </span>
+                <span
+                  className="block text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.2em] opacity-0 animate-fade-in"
+                  style={{ color: carousel.accentColor, animationDelay: "0.1s" }}
+                >
+                  {carousel.eyebrow}
+                </span>
+                <h1
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight tracking-tight mt-2 opacity-0 animate-fade-in"
+                  style={{ animationDelay: "0.25s" }}
+                >
+                  {carousel.title}
                 </h1>
+                <p
+                  className="font-semibold italic text-lg sm:text-xl lg:text-[26px] mt-3 min-h-[1.4em]"
+                  style={{ color: carousel.accentColor }}
+                >
+                  &ldquo;{displayText}
+                  {isTyping && <span className="animate-pulse">|</span>}
+                  {!isTyping && "”"}
+                </p>
               </>
             ) : (
               <>
                 <h1 className="font-bold text-gray-900 leading-tight tracking-tight">
                   <span className="block text-[#C90A1D] text-2xl sm:text-3xl md:text-4xl lg:text-[44px]">
-                    {carousel.firstText}
+                    {carousel.eyebrow}
                   </span>
                   <span className="block lg:h-6 h-4 text-gray-800 lg:mt-5 mt-4 text-[19px] lg:text-[27px]">
                     {displayText}

@@ -169,7 +169,7 @@ const About = () => {
         "Top-tier Sporting Equipment for their continued journey",
         "Certificate of Excellence awarded for their grit and dedication",
       ],
-      image: "/run2.jpeg",
+      image: "/silver-medals.jpg",
     },
     {
       title: "Individual awards",

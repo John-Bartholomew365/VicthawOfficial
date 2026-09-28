@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
     "unilorin-quarters": "Unilorin Quarters FC",
   };
   return {
-    title: `${names[slug] || "Team"} | Unity Cup 1.0 Archive`,
+    title: `${names[slug] || "Team"} | Unity Cup 1.0 Legacy`,
   };
 }
 

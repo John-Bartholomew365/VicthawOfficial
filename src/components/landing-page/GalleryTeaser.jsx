@@ -14,6 +14,7 @@ const featured = gallery.filter((g) =>
     "officials-walkout",
     "team-huddle",
     "tournament-mc",
+    "chairman-with-police-rep",
   ].includes(g.key)
 );
 

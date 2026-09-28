@@ -64,8 +64,8 @@ const AboutSection = () => {
         {activeTab === "about" ? (
           <div className="flex flex-col lg:flex-row gap-[50px] lg:gap-[100px] text-center lg:text-left">
             <Image
-              src="/use2.jpeg"
-              alt="About"
+              src="/gk-save-action.jpg"
+              alt="A goalkeeper makes a diving save during Unity Cup 2.0"
               height={600}
               width={494}
               className="rounded-md mx-auto"

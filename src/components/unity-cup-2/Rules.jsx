@@ -38,6 +38,7 @@ const rulesSections = [
     title: "Player Eligibility",
     items: [
       "To maintain the community spirit of the tournament, no active professional footballers or players currently participating in officially sanctioned tournaments are eligible to participate.",
+      "In line with the tournament's health-awareness theme, a 40+ Legends division was included alongside the main competition, open to players aged 40 and above.",
       "Penalty: Any team found to have fielded an ineligible player will immediately forfeit the match points to their opponent, regardless of the match outcome. The tournament organizers reserve the right to impose further sanctions if deemed necessary.",
     ],
   },

@@ -66,8 +66,8 @@ const UpcomingEvents = () => {
         <div className="lg:hidden w-full mb-10">
           <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="/brings.jpeg"
-              alt="Tournament venue"
+              src="/gallery/organizing-committee-1.jpg"
+              alt="The organizing committee with the Unity Cup 2.0 trophy"
               fill
               className="object-cover"
               sizes="100vw"
@@ -100,8 +100,8 @@ const UpcomingEvents = () => {
         <div className="hidden lg:flex lg:w-1/2">
           <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="/brings.jpeg"
-              alt="Tournament venue"
+              src="/gallery/organizing-committee-1.jpg"
+              alt="The organizing committee with the Unity Cup 2.0 trophy"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

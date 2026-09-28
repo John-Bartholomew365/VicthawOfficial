@@ -4,7 +4,7 @@ import PageLoader from "@/components/PageLoader";
 import React from "react";
 
 export const metadata = {
-  title: "Unity Cup 1.0 Archive",
+  title: "Unity Cup 1.0 Legacy",
   description:
     "Relive the first Victhaw Unity Cup 1.0 — teams, results, schedule, prizes and highlights from the debut tournament.",
   alternates: {

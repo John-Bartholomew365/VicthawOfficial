@@ -58,14 +58,16 @@ export const metadata = {
     template: "%s | Victhaw Official",
   },
   description:
-    "Official home of the Victhaw Unity Cup 2.0 (August 2026) — 8 teams, two groups, one champion. Follow live fixtures, scores, standings, top scorers & prizes. Plus Tradfit Rhythms events and The Visionary certification & services.",
+    "Official home of the Victhaw Unity Cup 2.0 (1st August - 20th September 2026) — themed 'A Kick Against High Blood Pressure', 8 teams, two groups, one champion. Follow results, scores, standings, top scorers & prizes. Plus Tradfit Rhythms events and The Visionary certification & services.",
   keywords: [
     "Victhaw",
     "Victhaw Official",
     "Unity Cup",
     "Unity Cup 2.0",
+    "A Kick Against High Blood Pressure",
     "football tournament",
     "grassroots football",
+    "hypertension awareness",
     "Nigeria football",
     "live scores",
     "fixtures",
@@ -88,7 +90,7 @@ export const metadata = {
     siteName: "Victhaw Official",
     title: "Victhaw Official | Unity Cup 2.0 – The Battle of Champions",
     description:
-      "The official home of Unity Cup 2.0 — 8 teams, two groups, one champion. Live fixtures, scores, standings and prizes. Plus Tradfit Rhythms and The Visionary.",
+      "The official home of Unity Cup 2.0 — themed 'A Kick Against High Blood Pressure'. 8 teams, two groups, one champion. Results, standings and prizes. Plus Tradfit Rhythms and The Visionary.",
     images: [
       {
         url: "/victhaw-official.jpg",

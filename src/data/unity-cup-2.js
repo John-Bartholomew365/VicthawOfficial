@@ -10,10 +10,13 @@ export const edition = {
   version: "2.0",
   fullTitle: "Victhaw Official Unity Cup 2.0",
   shortTitle: "Unity Cup 2.0",
-  dates: "August 8th - September 20th, 2026",
+  theme: "A Kick Against High Blood Pressure",
+  dates: "1st August - 20th September, 2026",
   venue: "Lower River Niger Basin, Basin Road, Ilorin, Kwara State",
-  format: "Group Stage (Groups A & B) + Semi-Finals + Third Place + Final",
+  format: "11-a-side Group Stage (Groups A & B) + Semi-Finals + Third Place + Final",
   numberOfTeams: 8,
+  expectedAudience: "1000+",
+  ageCategory: "40+ Legends division",
   accentColor: "#C81E23",
   heroImage: "/victhaw-logo.svg",
   champion: {
@@ -23,6 +26,13 @@ export const edition = {
     image: "/champion-kwaita-united.jpg",
   },
 };
+
+// -------------------------------------------------------------
+// UNITY CUP 1.0 — legacy tagline (for the archive)
+// -------------------------------------------------------------
+
+export const unityCup1Tagline =
+  "Champions were made, memories were created — Unity Cup 1.0 set the standard.";
 
 // -------------------------------------------------------------
 // TEAMS
@@ -749,7 +759,7 @@ export const topScorers = [
 ];
 
 // -------------------------------------------------------------
-// PRIZES (placeholder - amounts to be confirmed)
+// PRIZES
 // -------------------------------------------------------------
 
 export const prizes = [
@@ -762,7 +772,7 @@ export const prizes = [
     items: [
       "Gold Medals for all players",
       "Championship Trophy",
-      "Cash Prize (amount TBA - PLACEHOLDER)",
+      "Cash Prize of ₦400,000",
     ],
   },
   {
@@ -774,7 +784,7 @@ export const prizes = [
     items: [
       "Silver Medals for all players",
       "Runner-up Trophy",
-      "Cash Prize (amount TBA - PLACEHOLDER)",
+      "Cash Prize of ₦200,000",
     ],
   },
   {
@@ -984,6 +994,168 @@ export const gallery = [
     caption: "The voice of the tournament keeps the crowd hyped.",
     category: "Ceremony",
   },
+  {
+    key: "chairman-with-police-rep",
+    image: "/gallery/chairman-with-police-rep.jpg",
+    caption:
+      "The Chairman of 50/50 with a representative of the Commissioner of Police, Ilorin.",
+    category: "Ceremony",
+  },
+  {
+    key: "guest-of-honour-alhaja",
+    image: "/gallery/guest-of-honour-alhaja.jpg",
+    caption: "A guest of honour cheers on the action from the VIP tent.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "committee-trophy-lift",
+    image: "/gallery/committee-trophy-lift.jpg",
+    caption: "The organizing committee watches on as the trophy is raised high.",
+    category: "Ceremony",
+  },
+  {
+    key: "ball-boy-portrait",
+    image: "/gallery/ball-boy-portrait.jpg",
+    caption: "Even the ball boys had their moment in the spotlight.",
+    category: "Matchday",
+  },
+  {
+    key: "coach-korede-presentation",
+    image: "/gallery/coach-korede-presentation.jpg",
+    caption: "Coach Korede receives recognition from Victhaw Official.",
+    category: "Ceremony",
+  },
+  {
+    key: "organizing-committee-1",
+    image: "/gallery/organizing-committee-1.jpg",
+    caption: "The organizing committee behind Unity Cup 2.0.",
+    category: "People",
+  },
+  {
+    key: "organizing-committee-2",
+    image: "/gallery/organizing-committee-2.jpg",
+    caption: "The team that brought Unity Cup 2.0 to life.",
+    category: "People",
+  },
+  {
+    key: "fitness-ambassador-speech",
+    image: "/gallery/fitness-ambassador-speech.jpg",
+    caption: "The Fitness Ambassador addresses the crowd at the closing ceremony.",
+    category: "Ceremony",
+  },
+  {
+    key: "first-aid-team-in-action",
+    image: "/gallery/first-aid-team-in-action.jpg",
+    caption: "Player welfare first — the medical team responds on the pitch.",
+    category: "Matchday",
+  },
+  {
+    key: "fortunate-fc-chairman",
+    image: "/gallery/fortunate-fc-chairman.jpg",
+    caption: "The Chairman of Fortunate FC, locked in on the action.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "chairman-address",
+    image: "/gallery/chairman-address.jpg",
+    caption: "The Chairman of 50/50 addresses the crowd.",
+    category: "Ceremony",
+    focus: "top",
+  },
+  {
+    key: "chairman-5050-portrait",
+    image: "/gallery/chairman-5050-portrait.jpg",
+    caption: "The Chairman of 50/50 — proud partner powering Unity Cup 2.0.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "chairman-with-first-lady-rep",
+    image: "/gallery/chairman-with-first-lady-rep.jpg",
+    caption: "The Chairman of 50/50 with a special guest at the closing ceremony.",
+    category: "Ceremony",
+  },
+  {
+    key: "fitness-ambassador-with-trophy",
+    image: "/gallery/fitness-ambassador-with-trophy.jpg",
+    caption:
+      "Victhaw Official carries the trophy, with the Fitness Ambassador and the committee close behind.",
+    category: "Ceremony",
+  },
+  {
+    key: "trophy-procession",
+    image: "/gallery/trophy-procession.jpg",
+    caption: "The champions' trophy makes its way down the red carpet.",
+    category: "Ceremony",
+  },
+  {
+    key: "organizer-trophy-raised",
+    image: "/gallery/organizer-trophy-raised.jpg",
+    caption: "Victhaw Official raises the trophy high.",
+    category: "Ceremony",
+  },
+  {
+    key: "organizer-with-trophy-smiling",
+    image: "/gallery/organizer-with-trophy-smiling.jpg",
+    caption: "All smiles as the trophy is paraded through the crowd.",
+    category: "Ceremony",
+  },
+  {
+    key: "behind-the-scenes-photographer",
+    image: "/gallery/behind-the-scenes-photographer.jpg",
+    caption: "Behind the lens — the team capturing every Unity Cup 2.0 moment.",
+    category: "People",
+  },
+  {
+    key: "guest-of-honour-1",
+    image: "/gallery/guest-of-honour-1.jpg",
+    caption: "A guest of honour at the Unity Cup 2.0 closing ceremony.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "guest-of-honour-2",
+    image: "/gallery/guest-of-honour-2.jpg",
+    caption: "Traditional attire meets football culture at the closing ceremony.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "police-commissioner-rep",
+    image: "/gallery/police-commissioner-rep.jpg",
+    caption: "The representative of the Commissioner of Police, Ilorin, in attendance.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "guest-of-honour-3",
+    image: "/gallery/guest-of-honour-3.jpg",
+    caption: "A special guest reflects on a memorable tournament.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "guest-of-honour-elder",
+    image: "/gallery/guest-of-honour-elder.jpg",
+    caption: "An elder statesman graces the Unity Cup 2.0 closing ceremony.",
+    category: "People",
+    focus: "top",
+  },
+  {
+    key: "chairman-with-korede",
+    image: "/gallery/chairman-with-korede.jpg",
+    caption: "The Chairman of 50/50 with Coach Korede, celebrating together.",
+    category: "Ceremony",
+  },
+  {
+    key: "chairman-with-organizer",
+    image: "/gallery/chairman-with-organizer.jpg",
+    caption:
+      "The Chairman of 50/50 with Victhaw Official — the driving forces behind Unity Cup 2.0.",
+    category: "Ceremony",
+  },
 ];
 
 // -------------------------------------------------------------
@@ -992,6 +1164,11 @@ export const gallery = [
 
 export const faqs = [
   {
+    question: "What was the theme of Unity Cup 2.0?",
+    answer:
+      "Unity Cup 2.0 was built around the theme \"A Kick Against High Blood Pressure\" — using football to promote awareness of hypertension and encourage an active lifestyle, alongside a dedicated 40+ Legends division for the age group most at risk.",
+  },
+  {
     question: "Who won Unity Cup 2.0?",
     answer:
       "Kwaita United FC were crowned champions of the Victhaw Official Unity Cup 2.0 after a hard-fought final. See the Results page for the full scoreline and every match from the tournament.",
@@ -999,7 +1176,7 @@ export const faqs = [
   {
     question: "When did Unity Cup 2.0 take place?",
     answer:
-      "Unity Cup 2.0 ran from August 8th to September 20th, 2026 at Lower River Niger Basin, Basin Road, Ilorin, Kwara State. Group games were played every weekend, with the semi-finals on 6th September and the final on 20th September.",
+      "Unity Cup 2.0 ran from 1st August to 20th September, 2026 at Lower River Niger Basin, Basin Road, Ilorin, Kwara State. Group games were played every weekend, with the semi-finals on 6th September and the final on 20th September.",
   },
   {
     question: "How many teams took part in Unity Cup 2.0?",
@@ -1066,6 +1243,7 @@ export const sponsors = [];
 
 export default {
   edition,
+  unityCup1Tagline,
   teams,
   groups,
   teamsBySlug,

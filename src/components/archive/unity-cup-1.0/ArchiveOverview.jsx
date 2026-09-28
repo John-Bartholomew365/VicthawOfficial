@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { unityCup1Tagline } from "@/data/unity-cup-2";
 
 const sections = [
   {
@@ -48,18 +49,21 @@ export default function ArchiveOverview() {
     <div className="text-black tracking-tight">
       <div className="mt-[80px] mb-[40px] text-center">
         <span className="inline-block bg-[#C81E23]/10 text-[#C81E23] text-[13px] font-semibold tracking-widest uppercase rounded-full px-4 py-1.5 mb-5">
-          Archived Tournament
+          Unity Cup Legacy
         </span>
         <h1 className="text-[34px] lg:text-[52px] font-[600] leading-tight">
           Unity Cup 1.0
         </h1>
-        <p className="text-[#6B6F76] mt-4 max-w-[560px] mx-auto text-lg">
+        <p className="text-[#C81E23] font-semibold italic mt-4 max-w-[560px] mx-auto text-lg">
+          &ldquo;{unityCup1Tagline}&rdquo;
+        </p>
+        <p className="text-[#6B6F76] mt-3 max-w-[560px] mx-auto text-lg">
           The inaugural Victhaw Official Unity Cup, held from April 12th to
           June 29th, 2025 at Basin, Ilorin, Kwara State. Relive the moments,
           results, and champions of the tournament that started it all.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/tournament/schedule">
+          <Link href="/">
             <button className="bg-[#C81E23] text-white py-3 px-8 rounded-lg hover:bg-white hover:text-black hover:border-2 hover:border-[#C81E23] transition-all duration-300 text-lg font-medium w-full sm:w-auto">
               Back to Unity Cup 2.0
             </button>

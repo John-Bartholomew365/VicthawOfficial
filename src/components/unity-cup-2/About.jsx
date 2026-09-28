@@ -12,16 +12,28 @@ const aboutSections = [
     body: "Unity Cup 2.0 was the next chapter of the high-stakes football tournament that unites teams from different backgrounds in a celebration of competitive spirit and sportsmanship. It built on the success of Unity Cup 1.0, with 8 teams, bigger groups, and the same passion for the beautiful game.",
   },
   {
+    title: `Our Theme: "${edition.theme}"`,
+    body: "Unity Cup 2.0 was designed to unite people through sport while promoting awareness about high blood pressure and the importance of an active lifestyle — blending competitive football with real health advocacy.",
+  },
+  {
+    title: "40+ Legends Division",
+    body: "In keeping with the health theme, the tournament featured a dedicated 40+ age category — putting the spotlight on the very demographic most at risk of hypertension, and proving the game has no age limit.",
+  },
+  {
     title: "Our Mission",
-    body: "We create a platform where talented players compete at their best, showcase their abilities, and strengthen community bonds through their shared love of the game.",
+    body: "We create a platform where talented players compete at their best, showcase their abilities, and strengthen community bonds through their shared love of the game — while encouraging everyone to stay active and informed about their health.",
   },
   {
     title: "Tournament Format",
-    body: "The competition featured a group stage with Groups A and B, followed by the semi-finals, a third place match and a grand final. The top 2 teams from each group advanced to the knockout phase, where Kwaita United ultimately came out on top.",
+    body: `The competition was an 11-a-side group stage with Groups A and B, followed by the semi-finals, a third place match and a grand final. The top 2 teams from each group advanced to the knockout phase, where Kwaita United ultimately came out on top, in front of an audience of ${edition.expectedAudience} fans.`,
   },
   {
     title: "The Teams",
     body: "Defending champions Bankers All Stars were joined by 7 ambitious squads, all looking to write their own history. Check the Teams page to meet every side that competed in Unity Cup 2.0.",
+  },
+  {
+    title: "Beyond the Scoreline",
+    body: "Every matchday paired the football with light fitness & stretching sessions and a health-awareness campaign — reinforcing the tournament's message that staying active starts with small, consistent steps.",
   },
   {
     title: "Community Impact",

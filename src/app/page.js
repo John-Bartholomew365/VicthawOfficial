@@ -4,8 +4,10 @@ import ChampionSpotlight from "@/components/landing-page/ChampionSpotlight";
 import Footer from "@/components/landing-page/Footer";
 import GalleryTeaser from "@/components/landing-page/GalleryTeaser";
 import HeroSection from "@/components/landing-page/HeroSection";
+import LegacySection from "@/components/landing-page/LegacySection";
 import Prizes from "@/components/landing-page/Prizes";
 import RegisterTeam from "@/components/landing-page/RegisterTeam";
+import ThemeBanner from "@/components/landing-page/ThemeBanner";
 import TournamentHighlight from "@/components/landing-page/TournamentHighlight";
 import UpcomingEvents from "@/components/landing-page/UpcomingEvents";
 import PageLoader from "@/components/PageLoader";
@@ -70,10 +72,12 @@ export default function Home() {
         )}
         <HeroSection />
         <ChampionSpotlight />
+        <ThemeBanner />
         <AboutSection />
         <TournamentHighlight />
         <GalleryTeaser />
         <Prizes />
+        <LegacySection />
         <RegisterTeam />
         <UpcomingEvents />
       </div>

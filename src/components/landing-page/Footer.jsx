@@ -144,7 +144,7 @@ const Footer = () => {
               className="hover:text-[#C90A1D] text-[14px]"
               href={"/archive/unity-cup-1.0"}
             >
-              Unity Cup 1.0 (Archive)
+              Unity Cup 1.0 (Legacy)
             </Link>
           </div>
         </div>

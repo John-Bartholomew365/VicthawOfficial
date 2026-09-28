@@ -57,7 +57,7 @@ const Hero = () => {
             </h1>
             <p className="text-[#6B6F76] lg:text-start text-center tracking-tight lg:w-[410px] w-auto mt-4">
               This tournament is all about celebrating excellence! Outstanding
-              teams and exceptional players will be recognized with prestigious
+              teams and exceptional players were recognized with prestigious
               awards and exciting prizes for their skill, dedication, and
               performance on the field.
             </p>
@@ -94,7 +94,7 @@ const Hero = () => {
             </h1>
             <p className="text-[#6B6F76] lg:text-start text-center tracking-tight lg:w-[410px] w-auto mt-4">
               This tournament is all about celebrating excellence! Outstanding
-              teams and exceptional players will be recognized with prestigious
+              teams and exceptional players were recognized with prestigious
               awards and exciting prizes for their skill, dedication, and
               performance on the field.
             </p>
