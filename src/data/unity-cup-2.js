@@ -23,7 +23,7 @@ export const edition = {
     teamSlug: "kwaita-united",
     teamName: "Kwaita United",
     announced: true,
-    image: "/champion-kwaita-united.jpg",
+    image: "/gallery/team-trophy.jpg",
   },
 };
 
@@ -772,7 +772,7 @@ export const prizes = [
     items: [
       "Gold Medals for all players",
       "Championship Trophy",
-      "Cash Prize of ₦400,000",
+      "Cash Prize of ₦250,000",
     ],
   },
   {
@@ -784,7 +784,7 @@ export const prizes = [
     items: [
       "Silver Medals for all players",
       "Runner-up Trophy",
-      "Cash Prize of ₦200,000",
+      "Cash Prize of ₦150,000",
     ],
   },
   {
@@ -850,6 +850,220 @@ export const awards = [
 // -------------------------------------------------------------
 
 export const gallery = [
+  {
+    key: "trophy-lift",
+    image: "/gallery/trophy-lift.jpg",
+    caption: "The Unity Cup 2.0 trophy goes up as the winners celebrate.",
+    category: "Ceremony",
+  },
+  {
+    key: "team-trophy",
+    image: "/gallery/team-trophy.jpg",
+    caption:
+      "Trophy in hand and joy all round — the champions celebrate with officials and supporters.",
+    category: "Teams",
+  },
+  {
+    key: "trophy-hold",
+    image: "/gallery/trophy-hold.jpg",
+    caption: "Gold medal around his neck, the champions' trophy in his hands.",
+    category: "Ceremony",
+  },
+  {
+    key: "team-cheer",
+    image: "/gallery/team-cheer.jpg",
+    caption: "Arms in the air — the champions erupt as the trophy is lifted.",
+    category: "Teams",
+  },
+  {
+    key: "team-photo",
+    image: "/gallery/team-photo.jpg",
+    caption:
+      "The champions pose with the trophy, alongside their officials and supporters.",
+    category: "Teams",
+  },
+  {
+    key: "team-group",
+    image: "/gallery/team-group.jpg",
+    caption: "Medals on, smiles wide — the champions gather for the group photo.",
+    category: "Teams",
+  },
+  {
+    key: "trophy-presentation",
+    image: "/gallery/trophy-presentation.jpg",
+    caption:
+      "The trophy is raised high at the presentation as guests of honour and the champions' captain look on.",
+    category: "Ceremony",
+  },
+  {
+    key: "winners-banner",
+    image: "/gallery/winners-banner.jpg",
+    caption:
+      "The individual award winners pose together — Best Coach, Best Player, Best Goalkeeper and Top Scorer.",
+    category: "Ceremony",
+  },
+  {
+    key: "award-chairman",
+    image: "/gallery/award-chairman.jpg",
+    caption:
+      "The Chairman of 50/50 holds the Best Player trophy while the representative of the Commissioner of Police, Ilorin, presents the Golden Glove.",
+    category: "Ceremony",
+  },
+  {
+    key: "award-presentation",
+    image: "/gallery/award-presentation.jpg",
+    caption:
+      "The Golden Glove is presented on the red carpet, with the Chairman of 50/50 and the guests of honour looking on.",
+    category: "Ceremony",
+  },
+  {
+    key: "award-trophies",
+    image: "/gallery/award-trophies.jpg",
+    caption:
+      "The individual awards up close — the Golden Glove, the Golden Ball and the champions' trophy.",
+    category: "Ceremony",
+  },
+  {
+    key: "certificate-presentation",
+    image: "/gallery/certificate-presentation.jpg",
+    caption:
+      "A certificate of achievement is presented at the closing ceremony, with guests of honour looking on.",
+    category: "Ceremony",
+  },
+  {
+    key: "medal-line",
+    image: "/gallery/medal-line.jpg",
+    caption:
+      "Players file past the guests of honour to receive their medals, with the trophy on show.",
+    category: "Ceremony",
+  },
+  {
+    key: "medal-guests",
+    image: "/gallery/medal-guests.jpg",
+    caption: "Guests of honour line up on the pitch for the medal presentation.",
+    category: "Ceremony",
+  },
+  {
+    key: "trophy-parade",
+    image: "/gallery/trophy-parade.jpg",
+    caption:
+      "The trophy is paraded to the field, led by Victhaw Official and the Fitness Ambassador.",
+    category: "Ceremony",
+  },
+  {
+    key: "trophy-walk",
+    image: "/gallery/trophy-walk.jpg",
+    caption:
+      "Victhaw Official leads the walk-in with the trophy, flanked by the Fitness Ambassador and the committee.",
+    category: "Ceremony",
+  },
+  {
+    key: "trophy-smile",
+    image: "/gallery/trophy-smile.jpg",
+    caption: "Victhaw Official smiles as the trophy makes its way to the presentation.",
+    category: "Ceremony",
+  },
+  {
+    key: "trophy-carry",
+    image: "/gallery/trophy-carry.jpg",
+    caption: "Victhaw Official carries the trophy with pride.",
+    category: "Ceremony",
+  },
+  {
+    key: "chairman-guest",
+    image: "/gallery/chairman-guest.jpg",
+    caption:
+      "The Chairman of 50/50 with Alhaja, one of the esteemed guests of honour, both wearing their medals.",
+    category: "People",
+  },
+  {
+    key: "chairman-handshake",
+    image: "/gallery/chairman-handshake.jpg",
+    caption:
+      "A warm handshake as the Chairman of 50/50 welcomes a distinguished visitor to Unity Cup 2.0.",
+    category: "People",
+  },
+  {
+    key: "chairman-greeting",
+    image: "/gallery/chairman-greeting.jpg",
+    caption:
+      "Good humour and good company — the Chairman of 50/50 shares a light moment with a visiting guest.",
+    category: "People",
+  },
+  {
+    key: "ambassador-clipboard",
+    image: "/gallery/ambassador-clipboard.jpg",
+    caption: "The Fitness Ambassador goes through the match sheet on the touchline.",
+    category: "People",
+  },
+  {
+    key: "guests-queue",
+    image: "/gallery/guests-queue.jpg",
+    caption: "Guests of honour line up to greet the teams.",
+    category: "People",
+  },
+  {
+    key: "guests-line",
+    image: "/gallery/guests-line.jpg",
+    caption: "Dignitaries in colourful attire wait to be introduced to the players.",
+    category: "People",
+  },
+  {
+    key: "guests-smile",
+    image: "/gallery/guests-smile.jpg",
+    caption: "Smiles from the guests of honour as the teams come through.",
+    category: "People",
+  },
+  {
+    key: "guests-laugh",
+    image: "/gallery/guests-laugh.jpg",
+    caption: "A light moment among the guests of honour.",
+    category: "People",
+  },
+  {
+    key: "car-park",
+    image: "/gallery/car-park.jpg",
+    caption: "Behind the scenes — a marshal guides arriving guests at the car park.",
+    category: "People",
+  },
+  {
+    key: "event-banner",
+    image: "/gallery/event-banner.jpg",
+    caption:
+      "The Unity Cup 2.0 banner, \"A Kick Against High Blood Pressure\", carrying the logos of the partners behind the tournament.",
+    category: "People",
+  },
+  {
+    key: "flag-lineup",
+    image: "/gallery/flag-lineup.jpg",
+    caption:
+      "The national flag is unfurled as both teams and the match officials line up before kickoff.",
+    category: "Matchday",
+  },
+  {
+    key: "teams-lineup",
+    image: "/gallery/teams-lineup.jpg",
+    caption: "A side poses with the guests of honour before kickoff.",
+    category: "Teams",
+  },
+  {
+    key: "players-embrace",
+    image: "/gallery/players-embrace.jpg",
+    caption: "Respect after the final whistle — rivals embrace.",
+    category: "Matchday",
+  },
+  {
+    key: "keeper-celebrate",
+    image: "/gallery/keeper-celebrate.jpg",
+    caption: "Arms raised, a goalkeeper soaks in the moment.",
+    category: "Matchday",
+  },
+  {
+    key: "referees-talk",
+    image: "/gallery/referees-talk.jpg",
+    caption: "The match officials confer on the touchline.",
+    category: "Matchday",
+  },
   {
     key: "teams-greeting",
     image: "/gallery/teams-greeting.jpg",

@@ -160,7 +160,7 @@ const About = () => {
         "The gleaming Champion's Trophy claimed by Kwaita United",
         "Cash Prize that rewarded their hard work and triumph!",
       ],
-      image: "/champion-trophy-v3.jpg",
+      image: "/gallery/trophy-lift.jpg",
     },
     {
       title: "Runners-up",

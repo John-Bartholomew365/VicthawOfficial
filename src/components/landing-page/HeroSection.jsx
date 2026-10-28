@@ -130,6 +130,11 @@ const HeroSection = () => {
                       ? "object-contain"
                       : "object-cover"
                   }`}
+                  style={
+                    carousel.imagePosition
+                      ? { objectPosition: carousel.imagePosition }
+                      : undefined
+                  }
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
