@@ -31,15 +31,15 @@ const WhyVicthaw = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Image */}
           <div
-            className="relative h-96 rounded-lg overflow-hidden shadow-lg"
+            className="relative aspect-[4/5] max-h-[560px] w-full max-w-md mx-auto rounded-lg overflow-hidden shadow-lg"
             data-aos="fade-up"
           >
             <Image
-              src="/carried.jpeg"
-              alt="Victor on the Football Field"
+              src="/gallery/organizer-with-trophy-smiling.jpg"
+              alt="Victhaw Official smiling with the Unity Cup trophy"
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 448px"
+              style={{ objectFit: "cover", objectPosition: "50% 30%" }}
               className="rounded-lg"
             />
             {/* <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
