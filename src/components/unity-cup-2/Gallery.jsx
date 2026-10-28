@@ -9,6 +9,7 @@ import {
   FaExpandAlt,
 } from "react-icons/fa";
 import { gallery, edition } from "@/data/unity-cup-2";
+import HighlightVideo from "./HighlightVideo";
 
 const CATEGORIES = ["All", "Matchday", "Teams", "Ceremony", "People"];
 
@@ -66,6 +67,8 @@ const Gallery = () => {
           Click any photo to reveal the story behind it
         </p>
       </motion.div>
+
+      <HighlightVideo />
 
       {/* Filters */}
       <div className="flex flex-wrap justify-center gap-3 mb-10">

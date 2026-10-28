@@ -197,7 +197,7 @@ const ImpactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="lg:text-[35px] text-[27px] tracking-tight font-bold mb-4">
-            The Impact of Victhaw Unity Cup 1.0
+            The Impact of VicthawOfficial Unity Cup 1.0
           </h2>
           <p className="text-[16px] tracking-tight text-[#6B6F76] m-auto lg:w-[590px] w-auto">
             The inaugural Unity Cup successfully transformed lives, built character, and united 
