@@ -11,7 +11,8 @@ const Page = () => {
   useEffect(() => {
     // Initialize Howler sound - same as main page
     soundRef.current = new Howl({
-      src: ["/bg-song.mp3"],
+      src: ["/bg-song-lite.mp3"],
+      html5: true, // Stream instead of decoding the whole track into memory
       loop: true,
       volume: 0.5,
       autoplay: true,
